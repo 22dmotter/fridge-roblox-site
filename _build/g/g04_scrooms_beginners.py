@@ -7,7 +7,7 @@ cat="Guides", game="Scrooms", date="2026-10-20",
 videos=[("77eMzqLl-C0","How to Play Scrooms! Full Beginner's Guide (Roblox)")],
 kw_primary="scrooms guide",
 kw_secondary=["how to play scrooms","scrooms roblox","scrooms beginner guide","scrooms tamer's guitar","scrooms ocarina"],
-related=["scrooms-level-up-fast","scrooms-statue-locations","anime-dice-codes","steal-an-egg-speed-guide"],
+related=["scrooms-level-up-fast","scrooms-statue-locations","fix-roblox-lag","anime-dice-codes"],
 body="""
 <p class="lead">This <strong>Scrooms guide</strong> takes you from your very first catch to your first real upgrade. Scrooms is a Roblox creature-catching game where you tame mushroom-like creatures called Scrooms by playing music. You tune an instrument, keep the creature inside a catch zone, sell what you catch for Chimes, and use those Chimes to buy better instruments. If you just loaded into Songkeeper's Grove and have no idea what to do, start here.</p>
 

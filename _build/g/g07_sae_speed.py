@@ -7,7 +7,7 @@ cat="Tips", game="Steal an Egg", date="2026-10-21",
 videos=[("iqPQE1lD18s","How to Gain TONS of Speed FAST in Steal an Egg! | Best Speed Method")],
 kw_primary="how to get speed in steal an egg",
 kw_secondary=["steal an egg speed","how to increase speed in steal an egg","steal an egg trails","steal an egg treadmill","steal an egg biome speed requirements"],
-related=["steal-an-egg-codes","steal-an-egg-win-races","steal-an-egg-candy-corn","scrooms-level-up-fast"],
+related=["steal-an-egg-codes","steal-an-egg-win-races","unlock-fps-roblox","steal-an-egg-candy-corn"],
 body="""
 <p class="lead">If you keep getting caught by guardians or can't reach the next biome, you need more Speed. This guide shows you <strong>how to get speed in Steal an Egg</strong> as fast as possible: the treadmill upgrade path, which trails to buy (and which to skip), the Speed you need for every biome, and the little timing tricks that add up to billions. It's the same method Fridge uses in his speed video.</p>
 

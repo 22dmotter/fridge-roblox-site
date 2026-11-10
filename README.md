@@ -34,6 +34,20 @@ A fast, dark-themed (ice-blue/cyan accent), mobile-first static site, modeled on
 - `huzz-valley-codes.html` – Huzz/Huss Valley codes (Nov 2026)
 - `monkey-escape-sunken-shards.html` – All 9 Sunken Shards in +1 Speed Monkey Escape
 
+### Evergreen Roblox help guides (no Fridge video yet, generated cover images in `assets/thumbs/`)
+- `run-multiple-roblox-accounts.html` – How to run multiple Roblox accounts at once (Account Switcher, Error 264, risks)
+- `how-to-afk-in-roblox.html` – How to AFK in Roblox safely (20-minute idle kick, macros risk)
+- `bloxstrap-guide.html` – How to install Bloxstrap (2026 status, official sources only)
+- `roblox-shaders.html` – Roblox shaders 2026 (RoShade/ReShade status, ban risk, safe alternatives)
+- `unlock-fps-roblox.html` – How to unlock FPS in Roblox (official Maximum Frame Rate)
+- `fix-roblox-lag.html` – How to fix Roblox lag
+- `recover-roblox-account.html` – Roblox account recovery
+- `make-roblox-thumbnails.html` – How to make Roblox thumbnails for free
+- `join-someone-roblox-without-friends.html` – How to join someone on Roblox without being friends
+- `delete-roblox-account.html` – How to delete a Roblox account
+
+**Adding a video to an evergreen guide:** in its `_build/g/e*.py` file, set `videos=[("VIDEO_ID", "Video title")]` and replace `{VIDEO_PLACEHOLDER}` in the body with `{VIDEO0}`, then rebuild. The card thumbnail and `og:image` switch to the YouTube thumbnail automatically. These guides also have a `sources=[...]` list rendered as an "Official sources" box; re-check those pages whenever Roblox or Bloxstrap change something.
+
 Every page has: a keyword-first `<title>` under 60 characters, a 140–160 character meta description, canonical URL, Open Graph + Twitter card tags, breadcrumbs with `BreadcrumbList` JSON-LD, and one `<h1>`. Guide pages also have `BlogPosting` (with `VideoObject`) and `FAQPage` JSON-LD, a visible "Last updated" date, a table of contents, numbered steps, tables, a FAQ, and a related-guides section.
 
 ## How the site is built

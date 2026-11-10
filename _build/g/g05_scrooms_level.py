@@ -7,7 +7,7 @@ cat="Tips", game="Scrooms", date="2026-10-13",
 videos=[("uRHKZNOa7jA","How to Level Up FAST in Scrooms! | Best XP Method")],
 kw_primary="level up fast in scrooms",
 kw_secondary=["scrooms xp","scrooms level up","scrooms best xp method","scrooms tamer in training","scrooms leveling guide"],
-related=["scrooms-beginners-guide","scrooms-statue-locations","steal-an-egg-speed-guide","roblox-hollow-event-guide"],
+related=["scrooms-beginners-guide","scrooms-statue-locations","how-to-afk-in-roblox","steal-an-egg-speed-guide"],
 body="""
 <p class="lead">Want to <strong>level up fast in Scrooms</strong>? The good news is that Scrooms XP is simple. Only two things raise your level: <strong>catching Scrooms</strong> and <strong>completing quests</strong>. Catches give a steady trickle of XP, and quests pay out in huge lumps. This guide shows you the fastest catching routine, which quests are worth chasing, and which purchases actually help (most don't).</p>
 
