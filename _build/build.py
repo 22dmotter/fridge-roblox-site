@@ -54,7 +54,8 @@ h1,h2,h3{line-height:1.25}h2{font-size:1.5rem;margin:1.8em 0 .6em}h3{font-size:1
 .card:hover{transform:translateY(-3px);border-color:var(--accd)}
 .card a.thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000}.card a.thumb img{width:100%;height:100%;object-fit:cover}
 .card .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
-.card h3{margin:0;font-size:1.08rem}.card h3 a{color:var(--txt);text-decoration:none}.card h3 a:hover{color:var(--acc)}
+.card h2,.card h3{margin:0;font-size:1.08rem}.card h2 a,.card h3 a{color:var(--txt);text-decoration:none}.card h2 a:hover,.card h3 a:hover{color:var(--acc)}
+[hidden]{display:none!important}
 .card p{margin:0;color:var(--mut);font-size:.93rem}.meta{font-size:.8rem;color:var(--mut);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .tag{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.6px;padding:3px 9px;border-radius:999px;background:rgba(92,225,255,.12);color:var(--acc);text-decoration:none;border:1px solid rgba(92,225,255,.3)}
 .more{margin-top:auto;font-weight:700;text-decoration:none;font-size:.9rem}
