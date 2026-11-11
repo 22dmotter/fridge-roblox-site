@@ -32,7 +32,7 @@ cat="Codes", game="Anime Dice", date="2026-10-21",
 videos=[("nKPYNRuDQP4","ALL WORKING Codes in Anime Dice! (2026) FREE Rerolls")],
 kw_primary="anime dice codes",
 kw_secondary=["anime dice codes 2026","anime dice codes november 2026","anime dice free rerolls","how to redeem codes in anime dice","new anime dice codes"],
-related=["huzz-valley-codes","steal-an-egg-codes","roblox-hollow-event-guide","scrooms-beginners-guide"],
+related=["huzz-valley-codes","steal-an-egg-codes","roblox-hollow-event-guide","scrooms-beginners-guide","anime-adventures-codes"],
 body="""
 <p class="lead">These are all the working <strong>Anime Dice codes</strong> for November 2026. Redeem them for free Trait Rerolls, Gems, Lucky Spins and event currency, then use our tips below to get the most out of every reroll. We cross-checked this list against several current Roblox code trackers on <time datetime="2026-11-10">November 10, 2026</time>, and only codes that show as working on multiple lists made it into the main table.</p>
 

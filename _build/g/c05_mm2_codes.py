@@ -8,7 +8,7 @@ desc='Murder Mystery 2 codes for November 2026: no MM2 code works right now. See
 cat="Codes", game="Murder Mystery 2", date="2026-11-11", videos=[],
 kw_primary="murder mystery 2 codes",
 kw_secondary=["mm2 codes","mm2 codes 2026","murder mystery 2 codes november 2026","mm2 godly codes","how to redeem mm2 codes"],
-related=["rivals-codes","blox-fruits-codes","adopt-me-codes","recover-roblox-account"],
+related=["rivals-codes","blox-fruits-codes","adopt-me-codes","recover-roblox-account","forsaken-codes"],
 chapters=[("0:00","Do MM2 codes exist right now?","active"),("0:20","Every expired MM2 code","expired"),("0:50","How to redeem (Inventory)","redeem"),("1:15","Free Halloween 2026 rewards","free"),("1:45","Fake Godly code scams","scams")],
 sources=[("Murder Mystery 2 on Roblox (official game page)","https://www.roblox.com/games/142823291/Murder-Mystery-2"),("Murder Mystery 2 Wiki: Codes","https://mm2wiki.org/wiki/codes/"),("Gaming Route: MM2 codes (Nov 11, 2026)","https://gamingroute.com/mm2-codes/"),("Beebom: MM2 codes (Nov 1, 2026)","https://beebom.com/murder-mystery-2-mm2-codes/")],
 body="""

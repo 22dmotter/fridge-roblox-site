@@ -52,6 +52,11 @@ A fast, dark-themed (amber / yellow-orange accent: `#FFB020`, hover `#E8890C`), 
 - `brookhaven-codes.html`, `throw-food-for-animals-codes.html`, `break-and-steal-an-egg-codes.html` – no code system (explained honestly, free rewards listed instead)
 - `steal-an-egg-codes.html` (#1 by CCU) was refreshed rather than duplicated
 
+### More game codes pages (CCU ranks 11–20 + Anime Adventures, Nov 11 2026; `_build/g/c10`–`c20`)
+- Working codes: `anime-adventures-codes.html` (5), `dandys-world-codes.html` (2), `fisch-codes.html` (2), `survive-your-ideas-codes.html` (4), `fish-it-codes.html` (3), `steal-a-brainrot-codes.html` (1)
+- None confirmed (disputed code listed): `dont-splash-codes.html`, `catalog-avatar-creator-codes.html`
+- No code system: `forsaken-codes.html`, `violence-district-codes.html`, `the-strongest-battlegrounds-codes.html` (sound IDs only)
+
 ### Video-ready Roblox how-to guides (`_build/g/t*.py`)
 - `how-to-turn-on-voice-chat-roblox.html`, `how-to-appear-offline-roblox.html`, `add-trusted-friends-roblox.html`, `check-roblox-account-status.html`, `equip-multiple-accessories-roblox.html`, `redeem-roblox-gift-card.html`, `roblox-parental-controls-guide.html`, `how-to-emote-roblox.html`, `throw-food-for-animals-guide.html`, `99-nights-in-the-forest-guide.html`
 

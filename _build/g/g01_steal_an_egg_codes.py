@@ -7,7 +7,7 @@ cat="Codes", game="Steal an Egg", date="2026-11-11",
 videos=[("iqPQE1lD18s","How to Gain TONS of Speed FAST in Steal an Egg!")],
 kw_primary="steal an egg codes",
 kw_secondary=["steal an egg codes 2026","steal an egg codes november 2026","steal an egg codes roblox","how to redeem steal an egg codes","steal an egg free speed"],
-related=["steal-an-egg-speed-guide","break-and-steal-an-egg-codes","steal-an-egg-win-races","anime-dice-codes"],
+related=["steal-an-egg-speed-guide","break-and-steal-an-egg-codes","steal-an-egg-win-races","anime-dice-codes","steal-a-brainrot-codes"],
 chapters=[("0:00","Are there Steal an Egg codes?","active"),("0:20","How codes would be redeemed","redeem"),("0:40","Free rewards without codes","free-rewards"),("1:10","Fridge's speed method","speed"),("2:00","Where new codes will appear","where"),("2:20","Fake code scams","scams")],
 sources=[("Steal An Egg on Roblox (official game page)","https://www.roblox.com/games/107778070777162/Steal-An-Egg"),("Gaming Route: Steal an Egg codes (Nov 11, 2026)","https://gamingroute.com/steal-an-egg-codes/"),("Destructoid: Steal An Egg codes (Nov 9, 2026)","https://www.destructoid.com/steal-an-egg-codes/")],
 body="""

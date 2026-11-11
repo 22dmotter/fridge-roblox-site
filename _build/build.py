@@ -7,7 +7,7 @@ SUB = YT + "?sub_confirmation=1"
 TODAY = "2026-11-11"
 MOD_HUMAN = "November 11, 2026"
 CATS = {
- "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 10 games by players (Steal an Egg, Blox Fruits, RIVALS, 99 Nights and more) plus Anime Dice and Huzz Valley. Each code is checked against at least two live sources, and games with no codes say so."),
+ "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus Anime Dice and Huzz Valley. Each code is checked against at least two live sources, and games with no codes say so."),
  "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, plus Scrooms, Bloxstrap, account recovery and more."),
  "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: the Hollow 2026, the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
  "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
@@ -353,9 +353,11 @@ feat = "".join(card(g) for g in guides[:6])
 game_feat = "".join(card(g) for g in [x for x in guides if x["videos"]][:6])
 TOP10_CODES = ["steal-an-egg-codes","murder-mystery-2-codes","brookhaven-codes","throw-food-for-animals-codes","blox-fruits-codes","99-nights-in-the-forest-codes","rivals-codes","adopt-me-codes","break-and-steal-an-egg-codes","jujutsu-shenanigans-codes"]
 HOWTO_NEW = ["how-to-turn-on-voice-chat-roblox","add-trusted-friends-roblox","how-to-appear-offline-roblox","roblox-parental-controls-guide","redeem-roblox-gift-card","check-roblox-account-status","equip-multiple-accessories-roblox","how-to-emote-roblox","throw-food-for-animals-guide","99-nights-in-the-forest-guide"]
+MORE_CODES = ["anime-adventures-codes","forsaken-codes","dandys-world-codes","fisch-codes","survive-your-ideas-codes","fish-it-codes","violence-district-codes","dont-splash-codes","steal-a-brainrot-codes","catalog-avatar-creator-codes","the-strongest-battlegrounds-codes"]
 top_feat = "".join(card(BY[s]) for s in TOP10_CODES)
+more_feat = "".join(card(BY[s]) for s in MORE_CODES)
 howto_feat = "".join(card(BY[s]) for s in HOWTO_NEW)
-help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW][:4])
+help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES][:4])
 cats_html = "".join(f'<a href="{v[0]}">{v[1]}<small>{sum(1 for g in guides if g["cat"]==k)} guides</small></a>' for k,v in CATS.items())
 idx_ld = [{"@context":"https://schema.org","@type":"WebSite","name":"Fridge Guides","url":BASE,"potentialAction":{"@type":"SearchAction","target":BASE+"guides.html?q={search_term_string}","query-input":"required name=search_term_string"}},
           dict({"@context":"https://schema.org"}, **ORG)]
@@ -369,6 +371,7 @@ idx_body = f"""<section class="hero"><div class="wrap">{{CRUMBS}}
 <section aria-labelledby="latest-h"><div class="sec-h"><h2 id="latest-h">Latest Roblox Guides</h2><a href="guides.html">View all →</a></div><div class="grid">{feat}</div></section>
 <section aria-labelledby="game-h"><div class="sec-h"><h2 id="game-h">Latest Game Codes &amp; Guides</h2><a href="tag-codes.html">All codes →</a></div><div class="grid">{game_feat}</div></section>
 <section aria-labelledby="top-h"><div class="sec-h"><h2 id="top-h">Codes for the Top 10 Roblox Games</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The ten most-played Roblox games by live player count on November 11, 2026, with every working code checked against at least two sources. Games without a code system say so.</p><div class="grid">{top_feat}</div></section>
+<section aria-labelledby="more-h"><div class="sec-h"><h2 id="more-h">More Roblox Game Codes</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The next most-played Roblox games (ranks 11–20 by live players on November 11, 2026, plus Anime Adventures), each checked against at least two sources. Games with no codes say so.</p><div class="grid">{more_feat}</div></section>
 <section aria-labelledby="howto-h"><div class="sec-h"><h2 id="howto-h">New Roblox How-To Guides</h2><a href="tag-guides.html">All guides →</a></div><div class="grid">{howto_feat}</div></section>
 <section aria-labelledby="cat-h"><h2 id="cat-h">Browse by Category</h2><div class="cats">{cats_html}</div></section>
 <section class="intro" aria-labelledby="ch-h"><div><h2 id="ch-h">Welcome to the Fridge Content Hub</h2>

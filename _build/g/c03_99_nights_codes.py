@@ -6,7 +6,7 @@ desc='99 Nights in the Forest codes for November 2026: 3 working codes for free 
 cat="Codes", game="99 Nights in the Forest", date="2026-11-11", videos=[],
 kw_primary="99 nights in the forest codes",
 kw_secondary=["99 nights in the forest codes 2026","99 nights codes diamonds","yay fishing code","how to redeem 99 nights in the forest codes","99 nights in the forest codes for gems"],
-related=["99-nights-in-the-forest-guide","blox-fruits-codes","rivals-codes","murder-mystery-2-codes"],
+related=["99-nights-in-the-forest-guide","blox-fruits-codes","rivals-codes","murder-mystery-2-codes","dandys-world-codes"],
 chapters=[("0:00","Intro: free Diamonds","active"),("0:15","All working codes","active"),("0:50","How to redeem in the lobby","redeem"),("1:20","The yay fishing chat code","fishing"),("2:00","What to spend Diamonds on","spend"),("2:30","Expired codes","expired")],
 sources=[("99 Nights in the Forest on Roblox (official game page)","https://www.roblox.com/games/79546208627805/99-Nights-in-the-Forest"),("Destructoid: 99 Nights in the Forest codes (Nov 9, 2026)","https://www.destructoid.com/99-nights-in-the-forest-codes/"),("99 Nights in the Forest Wiki: Codes (Nov 7, 2026)","https://99nightsinforest.wiki/wiki/codes/"),("GamesRadar+: 99 Nights in the Forest codes (Nov 2, 2026)","https://www.gamesradar.com/games/survival/99-nights-in-the-forest-codes/")],
 body="""

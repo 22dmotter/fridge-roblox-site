@@ -6,7 +6,7 @@ desc='Break and Steal an Egg codes for November 2026: no codes exist yet. Get th
 cat="Codes", game="Break and Steal an Egg", date="2026-11-11", videos=[],
 kw_primary="break and steal an egg codes",
 kw_secondary=["break and steal an egg codes 2026","break and steal an egg free sabertooth","break and steal an egg free speed","break and steal an egg roblox","break and steal an egg community rewards"],
-related=["steal-an-egg-codes","steal-an-egg-speed-guide","throw-food-for-animals-codes","blox-fruits-codes"],
+related=["steal-an-egg-codes","steal-an-egg-speed-guide","throw-food-for-animals-codes","blox-fruits-codes","steal-a-brainrot-codes"],
 chapters=[("0:00","Are there codes?","active"),("0:20","Free +10K Speed","speed"),("0:45","Free Sabertooth Egg","sabertooth"),("1:15","Not the same as Steal an Egg","different"),("1:40","Fake code warning","fake")],
 sources=[("Break and Steal an Egg on Roblox (official game page)","https://www.roblox.com/games/114326934417838/Break-and-Steal-an-Egg"),("Break and Steal an Egg Wiki: Codes (Nov 3, 2026)","https://breakstealanegg.wiki/codes/"),("CodesHub: Break and Steal an Egg codes (Nov 9, 2026)","https://getrobloxcodes.com/break-and-steal-an-egg-codes"),("RollerCodes: Break and Steal an Egg codes","https://rollercodes.com/break-and-steal-an-egg-codes/")],
 body="""

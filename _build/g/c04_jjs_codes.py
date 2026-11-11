@@ -6,7 +6,7 @@ desc='Jujutsu Shenanigans codes for November 2026: 2 working codes for Cash and 
 cat="Codes", game="Jujutsu Shenanigans", date="2026-11-11", videos=[],
 kw_primary="jujutsu shenanigans codes",
 kw_secondary=["jjs codes","jujutsu shenanigans codes 2026","jujutsu shenanigans emote codes","how to redeem jujutsu shenanigans codes","ria2026 code"],
-related=["rivals-codes","blox-fruits-codes","how-to-emote-roblox","murder-mystery-2-codes"],
+related=["rivals-codes","blox-fruits-codes","how-to-emote-roblox","murder-mystery-2-codes","the-strongest-battlegrounds-codes"],
 chapters=[("0:00","Intro","active"),("0:10","Working codes","active"),("0:40","How to redeem in the Shop","redeem"),("1:10","Why codes fail","fail"),("1:30","Expired codes","expired")],
 sources=[("Jujutsu Shenanigans on Roblox (official game page)","https://www.roblox.com/games/9391468976/Jujutsu-Shenanigans"),("Destructoid: Jujutsu Shenanigans codes (Nov 9, 2026)","https://www.destructoid.com/jujutsu-shenanigans-codes/"),("Roblox Den: Jujutsu Shenanigans codes (Nov 11, 2026)","https://robloxden.com/game-codes/jujutsu-shenanigans"),("PC Gamer: Jujutsu Shenanigans codes (Oct 16, 2026)","https://www.pcgamer.com/roblox/jujutsu-shenanigans-codes/")],
 body="""
