@@ -7,7 +7,7 @@ SUB = YT + "?sub_confirmation=1"
 TODAY = "2026-11-11"
 MOD_HUMAN = "November 11, 2026"
 CATS = {
- "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus Anime Dice and Huzz Valley, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
+ "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus Dress To Impress, King Legacy, Blade Ball, Bee Swarm Simulator, Arise Crossover, Anime Dice, Huzz Valley and more, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
  "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus Scrooms, Bloxstrap, account recovery and more."),
  "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: the Hollow 2026, the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
  "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, avatar outfit ideas, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
@@ -16,6 +16,7 @@ def esc(s): return html.escape(s, quote=True)
 
 # ---------- load guides ----------
 guides = []
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 for f in sorted(glob.glob(os.path.join(os.path.dirname(__file__), "g", "*.py"))):
     spec = importlib.util.spec_from_file_location("m", f); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
     guides.append(m.G)
@@ -321,6 +322,8 @@ CODE_COUNTS = {"steal-an-egg-codes":None,"blox-fruits-codes":24,"rivals-codes":8
  "violence-district-codes":None,"dont-splash-codes":0,"steal-a-brainrot-codes":1,"catalog-avatar-creator-codes":0,"the-strongest-battlegrounds-codes":None,
  "anime-dice-codes":24,"huzz-valley-codes":4}
 def codes_table():
+    for x in guides:
+        if "code_count" in x: CODE_COUNTS[x["slug"]] = x["code_count"]
     rows=[]
     for x in sorted([x for x in guides if x["cat"]=="Codes" and x["slug"] in CODE_COUNTS], key=lambda x:(CODE_COUNTS[x["slug"]] is None, -(CODE_COUNTS[x["slug"]] or 0), x["game"].lower())):
         c=CODE_COUNTS[x["slug"]]
@@ -410,7 +413,9 @@ more_feat = "".join(card(BY[s]) for s in MORE_CODES)
 howto_feat = "".join(card(BY[s]) for s in HOWTO_NEW)
 GENERAL_NEW = ["roblox-codes-november-2026","how-to-get-free-items-in-roblox","how-to-level-up-fast-in-roblox","best-roblox-pets-2026","roblox-avatar-ideas","how-to-report-a-player-on-roblox","roblox-gift-card-guide","how-to-join-a-roblox-group","roblox-age-verification","how-to-change-roblox-username"]
 general_feat = "".join(card(BY[s]) for s in GENERAL_NEW)
-help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW][:4])
+NEW_CODES = ["dress-to-impress-codes","king-legacy-codes","arise-crossover-codes","blade-ball-codes","bee-swarm-simulator-codes","anime-vanguards-codes","volleyball-legends-codes","grow-a-garden-codes","basketball-zero-codes","driving-empire-codes"]
+newcodes_feat = "".join(card(BY[s]) for s in NEW_CODES if s in BY)
+help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW+NEW_CODES][:4])
 cats_html = "".join(f'<a href="{v[0]}">{v[1]}<small>{sum(1 for g in guides if g["cat"]==k)} guides</small></a>' for k,v in CATS.items())
 idx_ld = [{"@context":"https://schema.org","@type":"WebSite","name":"Fridge Guides","url":BASE,"potentialAction":{"@type":"SearchAction","target":BASE+"guides.html?q={search_term_string}","query-input":"required name=search_term_string"}},
           dict({"@context":"https://schema.org"}, **ORG)]
@@ -426,6 +431,7 @@ idx_body = f"""<section class="hero"><div class="wrap">{{CRUMBS}}
 <section aria-labelledby="gen-h"><div class="sec-h"><h2 id="gen-h">Essential Roblox Guides</h2><a href="guides.html">All guides →</a></div><p class="small">Every Roblox code in one hub, plus free items, leveling, pets, avatar ideas, reporting, gift cards, Communities, age checks and username changes. Checked against official Roblox pages on November 11, 2026.</p><div class="grid">{general_feat}</div></section>
 <section aria-labelledby="top-h"><div class="sec-h"><h2 id="top-h">Codes for the Top 10 Roblox Games</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The ten most-played Roblox games by live player count on November 11, 2026, with every working code checked against at least two sources. Games without a code system say so.</p><div class="grid">{top_feat}</div></section>
 <section aria-labelledby="more-h"><div class="sec-h"><h2 id="more-h">More Roblox Game Codes</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The next most-played Roblox games (ranks 11–20 by live players on November 11, 2026, plus Anime Adventures), each checked against at least two sources. Games with no codes say so.</p><div class="grid">{more_feat}</div></section>
+<section aria-labelledby="nc-h"><div class="sec-h"><h2 id="nc-h">New Codes: Dress To Impress, King Legacy and More</h2><a href="roblox-codes-november-2026.html">Codes hub →</a></div><p class="small">Ten more high-traffic Roblox games with active codes, each checked against at least two sources on November 11, 2026.</p><div class="grid">{newcodes_feat}</div></section>
 <section aria-labelledby="howto-h"><div class="sec-h"><h2 id="howto-h">New Roblox How-To Guides</h2><a href="tag-guides.html">All guides →</a></div><div class="grid">{howto_feat}</div></section>
 <section aria-labelledby="cat-h"><h2 id="cat-h">Browse by Category</h2><div class="cats">{cats_html}</div></section>
 <section class="intro" aria-labelledby="ch-h"><div><h2 id="ch-h">Welcome to the Fridge Content Hub</h2>

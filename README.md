@@ -69,6 +69,11 @@ A fast, dark-themed (amber / yellow-orange accent: `#FFB020`, hover `#E8890C`), 
 - Animated background: `.bg-fx` (10 drifting amber squares/orbs, opacity 0.04–0.08, `position:fixed`, `pointer-events:none`, transform/opacity only, 44–88 s, 5 elements under 640px, static under `prefers-reduced-motion`)
 - Subscribe buttons use `.yt-sub`: YouTube red #FF0000 with bold white 1.2rem text (large-text AA, 4.0:1), hover #CC0000; inline subscribe links use #CC0000 (5.9:1), hover #A30000; visible focus ring
 
+### Codes batch 3 (`_build/g/c21`–`c30`, Nov 11 2026; rendered by `_build/codeslib.py`)
+- `dress-to-impress-codes.html` (25), `king-legacy-codes.html` (6), `bee-swarm-simulator-codes.html` (9), `blade-ball-codes.html` (10), `arise-crossover-codes.html` (11), `grow-a-garden-codes.html` (2), `anime-vanguards-codes.html` (3), `basketball-zero-codes.html` (2), `volleyball-legends-codes.html` (3), `driving-empire-codes.html` (2)
+- `codeslib.make()` sets `code_count`, which feeds the codes hub table automatically
+- `anime-dice-codes.html` refreshed Nov 11 (24 working, safety section, expiry notes)
+
 ### Video chapters
 Each guide can define `chapters=[("0:00","Title","section-id"), ...]` and put `{CHAPTERS}` in its body. The build renders a "Video Chapters" list linking to each numbered section, plus an HTML comment telling Daniel to paste the same lines into the YouTube description. When the matching video is uploaded, add its ID to `videos=[...]`, swap `{VIDEO_PLACEHOLDER}` for `{VIDEO0}`, and adjust the timestamps to the real video.
 
