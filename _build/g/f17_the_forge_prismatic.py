@@ -1,0 +1,25 @@
+import forgelib as F
+G = F.make(slug="the-forge-prismatic-pickaxe", order=17, kw="get the prismatic pickaxe",
+ title="How to Get the Prismatic Pickaxe in The Forge (2026)",
+ h1="How to Get the Prismatic Pickaxe in The Forge: Iceberg Location and Stats",
+ desc="How to get the Prismatic Pickaxe in The Forge: the hidden Iceberg location, the Mosasaursit you need in your inventory, its 1.5M Gold price, and its stats.",
+ kw2=["the forge prismatic pickaxe","where is the prismatic pickaxe the forge","the forge iceberg","the forge mosasaursit","the forge island 3 pickaxe"],
+ related=["the-forge-heavenly-pickaxe","the-forge-dragon-head-pickaxe","the-forge-pickaxe-progression","the-forge-island-3-guide"],
+ ids=["vEtKp-xo0CI","7-ifYeJKWr8","5_W69QZagy8"],
+ lead="The <strong>Prismatic Pickaxe</strong> was the best pickaxe in The Forge when the Winter Expansion launched on December 25, 2025, and Fridge posted three guides to it that day. Here's how to get the Prismatic Pickaxe: where it is, what you need, and what it costs now.",
+ heading="Watch Fridge's Prismatic Pickaxe Videos",
+ sections=[
+ ("where","Where the Prismatic Pickaxe Is","""<p>The Forge Wiki says it's in <strong>The Iceberg</strong> on the Frostspire Expanse, \"under the frozen lake\" behind the giant iceberg that holds the Mosasaursit. Pro Game Guides gives the route:</p>
+<ol class="steps"><li>Travel to the Frostspire Expanse (level 70+).</li><li>Go up to <strong>The Peak</strong> cave entrance, but don't go inside.</li><li>Keep going <strong>left</strong> to the edge of the mountain until you see a hidden <strong>frozen lake</strong> with a hole in the ice.</li><li>Jump through the hole and break the barrier. Pro Game Guides says you need at least a <strong>Frost Pickaxe</strong>.</li><li>Mine the <strong>Mosasaursit</strong> inside, then claim the pickaxe.</li></ol>"""),
+ ("req","The Mosasaursit Requirement","""<p>To stop players skipping the iceberg, you must have <strong>at least 1 Mosasaursit</strong> in your inventory to get the pickaxe, according to the Forge Wiki. Mosasaursit is an Exotic ore, a fossilized sea creature. It gives armor +35% max Health but -25% Movement Speed, so keep one even if you don't plan to use it.</p>"""),
+ ("stats","Prismatic Pickaxe Stats and Price","""<div class="table-wrap"><table><caption>Prismatic Pickaxe (Forge Wiki, November 11, 2026)</caption><thead><tr><th scope="col">Stat</th><th scope="col">Value</th></tr></thead><tbody>
+<tr><td>Mine Power</td><td>650</td></tr><tr><td>Speed</td><td>+10%</td></tr><tr><td>Luck</td><td>+72%</td></tr><tr><td>Rune slots</td><td>4</td></tr><tr><td>Rarity</td><td>Legendary</td></tr><tr><td>Cost</td><td>1,500,000 Gold (1,320,000 with the Goblin race)</td></tr></tbody></table></div>
+<p>Rune it straight away: with 4 slots, Miner Shards for Swift Mining and Mine Power make a big difference on The Peak's crystals. See our <a href="the-forge-runes-guide.html">runes guide</a>. Pro Game Guides listed it at 2 million Gold in December 2025. The wiki's current price is 1.5 million, so it's cheaper than at launch.</p>"""),
+ ("compare","Prismatic vs Heavenly vs Dragon Head","""<div class="table-wrap"><table><caption>Top Frostspire pickaxes</caption><thead><tr><th scope="col">Pickaxe</th><th scope="col">Mine Power</th><th scope="col">Speed</th><th scope="col">Luck</th><th scope="col">Cost</th></tr></thead><tbody>
+<tr><td>Prismatic</td><td>650</td><td>+10%</td><td>+72%</td><td>1.5M</td></tr><tr><td><a href="the-forge-heavenly-pickaxe.html">Heavenly</a></td><td>725</td><td>0%</td><td>+85%</td><td>2M</td></tr><tr><td><a href="the-forge-dragon-head-pickaxe.html">Dragon Head</a></td><td>750</td><td>+10%</td><td>+78%</td><td>2.2M</td></tr></tbody></table></div>
+<p>Prismatic is the cheapest of the three and has no quest chain, just the iceberg. It's the natural first big upgrade. Fridge's combined Short covers both the Prismatic and the Heavenly. The Heavenly now needs the Secret Maze, which was added in January 2026.</p>""")],
+ faq=[("Where is the Prismatic Pickaxe in The Forge?","In The Iceberg under a frozen lake to the left of The Peak's cave entrance on the Frostspire Expanse."),
+      ("How much is the Prismatic Pickaxe?","1,500,000 Gold, or 1,320,000 with the Goblin race, on the Forge Wiki as of November 11, 2026."),
+      ("Why can't I get the Prismatic Pickaxe?","You need at least 1 Mosasaursit in your inventory, and a Frost Pickaxe or better to break the barrier.")],
+ sources=[F.wiki("Prismatic_Pickaxe","Prismatic Pickaxe"),F.wiki("Mosasaursit"),F.wiki("Frostspire_Expanse","Frostspire Expanse"),("Pro Game Guides: Frostspire Expanse hidden pickaxes","https://progameguides.com/roblox/the-forge-map-all-islands-locations-level-requirements/")],
+ howto=("How to get the Prismatic Pickaxe in The Forge",[("Go to The Peak","Travel up to The Peak cave entrance on the Frostspire Expanse.","where"),("Find the frozen lake","Head left to the hidden lake and jump through the hole.","where"),("Break the barrier","Use a Frost Pickaxe or better.","where"),("Mine Mosasaursit","Keep at least 1 in your inventory and claim the pickaxe.","req")]))

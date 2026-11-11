@@ -1,0 +1,26 @@
+import forgelib as F
+G = F.make(slug="the-forge-armor-guide", order=11, kw="best armor in the forge",
+ title="Best Armor in The Forge: Recipes and Ore Amounts (2026)",
+ h1="Best Armor in The Forge: How to Forge More Armor Types and the Best Recipes",
+ desc="The best armor in The Forge: how armor forging works, every armor set's health bonus, how to unlock more armor types, and the top ore recipes for each island.",
+ kw2=["the forge armor recipe","the forge best armor recipe","how to craft armor the forge","the forge armor types","the forge heavy armor"],
+ related=["the-forge-forging-guide","the-forge-volcanic-depths","the-forge-goblin-lord-quest","the-forge-raven-cave"],
+ ids=["pAX3KHmMLFo","c7q21lhGiZ4"],
+ lead="Fridge has a Short on forging more armor types and a full video on his best armor recipe. This guide adds the current numbers from the Forge Wiki, so you know the <strong>best armor in The Forge</strong> for whichever island you're on.",
+ heading="Watch Fridge's Armor Videos",
+ sections=[
+ ("how","How Armor Forging Works","""<p>Armor is forged at the Forge from ores, just like weapons. In The Forge, <strong>Defense</strong> means extra Health. The type of piece you get depends on <strong>how many ores</strong> you put in. More ore unlocks heavier types. The <strong>ores themselves</strong> decide the traits and look. Each type has a <strong>chance</strong>, the odds of getting that specific piece. Enhancing and runes can change an armor's stats a lot, according to the Forge Wiki.</p>
+<p>To <strong>forge more armor types</strong>, change how much ore you use. Like weapons, the ore count sets which types you can roll. Bigger heavy pieces need more ore: the Goblin's Crown heavy helmet, for example, needs at least 20. Quest recipes like the Goblin's Crown, or island-only sets like Samurai and Shogun, appear once you unlock them. Since version 1.05 (January 18, 2026), <strong>Lock Forge</strong> lets you guarantee a category by using enough ore. For example, the Goblin's Crown needs 35 ores to lock.</p>"""),
+ ("sets","Armor Sets and Health Bonuses","""<div class="table-wrap"><table><caption>Chestplate health bonus by set (Forge Wiki)</caption><thead><tr><th scope="col">Set</th><th scope="col">Weight</th><th scope="col">Chestplate health</th><th scope="col">Chance</th></tr></thead><tbody>
+<tr><td>Light</td><td>Light</td><td>+5%</td><td>1/1</td></tr><tr><td>Ninja</td><td>Light</td><td>+13.5%</td><td>1/1</td></tr>
+<tr><td>Samurai</td><td>Medium</td><td>+12.75%</td><td>1/2</td></tr><tr><td>Viking</td><td>Medium</td><td>+15%</td><td>1/4</td></tr><tr><td>Rootguard</td><td>Medium</td><td>+21%</td><td>1/2</td></tr>
+<tr><td>Knight</td><td>Heavy</td><td>+16.25%</td><td>1/1</td></tr><tr><td>Dark Knight</td><td>Heavy</td><td>+25%</td><td>1/2</td></tr><tr><td>Wolf</td><td>Heavy</td><td>+35%</td><td>1/3</td></tr>
+<tr><td>Raven's</td><td>Heavy</td><td>+37%</td><td>1/8</td></tr><tr><td>Vanguard</td><td>Heavy</td><td>+40%</td><td>1/4</td></tr><tr><td>Shogun</td><td>Heavy</td><td>+46%</td><td>1/8</td></tr><tr><td>Juggernaut's</td><td>Heavy</td><td>+53%</td><td>1/8</td></tr></tbody></table></div>"""),
+ ("recipes","Best Armor Recipes by Island","""<p>These are the Forge Wiki community guide's recommended chestplate recipes:</p>
+<ul><li><strong>Forgotten Kingdom, early:</strong> 16 Ruby, 12 Emerald, 12 Cuprite.</li><li><strong>Forgotten Kingdom, mid:</strong> 16 Lightite, 12 Mythril, 12 Eye Ore.</li><li><strong>Forgotten Kingdom, endgame:</strong> 16 Darkryte, 12 Demonite, 12 Eye Ore. Darkryte adds Phantom Step dodges and Demonite adds burn effects. Farm both in the <a href="the-forge-volcanic-depths.html">Volcanic Depths</a>.</li><li><strong>Frostspire Expanse, early:</strong> 16 Snowite, 12 Frost Fossil, 12 Velchire.</li><li><strong>Frostspire Expanse, endgame tank:</strong> 16 Gargantuan, 12 Etherealite, 12 Duranite.</li></ul>
+<p>For helmets and leggings, use the same ores in smaller amounts, about 9–12 of each. Fridge's December 2025 recipe was built for the Forgotten Kingdom, so it lines up with the Darkryte, Demonite and Eye Ore build above.</p>"""),
+ ("tips","Armor Tips","""<ul><li>Eye Ore boosts damage but lowers max Health. Mix it with Mythril or Obsidian for defense.</li><li>Heavy armor also sells for the most Gold. See our <a href="the-forge-money-guide.html">money guide</a>.</li><li>Armor Molds, which drop from bosses like the Golem at 1 in 18, raise your chances of forging specific pieces.</li><li>Learn forging quality and weapon recipes in our <a href="the-forge-forging-guide.html">forging guide</a>.</li></ul>""")],
+ faq=[("What is the best armor in The Forge?","Juggernaut's Chestplate has the highest health bonus at +53%. For a Forgotten Kingdom recipe, the wiki recommends 16 Darkryte, 12 Demonite and 12 Eye Ore."),
+      ("How do you get more armor types in The Forge?","Put more ores into the forge to unlock heavier types, and unlock quest or island recipes like the Goblin's Crown and Shogun set."),
+      ("Does armor give defense or health in The Forge?","Armor defense works as extra Health. Each piece adds a percentage to your max HP.")],
+ sources=[F.wiki("Armor"),F.wiki("Guide","Community guide: armor recipes"),F.wiki("Version_History","Version History (Lock Forge update)"),F.wiki("Golem","Golem boss drops")])

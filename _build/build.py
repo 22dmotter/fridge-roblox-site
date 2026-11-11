@@ -10,7 +10,8 @@ CATS = {
  "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus Dress To Impress, King Legacy, Blade Ball, Bee Swarm Simulator, Arise Crossover, Anime Dice, Huzz Valley and more, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
  "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus Scrooms, Bloxstrap, account recovery and more."),
  "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: the Hollow 2026, the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
- "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, avatar outfit ideas, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
+ "The Forge": ("tag-the-forge.html", "The Forge Guides", "Every Fridge guide for The Forge on Roblox: races and rerolls, codes, pickaxes, Galaxite, Volcanic Depths, the Goblin Cave, Raven Cave, the Secret Maze, money and AFK farming. Each page embeds Fridge's matching videos and Shorts and is checked against the Forge Wiki on November 11, 2026."),
+"Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, avatar outfit ideas, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
 }
 def esc(s): return html.escape(s, quote=True)
 
@@ -80,6 +81,7 @@ a.yt-sub:not(.btn){display:inline-block;background:#CC0000;padding:2px 12px;marg
 .yt-sub:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px #CC0000}
 .short-slot{margin:22px auto;max-width:300px}.short-ph{aspect-ratio:9/16;width:100%;border:2px dashed var(--acc);border-radius:18px;background:var(--bg2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:18px;color:var(--mut)}
 .short-ph strong{color:var(--txt)}.short-ic{width:56px;height:56px;border-radius:14px;background:#FF0000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.shorts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;margin:18px 0}.shorts-grid .short-slot{margin:0;max-width:none}
 .short-slot iframe{aspect-ratio:9/16;width:100%;height:auto;border:0;border-radius:18px}.short-slot figcaption{text-align:center;margin-top:6px}
 :root{--bg:#0a0f14;--bg2:#101821;--card:#131d28;--line:#1f2e3d;--txt:#e6eef5;--mut:#9fb3c4;--acc:#ffb020;--acc2:#ffc966;--accd:#e8890c;--acc3:#f5a623;--ink:#1a1000;--r:14px;--max:1160px}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
@@ -175,7 +177,7 @@ var p=new URLSearchParams(location.search);if(p.get('q'))input.value=p.get('q');
 LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Fridge logo</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="12" y="3" width="40" height="58" rx="9" fill="url(#g)"/><rect x="12" y="24" width="40" height="3" fill="#0a0f14"/><rect x="18" y="10" width="4" height="10" rx="2" fill="#0a0f14"/><rect x="18" y="32" width="4" height="14" rx="2" fill="#0a0f14"/><path d="M38 38l3-5 3 5-3 5z" fill="#fff" opacity=".9"/><path d="M33 13l2-3 2 3-2 3z" fill="#fff" opacity=".8"/></svg>"""
 
 def nav(active):
-    items = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides"),("tag-events.html","Events"),("tag-tips.html","Tips"),("about.html","About")]
+    items = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides"),("tag-events.html","Events"),("tag-tips.html","Tips"),("tag-the-forge.html","The Forge"),("about.html","About")]
     li = "".join(f'<li><a href="{h}"{" aria-current=\"page\"" if h==active else ""}>{t}</a></li>' for h,t in items)
     return li
 
@@ -269,9 +271,11 @@ def bc_html(items):
 def thumb(vid): return f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
 def g_img(g, absolute=False):
     if g["videos"]: return thumb(g["videos"][0][0])
+    if g.get("shorts"): return thumb(g["shorts"][0][0])
     return (BASE if absolute else "") + f"assets/thumbs/{g['slug']}.png"
 def g_img_alt(g):
     if g["videos"]: return f"{g['game']} guide thumbnail: {g['videos'][0][1]}"
+    if g.get("shorts"): return f"{g['game']} guide thumbnail from Fridge's Short: {g['shorts'][0][1]}"
     return f"Fridge guide cover image: {g['h1']}"
 PLACEHOLDER = """<!-- YOUTUBE EMBED PLACEHOLDER: no matching Fridge video yet.
      When a video exists, add ("VIDEO_ID", "Video title") to this guide's videos=[...] list in _build/g/
@@ -305,6 +309,11 @@ def video_embed(vid, title, game):
 </div>
 <!-- /YOUTUBE EMBED -->"""
 
+def short_embed(vid, title, date=None):
+    d = f" · {human(date)}" if date else ""
+    return f"""<!-- YOUTUBE SHORT EMBED (vertical 9:16): Fridge Short "{esc(title)}" (ID {vid}). To swap it, replace the ID in the iframe src and the link. -->
+<figure class="short-slot"><iframe src="https://www.youtube-nocookie.com/embed/{vid}?rel=0" title="Fridge YouTube Short: {esc(title)}" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption class="small"><a href="https://www.youtube.com/shorts/{vid}" rel="noopener" target="_blank">{esc(title)}</a>{d}</figcaption></figure>"""
+
 def write(path, s):
     with open(os.path.join(OUT, path), "w") as f: f.write(s)
 
@@ -334,8 +343,13 @@ report = []
 # ---------- guide pages ----------
 for g in guides:
     body = g["body"]
-    for i,(vid,t) in enumerate(g["videos"]):
-        body = body.replace("{VIDEO%d}"%i, video_embed(vid,t,g["game"]))
+    for i,v in enumerate(g["videos"]):
+        body = body.replace("{VIDEO%d}"%i, video_embed(v[0],v[1],g["game"]))
+    sh = g.get("shorts", [])
+    for i,v in enumerate(sh):
+        body = body.replace("{SHORT%d}"%i, short_embed(v[0],v[1],v[2] if len(v)>2 else None))
+    if "{SHORTS}" in body:
+        body = body.replace("{SHORTS}", '<div class="shorts-grid">' + "".join(short_embed(v[0],v[1],v[2] if len(v)>2 else None) for v in sh) + '</div>')
     body = body.replace("{VIDEO_PLACEHOLDER}", PLACEHOLDER)
     body = body.replace("{SHORT_PLACEHOLDER}", SHORT_PLACEHOLDER)
     if "{CODES_TABLE}" in body: body = body.replace("{CODES_TABLE}", codes_table())
@@ -355,10 +369,12 @@ for g in guides:
     catp, catn, _ = CATS[g["cat"]]
     items = [("Home","index.html"),(catn,catp),(g["h1"].split(":")[0], g["slug"]+".html")]
     url = BASE + g["slug"] + ".html"
+    vids_ld = [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/watch?v={v[0]}","thumbnailUrl":thumb(v[0]),"uploadDate":(v[2] if len(v)>2 else g["date"]),"description":f"Fridge's Roblox video: {v[1]}"} for v in g["videos"] if len(v)<3 or v[2]] + \
+              [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/shorts/{v[0]}","thumbnailUrl":thumb(v[0]),"uploadDate":v[2],"description":f"Fridge's Roblox YouTube Short: {v[1]}"} for v in g.get("shorts",[]) if len(v)>2 and v[2]]
     ld_post = {"@context":"https://schema.org","@type":"BlogPosting","headline":g["h1"],"description":g["desc"],"image":[g_img(g, True)],
       "datePublished":g["date"],"dateModified":TODAY,"author":PERSON,"publisher":ORG,"mainEntityOfPage":{"@type":"WebPage","@id":url},
       "articleSection":g["cat"],"keywords":", ".join([g["kw_primary"]]+g["kw_secondary"]),"about":{"@type":"VideoGame","name":g["game"],"gamePlatform":"Roblox"},
-      **({} if not g["videos"] else {"video":[{"@type":"VideoObject","name":t,"embedUrl":f"https://www.youtube.com/embed/{v}","contentUrl":f"https://www.youtube.com/watch?v={v}","thumbnailUrl":thumb(v),"uploadDate":g["date"],"description":f"Fridge's Roblox video: {t}"} for v,t in g["videos"]]})}
+      **({} if not vids_ld else {"video":vids_ld})}
     ld_faq = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in g["faq"]]}
     lds_extra = [ld_post, ld_faq]
     if g.get("howto"):
@@ -379,7 +395,7 @@ for g in guides:
 <h2 id="faq-h">{esc(g['game'])} FAQ</h2>
 {faq_html}
 </section>
-<p class="callout">Found this helpful? <a class="yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe to Fridge on YouTube</a> for new {esc(g['game'])} videos. {"This guide is updated with every new upload." if g["videos"] else "This guide is re-checked against official Roblox sources when things change."}</p>
+<p class="callout">Found this helpful? <a class="yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe to Fridge on YouTube</a> for new {esc(g['game'])} videos. {"This guide is updated with every new upload." if (g["videos"] or g.get("shorts")) else "This guide is re-checked against official Roblox sources when things change."}</p>
 </article>
 <aside>
 <nav class="toc" aria-label="Table of contents"><strong>On this page</strong><ol>{toc}</ol></nav>
@@ -404,7 +420,9 @@ for g in guides:
 
 # ---------- index ----------
 feat = "".join(card(g) for g in guides[:6])
-game_feat = "".join(card(g) for g in [x for x in guides if x["videos"]][:6])
+game_feat = "".join(card(g) for g in [x for x in guides if x["videos"] and x["game"]!="The Forge"][:6])
+FORGE = [x["slug"] for x in sorted([x for x in guides if x["game"]=="The Forge"], key=lambda x:x.get("forge_order",99))]
+forge_feat = "".join(card(BY[s]) for s in FORGE)
 TOP10_CODES = ["steal-an-egg-codes","murder-mystery-2-codes","brookhaven-codes","throw-food-for-animals-codes","blox-fruits-codes","99-nights-in-the-forest-codes","rivals-codes","adopt-me-codes","break-and-steal-an-egg-codes","jujutsu-shenanigans-codes"]
 HOWTO_NEW = ["how-to-turn-on-voice-chat-roblox","add-trusted-friends-roblox","how-to-appear-offline-roblox","roblox-parental-controls-guide","redeem-roblox-gift-card","check-roblox-account-status","equip-multiple-accessories-roblox","how-to-emote-roblox","throw-food-for-animals-guide","99-nights-in-the-forest-guide"]
 MORE_CODES = ["anime-adventures-codes","forsaken-codes","dandys-world-codes","fisch-codes","survive-your-ideas-codes","fish-it-codes","violence-district-codes","dont-splash-codes","steal-a-brainrot-codes","catalog-avatar-creator-codes","the-strongest-battlegrounds-codes"]
@@ -415,7 +433,7 @@ GENERAL_NEW = ["roblox-codes-november-2026","how-to-get-free-items-in-roblox","h
 general_feat = "".join(card(BY[s]) for s in GENERAL_NEW)
 NEW_CODES = ["dress-to-impress-codes","king-legacy-codes","arise-crossover-codes","blade-ball-codes","bee-swarm-simulator-codes","anime-vanguards-codes","volleyball-legends-codes","grow-a-garden-codes","basketball-zero-codes","driving-empire-codes"]
 newcodes_feat = "".join(card(BY[s]) for s in NEW_CODES if s in BY)
-help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW+NEW_CODES][:4])
+help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW+NEW_CODES+FORGE][:4])
 cats_html = "".join(f'<a href="{v[0]}">{v[1]}<small>{sum(1 for g in guides if g["cat"]==k)} guides</small></a>' for k,v in CATS.items())
 idx_ld = [{"@context":"https://schema.org","@type":"WebSite","name":"Fridge Guides","url":BASE,"potentialAction":{"@type":"SearchAction","target":BASE+"guides.html?q={search_term_string}","query-input":"required name=search_term_string"}},
           dict({"@context":"https://schema.org"}, **ORG)]
@@ -432,6 +450,7 @@ idx_body = f"""<section class="hero"><div class="wrap">{{CRUMBS}}
 <section aria-labelledby="top-h"><div class="sec-h"><h2 id="top-h">Codes for the Top 10 Roblox Games</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The ten most-played Roblox games by live player count on November 11, 2026, with every working code checked against at least two sources. Games without a code system say so.</p><div class="grid">{top_feat}</div></section>
 <section aria-labelledby="more-h"><div class="sec-h"><h2 id="more-h">More Roblox Game Codes</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The next most-played Roblox games (ranks 11–20 by live players on November 11, 2026, plus Anime Adventures), each checked against at least two sources. Games with no codes say so.</p><div class="grid">{more_feat}</div></section>
 <section aria-labelledby="nc-h"><div class="sec-h"><h2 id="nc-h">New Codes: Dress To Impress, King Legacy and More</h2><a href="roblox-codes-november-2026.html">Codes hub →</a></div><p class="small">Ten more high-traffic Roblox games with active codes, each checked against at least two sources on November 11, 2026.</p><div class="grid">{newcodes_feat}</div></section>
+<section aria-labelledby="forge-h"><div class="sec-h"><h2 id="forge-h">The Forge Guides &amp; Codes</h2><a href="tag-the-forge.html">All The Forge guides →</a></div><p class="small">Every Fridge video and Short about The Forge, grouped by topic, with written steps checked against the Forge Wiki on November 11, 2026. Start with <a href="the-forge-codes.html">The Forge codes</a> for free race rerolls.</p><div class="grid">{forge_feat}</div></section>
 <section aria-labelledby="howto-h"><div class="sec-h"><h2 id="howto-h">New Roblox How-To Guides</h2><a href="tag-guides.html">All guides →</a></div><div class="grid">{howto_feat}</div></section>
 <section aria-labelledby="cat-h"><h2 id="cat-h">Browse by Category</h2><div class="cats">{cats_html}</div></section>
 <section class="intro" aria-labelledby="ch-h"><div><h2 id="ch-h">Welcome to the Fridge Content Hub</h2>
@@ -466,6 +485,7 @@ TAGMETA = {
  "Codes": ("Roblox Codes November 2026 – Working Codes | Fridge", "Working Roblox codes for November 2026: Anime Dice rerolls, Huzz Valley free spins and the truth about Steal an Egg codes. Copy them and redeem today!"),
  "Guides": ("Roblox Game Guides & Walkthroughs | Fridge", "Step-by-step Roblox guides from Fridge: how to play Scrooms, every Scrooms statue, and all 9 Monkey Escape shards. Pick a walkthrough and start now!"),
  "Events": ("Roblox Event Guides 2026 – Hollow & Halloween | Fridge", "Roblox event guides for 2026: the Hollow event recap, Steal an Egg Halloween Dimension, Candy Corn farming and the Phantom Express. Catch up on it all!"),
+ "The Forge": ("The Forge Roblox Guides & Codes (2026) | Fridge", "Every Fridge guide for The Forge on Roblox: working codes, race rerolls, Archangel, pickaxes, Galaxite, Volcanic Depths and money farming, with videos."),
  "Tips": ("Roblox Tips: Speed, XP & Racing Tricks | Fridge", "Quick Roblox tips from Fridge: how to get speed in Steal an Egg, level up fast in Scrooms, and win every race. Use these tricks to progress faster today!"),
 }
 for k,(p,n,intro) in CATS.items():

@@ -17,6 +17,7 @@ body="""
 
 <h2 id="table">All Roblox Codes Pages (November 2026)</h2>
 {CODES_TABLE}
+<p><strong>Newest page:</strong> <a href="the-forge-codes.html">The Forge codes</a>, with 4 working codes worth 45 free race rerolls. All of Fridge's The Forge videos and Shorts are on the <a href="tag-the-forge.html">The Forge guides</a> page.</p>
 <p class="small">Counts come from each linked page's working-codes table. Disputed codes (only one source, or sources disagree) aren't counted.</p>
 
 <h2 id="promo">Roblox Promo Codes for Roblox Itself</h2>
