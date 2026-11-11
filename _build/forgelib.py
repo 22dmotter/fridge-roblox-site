@@ -34,11 +34,11 @@ def embeds(ids, heading="Watch Fridge's Video"):
 def make(slug, order, kw, title, h1, desc, kw2, related, ids, lead, sections, faq, sources, howto=None, heading="Watch Fridge's Video"):
     vids, shorts = split(ids)
     secs = "\n".join(f'<h2 id="{a}">{h}</h2>\n{b}' for a, h, b in sections)
-    more = ('<h2 id="more">More The Forge Guides</h2>\n<p>Every Fridge guide for The Forge is listed on the <a href="tag-the-forge.html">The Forge guides page</a>. '
+    more = ('<h2 id="more">More The Forge Guides</h2>\n<p>Looking for more The Forge help? See the <a href="the-forge-beginners-guide.html">beginner guide</a>, the <a href="the-forge-race-reroll-guide.html">race reroll guide</a> or the <a href="the-forge-pickaxe-progression.html">pickaxe progression</a> guide, and browse the rest under <a href="tag-guides.html">Roblox Guides</a>. '
             'For free race rerolls, start with <a href="the-forge-codes.html">The Forge codes</a>. Other games are covered in our <a href="roblox-codes-november-2026.html">Roblox codes hub</a>.</p>')
     body = f'<p class="lead">{lead}</p>\n{embeds(ids, heading)}\n{secs}\n{more}\n'
     src = [("The Forge on Roblox (official game page)", PLACE)] + list(sources)
-    G = dict(slug=slug, title=title, h1=h1, desc=desc, cat="The Forge", game="The Forge", date="2026-11-11",
+    G = dict(slug=slug, title=title, h1=h1, desc=desc, cat="Guides", game="The Forge", date="2026-11-11",
              videos=vids, shorts=shorts, kw_primary=kw, kw_secondary=kw2, related=related, chapters=None,
              howto=howto, sources=src, body=body, faq=faq, forge_order=order, forge_ids=list(ids))
     return G

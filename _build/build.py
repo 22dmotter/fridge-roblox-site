@@ -7,10 +7,9 @@ SUB = YT + "?sub_confirmation=1"
 TODAY = "2026-11-11"
 MOD_HUMAN = "November 11, 2026"
 CATS = {
- "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus Dress To Impress, King Legacy, Blade Ball, Bee Swarm Simulator, Arise Crossover, Anime Dice, Huzz Valley and more, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
- "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus Scrooms, Bloxstrap, account recovery and more."),
+ "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus The Forge, Dress To Impress, King Legacy, Blade Ball, Bee Swarm Simulator, Arise Crossover, Anime Dice, Huzz Valley and more, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
+ "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus The Forge (races, pickaxes and money), Scrooms, Bloxstrap, account recovery and more."),
  "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: the Hollow 2026, the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
- "The Forge": ("tag-the-forge.html", "The Forge Guides", "Every Fridge guide for The Forge on Roblox: races and rerolls, codes, pickaxes, Galaxite, Volcanic Depths, the Goblin Cave, Raven Cave, the Secret Maze, money and AFK farming. Each page embeds Fridge's matching videos and Shorts and is checked against the Forge Wiki on November 11, 2026."),
 "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, avatar outfit ideas, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
 }
 def esc(s): return html.escape(s, quote=True)
@@ -177,7 +176,7 @@ var p=new URLSearchParams(location.search);if(p.get('q'))input.value=p.get('q');
 LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Fridge logo</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="12" y="3" width="40" height="58" rx="9" fill="url(#g)"/><rect x="12" y="24" width="40" height="3" fill="#0a0f14"/><rect x="18" y="10" width="4" height="10" rx="2" fill="#0a0f14"/><rect x="18" y="32" width="4" height="14" rx="2" fill="#0a0f14"/><path d="M38 38l3-5 3 5-3 5z" fill="#fff" opacity=".9"/><path d="M33 13l2-3 2 3-2 3z" fill="#fff" opacity=".8"/></svg>"""
 
 def nav(active):
-    items = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides"),("tag-events.html","Events"),("tag-tips.html","Tips"),("tag-the-forge.html","The Forge"),("about.html","About")]
+    items = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides"),("tag-events.html","Events"),("tag-tips.html","Tips"),("about.html","About")]
     li = "".join(f'<li><a href="{h}"{" aria-current=\"page\"" if h==active else ""}>{t}</a></li>' for h,t in items)
     return li
 
@@ -422,7 +421,6 @@ for g in guides:
 feat = "".join(card(g) for g in guides[:6])
 game_feat = "".join(card(g) for g in [x for x in guides if x["videos"] and x["game"]!="The Forge"][:6])
 FORGE = [x["slug"] for x in sorted([x for x in guides if x["game"]=="The Forge"], key=lambda x:x.get("forge_order",99))]
-forge_feat = "".join(card(BY[s]) for s in FORGE)
 TOP10_CODES = ["steal-an-egg-codes","murder-mystery-2-codes","brookhaven-codes","throw-food-for-animals-codes","blox-fruits-codes","99-nights-in-the-forest-codes","rivals-codes","adopt-me-codes","break-and-steal-an-egg-codes","jujutsu-shenanigans-codes"]
 HOWTO_NEW = ["how-to-turn-on-voice-chat-roblox","add-trusted-friends-roblox","how-to-appear-offline-roblox","roblox-parental-controls-guide","redeem-roblox-gift-card","check-roblox-account-status","equip-multiple-accessories-roblox","how-to-emote-roblox","throw-food-for-animals-guide","99-nights-in-the-forest-guide"]
 MORE_CODES = ["anime-adventures-codes","forsaken-codes","dandys-world-codes","fisch-codes","survive-your-ideas-codes","fish-it-codes","violence-district-codes","dont-splash-codes","steal-a-brainrot-codes","catalog-avatar-creator-codes","the-strongest-battlegrounds-codes"]
@@ -431,7 +429,7 @@ more_feat = "".join(card(BY[s]) for s in MORE_CODES)
 howto_feat = "".join(card(BY[s]) for s in HOWTO_NEW)
 GENERAL_NEW = ["roblox-codes-november-2026","how-to-get-free-items-in-roblox","how-to-level-up-fast-in-roblox","best-roblox-pets-2026","roblox-avatar-ideas","how-to-report-a-player-on-roblox","roblox-gift-card-guide","how-to-join-a-roblox-group","roblox-age-verification","how-to-change-roblox-username"]
 general_feat = "".join(card(BY[s]) for s in GENERAL_NEW)
-NEW_CODES = ["dress-to-impress-codes","king-legacy-codes","arise-crossover-codes","blade-ball-codes","bee-swarm-simulator-codes","anime-vanguards-codes","volleyball-legends-codes","grow-a-garden-codes","basketball-zero-codes","driving-empire-codes"]
+NEW_CODES = ["the-forge-codes","dress-to-impress-codes","king-legacy-codes","arise-crossover-codes","blade-ball-codes","bee-swarm-simulator-codes","anime-vanguards-codes","volleyball-legends-codes","grow-a-garden-codes","basketball-zero-codes","driving-empire-codes"]
 newcodes_feat = "".join(card(BY[s]) for s in NEW_CODES if s in BY)
 help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW+NEW_CODES+FORGE][:4])
 cats_html = "".join(f'<a href="{v[0]}">{v[1]}<small>{sum(1 for g in guides if g["cat"]==k)} guides</small></a>' for k,v in CATS.items())
@@ -449,8 +447,7 @@ idx_body = f"""<section class="hero"><div class="wrap">{{CRUMBS}}
 <section aria-labelledby="gen-h"><div class="sec-h"><h2 id="gen-h">Essential Roblox Guides</h2><a href="guides.html">All guides →</a></div><p class="small">Every Roblox code in one hub, plus free items, leveling, pets, avatar ideas, reporting, gift cards, Communities, age checks and username changes. Checked against official Roblox pages on November 11, 2026.</p><div class="grid">{general_feat}</div></section>
 <section aria-labelledby="top-h"><div class="sec-h"><h2 id="top-h">Codes for the Top 10 Roblox Games</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The ten most-played Roblox games by live player count on November 11, 2026, with every working code checked against at least two sources. Games without a code system say so.</p><div class="grid">{top_feat}</div></section>
 <section aria-labelledby="more-h"><div class="sec-h"><h2 id="more-h">More Roblox Game Codes</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The next most-played Roblox games (ranks 11–20 by live players on November 11, 2026, plus Anime Adventures), each checked against at least two sources. Games with no codes say so.</p><div class="grid">{more_feat}</div></section>
-<section aria-labelledby="nc-h"><div class="sec-h"><h2 id="nc-h">New Codes: Dress To Impress, King Legacy and More</h2><a href="roblox-codes-november-2026.html">Codes hub →</a></div><p class="small">Ten more high-traffic Roblox games with active codes, each checked against at least two sources on November 11, 2026.</p><div class="grid">{newcodes_feat}</div></section>
-<section aria-labelledby="forge-h"><div class="sec-h"><h2 id="forge-h">The Forge Guides &amp; Codes</h2><a href="tag-the-forge.html">All The Forge guides →</a></div><p class="small">Every Fridge video and Short about The Forge, grouped by topic, with written steps checked against the Forge Wiki on November 11, 2026. Start with <a href="the-forge-codes.html">The Forge codes</a> for free race rerolls.</p><div class="grid">{forge_feat}</div></section>
+<section aria-labelledby="nc-h"><div class="sec-h"><h2 id="nc-h">New Codes: The Forge, Dress To Impress and More</h2><a href="roblox-codes-november-2026.html">Codes hub →</a></div><p class="small">More high-traffic Roblox games with active codes, including The Forge, Dress To Impress and King Legacy, each checked against at least two sources on November 11, 2026.</p><div class="grid">{newcodes_feat}</div></section>
 <section aria-labelledby="howto-h"><div class="sec-h"><h2 id="howto-h">New Roblox How-To Guides</h2><a href="tag-guides.html">All guides →</a></div><div class="grid">{howto_feat}</div></section>
 <section aria-labelledby="cat-h"><h2 id="cat-h">Browse by Category</h2><div class="cats">{cats_html}</div></section>
 <section class="intro" aria-labelledby="ch-h"><div><h2 id="ch-h">Welcome to the Fridge Content Hub</h2>
@@ -485,7 +482,6 @@ TAGMETA = {
  "Codes": ("Roblox Codes November 2026 – Working Codes | Fridge", "Working Roblox codes for November 2026: Anime Dice rerolls, Huzz Valley free spins and the truth about Steal an Egg codes. Copy them and redeem today!"),
  "Guides": ("Roblox Game Guides & Walkthroughs | Fridge", "Step-by-step Roblox guides from Fridge: how to play Scrooms, every Scrooms statue, and all 9 Monkey Escape shards. Pick a walkthrough and start now!"),
  "Events": ("Roblox Event Guides 2026 – Hollow & Halloween | Fridge", "Roblox event guides for 2026: the Hollow event recap, Steal an Egg Halloween Dimension, Candy Corn farming and the Phantom Express. Catch up on it all!"),
- "The Forge": ("The Forge Roblox Guides & Codes (2026) | Fridge", "Every Fridge guide for The Forge on Roblox: working codes, race rerolls, Archangel, pickaxes, Galaxite, Volcanic Depths and money farming, with videos."),
  "Tips": ("Roblox Tips: Speed, XP & Racing Tricks | Fridge", "Quick Roblox tips from Fridge: how to get speed in Steal an Egg, level up fast in Scrooms, and win every race. Use these tricks to progress faster today!"),
 }
 for k,(p,n,intro) in CATS.items():
@@ -501,6 +497,23 @@ for k,(p,n,intro) in CATS.items():
 <p style="margin-top:28px">More categories: {others} · <a href="guides.html">All guides</a></p>
 </div>"""
     write(p, page(p, t, d, [("Home","index.html"),(n,p)], b, active=p, ld=ld))
+
+# Lightweight redirect so old /tag-the-forge.html links do not 404. Excluded from the sitemap.
+write("tag-the-forge.html", f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Forge Guides moved | Fridge</title>
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="{BASE}tag-guides.html">
+<meta http-equiv="refresh" content="0;url=tag-guides.html">
+</head>
+<body>
+<p>The Forge guides now live under <a href="tag-guides.html">Roblox Guides</a>. The Forge codes are under <a href="tag-codes.html">Roblox Codes</a> and in the <a href="roblox-codes-november-2026.html">codes hub</a>.</p>
+</body>
+</html>
+""")
 
 # ---------- about ----------
 ab_ld = [{"@context":"https://schema.org","@type":"AboutPage","name":"About Fridge","url":BASE+"about.html","mainEntity":dict(ORG, description="Roblox YouTube channel making codes, guides and event videos.")}]
