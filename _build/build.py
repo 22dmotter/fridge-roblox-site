@@ -4,13 +4,13 @@ OUT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "
 SITE = "Fridge"
 YT = "https://www.youtube.com/@Fridgetherealone"
 SUB = YT + "?sub_confirmation=1"
-TODAY = "2026-11-10"
-MOD_HUMAN = "November 10, 2026"
+TODAY = "2026-11-11"
+MOD_HUMAN = "November 11, 2026"
 CATS = {
- "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 (Steal an Egg, Anime Dice, Huzz Valley), checked against live sources with every Fridge upload."),
- "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: Scrooms and +1 Speed Monkey Escape, plus Bloxstrap, account recovery, thumbnails, joining players and account deletion."),
+ "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 10 games by players (Steal an Egg, Blox Fruits, RIVALS, 99 Nights and more) plus Anime Dice and Huzz Valley. Each code is checked against at least two live sources, and games with no codes say so."),
+ "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, plus Scrooms, Bloxstrap, account recovery and more."),
  "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: the Hollow 2026, the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
- "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: Steal an Egg Speed, Scrooms leveling, plus safe ways to unlock FPS, fix lag, AFK, run multiple accounts and the truth about shaders."),
+ "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
 }
 def esc(s): return html.escape(s, quote=True)
 
@@ -102,6 +102,7 @@ article.post{min-width:0}article.post h1{font-size:clamp(1.7rem,5vw,2.5rem);marg
 .post ol.steps{counter-reset:s;list-style:none;padding:0}.post ol.steps>li{counter-increment:s;position:relative;padding:10px 12px 10px 50px;margin:8px 0;background:var(--bg2);border:1px solid var(--line);border-radius:10px}
 .post ol.steps>li:before{content:counter(s);position:absolute;left:12px;top:10px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:var(--ink);font-weight:800;text-align:center;line-height:26px;font-size:.85rem}
 .callout{border-left:4px solid var(--acc);background:rgba(255,176,32,.08);padding:12px 16px;border-radius:0 10px 10px 0;margin:18px 0}
+.chapters{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:14px 18px;margin:18px 0}.chapters h2{margin:0 0 4px;font-size:1.2rem}.chapters ol{margin:8px 0 0;padding-left:22px}.chapters .ts{display:inline-block;min-width:3.2em;font-variant-numeric:tabular-nums;color:var(--acc);font-weight:700}
 .callout.warn{border-left-color:#ff6b3d;background:rgba(255,107,61,.10)}.callout.warn strong:first-child{color:#ff9a75}.side-box ul{margin:0;padding-left:20px}
 .table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px}
 table{border-collapse:collapse;width:100%;font-size:.95rem}caption{text-align:left;padding:10px 12px;color:var(--mut);font-size:.85rem;caption-side:top}
@@ -289,13 +290,18 @@ for g in guides:
     for i,(vid,t) in enumerate(g["videos"]):
         body = body.replace("{VIDEO%d}"%i, video_embed(vid,t,g["game"]))
     body = body.replace("{VIDEO_PLACEHOLDER}", PLACEHOLDER)
+    if g.get("chapters"):
+        ch = "".join(f'<li><span class="ts">{esc(ts)}</span> <a href="#{an}">{esc(t)}</a></li>' for ts,t,an in g["chapters"])
+        body = body.replace("{CHAPTERS}", f"""<!-- VIDEO CHAPTERS: suggested YouTube chapter timestamps for the matching Fridge video. Each chapter maps to the linked section below; paste them into the video description as "0:00 Title" lines. -->
+<section class="chapters" aria-labelledby="chap-h"><h2 id="chap-h">Video Chapters</h2><p class="small">Planned segments for the matching Fridge video. Each one jumps to the section it covers, so you can read along or skip ahead.</p><ol>{ch}</ol></section>""")
+    body = body.replace("{CHAPTERS}", "")
     h2s = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', body)
     toc = "".join(f'<li><a href="#{i}">{re.sub("<[^>]+>","",t)}</a></li>' for i,t in h2s) + '<li><a href="#faq">FAQ</a></li>'
     faq_html = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q,a in g["faq"])
     rel = [BY[s] for s in g["related"] if s in BY][:3]
     sources_html = ""
     if g.get("sources"):
-        sources_html = '<section class="side-box" aria-labelledby="src-h" style="margin-top:28px"><h2 id="src-h" style="margin-top:0">Official sources</h2><ul>' + "".join(f'<li><a href="{u}" rel="noopener" target="_blank">{esc(n)}</a></li>' for n,u in g["sources"]) + '</ul></section>'
+        sources_html = '<section class="side-box" aria-labelledby="src-h" style="margin-top:28px"><h2 id="src-h" style="margin-top:0">Sources</h2><ul>' + "".join(f'<li><a href="{u}" rel="noopener" target="_blank">{esc(n)}</a></li>' for n,u in g["sources"]) + '</ul></section>'
     rel_html = "".join(card(r) for r in rel)
     catp, catn, _ = CATS[g["cat"]]
     items = [("Home","index.html"),(catn,catp),(g["h1"].split(":")[0], g["slug"]+".html")]
@@ -345,29 +351,35 @@ for g in guides:
 # ---------- index ----------
 feat = "".join(card(g) for g in guides[:6])
 game_feat = "".join(card(g) for g in [x for x in guides if x["videos"]][:6])
-help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"]][6:10])
+TOP10_CODES = ["steal-an-egg-codes","murder-mystery-2-codes","brookhaven-codes","throw-food-for-animals-codes","blox-fruits-codes","99-nights-in-the-forest-codes","rivals-codes","adopt-me-codes","break-and-steal-an-egg-codes","jujutsu-shenanigans-codes"]
+HOWTO_NEW = ["how-to-turn-on-voice-chat-roblox","add-trusted-friends-roblox","how-to-appear-offline-roblox","roblox-parental-controls-guide","redeem-roblox-gift-card","check-roblox-account-status","equip-multiple-accessories-roblox","how-to-emote-roblox","throw-food-for-animals-guide","99-nights-in-the-forest-guide"]
+top_feat = "".join(card(BY[s]) for s in TOP10_CODES)
+howto_feat = "".join(card(BY[s]) for s in HOWTO_NEW)
+help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW][:4])
 cats_html = "".join(f'<a href="{v[0]}">{v[1]}<small>{sum(1 for g in guides if g["cat"]==k)} guides</small></a>' for k,v in CATS.items())
 idx_ld = [{"@context":"https://schema.org","@type":"WebSite","name":"Fridge Guides","url":BASE,"potentialAction":{"@type":"SearchAction","target":BASE+"guides.html?q={search_term_string}","query-input":"required name=search_term_string"}},
           dict({"@context":"https://schema.org"}, **ORG)]
 idx_body = f"""<section class="hero"><div class="wrap">{{CRUMBS}}
 <p class="tag">Roblox codes · guides · events</p>
 <h1>Roblox Codes &amp; Guides by <b>Fridge</b></h1>
-<p>Working Roblox codes, beginner guides and event walkthroughs for Steal an Egg, Scrooms, Anime Dice, the Hollow event and more. Game guides match Fridge's YouTube videos, and evergreen Roblox help guides cover FPS, lag, Bloxstrap and account safety.</p>
+<p>Working Roblox codes for the top 10 games, beginner guides and event walkthroughs for Steal an Egg, Blox Fruits, RIVALS, Scrooms, Anime Dice and more, plus how-tos for voice chat, Trusted Friends and parental controls. Game guides match Fridge's YouTube videos, and evergreen Roblox help guides cover FPS, lag, Bloxstrap and account safety.</p>
 <a class="btn" href="guides.html">Browse all guides</a><a class="btn ghost" href="{SUB}" rel="noopener" target="_blank">Subscribe on YouTube</a>
 </div></section>
 <div class="wrap">
 <section aria-labelledby="latest-h"><div class="sec-h"><h2 id="latest-h">Latest Roblox Guides</h2><a href="guides.html">View all →</a></div><div class="grid">{feat}</div></section>
 <section aria-labelledby="game-h"><div class="sec-h"><h2 id="game-h">Latest Game Codes &amp; Guides</h2><a href="tag-codes.html">All codes →</a></div><div class="grid">{game_feat}</div></section>
+<section aria-labelledby="top-h"><div class="sec-h"><h2 id="top-h">Codes for the Top 10 Roblox Games</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The ten most-played Roblox games by live player count on November 11, 2026, with every working code checked against at least two sources. Games without a code system say so.</p><div class="grid">{top_feat}</div></section>
+<section aria-labelledby="howto-h"><div class="sec-h"><h2 id="howto-h">New Roblox How-To Guides</h2><a href="tag-guides.html">All guides →</a></div><div class="grid">{howto_feat}</div></section>
 <section aria-labelledby="cat-h"><h2 id="cat-h">Browse by Category</h2><div class="cats">{cats_html}</div></section>
 <section class="intro" aria-labelledby="ch-h"><div><h2 id="ch-h">Welcome to the Fridge Content Hub</h2>
 <p>Fridge is a Roblox YouTube channel focused on fast, no-nonsense guides: the newest codes, the quickest ways to level up, and full walkthroughs for big events like the Roblox Hollow. This site is the written companion to the channel, so you can copy codes, check tables and skim steps without scrubbing through a video.</p>
 <p>Start with the <a href="steal-an-egg-speed-guide.html">Steal an Egg speed guide</a>, the <a href="scrooms-beginners-guide.html">Scrooms beginner's guide</a> or the latest <a href="anime-dice-codes.html">Anime Dice codes</a>.</p></div>
 <div><a class="btn" href="{YT}/videos" rel="noopener" target="_blank">Watch Fridge's videos</a><a class="btn ghost" href="about.html">About Fridge</a></div></section>
-<section aria-labelledby="pop-h"><h2 id="pop-h">Popular Right Now</h2><div class="grid">{"".join(card(BY[s]) for s in ["steal-an-egg-codes","roblox-hollow-event-guide","huzz-valley-codes"])}</div></section>
+<section aria-labelledby="pop-h"><h2 id="pop-h">Popular Right Now</h2><div class="grid">{"".join(card(BY[s]) for s in ["steal-an-egg-codes","blox-fruits-codes","throw-food-for-animals-guide"])}</div></section>
 <section aria-labelledby="help-h"><h2 id="help-h">More Roblox Help Guides</h2><div class="grid">{help_feat}</div></section>
 </div>"""
 write("index.html", page("index.html", "Fridge – Roblox Codes & Guides Hub (November 2026)",
- "Fridge's Roblox hub: working codes for Anime Dice and Huzz Valley, Steal an Egg speed tips, Scrooms guides and Hollow event coverage. Find your guide now!",
+ "Fridge's Roblox hub: working codes for the top 10 games, Steal an Egg and Scrooms guides, plus voice chat, Trusted Friends and parental control help. Dive in!",
  [("Home","index.html")], idx_body, active="index.html", ld=idx_ld))
 
 # ---------- guides listing ----------

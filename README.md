@@ -46,6 +46,18 @@ A fast, dark-themed (amber / yellow-orange accent: `#FFB020`, hover `#E8890C`), 
 - `join-someone-roblox-without-friends.html` – How to join someone on Roblox without being friends
 - `delete-roblox-account.html` – How to delete a Roblox account
 
+### Top 10 Roblox games codes pages (by live CCU, Nov 11 2026; `_build/g/c0*.py`)
+- `blox-fruits-codes.html`, `rivals-codes.html`, `99-nights-in-the-forest-codes.html`, `jujutsu-shenanigans-codes.html` – working codes (≥2 agreeing trackers or official source)
+- `murder-mystery-2-codes.html`, `adopt-me-codes.html` – code box exists but nothing confirmed working
+- `brookhaven-codes.html`, `throw-food-for-animals-codes.html`, `break-and-steal-an-egg-codes.html` – no code system (explained honestly, free rewards listed instead)
+- `steal-an-egg-codes.html` (#1 by CCU) was refreshed rather than duplicated
+
+### Video-ready Roblox how-to guides (`_build/g/t*.py`)
+- `how-to-turn-on-voice-chat-roblox.html`, `how-to-appear-offline-roblox.html`, `add-trusted-friends-roblox.html`, `check-roblox-account-status.html`, `equip-multiple-accessories-roblox.html`, `redeem-roblox-gift-card.html`, `roblox-parental-controls-guide.html`, `how-to-emote-roblox.html`, `throw-food-for-animals-guide.html`, `99-nights-in-the-forest-guide.html`
+
+### Video chapters
+Each guide can define `chapters=[("0:00","Title","section-id"), ...]` and put `{CHAPTERS}` in its body. The build renders a "Video Chapters" list linking to each numbered section, plus an HTML comment telling Daniel to paste the same lines into the YouTube description. When the matching video is uploaded, add its ID to `videos=[...]`, swap `{VIDEO_PLACEHOLDER}` for `{VIDEO0}`, and adjust the timestamps to the real video.
+
 **Adding a video to an evergreen guide:** in its `_build/g/e*.py` file, set `videos=[("VIDEO_ID", "Video title")]` and replace `{VIDEO_PLACEHOLDER}` in the body with `{VIDEO0}`, then rebuild. The card thumbnail and `og:image` switch to the YouTube thumbnail automatically. These guides also have a `sources=[...]` list rendered as an "Official sources" box; re-check those pages whenever Roblox or Bloxstrap change something.
 
 Every page has: a keyword-first `<title>` under 60 characters, a 140–160 character meta description, canonical URL, Open Graph + Twitter card tags, breadcrumbs with `BreadcrumbList` JSON-LD, and one `<h1>`. Guide pages also have `BlogPosting` (with `VideoObject`) and `FAQPage` JSON-LD, a visible "Last updated" date, a table of contents, numbered steps, tables, a FAQ, and a related-guides section.
