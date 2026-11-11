@@ -9,7 +9,7 @@ MOD_HUMAN = "November 11, 2026"
 CATS = {
  "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus The Forge, Dress To Impress, King Legacy, Blade Ball, Bee Swarm Simulator, Arise Crossover, Anime Dice, Huzz Valley and more, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
  "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus The Forge (races, pickaxes and money), Scrooms, Bloxstrap, account recovery and more."),
- "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: the Hollow 2026, the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
+ "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: a November 2026 leak about a Twin Atlas test place named Slippers that trackers tie to a possible Christmas or winter event, the Hollow 2026 recap, and the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
 "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, avatar outfit ideas, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
 }
 def esc(s): return html.escape(s, quote=True)
@@ -54,7 +54,7 @@ def make_cover(g):
     im.save(os.path.join(d, g["slug"]+".png"), optimize=True)
 
 for _g in guides:
-    if not _g["videos"]: make_cover(_g)
+    if not _g["videos"] and not _g.get("cover"): make_cover(_g)
 
 # ---------- CSS ----------
 CSS = r"""
@@ -65,6 +65,7 @@ CSS = r"""
 .short-ph strong{color:var(--txt)}.short-ic{width:56px;height:56px;border-radius:14px;background:#FF0000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
 .shorts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;margin:18px 0}.shorts-grid .short-slot{margin:0;max-width:none}
 .short-slot iframe{aspect-ratio:9/16;width:100%;height:auto;border:0;border-radius:18px}.short-slot figcaption{text-align:center;margin-top:6px}
+figure.shot{margin:20px 0;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}figure.shot img{width:100%;height:auto;display:block;background:#000}figure.shot figcaption{padding:10px 14px;font-size:.85rem;color:var(--mut);line-height:1.45}figure.shot figcaption a{font-weight:700}
 :root{--bg:#0a0f14;--bg2:#101821;--card:#131d28;--line:#1f2e3d;--txt:#e6eef5;--mut:#9fb3c4;--acc:#ffb020;--acc2:#ffc966;--accd:#e8890c;--acc3:#f5a623;--ink:#1a1000;--r:14px;--max:1160px}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif}
@@ -307,8 +308,10 @@ def thumb(vid): return f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
 def g_img(g, absolute=False):
     if g["videos"]: return thumb(g["videos"][0][0])
     if g.get("shorts"): return thumb(g["shorts"][0][0])
+    if g.get("cover"): return (BASE if absolute else "") + g["cover"]
     return (BASE if absolute else "") + f"assets/thumbs/{g['slug']}.png"
 def g_img_alt(g):
+    if g.get("image_alt"): return g["image_alt"]
     if g["videos"]: return f"{g['game']} guide thumbnail: {g['videos'][0][1]}"
     if g.get("shorts"): return f"{g['game']} guide thumbnail from Fridge's Short: {g['shorts'][0][1]}"
     return f"Fridge guide cover image: {g['h1']}"
@@ -454,7 +457,9 @@ for g in guides:
         density=round(100*occ*len(kw.split())/len(words),2), kw_first100=kw in first100, body_links=links, h1=g["h1"], title=g["title"], sec=g["kw_secondary"]))
 
 # ---------- index ----------
-feat = "".join(card(g) for g in guides[:6])
+NEW_EVENT = "roblox-christmas-event-2026-leak"
+feat_guides = ([BY[NEW_EVENT]] if NEW_EVENT in BY else []) + [g for g in guides if g["slug"] != NEW_EVENT]
+feat = "".join(card(g) for g in feat_guides[:6])
 game_feat = "".join(card(g) for g in [x for x in guides if x["videos"] and x["game"]!="The Forge"][:6])
 FORGE = [x["slug"] for x in sorted([x for x in guides if x["game"]=="The Forge"], key=lambda x:x.get("forge_order",99))]
 TOP10_CODES = ["steal-an-egg-codes","murder-mystery-2-codes","brookhaven-codes","throw-food-for-animals-codes","blox-fruits-codes","99-nights-in-the-forest-codes","rivals-codes","adopt-me-codes","break-and-steal-an-egg-codes","jujutsu-shenanigans-codes"]
@@ -517,7 +522,7 @@ write("guides.html", page("guides.html", "All Roblox Guides & Codes (2026) | Fri
 TAGMETA = {
  "Codes": ("Roblox Codes November 2026 – Working Codes | Fridge", "Working Roblox codes for November 2026: Anime Dice rerolls, Huzz Valley free spins and the truth about Steal an Egg codes. Copy them and redeem today!"),
  "Guides": ("Roblox Game Guides & Walkthroughs | Fridge", "Step-by-step Roblox guides from Fridge: how to play Scrooms, every Scrooms statue, and all 9 Monkey Escape shards. Pick a walkthrough and start now!"),
- "Events": ("Roblox Event Guides 2026 – Hollow & Halloween | Fridge", "Roblox event guides for 2026: the Hollow event recap, Steal an Egg Halloween Dimension, Candy Corn farming and the Phantom Express. Catch up on it all!"),
+ "Events": ("Roblox Event Guides 2026 – Hollow & Christmas Leak | Fridge", "Roblox event guides for 2026: the Slippers Christmas leak, the Hollow recap, and Steal an Egg Halloween Dimension guides. See what is confirmed!"),
  "Tips": ("Roblox Tips: Speed, XP & Racing Tricks | Fridge", "Quick Roblox tips from Fridge: how to get speed in Steal an Egg, level up fast in Scrooms, and win every race. Use these tricks to progress faster today!"),
 }
 for k,(p,n,intro) in CATS.items():
