@@ -60,6 +60,15 @@ A fast, dark-themed (amber / yellow-orange accent: `#FFB020`, hover `#E8890C`), 
 ### Video-ready Roblox how-to guides (`_build/g/t*.py`)
 - `how-to-turn-on-voice-chat-roblox.html`, `how-to-appear-offline-roblox.html`, `add-trusted-friends-roblox.html`, `check-roblox-account-status.html`, `equip-multiple-accessories-roblox.html`, `redeem-roblox-gift-card.html`, `roblox-parental-controls-guide.html`, `how-to-emote-roblox.html`, `throw-food-for-animals-guide.html`, `99-nights-in-the-forest-guide.html`
 
+### General Roblox guides (`_build/g/n01`–`n10`, Nov 11 2026)
+- `roblox-codes-november-2026.html` – codes hub; its table is generated from `CODE_COUNTS` in `build.py` via the `{CODES_TABLE}` placeholder (update the count there whenever a codes page changes)
+- `how-to-get-free-items-in-roblox.html`, `how-to-level-up-fast-in-roblox.html`, `best-roblox-pets-2026.html`, `roblox-avatar-ideas.html`, `how-to-report-a-player-on-roblox.html`, `roblox-gift-card-guide.html` (buying/value/scams; redeeming stays in `redeem-roblox-gift-card.html`), `how-to-join-a-roblox-group.html`, `roblox-age-verification.html`, `how-to-change-roblox-username.html`
+- Each has a 9:16 YouTube Shorts slot (`{SHORT_PLACEHOLDER}`; see the HTML comment for how to swap in a Short ID) and HowTo schema via the optional `howto=(name, [(step, text, anchor)])` field
+
+### Site-wide visuals
+- Animated background: `.bg-fx` (10 drifting amber squares/orbs, opacity 0.04–0.08, `position:fixed`, `pointer-events:none`, transform/opacity only, 44–88 s, 5 elements under 640px, static under `prefers-reduced-motion`)
+- Subscribe buttons use `.yt-sub`: YouTube red #FF0000 with bold white 1.2rem text (large-text AA, 4.0:1), hover #CC0000; inline subscribe links use #CC0000 (5.9:1), hover #A30000; visible focus ring
+
 ### Video chapters
 Each guide can define `chapters=[("0:00","Title","section-id"), ...]` and put `{CHAPTERS}` in its body. The build renders a "Video Chapters" list linking to each numbered section, plus an HTML comment telling Daniel to paste the same lines into the YouTube description. When the matching video is uploaded, add its ID to `videos=[...]`, swap `{VIDEO_PLACEHOLDER}` for `{VIDEO0}`, and adjust the timestamps to the real video.
 

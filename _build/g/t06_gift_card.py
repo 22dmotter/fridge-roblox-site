@@ -10,7 +10,7 @@ related=["roblox-parental-controls-guide","equip-multiple-accessories-roblox","r
 chapters=[("0:00","Intro: what a gift card gives you","what"),("0:20","Step 1: go to roblox.com/redeem","redeem"),("0:50","Step 2: enter the PIN","redeem"),("1:10","Step 3: turn Credit into Robux","credit"),("1:40","Mobile and console","devices"),("2:10","Invalid PIN fixes","fixes")],
 sources=[("Roblox Support: How to Redeem Roblox Gift Cards","https://en.help.roblox.com/hc/en-us/articles/115005566223-How-to-Redeem-Roblox-Gift-Cards"),("Roblox Support: Roblox Credit","https://en.help.roblox.com/hc/en-us/articles/360029697131"),("Roblox Redeem page","https://www.roblox.com/redeem")],
 body="""
-<p class="lead">This guide shows <strong>how to redeem a Roblox gift card</strong> the official way in 2026. Most cards are redeemed in a web browser at <strong>roblox.com/redeem</strong>, and the value usually lands as <strong>Roblox Credit</strong> that you then turn into Robux or a Premium subscription. The steps below follow Roblox Support.</p>
+<p class="lead">This guide shows <strong>how to redeem a Roblox gift card</strong> the official way in 2026. Most cards are redeemed in a web browser at <strong>roblox.com/redeem</strong>, and the value usually lands as <strong>Roblox Credit</strong> that you then turn into Robux or a Roblox Plus (formerly Premium) subscription. The steps below follow Roblox Support.</p>
 {CHAPTERS}
 {VIDEO_PLACEHOLDER}
 
@@ -38,7 +38,7 @@ body="""
 <ol class="steps">
 <li>Stay on the website (Credit only works in a browser).</li>
 <li>Click <strong>Get Robux</strong> and choose a package. You'll see Roblox Credit as a payment option, or use <strong>Convert Credit to Robux</strong> on the Redeem page.</li>
-<li>Or use Credit to subscribe to <strong>Roblox Premium</strong> on the website.</li>
+<li>Or use Credit to subscribe to <strong>Roblox Plus</strong> (formerly Roblox Premium) on the website.</li>
 <li>Check your Credit balance on the Redeem page or in <strong>Billing Settings</strong>.</li>
 </ol>
 <div class="callout"><strong>Heads up:</strong> Roblox Support says you can't split one purchase between Credit and another payment method. If your balance is short, pick a smaller package.</div>
@@ -68,7 +68,8 @@ body="""
 <li>Sign in to the right account (check the username at the top of the page).</li>
 <li>Use a web browser at roblox.com/redeem, not a console.</li>
 <li>Type the PIN carefully, swapping look-alike characters if it fails.</li>
-<li>Decide whether you want Robux or Premium before you spend the Credit.</li>
+<li>Buying a card? Our <a href="roblox-gift-card-guide.html">buyer's guide</a> covers where to buy, value and scams.</li>
+<li>Decide whether you want Robux or Roblox Plus before you spend the Credit.</li>
 </ol>
 """,
 faq=[

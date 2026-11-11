@@ -7,10 +7,10 @@ SUB = YT + "?sub_confirmation=1"
 TODAY = "2026-11-11"
 MOD_HUMAN = "November 11, 2026"
 CATS = {
- "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus Anime Dice and Huzz Valley. Each code is checked against at least two live sources, and games with no codes say so."),
- "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, plus Scrooms, Bloxstrap, account recovery and more."),
+ "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus Anime Dice and Huzz Valley, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
+ "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus Scrooms, Bloxstrap, account recovery and more."),
  "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: the Hollow 2026, the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
- "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
+ "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, avatar outfit ideas, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
 }
 def esc(s): return html.escape(s, quote=True)
 
@@ -57,6 +57,29 @@ for _g in guides:
 
 # ---------- CSS ----------
 CSS = r"""
+.bg-fx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.bg-fx i{position:absolute;display:block;width:var(--s,60px);height:var(--s,60px);border:1px solid rgba(255,176,32,.9);background:rgba(255,176,32,.35);border-radius:6px;opacity:.06;will-change:transform;animation:bgdrift var(--d,60s) ease-in-out infinite alternate}
+.bg-fx i:nth-child(1){left:6%;top:12%;--s:46px;--d:52s}
+.bg-fx i:nth-child(2){left:78%;top:8%;--s:72px;--d:70s;animation-delay:-12s}
+.bg-fx i:nth-child(3){left:38%;top:62%;--s:34px;--d:44s;animation-delay:-20s}
+.bg-fx i:nth-child(4){left:88%;top:58%;--s:56px;--d:84s;animation-delay:-35s}
+.bg-fx i:nth-child(5){left:18%;top:82%;--s:64px;--d:66s;animation-delay:-8s;border-radius:50%}
+.bg-fx i:nth-child(6){left:58%;top:24%;--s:28px;--d:48s;animation-delay:-26s}
+.bg-fx i:nth-child(7){left:4%;top:46%;--s:40px;--d:76s;animation-delay:-40s;border-radius:50%}
+.bg-fx i:nth-child(8){left:68%;top:86%;--s:50px;--d:58s;animation-delay:-16s}
+.bg-fx i:nth-child(9){left:46%;top:4%;--s:38px;--d:88s;animation-delay:-50s}
+.bg-fx i:nth-child(10){left:28%;top:34%;--s:24px;--d:62s;animation-delay:-30s;border-radius:50%}
+@keyframes bgdrift{0%{transform:translate3d(0,0,0) rotate(0deg);opacity:.04}50%{opacity:.08}100%{transform:translate3d(60px,-90px,0) rotate(180deg);opacity:.05}}
+@media (max-width:640px){.bg-fx i:nth-child(n+6){display:none}}
+@media (prefers-reduced-motion:reduce){.bg-fx i{animation:none;opacity:.05;transform:rotate(20deg)}}
+.yt-sub{background:#FF0000;color:#fff!important;font-weight:800;text-decoration:none;border-radius:999px}
+a.yt-sub:not(.btn){display:inline-block;background:#CC0000;padding:2px 12px;margin:2px 0}
+.btn.yt-sub{background:#FF0000;color:#fff;border:0;font-size:1.2rem;padding:10px 22px}
+.yt-sub:hover,.btn.yt-sub:hover{background:#CC0000;color:#fff}a.yt-sub:not(.btn):hover{background:#A30000}
+.yt-sub:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px #CC0000}
+.short-slot{margin:22px auto;max-width:300px}.short-ph{aspect-ratio:9/16;width:100%;border:2px dashed var(--acc);border-radius:18px;background:var(--bg2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:18px;color:var(--mut)}
+.short-ph strong{color:var(--txt)}.short-ic{width:56px;height:56px;border-radius:14px;background:#FF0000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.short-slot iframe{aspect-ratio:9/16;width:100%;height:auto;border:0;border-radius:18px}.short-slot figcaption{text-align:center;margin-top:6px}
 :root{--bg:#0a0f14;--bg2:#101821;--card:#131d28;--line:#1f2e3d;--txt:#e6eef5;--mut:#9fb3c4;--acc:#ffb020;--acc2:#ffc966;--accd:#e8890c;--acc3:#f5a623;--ink:#1a1000;--r:14px;--max:1160px}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif}
@@ -191,6 +214,7 @@ def head(title, desc, path, og_type="website", image=None, image_alt=None, extra
 {lds}
 </head>
 <body>
+<div class="bg-fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <a class="skip" href="#content">Skip to content</a>
 """
 
@@ -210,7 +234,7 @@ def footer(prefix=""):
     cats = "".join(f'<li><a href="{prefix}{v[0]}">{v[1]}</a></li>' for v in CATS.values())
     return f"""</main>
 <footer class="site"><div class="wrap cols">
-<div><h2>Fridge</h2><p>Roblox codes, guides and event coverage from the Fridge YouTube channel. Guides are updated with new videos and re-checked for accuracy.</p><p><a class="btn" href="{SUB}" rel="noopener" target="_blank">Subscribe on YouTube</a></p></div>
+<div><h2>Fridge</h2><p>Roblox codes, guides and event coverage from the Fridge YouTube channel. Guides are updated with new videos and re-checked for accuracy.</p><p><a class="btn yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe on YouTube</a></p></div>
 <div><h2>Latest guides</h2><ul>{latest}</ul></div>
 <div><h2>Categories</h2><ul>{cats}<li><a href="{prefix}about.html">About Fridge</a></li><li><a href="{prefix}sitemap.xml">Sitemap</a></li></ul></div>
 </div><div class="wrap"><p class="small">© 2026 Fridge (@Fridgetherealone). Not affiliated with Roblox Corporation or any game developer. Game names belong to their owners.</p></div></footer>
@@ -252,8 +276,15 @@ PLACEHOLDER = """<!-- YOUTUBE EMBED PLACEHOLDER: no matching Fridge video yet.
      When a video exists, add ("VIDEO_ID", "Video title") to this guide's videos=[...] list in _build/g/
      and replace {VIDEO_PLACEHOLDER} in the body with {VIDEO0}, then run python3 _build/build.py.
      Raw HTML alternative: copy any <div class="yt" data-id="VIDEO_ID_HERE"> block from another guide. -->
-<div class="callout"><strong>Video coming soon:</strong> Fridge hasn't made a video for this guide yet. Subscribe on <a href="https://www.youtube.com/@Fridgetherealone?sub_confirmation=1" rel="noopener" target="_blank">YouTube</a> to catch it when it drops.</div>
+<div class="callout"><strong>Video coming soon:</strong> Fridge hasn't made a video for this guide yet. <a class="yt-sub" href="https://www.youtube.com/@Fridgetherealone?sub_confirmation=1" rel="noopener" target="_blank">Subscribe on YouTube</a> to catch it when it drops.</div>
 <!-- /YOUTUBE EMBED PLACEHOLDER -->"""
+
+SHORT_PLACEHOLDER = """<!-- YOUTUBE SHORTS EMBED SLOT (9:16): no matching Fridge Short yet.
+     When the Short is live, replace the inner <div class="short-ph"> with:
+     <iframe src="https://www.youtube-nocookie.com/embed/SHORT_ID_HERE" title="Fridge YouTube Short" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     (SHORT_ID_HERE = the 11-character ID from youtube.com/shorts/SHORT_ID_HERE). -->
+<figure class="short-slot" aria-label="YouTube Short coming soon"><div class="short-ph"><span class="short-ic" aria-hidden="true">▶</span><strong>Fridge Short coming soon</strong><span>A 60-second version of this guide will appear here.</span></div><figcaption class="small">Vertical video slot for the matching YouTube Short.</figcaption></figure>
+<!-- /YOUTUBE SHORTS EMBED SLOT -->"""
 
 def card(g, lvl="h3"):
     cat = g["cat"]
@@ -283,6 +314,19 @@ def page(path, title, desc, crumbs_items, body, active=None, og_type="website", 
     ld = (ld or []) + [bc_ld(crumbs_items)]
     return head(title, desc, path, og_type, image, image_alt, ld) + header(active or path) + body.replace("{CRUMBS}", bc_html(crumbs_items)) + footer()
 
+# working-code counts per codes page (from each page's verified table); None = game has no code system
+CODE_COUNTS = {"steal-an-egg-codes":None,"blox-fruits-codes":24,"rivals-codes":8,"99-nights-in-the-forest-codes":3,"jujutsu-shenanigans-codes":2,
+ "murder-mystery-2-codes":0,"adopt-me-codes":0,"brookhaven-codes":None,"throw-food-for-animals-codes":None,"break-and-steal-an-egg-codes":None,
+ "anime-adventures-codes":5,"forsaken-codes":None,"dandys-world-codes":2,"fisch-codes":2,"survive-your-ideas-codes":4,"fish-it-codes":3,
+ "violence-district-codes":None,"dont-splash-codes":0,"steal-a-brainrot-codes":1,"catalog-avatar-creator-codes":0,"the-strongest-battlegrounds-codes":None,
+ "anime-dice-codes":24,"huzz-valley-codes":4}
+def codes_table():
+    rows=[]
+    for x in sorted([x for x in guides if x["cat"]=="Codes" and x["slug"] in CODE_COUNTS], key=lambda x:(CODE_COUNTS[x["slug"]] is None, -(CODE_COUNTS[x["slug"]] or 0), x["game"].lower())):
+        c=CODE_COUNTS[x["slug"]]
+        cnt = "No code system" if c is None else (f"{c} working" if c else "0 confirmed right now")
+        rows.append(f'<tr><td>{esc(x["game"])}</td><td>{cnt}</td><td><a href="{x["slug"]}.html">{esc(x["game"])} codes</a></td></tr>')
+    return '<div class="table-wrap"><table><caption>Every Fridge codes page, sorted by working codes (checked '+MOD_HUMAN+')</caption><thead><tr><th scope="col">Game</th><th scope="col">Working codes</th><th scope="col">Page</th></tr></thead><tbody>'+"".join(rows)+'</tbody></table></div>'
 report = []
 # ---------- guide pages ----------
 for g in guides:
@@ -290,6 +334,8 @@ for g in guides:
     for i,(vid,t) in enumerate(g["videos"]):
         body = body.replace("{VIDEO%d}"%i, video_embed(vid,t,g["game"]))
     body = body.replace("{VIDEO_PLACEHOLDER}", PLACEHOLDER)
+    body = body.replace("{SHORT_PLACEHOLDER}", SHORT_PLACEHOLDER)
+    if "{CODES_TABLE}" in body: body = body.replace("{CODES_TABLE}", codes_table())
     if g.get("chapters"):
         ch = "".join(f'<li><span class="ts">{esc(ts)}</span> <a href="#{an}">{esc(t)}</a></li>' for ts,t,an in g["chapters"])
         body = body.replace("{CHAPTERS}", f"""<!-- VIDEO CHAPTERS: suggested YouTube chapter timestamps for the matching Fridge video. Each chapter maps to the linked section below; paste them into the video description as "0:00 Title" lines. -->
@@ -311,6 +357,11 @@ for g in guides:
       "articleSection":g["cat"],"keywords":", ".join([g["kw_primary"]]+g["kw_secondary"]),"about":{"@type":"VideoGame","name":g["game"],"gamePlatform":"Roblox"},
       **({} if not g["videos"] else {"video":[{"@type":"VideoObject","name":t,"embedUrl":f"https://www.youtube.com/embed/{v}","contentUrl":f"https://www.youtube.com/watch?v={v}","thumbnailUrl":thumb(v),"uploadDate":g["date"],"description":f"Fridge's Roblox video: {t}"} for v,t in g["videos"]]})}
     ld_faq = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in g["faq"]]}
+    lds_extra = [ld_post, ld_faq]
+    if g.get("howto"):
+        hn, steps = g["howto"]
+        lds_extra.append({"@context":"https://schema.org","@type":"HowTo","name":hn,"description":g["desc"],"image":g_img(g, True),
+          "step":[{"@type":"HowToStep","position":i+1,"name":n,"text":t,"url":url+"#"+a} for i,(n,t,a) in enumerate(steps)]})
     content = f"""<div class="wrap">{{CRUMBS}}
 <div class="layout">
 <article class="post">
@@ -325,7 +376,7 @@ for g in guides:
 <h2 id="faq-h">{esc(g['game'])} FAQ</h2>
 {faq_html}
 </section>
-<p class="callout">Found this helpful? <a href="{SUB}" rel="noopener" target="_blank">Subscribe to Fridge on YouTube</a> for new {esc(g['game'])} videos. {"This guide is updated with every new upload." if g["videos"] else "This guide is re-checked against official Roblox sources when things change."}</p>
+<p class="callout">Found this helpful? <a class="yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe to Fridge on YouTube</a> for new {esc(g['game'])} videos. {"This guide is updated with every new upload." if g["videos"] else "This guide is re-checked against official Roblox sources when things change."}</p>
 </article>
 <aside>
 <nav class="toc" aria-label="Table of contents"><strong>On this page</strong><ol>{toc}</ol></nav>
@@ -335,7 +386,7 @@ for g in guides:
 <section class="related" aria-labelledby="rel-h"><div class="sec-h"><h2 id="rel-h">Related Guides</h2><a href="guides.html">All guides →</a></div><div class="grid">{rel_html}</div></section>
 </div>"""
     write(g["slug"]+".html", page(g["slug"]+".html", g["title"], g["desc"], items, content, active="guides.html", og_type="article",
-        image=g_img(g, True), image_alt=g_img_alt(g), ld=[ld_post, ld_faq]))
+        image=g_img(g, True), image_alt=g_img_alt(g), ld=lds_extra))
     # stats
     text = re.sub(r"<!--.*?-->", " ", body, flags=re.S); text = re.sub(r"<[^>]+>", " ", text)
     fq = " ".join(q+" "+a for q,a in g["faq"])
@@ -357,7 +408,9 @@ MORE_CODES = ["anime-adventures-codes","forsaken-codes","dandys-world-codes","fi
 top_feat = "".join(card(BY[s]) for s in TOP10_CODES)
 more_feat = "".join(card(BY[s]) for s in MORE_CODES)
 howto_feat = "".join(card(BY[s]) for s in HOWTO_NEW)
-help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES][:4])
+GENERAL_NEW = ["roblox-codes-november-2026","how-to-get-free-items-in-roblox","how-to-level-up-fast-in-roblox","best-roblox-pets-2026","roblox-avatar-ideas","how-to-report-a-player-on-roblox","roblox-gift-card-guide","how-to-join-a-roblox-group","roblox-age-verification","how-to-change-roblox-username"]
+general_feat = "".join(card(BY[s]) for s in GENERAL_NEW)
+help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW][:4])
 cats_html = "".join(f'<a href="{v[0]}">{v[1]}<small>{sum(1 for g in guides if g["cat"]==k)} guides</small></a>' for k,v in CATS.items())
 idx_ld = [{"@context":"https://schema.org","@type":"WebSite","name":"Fridge Guides","url":BASE,"potentialAction":{"@type":"SearchAction","target":BASE+"guides.html?q={search_term_string}","query-input":"required name=search_term_string"}},
           dict({"@context":"https://schema.org"}, **ORG)]
@@ -365,11 +418,12 @@ idx_body = f"""<section class="hero"><div class="wrap">{{CRUMBS}}
 <p class="tag">Roblox codes · guides · events</p>
 <h1>Roblox Codes &amp; Guides by <b>Fridge</b></h1>
 <p>Working Roblox codes for the top 10 games, beginner guides and event walkthroughs for Steal an Egg, Blox Fruits, RIVALS, Scrooms, Anime Dice and more, plus how-tos for voice chat, Trusted Friends and parental controls. Game guides match Fridge's YouTube videos, and evergreen Roblox help guides cover FPS, lag, Bloxstrap and account safety.</p>
-<a class="btn" href="guides.html">Browse all guides</a><a class="btn ghost" href="{SUB}" rel="noopener" target="_blank">Subscribe on YouTube</a>
+<a class="btn" href="guides.html">Browse all guides</a><a class="btn yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe on YouTube</a>
 </div></section>
 <div class="wrap">
 <section aria-labelledby="latest-h"><div class="sec-h"><h2 id="latest-h">Latest Roblox Guides</h2><a href="guides.html">View all →</a></div><div class="grid">{feat}</div></section>
 <section aria-labelledby="game-h"><div class="sec-h"><h2 id="game-h">Latest Game Codes &amp; Guides</h2><a href="tag-codes.html">All codes →</a></div><div class="grid">{game_feat}</div></section>
+<section aria-labelledby="gen-h"><div class="sec-h"><h2 id="gen-h">Essential Roblox Guides</h2><a href="guides.html">All guides →</a></div><p class="small">Every Roblox code in one hub, plus free items, leveling, pets, avatar ideas, reporting, gift cards, Communities, age checks and username changes. Checked against official Roblox pages on November 11, 2026.</p><div class="grid">{general_feat}</div></section>
 <section aria-labelledby="top-h"><div class="sec-h"><h2 id="top-h">Codes for the Top 10 Roblox Games</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The ten most-played Roblox games by live player count on November 11, 2026, with every working code checked against at least two sources. Games without a code system say so.</p><div class="grid">{top_feat}</div></section>
 <section aria-labelledby="more-h"><div class="sec-h"><h2 id="more-h">More Roblox Game Codes</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The next most-played Roblox games (ranks 11–20 by live players on November 11, 2026, plus Anime Adventures), each checked against at least two sources. Games with no codes say so.</p><div class="grid">{more_feat}</div></section>
 <section aria-labelledby="howto-h"><div class="sec-h"><h2 id="howto-h">New Roblox How-To Guides</h2><a href="tag-guides.html">All guides →</a></div><div class="grid">{howto_feat}</div></section>
@@ -441,7 +495,7 @@ ab_body = f"""<div class="wrap">{{CRUMBS}}
 <p>Each guide on this site goes with a Fridge video. The written version lets you copy codes, scan tables and follow numbered steps at your own pace. Guides show a visible "Last updated" date, and code pages are rechecked against current sources whenever a new video goes up. If something has expired or changed, the page says so. We never list made-up codes or present rumors as facts.</p>
 <h2>Watch and subscribe</h2>
 <p>New videos drop regularly on the channel. Subscribe so you don't miss new codes and event guides.</p>
-<p><a class="btn" href="{SUB}" rel="noopener" target="_blank">Subscribe to Fridge</a><a class="btn ghost" href="{YT}/videos" rel="noopener" target="_blank">See all videos</a></p>
+<p><a class="btn yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe to Fridge</a><a class="btn ghost" href="{YT}/videos" rel="noopener" target="_blank">See all videos</a></p>
 <h2>Disclaimer</h2>
 <p class="small">Fridge is an independent creator and is not affiliated with Roblox Corporation or any game developer. Game names, logos and assets belong to their owners. Code rewards and event details can change at any time.</p>
 </article></div>"""
