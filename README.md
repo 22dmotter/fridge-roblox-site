@@ -66,8 +66,8 @@ A fast, dark-themed (amber / yellow-orange accent: `#FFB020`, hover `#E8890C`), 
 - Each has a 9:16 YouTube Shorts slot (`{SHORT_PLACEHOLDER}`; see the HTML comment for how to swap in a Short ID) and HowTo schema via the optional `howto=(name, [(step, text, anchor)])` field
 
 ### Site-wide visuals
-- Animated background: `.bg-fx` (10 drifting amber squares/orbs, opacity 0.04–0.08, `position:fixed`, `pointer-events:none`, transform/opacity only, 44–88 s, 5 elements under 640px, static under `prefers-reduced-motion`)
-- Subscribe buttons use `.yt-sub`: YouTube red #FF0000 with bold white 1.2rem text (large-text AA, 4.0:1), hover #CC0000; inline subscribe links use #CC0000 (5.9:1), hover #A30000; visible focus ring
+- Subtle particle background: a fixed, behind-content canvas in `.bg-fx` (`pointer-events:none`). Up to 60 tiny (1–3px) amber/white dots on desktop and 25 on mobile, opacity 0.15–0.4, slow upward drift. Pauses when the tab is hidden, honors `devicePixelRatio` (capped at 2), and is removed under `prefers-reduced-motion`.
+- Subscribe buttons (`.yt-sub`) rest as a pill with a transparent fill, a 2px #FF0000 border and #FF4D4D text (about 5.9:1 on the dark background). On `:hover`, `:focus-visible` and `:active` they fill solid #FF0000 with bold white text over a 200ms transition (disabled under `prefers-reduced-motion`). Focus still has a visible ring.
 
 ### Codes batch 3 (`_build/g/c21`–`c30`, Nov 11 2026; rendered by `_build/codeslib.py`)
 - `dress-to-impress-codes.html` (25), `king-legacy-codes.html` (6), `bee-swarm-simulator-codes.html` (9), `blade-ball-codes.html` (10), `arise-crossover-codes.html` (11), `grow-a-garden-codes.html` (2), `anime-vanguards-codes.html` (3), `basketball-zero-codes.html` (2), `volleyball-legends-codes.html` (3), `driving-empire-codes.html` (2)

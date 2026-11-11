@@ -59,25 +59,8 @@ for _g in guides:
 # ---------- CSS ----------
 CSS = r"""
 .bg-fx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-.bg-fx i{position:absolute;display:block;width:var(--s,60px);height:var(--s,60px);border:1px solid rgba(255,176,32,.9);background:rgba(255,176,32,.35);border-radius:6px;opacity:.06;will-change:transform;animation:bgdrift var(--d,60s) ease-in-out infinite alternate}
-.bg-fx i:nth-child(1){left:6%;top:12%;--s:46px;--d:52s}
-.bg-fx i:nth-child(2){left:78%;top:8%;--s:72px;--d:70s;animation-delay:-12s}
-.bg-fx i:nth-child(3){left:38%;top:62%;--s:34px;--d:44s;animation-delay:-20s}
-.bg-fx i:nth-child(4){left:88%;top:58%;--s:56px;--d:84s;animation-delay:-35s}
-.bg-fx i:nth-child(5){left:18%;top:82%;--s:64px;--d:66s;animation-delay:-8s;border-radius:50%}
-.bg-fx i:nth-child(6){left:58%;top:24%;--s:28px;--d:48s;animation-delay:-26s}
-.bg-fx i:nth-child(7){left:4%;top:46%;--s:40px;--d:76s;animation-delay:-40s;border-radius:50%}
-.bg-fx i:nth-child(8){left:68%;top:86%;--s:50px;--d:58s;animation-delay:-16s}
-.bg-fx i:nth-child(9){left:46%;top:4%;--s:38px;--d:88s;animation-delay:-50s}
-.bg-fx i:nth-child(10){left:28%;top:34%;--s:24px;--d:62s;animation-delay:-30s;border-radius:50%}
-@keyframes bgdrift{0%{transform:translate3d(0,0,0) rotate(0deg);opacity:.04}50%{opacity:.08}100%{transform:translate3d(60px,-90px,0) rotate(180deg);opacity:.05}}
-@media (max-width:640px){.bg-fx i:nth-child(n+6){display:none}}
-@media (prefers-reduced-motion:reduce){.bg-fx i{animation:none;opacity:.05;transform:rotate(20deg)}}
-.yt-sub{background:#FF0000;color:#fff!important;font-weight:800;text-decoration:none;border-radius:999px}
-a.yt-sub:not(.btn){display:inline-block;background:#CC0000;padding:2px 12px;margin:2px 0}
-.btn.yt-sub{background:#FF0000;color:#fff;border:0;font-size:1.2rem;padding:10px 22px}
-.yt-sub:hover,.btn.yt-sub:hover{background:#CC0000;color:#fff}a.yt-sub:not(.btn):hover{background:#A30000}
-.yt-sub:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px #CC0000}
+.bg-fx canvas{display:block;width:100%;height:100%}
+@media (prefers-reduced-motion:reduce){.bg-fx{display:none}}
 .short-slot{margin:22px auto;max-width:300px}.short-ph{aspect-ratio:9/16;width:100%;border:2px dashed var(--acc);border-radius:18px;background:var(--bg2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:18px;color:var(--mut)}
 .short-ph strong{color:var(--txt)}.short-ic{width:56px;height:56px;border-radius:14px;background:#FF0000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
 .shorts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;margin:18px 0}.shorts-grid .short-slot{margin:0;max-width:none}
@@ -104,6 +87,13 @@ form.hs input:focus{outline:2px solid var(--acc);border-color:transparent}
 .hero p{color:var(--mut);font-size:1.1rem;max-width:640px}
 .btn{display:inline-block;padding:11px 20px;border-radius:999px;background:var(--acc);color:var(--ink);font-weight:800;text-decoration:none;margin:6px 8px 0 0}
 .btn:hover{background:var(--accd);color:var(--ink)}.btn.ghost:hover{background:rgba(255,176,32,.12);color:var(--acc2);border-color:var(--acc2)}.btn.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+.yt-sub{background:transparent;color:#FF4D4D!important;font-weight:800;text-decoration:none;border-radius:999px;border:2px solid #FF0000;transition:background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease}
+a.yt-sub:not(.btn){display:inline-block;padding:2px 12px;margin:2px 0;line-height:1.4}
+.btn.yt-sub{background:transparent;color:#FF4D4D!important;border:2px solid #FF0000;font-size:1.2rem;padding:10px 22px}
+.yt-sub:hover,.yt-sub:focus-visible,.yt-sub:active,
+a.btn.yt-sub:hover,a.btn.yt-sub:focus-visible,a.btn.yt-sub:active{
+background:#FF0000;color:#fff!important;border-color:#FF0000}
+.yt-sub:focus-visible,a.btn.yt-sub:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px #FF0000}
 h1,h2,h3{line-height:1.25}h2{font-size:1.5rem;margin:1.8em 0 .6em}h3{font-size:1.15rem;margin:1.4em 0 .4em}
 .sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}.sec-h a{font-weight:700;text-decoration:none}
 .grid{display:grid;gap:18px;grid-template-columns:1fr}
@@ -171,6 +161,52 @@ var cards=[].slice.call(document.querySelectorAll('.card[data-search]'));var btn
 function run(){var q=input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);var shown=0;cards.forEach(function(c){var t=c.dataset.search;var ok=(cat==='all'||c.dataset.cat===cat)&&q.every(function(w){return t.indexOf(w)>-1});c.hidden=!ok;if(ok)shown++;});if(empty)empty.style.display=shown?'none':'block';}
 btns.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;btns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});run();});});
 var p=new URLSearchParams(location.search);if(p.get('q'))input.value=p.get('q');input.addEventListener('input',run);run();
+})();
+(function(){
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var root=document.querySelector('.bg-fx');
+if(!root)return;
+if(reduce){root.parentNode&&root.parentNode.removeChild(root);return;}
+var c=root.querySelector('canvas');
+if(!c){c=document.createElement('canvas');root.appendChild(c);}
+var ctx=c.getContext('2d',{alpha:true});
+if(!ctx){root.parentNode&&root.parentNode.removeChild(root);return;}
+var particles=[],running=false,raf=0,dpr=1,w=0,h=0,last=0;
+function cap(){return window.innerWidth<640?25:60;}
+function spawn(anywhere){
+  var amber=Math.random()<0.55;
+  return {x:Math.random()*w,y:anywhere?Math.random()*h:h+Math.random()*24,r:1+Math.random()*2,vx:(Math.random()-0.5)*8,vy:-(4+Math.random()*10),a:0.15+Math.random()*0.25,color:amber?'255,176,32':'230,238,245'};
+}
+function make(){var n=cap(),i;particles=[];for(i=0;i<n;i++)particles.push(spawn(true));}
+function resize(){
+  dpr=Math.min(window.devicePixelRatio||1,2);
+  w=Math.max(1,window.innerWidth);h=Math.max(1,window.innerHeight);
+  c.width=Math.floor(w*dpr);c.height=Math.floor(h*dpr);
+  c.style.width=w+'px';c.style.height=h+'px';
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  if(particles.length!==cap())make();
+}
+function tick(ts){
+  if(!running)return;
+  var dt=last?Math.min(0.05,(ts-last)/1000):0.016,i,p;last=ts;
+  ctx.clearRect(0,0,w,h);
+  for(i=0;i<particles.length;i++){
+    p=particles[i];
+    p.vx+=(Math.random()-0.5)*2*dt;
+    if(p.vx>10)p.vx=10;if(p.vx<-10)p.vx=-10;
+    p.x+=p.vx*dt;p.y+=p.vy*dt;
+    if(p.y+p.r<0){particles[i]=p=spawn(false);}
+    if(p.x<-8)p.x=w+8;else if(p.x>w+8)p.x=-8;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba('+p.color+','+p.a+')';ctx.fill();
+  }
+  raf=requestAnimationFrame(tick);
+}
+function start(){if(running)return;running=true;last=0;raf=requestAnimationFrame(tick);}
+function stop(){running=false;last=0;if(raf)cancelAnimationFrame(raf);}
+window.addEventListener('resize',resize,{passive:true});
+document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});
+resize();start();
 })();"""
 
 LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Fridge logo</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="12" y="3" width="40" height="58" rx="9" fill="url(#g)"/><rect x="12" y="24" width="40" height="3" fill="#0a0f14"/><rect x="18" y="10" width="4" height="10" rx="2" fill="#0a0f14"/><rect x="18" y="32" width="4" height="14" rx="2" fill="#0a0f14"/><path d="M38 38l3-5 3 5-3 5z" fill="#fff" opacity=".9"/><path d="M33 13l2-3 2 3-2 3z" fill="#fff" opacity=".8"/></svg>"""
@@ -216,7 +252,7 @@ def head(title, desc, path, og_type="website", image=None, image_alt=None, extra
 {lds}
 </head>
 <body>
-<div class="bg-fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="bg-fx" aria-hidden="true"><canvas></canvas></div>
 <a class="skip" href="#content">Skip to content</a>
 """
 
