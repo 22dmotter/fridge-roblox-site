@@ -262,7 +262,7 @@ def header(active, prefix=""):
     n = nav(active)
     if prefix: n = re.sub(r'href="', f'href="{prefix}', n)
     return f"""<header class="top"><div class="wrap bar">
-<a class="brand" href="{prefix}index.html" aria-label="Fridge home"><img src="{prefix}assets/logo.svg" alt="Fridge logo" width="34" height="34"><span><b>Fridge</b> Guides</span></a>
+<a class="brand" href="{prefix}index.html" aria-label="Roblox Guides home"><img src="{prefix}assets/logo.svg" alt="Roblox Guides logo" width="34" height="34"><span><b>Roblox</b> Guides</span></a>
 <nav class="main" aria-label="Main"><ul>{n}</ul></nav>
 <form class="hs" action="{prefix}guides.html" method="get" role="search"><label class="skip" for="hs-q">Search guides</label><input id="hs-q" name="q" type="search" placeholder="Search guides…" autocomplete="off"></form>
 </div></header>
@@ -477,7 +477,7 @@ MACRO = ["what-is-a-roblox-macro","best-roblox-macros","roblox-auto-clicker","gr
 macro_feat = "".join(card(BY[s]) for s in MACRO if s in BY)
 help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW+NEW_CODES+FORGE+MACRO][:4])
 cats_html = "".join(f'<a href="{v[0]}">{v[1]}<small>{sum(1 for g in guides if g["cat"]==k)} guides</small></a>' for k,v in CATS.items())
-idx_ld = [{"@context":"https://schema.org","@type":"WebSite","name":"Fridge Guides","url":BASE,"potentialAction":{"@type":"SearchAction","target":BASE+"guides.html?q={search_term_string}","query-input":"required name=search_term_string"}},
+idx_ld = [{"@context":"https://schema.org","@type":"WebSite","name":"Roblox Guides","url":BASE,"potentialAction":{"@type":"SearchAction","target":BASE+"guides.html?q={search_term_string}","query-input":"required name=search_term_string"}},
           dict({"@context":"https://schema.org"}, **ORG)]
 idx_body = f"""<section class="hero"><div class="wrap">{{CRUMBS}}
 <p class="tag">Roblox codes · guides · events</p>
