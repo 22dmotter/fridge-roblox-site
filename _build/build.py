@@ -4,13 +4,14 @@ OUT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "
 SITE = "Fridge"
 YT = "https://www.youtube.com/@Fridgetherealone"
 SUB = YT + "?sub_confirmation=1"
-TODAY = "2026-11-11"
-MOD_HUMAN = "November 11, 2026"
+TODAY = "2026-11-12"
+MOD_HUMAN = "November 12, 2026"
 CATS = {
  "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus The Forge, Dress To Impress, King Legacy, Blade Ball, Bee Swarm Simulator, Arise Crossover, Anime Dice, Huzz Valley and more, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
  "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus The Forge (races, pickaxes and money), Scrooms, Bloxstrap, account recovery and more."),
  "Events": ("tag-events.html", "Roblox Events", "Roblox event guides: a November 2026 leak about a Twin Atlas test place named Slippers that trackers tie to a possible Christmas or winter event, the Hollow 2026 recap, and the Steal an Egg Halloween Dimension, Candy Corn and the Phantom Express."),
 "Tips": ("tag-tips.html", "Roblox Tips", "Fast Roblox tips: beginner guides for Throw Food For Animals and 99 Nights in the Forest, avatar outfit ideas, emotes, Steal an Egg Speed and Scrooms leveling, plus safe ways to unlock FPS, fix lag and AFK."),
+ "Macro": ("tag-macro.html", "Roblox Macros", "Guides to Roblox macros and auto clickers: what they are, whether they can get you banned, safer download habits, TinyTask and AutoHotkey, Mac tools, and game-specific notes for Grow a Garden, Fisch and Bee Swarm Simulator. Every page includes a Roblox Terms of Use and malware warning. Fridge is not affiliated with any macro vendor, and no tool is described as allowed or undetectable."),
 }
 def esc(s): return html.escape(s, quote=True)
 
@@ -213,7 +214,7 @@ resize();start();
 LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Fridge logo</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="12" y="3" width="40" height="58" rx="9" fill="url(#g)"/><rect x="12" y="24" width="40" height="3" fill="#0a0f14"/><rect x="18" y="10" width="4" height="10" rx="2" fill="#0a0f14"/><rect x="18" y="32" width="4" height="14" rx="2" fill="#0a0f14"/><path d="M38 38l3-5 3 5-3 5z" fill="#fff" opacity=".9"/><path d="M33 13l2-3 2 3-2 3z" fill="#fff" opacity=".8"/></svg>"""
 
 def nav(active):
-    items = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides"),("tag-events.html","Events"),("tag-tips.html","Tips"),("about.html","About")]
+    items = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides"),("tag-events.html","Events"),("tag-tips.html","Tips"),("tag-macro.html","Macro"),("about.html","About")]
     li = "".join(f'<li><a href="{h}"{" aria-current=\"page\"" if h==active else ""}>{t}</a></li>' for h,t in items)
     return li
 
@@ -472,7 +473,9 @@ GENERAL_NEW = ["roblox-codes-november-2026","how-to-get-free-items-in-roblox","h
 general_feat = "".join(card(BY[s]) for s in GENERAL_NEW)
 NEW_CODES = ["the-forge-codes","dress-to-impress-codes","king-legacy-codes","arise-crossover-codes","blade-ball-codes","bee-swarm-simulator-codes","anime-vanguards-codes","volleyball-legends-codes","grow-a-garden-codes","basketball-zero-codes","driving-empire-codes"]
 newcodes_feat = "".join(card(BY[s]) for s in NEW_CODES if s in BY)
-help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW+NEW_CODES+FORGE][:4])
+MACRO = ["what-is-a-roblox-macro","best-roblox-macros","roblox-auto-clicker","grow-a-garden-macro","fisch-macro","bee-swarm-simulator-macro","roblox-macros-windows-mac"]
+macro_feat = "".join(card(BY[s]) for s in MACRO if s in BY)
+help_feat = "".join(card(g) for g in [x for x in guides if not x["videos"] and x["slug"] not in TOP10_CODES+HOWTO_NEW+MORE_CODES+GENERAL_NEW+NEW_CODES+FORGE+MACRO][:4])
 cats_html = "".join(f'<a href="{v[0]}">{v[1]}<small>{sum(1 for g in guides if g["cat"]==k)} guides</small></a>' for k,v in CATS.items())
 idx_ld = [{"@context":"https://schema.org","@type":"WebSite","name":"Fridge Guides","url":BASE,"potentialAction":{"@type":"SearchAction","target":BASE+"guides.html?q={search_term_string}","query-input":"required name=search_term_string"}},
           dict({"@context":"https://schema.org"}, **ORG)]
@@ -484,6 +487,7 @@ idx_body = f"""<section class="hero"><div class="wrap">{{CRUMBS}}
 </div></section>
 <div class="wrap">
 <section aria-labelledby="latest-h"><div class="sec-h"><h2 id="latest-h">Latest Roblox Guides</h2><a href="guides.html">View all →</a></div><div class="grid">{feat}</div></section>
+<section aria-labelledby="macro-h"><div class="sec-h"><h2 id="macro-h">Roblox Macro Guides</h2><a href="tag-macro.html">All macro guides →</a></div><p class="small">What a Roblox macro is, whether macros can get you banned, auto clicker setup, TinyTask and Mac tools, and game-specific notes for Grow a Garden, Fisch and Bee Swarm Simulator. Every page includes a Terms of Use and malware warning. Fridge is not affiliated with any macro vendor.</p><div class="grid">{macro_feat}</div></section>
 <section aria-labelledby="game-h"><div class="sec-h"><h2 id="game-h">Latest Game Codes &amp; Guides</h2><a href="tag-codes.html">All codes →</a></div><div class="grid">{game_feat}</div></section>
 <section aria-labelledby="gen-h"><div class="sec-h"><h2 id="gen-h">Essential Roblox Guides</h2><a href="guides.html">All guides →</a></div><p class="small">Every Roblox code in one hub, plus free items, leveling, pets, avatar ideas, reporting, gift cards, Communities, age checks and username changes. Checked against official Roblox pages on November 11, 2026.</p><div class="grid">{general_feat}</div></section>
 <section aria-labelledby="top-h"><div class="sec-h"><h2 id="top-h">Codes for the Top 10 Roblox Games</h2><a href="tag-codes.html">All codes →</a></div><p class="small">The ten most-played Roblox games by live player count on November 11, 2026, with every working code checked against at least two sources. Games without a code system say so.</p><div class="grid">{top_feat}</div></section>
@@ -524,16 +528,22 @@ TAGMETA = {
  "Guides": ("Roblox Game Guides & Walkthroughs | Fridge", "Step-by-step Roblox guides from Fridge: how to play Scrooms, every Scrooms statue, and all 9 Monkey Escape shards. Pick a walkthrough and start now!"),
  "Events": ("Roblox Event Guides 2026 – Hollow & Christmas Leak | Fridge", "Roblox event guides for 2026: the Slippers Christmas leak, the Hollow recap, and Steal an Egg Halloween Dimension guides. See what is confirmed!"),
  "Tips": ("Roblox Tips: Speed, XP & Racing Tricks | Fridge", "Quick Roblox tips from Fridge: how to get speed in Steal an Egg, level up fast in Scrooms, and win every race. Use these tricks to progress faster today!"),
+ "Macro": ("Roblox Macros: Ban Risk, Auto Clickers & Guides | Fridge", "Roblox macro guides: ban risk, auto clickers, Grow a Garden, Fisch and Bee Swarm, plus TinyTask and Mac tools. Read the Terms of Use warning first!"),
 }
 for k,(p,n,intro) in CATS.items():
     gs = [g for g in guides if g["cat"]==k]
     t, d = TAGMETA[k]
     ld = [{"@context":"https://schema.org","@type":"CollectionPage","name":n,"description":d,"url":BASE+p,"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"url":BASE+g["slug"]+".html","name":g["h1"]} for i,g in enumerate(gs)]}}]
     others = " · ".join(f'<a href="{v[0]}">{v[1]}</a>' for kk,v in CATS.items() if kk!=k)
+    extra = ""
+    if k == "Macro":
+        from macrolib import DISCLAIMER, MALWARE
+        extra = DISCLAIMER + MALWARE
     b = f"""<div class="wrap">{{CRUMBS}}
 <h1>{n} by Fridge</h1>
 <p class="updated"><strong>Last updated: <time datetime="{TODAY}">{MOD_HUMAN}</time></strong> · {len(gs)} guides</p>
 <p>{intro}</p>
+{extra}
 <div class="grid">{"".join(card(g,"h2") for g in gs)}</div>
 <p style="margin-top:28px">More categories: {others} · <a href="guides.html">All guides</a></p>
 </div>"""

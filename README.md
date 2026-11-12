@@ -12,7 +12,7 @@ A fast, dark-themed (amber / yellow-orange accent: `#FFB020`, hover `#E8890C`), 
 |---|---|
 | `index.html` | Homepage: hero, latest guides, categories, channel intro, popular guides |
 | `guides.html` | Every guide, with client-side search + category filter (supports `guides.html?q=scrooms`) |
-| `tag-codes.html`, `tag-guides.html`, `tag-events.html`, `tag-tips.html` | Category pages (Codes, Guides, Events, Tips) |
+| `tag-codes.html`, `tag-guides.html`, `tag-events.html`, `tag-tips.html`, `tag-macro.html` | Category pages (Codes, Guides, Events, Tips, Macro) |
 | `about.html` | About Fridge + YouTube links |
 | `404.html` | Custom not-found page (GitHub Pages serves it automatically) |
 | `*.html` (12 guides) | One article per guide/video (see list below) |
