@@ -144,7 +144,7 @@ code{background:#2a1d06;color:var(--acc2);padding:2px 7px;border-radius:6px;font
 .empty{display:none;color:var(--mut)}
 footer.site{margin-top:60px;border-top:1px solid var(--line);background:var(--bg2);padding:30px 0;color:var(--mut);font-size:.9rem}
 footer.site .cols{display:grid;gap:20px;grid-template-columns:1fr}footer.site h2{font-size:1rem;color:var(--txt);margin:0 0 8px}
-footer.site ul{list-style:none;margin:0;padding:0}footer.site li{margin:4px 0}footer.site a{color:var(--mut)}footer.site a:hover{color:var(--acc)}
+footer.site ul{list-style:none;margin:0;padding:0}footer.site li{margin:4px 0}footer.site a{color:var(--mut)}footer.site a:hover{color:var(--acc)}footer.site .legal{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}footer.site .legal-nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 12px}footer.site .legal-nav a{color:var(--txt);font-weight:600}footer.site .disclosure{max-width:70rem;margin:0 0 8px;line-height:1.55}
 .notfound{text-align:center;padding:60px 0}.notfound h1{font-size:clamp(3rem,14vw,6rem);margin:0;color:var(--acc)}
 @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}.cats{grid-template-columns:repeat(4,1fr)}footer.site .cols{grid-template-columns:2fr 1fr 1fr}}
 @media(min-width:900px){nav.main{order:0;width:auto}form.hs{margin-left:auto}form.hs input{width:190px}.grid{grid-template-columns:repeat(3,1fr)}
@@ -277,7 +277,12 @@ def footer(prefix=""):
 <div><h2>Fridge</h2><p>Roblox codes, guides and event coverage from the Fridge YouTube channel. Guides are updated with new videos and re-checked for accuracy.</p><p><a class="btn yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe on YouTube</a></p></div>
 <div><h2>Latest guides</h2><ul>{latest}</ul></div>
 <div><h2>Categories</h2><ul>{cats}<li><a href="{prefix}about.html">About Fridge</a></li><li><a href="{prefix}sitemap.xml">Sitemap</a></li></ul></div>
-</div><div class="wrap"><p class="small">© 2026 Fridge (@Fridgetherealone). Not affiliated with Roblox Corporation or any game developer. Game names belong to their owners.</p></div></footer>
+</div><div class="wrap legal">
+<p class="legal-nav"><a href="{prefix}privacy-policy.html">Privacy Policy</a><a href="{prefix}terms.html">Terms of Use</a><a href="{prefix}contact.html">Contact</a><a href="{prefix}about.html">About</a></p>
+<p class="small disclosure"><strong>Disclosure:</strong> This site may display advertisements, including ads served by Google. Links to third-party tools such as ExoPanda are provided for context and are not sponsored unless a page says otherwise. We are not affiliated with those vendors or with Roblox Corporation.</p>
+<p class="small">If you are in the EEA, the UK or Switzerland, Google requires a Google-certified consent management platform before personalized ads can be shown. We have not added an unofficial cookie banner. After AdSense approval, the operator intends to enable Google's Privacy &amp; messaging GDPR (and applicable US state) messages. See the <a href="{prefix}privacy-policy.html">Privacy Policy</a> for cookies, ads and your choices.</p>
+<p class="small">© 2026 Fridge (@Fridgetherealone). Not affiliated with Roblox Corporation or any game developer. Game names belong to their owners.</p>
+</div></footer>
 </body>
 </html>
 """
@@ -320,14 +325,14 @@ PLACEHOLDER = """<!-- YOUTUBE EMBED PLACEHOLDER: no matching Fridge video yet.
      When a video exists, add ("VIDEO_ID", "Video title") to this guide's videos=[...] list in _build/g/
      and replace {VIDEO_PLACEHOLDER} in the body with {VIDEO0}, then run python3 _build/build.py.
      Raw HTML alternative: copy any <div class="yt" data-id="VIDEO_ID_HERE"> block from another guide. -->
-<div class="callout"><strong>Video coming soon:</strong> Fridge hasn't made a video for this guide yet. <a class="yt-sub" href="https://www.youtube.com/@Fridgetherealone?sub_confirmation=1" rel="noopener" target="_blank">Subscribe on YouTube</a> to catch it when it drops.</div>
+<p class="small"><strong>No matching Fridge video yet.</strong> The written guide above is complete on its own. <a class="yt-sub" href="https://www.youtube.com/@Fridgetherealone?sub_confirmation=1" rel="noopener" target="_blank">Subscribe on YouTube</a> if you want to catch a video version later.</p>
 <!-- /YOUTUBE EMBED PLACEHOLDER -->"""
 
 SHORT_PLACEHOLDER = """<!-- YOUTUBE SHORTS EMBED SLOT (9:16): no matching Fridge Short yet.
      When the Short is live, replace the inner <div class="short-ph"> with:
      <iframe src="https://www.youtube-nocookie.com/embed/SHORT_ID_HERE" title="Fridge YouTube Short" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
      (SHORT_ID_HERE = the 11-character ID from youtube.com/shorts/SHORT_ID_HERE). -->
-<figure class="short-slot" aria-label="YouTube Short coming soon"><div class="short-ph"><span class="short-ic" aria-hidden="true">▶</span><strong>Fridge Short coming soon</strong><span>A 60-second version of this guide will appear here.</span></div><figcaption class="small">Vertical video slot for the matching YouTube Short.</figcaption></figure>
+<!-- Short placeholder hidden until a real Short ID is added to this guide. -->
 <!-- /YOUTUBE SHORTS EMBED SLOT -->"""
 
 def card(g, lvl="h3"):
@@ -566,35 +571,33 @@ write("tag-the-forge.html", f"""<!doctype html>
 </html>
 """)
 
-# ---------- about ----------
-ab_ld = [{"@context":"https://schema.org","@type":"AboutPage","name":"About Fridge","url":BASE+"about.html","mainEntity":dict(ORG, description="Roblox YouTube channel making codes, guides and event videos.")}]
-ab_body = f"""<div class="wrap">{{CRUMBS}}
-<article class="post">
-<h1>About Fridge: Roblox Guides on YouTube</h1>
-<p class="updated"><strong>Last updated: <time datetime="{TODAY}">{MOD_HUMAN}</time></strong></p>
-<p class="lead">Fridge (<a href="{YT}" rel="noopener" target="_blank">@Fridgetherealone</a>) is a Roblox YouTube channel that makes quick, useful guides: working codes, the fastest ways to level up and get stronger, collectible locations, and full coverage of big Roblox events.</p>
-<h2>What Fridge covers</h2>
-<ul>
-<li><strong>Codes:</strong> working code lists for games like <a href="anime-dice-codes.html">Anime Dice</a> and <a href="huzz-valley-codes.html">Huzz Valley</a>, plus honest answers when a game like <a href="steal-an-egg-codes.html">Steal an Egg</a> has no codes at all.</li>
-<li><strong>Guides:</strong> beginner walkthroughs such as <a href="scrooms-beginners-guide.html">how to play Scrooms</a> and location guides like the <a href="monkey-escape-sunken-shards.html">Monkey Escape shards</a>.</li>
-<li><strong>Events:</strong> leaks, confirmed games and badge guides for events like the <a href="roblox-hollow-event-guide.html">Roblox Hollow event</a>.</li>
-<li><strong>Tips:</strong> speed, XP and racing tricks that save you hours of grinding.</li>
-</ul>
-<p>Past videos have also covered The Forge (pickaxe upgrades, money-making methods and Crimson Depths), Steal an Egg rare eggs and more.</p>
-<h2>How this site works</h2>
-<p>Each guide on this site goes with a Fridge video. The written version lets you copy codes, scan tables and follow numbered steps at your own pace. Guides show a visible "Last updated" date, and code pages are rechecked against current sources whenever a new video goes up. If something has expired or changed, the page says so. We never list made-up codes or present rumors as facts.</p>
-<h2>Watch and subscribe</h2>
-<p>New videos drop regularly on the channel. Subscribe so you don't miss new codes and event guides.</p>
-<p><a class="btn yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe to Fridge</a><a class="btn ghost" href="{YT}/videos" rel="noopener" target="_blank">See all videos</a></p>
-<h2>Disclaimer</h2>
-<p class="small">Fridge is an independent creator and is not affiliated with Roblox Corporation or any game developer. Game names, logos and assets belong to their owners. Code rewards and event details can change at any time.</p>
-</article></div>"""
-write("about.html", page("about.html", "About Fridge – Roblox YouTuber (@Fridgetherealone)",
- "Meet Fridge (@Fridgetherealone), the Roblox YouTuber behind these codes, guides and event videos. See what the channel covers and subscribe for new uploads!",
- [("Home","index.html"),("About","about.html")], ab_body, active="about.html", ld=ab_ld))
+# ---------- about / legal ----------
+from legalpages import privacy_body, terms_body, contact_body, about_body
+
+def write_legal(path, title, desc, crumb, body, page_type="WebPage"):
+    ld = [{"@context":"https://schema.org","@type":page_type,"name":title.split("|")[0].strip(),"url":BASE+path,"dateModified":TODAY,"publisher":ORG}]
+    write(path, page(path, title, desc, [("Home","index.html"),(crumb,path)], body, active="about.html" if path=="about.html" else path, ld=ld))
+
+ab_ld_name = "About Roblox Guides and Fridge"
+write_legal("about.html",
+    "About Roblox Guides and Fridge | Official Site",
+    "Meet Roblox Guides and Fridge (@Fridgetherealone): who runs the site, how we verify codes with a two-source rule, and how often pages are updated. Read it!",
+    "About", about_body(), page_type="AboutPage")
+write_legal("privacy-policy.html",
+    "Privacy Policy | Roblox Guides",
+    "How Roblox Guides handles logs, YouTube embeds, cookies and ads, including Google AdSense disclosures, COPPA, GDPR and CCPA rights. Read the policy!",
+    "Privacy Policy", privacy_body())
+write_legal("terms.html",
+    "Terms of Use | Roblox Guides",
+    "Terms of Use for Roblox Guides: informational content, editorial rules, third-party links, ads, and unofficial-tool disclaimers. Read the terms today!",
+    "Terms of Use", terms_body())
+write_legal("contact.html",
+    "Contact Roblox Guides | Fridge on YouTube",
+    "Contact Roblox Guides through the Fridge YouTube channel. Use it for corrections, privacy requests or feedback — no personal email is published here. Reach out!",
+    "Contact", contact_body())
 
 # ---------- 404 (absolute paths so it works at any depth) ----------
-P = "/fridge-roblox-site/"
+P = "/"
 nf = head("Page Not Found (404) | Fridge Roblox Guides", "This page doesn't exist or has moved. Search Fridge's Roblox guides or jump to the latest codes for Steal an Egg, Anime Dice and Huzz Valley right here.", "404.html", prefix=P, extra_ld=[bc_ld([("Home","index.html"),("Page not found","404.html")])])
 nf = nf.replace('<meta name="robots" content="index,follow,max-image-preview:large">','<meta name="robots" content="noindex,follow">')
 nf += header("", prefix=P) + f"""<div class="wrap">{bc_html([("Home",P+"index.html"),("Page not found","")])}
@@ -605,12 +608,17 @@ nf += header("", prefix=P) + f"""<div class="wrap">{bc_html([("Home",P+"index.ht
 write("404.html", nf)
 
 # ---------- sitemap / robots ----------
-urls = [("",TODAY,"1.0","daily"),("guides.html",TODAY,"0.9","daily"),("about.html",TODAY,"0.5","monthly")] + \
+urls = [("",TODAY,"1.0","daily"),("guides.html",TODAY,"0.9","daily"),("about.html",TODAY,"0.5","monthly"),("privacy-policy.html",TODAY,"0.5","yearly"),("terms.html",TODAY,"0.5","yearly"),("contact.html",TODAY,"0.5","yearly")] + \
        [(v[0],TODAY,"0.7","weekly") for v in CATS.values()] + [(g["slug"]+".html",TODAY,"0.8","weekly") for g in guides]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"  <url><loc>{BASE}{u}</loc><lastmod>{d}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>\n" for u,d,p,c in urls) + "</urlset>\n"
 write("sitemap.xml", sm)
-write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
+write("robots.txt", f"User-agent: Mediapartners-Google\nAllow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
+write("ads.txt", """# ads.txt for robloxguides.org
+# Placeholder only. After Google AdSense approval, add the official publisher line
+# that AdSense provides, in this form (do not invent a publisher ID):
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+""")
 
 # ---------- assets ----------
 os.makedirs(os.path.join(OUT,"assets"), exist_ok=True)

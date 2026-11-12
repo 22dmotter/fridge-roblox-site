@@ -51,7 +51,7 @@ body="""
 <h2 id="third-party">Method 3: Third-Party Multi-Instance Tools (Risky)</h2>
 <div class="callout warn"><strong>Ban-risk warning:</strong> Roblox staff have said they don't officially support running multiple player clients at once. In their 2025 announcement on modified clients, Roblox said tools that <em>don't</em> modify the client binary weren't affected by that enforcement wave, but tools that <em>do</em> modify it would trigger consequences. Roblox also gives no guarantee about third-party tools, and its anti-cheat changes over time. There is no "safe" multi-instance tool.</div>
 <h3>Roblox Account Manager</h3>
-<p>The best-known tool is <strong>Roblox Account Manager</strong>. If you research it, know these facts:</p>
+<p>Fridge does not recommend unofficial multi-instance software, does not host it, and does not provide setup steps for it. The best-known name that comes up in searches is <strong>Roblox Account Manager</strong>. If you research it, these are facts about the project, not an endorsement:</p>
 <ul>
 <li>The <strong>original repository</strong> is <a href="https://github.com/ic3w0lf22/Roblox-Account-Manager" rel="noopener" target="_blank">github.com/ic3w0lf22/Roblox-Account-Manager</a>. As of November 2026 it's <strong>archived</strong> (read-only), and its last release dates to 2024, so it's no longer maintained.</li>
 <li>Its own README says its Multi Roblox option is <strong>off by default</strong> because a Roblox anti-cheat developer said using multiple clients "may be considered as malicious behavior."</li>

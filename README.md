@@ -4,6 +4,8 @@ The official guide site for the **Fridge** Roblox YouTube channel ([@Fridgethere
 
 **Live site:** https://robloxguides.org/
 
+Legal pages: [Privacy Policy](https://robloxguides.org/privacy-policy.html), [Terms of Use](https://robloxguides.org/terms.html), [Contact](https://robloxguides.org/contact.html), [About](https://robloxguides.org/about.html). `ads.txt` is a placeholder until an AdSense publisher ID is added. Do not invent a pub ID or add AdSense script tags before approval.
+
 A fast, dark-themed (amber / yellow-orange accent: `#FFB020`, hover `#E8890C`), mobile-first static site, modeled on the content-hub layout of cocajola.com: a homepage with a hero and latest-guides grid, a searchable guide listing, category (tag) pages, and one SEO-optimized article per video. No frameworks, one minified CSS file, one small deferred JS file.
 
 ## What's in the site
