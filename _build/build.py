@@ -352,12 +352,15 @@ def card(g, lvl="h3"):
 <{lvl}><a href="{g['slug']}.html">{esc(g['h1'])}</a></{lvl}>
 <p>{esc(g['desc'])}</p><a class="more" href="{g['slug']}.html" aria-label="Read: {esc(g['h1'])}">Read guide →</a></div></article>"""
 
-def video_embed(vid, title, game):
+def video_embed(vid, title, game, poster=None):
+    src = poster or thumb(vid)
+    # 16:9 posters (local maxres) use 480x270; YouTube hqdefault is 4:3 480x360
+    wh = (480, 270) if poster else (480, 360)
     return f"""<!-- YOUTUBE EMBED: Fridge video "{esc(title)}" (ID {vid}).
      To swap in a different video, replace the 11-character ID in ALL THREE places below
      (data-id, the watch?v= link and the thumbnail URL). Placeholder for a new video: VIDEO_ID_HERE -->
 <div class="yt" data-id="{vid}" data-title="{esc(title)}">
-<a href="https://www.youtube.com/watch?v={vid}" target="_blank" rel="noopener" aria-label="Play video: {esc(title)}"><img src="{thumb(vid)}" alt="Fridge YouTube video thumbnail: {esc(title)} ({esc(game)})" loading="lazy" width="480" height="360"><span class="yt-play" aria-hidden="true"></span></a>
+<a href="https://www.youtube.com/watch?v={vid}" target="_blank" rel="noopener" aria-label="Play video: {esc(title)}"><img src="{src}" alt="Fridge YouTube video thumbnail: {esc(title)} ({esc(game)})" loading="lazy" width="{wh[0]}" height="{wh[1]}"><span class="yt-play" aria-hidden="true"></span></a>
 </div>
 <!-- /YOUTUBE EMBED -->"""
 
@@ -396,7 +399,7 @@ report = []
 for g in guides:
     body = g["body"]
     for i,v in enumerate(g["videos"]):
-        body = body.replace("{VIDEO%d}"%i, video_embed(v[0],v[1],g["game"]))
+        body = body.replace("{VIDEO%d}"%i, video_embed(v[0],v[1],g["game"], poster=(g["cover"] if i==0 and g.get("cover") else None)))
     sh = g.get("shorts", [])
     for i,v in enumerate(sh):
         body = body.replace("{SHORT%d}"%i, short_embed(v[0],v[1],v[2] if len(v)>2 else None))
@@ -421,7 +424,7 @@ for g in guides:
     catp, catn, _ = CATS[g["cat"]]
     items = [("Home","index.html"),(catn,catp),(g["h1"].split(":")[0], g["slug"]+".html")]
     url = BASE + g["slug"] + ".html"
-    vids_ld = [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/watch?v={v[0]}","thumbnailUrl":thumb(v[0]),"uploadDate":(v[2] if len(v)>2 else g["date"]),"description":f"Fridge's Roblox video: {v[1]}"} for v in g["videos"] if len(v)<3 or v[2]] + \
+    vids_ld = [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/watch?v={v[0]}","thumbnailUrl":(g_img(g, True) if i==0 and g.get("cover") else thumb(v[0])),"uploadDate":(v[2] if len(v)>2 else g["date"]),"description":f"Fridge's Roblox video: {v[1]}"} for i,v in enumerate(g["videos"]) if len(v)<3 or v[2]] + \
               [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/shorts/{v[0]}","thumbnailUrl":thumb(v[0]),"uploadDate":v[2],"description":f"Fridge's Roblox YouTube Short: {v[1]}"} for v in g.get("shorts",[]) if len(v)>2 and v[2]]
     ld_post = {"@context":"https://schema.org","@type":"BlogPosting","headline":g["h1"],"description":g["desc"],"image":[g_img(g, True)],
       "datePublished":g["date"],"dateModified":TODAY,"author":PERSON,"publisher":ORG,"mainEntityOfPage":{"@type":"WebPage","@id":url},
