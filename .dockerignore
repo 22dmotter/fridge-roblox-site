@@ -1,0 +1,10 @@
+.git
+.agents
+.aws
+.codex
+.serena
+**/__pycache__
+**/*.py[cod]
+.env
+.env.*
+.DS_Store

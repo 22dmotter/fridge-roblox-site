@@ -1,5 +1,5 @@
 import glob, importlib.util, json, os, re, html, shutil, datetime
-BASE = "https://22dmotter.github.io/fridge-roblox-site/"
+BASE = os.environ.get("SITE_BASE", "https://22dmotter.github.io/fridge-roblox-site/").rstrip("/") + "/"
 OUT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 SITE = "Fridge"
 YT = "https://www.youtube.com/@Fridgetherealone"
