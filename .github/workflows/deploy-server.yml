@@ -143,13 +143,13 @@ jobs:
           fi
 
           new_id="$(docker inspect --format '{{.Id}}' "$container")"
-          for old_id in $(docker ps --all --quiet --filter label=com.fridge.site=roblox); do
+          for old_id in $(docker ps --all --no-trunc --quiet --filter label=com.fridge.site=roblox); do
             if [ "$old_id" != "$new_id" ]; then
               docker rm --force "$old_id"
             fi
           done
           current_image="$(docker image inspect --format '{{.Id}}' "$image")"
-          for old_image in $(docker image ls --quiet fridge-roblox-site); do
+          for old_image in $(docker image ls --no-trunc --quiet fridge-roblox-site); do
             if [ "$old_image" != "$current_image" ]; then
               docker image rm "$old_image"
             fi
