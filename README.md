@@ -2,7 +2,7 @@
 
 The official guide site for the **Fridge** Roblox YouTube channel ([@Fridgetherealone](https://www.youtube.com/@Fridgetherealone/videos)).
 
-**Live site:** https://22dmotter.github.io/fridge-roblox-site/
+**Live site:** https://robloxguides.org/
 
 A fast, dark-themed (amber / yellow-orange accent: `#FFB020`, hover `#E8890C`), mobile-first static site, modeled on the content-hub layout of cocajola.com: a homepage with a hero and latest-guides grid, a searchable guide listing, category (tag) pages, and one SEO-optimized article per video. No frameworks, one minified CSS file, one small deferred JS file.
 

@@ -25,7 +25,7 @@ sources=[
 ("Xh0PlUgc: Slippers map uploaded by Twin Atlas Events (Nov 10, 2026, 10:12 p.m. Eastern)","https://x.com/Xh0PlUgc/status/2120354030761439235"),
 ("Roblox place page for Slippers (place ID 92925615265308; currently private)","https://www.roblox.com/games/92925615265308/Slippers"),
 ("Twin Atlas: official studio site, including Roblox event work","https://twinatlas.com/games/"),
-("Our recap of The Hollow, Roblox's last finished platform-wide event in 2026","https://22dmotter.github.io/fridge-roblox-site/roblox-hollow-event-guide.html"),
+("Our recap of The Hollow, Roblox's last finished platform-wide event in 2026","roblox-hollow-event-guide.html"),
 ],
 body="""
 <p class="lead">A <strong>Roblox Christmas event 2026</strong> leak started spreading on X on November 10, 2026, and it does mention “Slippers.” That word is not a confirmed free item. It is the name of a <strong>private test place</strong> under the Twin Atlas Events group.</p>
