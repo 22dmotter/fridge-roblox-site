@@ -151,7 +151,26 @@ Accent colors live in the `:root` CSS variables at the top of `_build/build.py` 
 
 ## Deployment
 
-Hosted on **GitHub Pages** from the `main` branch root (`.nojekyll` is included). Any push to `main` redeploys. If you move to a custom domain, update `BASE` in `_build/build.py` and rebuild so canonical URLs, OG URLs and the sitemap use the new domain. Then submit `sitemap.xml` in Google Search Console.
+GitHub Pages remains published from the `main` branch root (`.nojekyll` is included). The separate `.github/workflows/deploy-server.yml` workflow also runs on pushes to `main` and deploys the Docker image to the Linux server through SSH; it does not change the Pages publishing source.
+
+Configure these GitHub Actions settings before the first server deployment:
+
+| Setting | Type | Purpose |
+|---|---|---|
+| `DEPLOY_SSH_KEY` | Secret | Private key for a deploy-only SSH account that can run Docker on the server |
+| `DEPLOY_HOST` | Variable | Server hostname or IP |
+| `DEPLOY_USER` | Variable | SSH username |
+| `DEPLOY_KNOWN_HOSTS` | Variable | Verified SSH host key line for the server |
+| `TRAEFIK_NETWORK` | Variable | Existing Docker network shared with Traefik |
+| `SITE_DOMAIN` | Variable | Hostname Traefik should route to this site |
+| `SITE_BASE` | Variable | Canonical site URL including `https://` and a trailing slash; defaults to the current GitHub Pages URL |
+| `DEPLOY_PORT` | Variable, optional | SSH port; defaults to `22` |
+| `TRAEFIK_ENTRYPOINT` | Variable, optional | Traefik entrypoint; defaults to `websecure` |
+| `TRAEFIK_CERT_RESOLVER` | Variable, optional | Traefik TLS certificate resolver; defaults to `letsencrypt` |
+
+The workflow sends the image to the server with `docker save` over SCP, starts and checks the new container, then removes the previous site container. It requires Docker access for the SSH account and the configured Traefik network to exist. The workflow uses only read access to repository contents and does not invoke GitHub Pages deployment actions.
+
+If you move the Pages site to a custom domain, update `BASE` in `_build/build.py` and rebuild the checked-in HTML so the Pages canonical URLs, Open Graph URLs, and sitemap use that domain. Set `SITE_BASE` in Actions to the production URL for the server image as well. Then submit `sitemap.xml` in Google Search Console.
 
 ---
 Not affiliated with Roblox Corporation or any game developer.

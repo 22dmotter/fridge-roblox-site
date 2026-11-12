@@ -1,0 +1,157 @@
+name: Deploy production site to Linux server
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-site-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Validate deployment settings and install SSH key
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ vars.DEPLOY_PORT || '22' }}
+          DEPLOY_KNOWN_HOSTS: ${{ vars.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          TRAEFIK_NETWORK: ${{ vars.TRAEFIK_NETWORK }}
+          SITE_DOMAIN: ${{ vars.SITE_DOMAIN }}
+          TRAEFIK_ENTRYPOINT: ${{ vars.TRAEFIK_ENTRYPOINT || 'websecure' }}
+          TRAEFIK_CERT_RESOLVER: ${{ vars.TRAEFIK_CERT_RESOLVER || 'letsencrypt' }}
+        run: |
+          set -euo pipefail
+          : "${DEPLOY_HOST:?Set the DEPLOY_HOST repository variable}"
+          : "${DEPLOY_USER:?Set the DEPLOY_USER repository variable}"
+          : "${DEPLOY_KNOWN_HOSTS:?Set DEPLOY_KNOWN_HOSTS to the verified SSH host key for the server}"
+          : "${DEPLOY_SSH_KEY:?Set the DEPLOY_SSH_KEY repository secret}"
+          : "${TRAEFIK_NETWORK:?Set the Docker network shared with Traefik}"
+          : "${SITE_DOMAIN:?Set the public domain routed by Traefik}"
+          [[ "$DEPLOY_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "$DEPLOY_PORT" =~ ^[0-9]+$ ]]
+          [[ "$DEPLOY_USER" =~ ^[A-Za-z_][A-Za-z0-9_-]*$ ]]
+          [[ "$TRAEFIK_NETWORK" =~ ^[A-Za-z0-9_.-]+$ ]]
+          [[ "$SITE_DOMAIN" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "$TRAEFIK_ENTRYPOINT" =~ ^[A-Za-z0-9_.-]+$ ]]
+          [[ "$TRAEFIK_CERT_RESOLVER" =~ ^[A-Za-z0-9_.-]+$ ]]
+
+          umask 077
+          install -m 700 -d "$HOME/.ssh"
+          printf '%s\n' "$DEPLOY_SSH_KEY" > "$HOME/.ssh/deploy_key"
+          chmod 600 "$HOME/.ssh/deploy_key"
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/known_hosts"
+
+      - name: Build and transfer image
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ vars.DEPLOY_PORT || '22' }}
+          SITE_BASE: ${{ vars.SITE_BASE || 'https://22dmotter.github.io/fridge-roblox-site/' }}
+        run: |
+          set -euo pipefail
+          release="${GITHUB_SHA:0:12}-${GITHUB_RUN_ID}"
+          image="fridge-roblox-site:${GITHUB_SHA}"
+          archive="$RUNNER_TEMP/fridge-site-${release}.tar.gz"
+          target="${DEPLOY_USER}@${DEPLOY_HOST}"
+
+          docker build --build-arg "SITE_BASE=${SITE_BASE}" --tag "$image" .
+          docker save "$image" | gzip -1 > "$archive"
+          scp -i "$HOME/.ssh/deploy_key" \
+            -P "$DEPLOY_PORT" \
+            -o BatchMode=yes \
+            -o StrictHostKeyChecking=yes \
+            -o UserKnownHostsFile="$HOME/.ssh/known_hosts" \
+            "$archive" "${target}:/tmp/fridge-site-${release}.tar.gz"
+
+      - name: Start container and connect it to Traefik
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ vars.DEPLOY_PORT || '22' }}
+          TRAEFIK_NETWORK: ${{ vars.TRAEFIK_NETWORK }}
+          SITE_DOMAIN: ${{ vars.SITE_DOMAIN }}
+          TRAEFIK_ENTRYPOINT: ${{ vars.TRAEFIK_ENTRYPOINT || 'websecure' }}
+          TRAEFIK_CERT_RESOLVER: ${{ vars.TRAEFIK_CERT_RESOLVER || 'letsencrypt' }}
+        run: |
+          set -euo pipefail
+          release="${GITHUB_SHA:0:12}-${GITHUB_RUN_ID}"
+          image="fridge-roblox-site:${GITHUB_SHA}"
+          target="${DEPLOY_USER}@${DEPLOY_HOST}"
+
+          ssh -i "$HOME/.ssh/deploy_key" \
+            -p "$DEPLOY_PORT" \
+            -o BatchMode=yes \
+            -o StrictHostKeyChecking=yes \
+            -o UserKnownHostsFile="$HOME/.ssh/known_hosts" \
+            "$target" bash -s -- \
+            "$image" "$release" "$TRAEFIK_NETWORK" "$SITE_DOMAIN" \
+            "$TRAEFIK_ENTRYPOINT" "$TRAEFIK_CERT_RESOLVER" <<'REMOTE'
+          set -euo pipefail
+          image="$1"
+          release="$2"
+          network="$3"
+          site_domain="$4"
+          entrypoint="$5"
+          cert_resolver="$6"
+          archive="/tmp/fridge-site-${release}.tar.gz"
+          container="fridge-site-${release}"
+          trap 'rm -f "$archive"' EXIT
+
+          docker load --input "$archive"
+          docker run --detach \
+            --name "$container" \
+            --restart unless-stopped \
+            --network "$network" \
+            --label com.fridge.site=roblox \
+            --label traefik.enable=true \
+            --label "traefik.docker.network=${network}" \
+            --label "traefik.http.routers.fridge-site.rule=Host(\"${site_domain}\")" \
+            --label "traefik.http.routers.fridge-site.entrypoints=${entrypoint}" \
+            --label traefik.http.routers.fridge-site.tls=true \
+            --label "traefik.http.routers.fridge-site.tls.certresolver=${cert_resolver}" \
+            --label traefik.http.services.fridge-site.loadbalancer.server.port=80 \
+            "$image"
+
+          ready=false
+          for attempt in $(seq 1 20); do
+            if docker exec "$container" wget -q -O /dev/null http://127.0.0.1/; then
+              ready=true
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then
+            docker logs "$container"
+            docker rm -f "$container"
+            exit 1
+          fi
+
+          new_id="$(docker inspect --format '{{.Id}}' "$container")"
+          for old_id in $(docker ps --all --quiet --filter label=com.fridge.site=roblox); do
+            if [ "$old_id" != "$new_id" ]; then
+              docker rm --force "$old_id"
+            fi
+          done
+          current_image="$(docker image inspect --format '{{.Id}}' "$image")"
+          for old_image in $(docker image ls --quiet fridge-roblox-site); do
+            if [ "$old_image" != "$current_image" ]; then
+              docker image rm "$old_image"
+            fi
+          done
+          REMOTE
