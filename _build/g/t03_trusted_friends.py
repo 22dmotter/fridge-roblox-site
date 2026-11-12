@@ -6,7 +6,7 @@ desc='How to add Trusted Friends on Roblox in 2026: the age check, QR code, cont
 cat="Guides", game="Roblox", date="2026-11-11", videos=[],
 kw_primary="how to add trusted friends on roblox",
 kw_secondary=["roblox trusted friends","how to add trusted friends on roblox without qr code","roblox trusted friends qr code","roblox trusted friends link","how to add trusted friends on roblox pc"],
-related=["roblox-parental-controls-guide","how-to-turn-on-voice-chat-roblox","how-to-appear-offline-roblox","join-someone-roblox-without-friends"],
+related=["roblox-age-verification","roblox-parental-controls-guide","how-to-turn-on-voice-chat-roblox","how-to-appear-offline-roblox"],
 chapters=[("0:00","What Trusted Friends are","what"),("0:25","Step 1: the age check","age-check"),("0:50","Teens: QR code, contacts, invite link","teens"),("1:50","Under 13: parent approval","kids"),("2:20","Adults","adults"),("2:40","Remove or downgrade","remove")],
 sources=[("Roblox Support: How do I add trusted friends?","https://en.help.roblox.com/hc/en-us/articles/46158344285204-How-do-I-add-trusted-friends")],
 body="""
@@ -18,7 +18,7 @@ body="""
 <p>Trusted Friends are a level above regular friends, meant for people you know and trust. They show a <strong>Trusted</strong> indicator next to their username on profiles, in experience chat and in friends chat. Availability varies by country, and Roblox is still rolling it out to more regions.</p>
 
 <h2 id="age-check">Step 1: Complete the Age Check</h2>
-<p>Roblox Support says you must estimate your age before Trusted Friends options appear. Open <strong>Settings → Account info</strong> and complete the age check (Facial Age Estimation with your camera, or ID verification where offered). Your friend needs to be age checked too.</p>
+<p>Roblox Support says you must estimate your age before Trusted Friends options appear. Open <strong>Settings → Account info</strong> and complete the age check (Facial Age Estimation with your camera, or ID verification where offered). Your friend needs to be age checked too. See our <a href="roblox-age-verification.html">Roblox age verification guide</a> for both official methods.</p>
 
 <h2 id="methods">How to Add Trusted Friends on Roblox by Age</h2>
 <div class="table-wrap"><table>

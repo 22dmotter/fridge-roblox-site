@@ -8,6 +8,13 @@ YOC = "https://www.youronlinechoices.eu/"
 EFFECTIVE = "November 12, 2026"
 EFFECTIVE_ISO = "2026-11-12"
 
+EMAIL = "blazingblox49@gmail.com"
+def email_link(text=None):
+    """Working mailto with numeric HTML entities to slow naive scrapers."""
+    enc = "".join(f"&#{ord(c)};" for c in EMAIL)
+    return f'<a href="mailto:{enc}">{text if text is not None else enc}</a>'
+
+
 def privacy_body():
     return f"""<div class="wrap">{{CRUMBS}}
 <article class="post">
@@ -54,11 +61,11 @@ def privacy_body():
 
 <h2 id="gdpr">Rights in the European Economic Area and United Kingdom</h2>
 <p>If the GDPR or UK GDPR applies to you, you may have rights to request access to personal data we hold about you, to correct it, to delete it, to restrict or object to certain processing, and to data portability, subject to legal limits. Where processing is based on consent, you may withdraw consent at any time, without affecting earlier lawful processing. You may also lodge a complaint with your local data protection authority (for example, a European supervisory authority or the UK Information Commissioner’s Office).</p>
-<p>Our legal bases, when those laws apply, include: operating the site and keeping it secure (legitimate interests, and where applicable our need to provide the website); complying with law; and, once a certified CMP and ads are in use, consent for advertising cookies and ads personalization where consent is required. Because this site does not run its own user accounts, we may only be able to identify you from information you include in a request (for example, an IP address and a date of a visit).</p>
+<p>Our legal bases, when those laws apply, include: operating the site and keeping it secure (legitimate interests, and where applicable our need to provide the website); complying with law; and, once a certified CMP and ads are in use, consent for advertising cookies and ads personalization where consent is required. Because this site does not run its own user accounts, we may only be able to identify you from information you include in a request (for example, an IP address and a date of a visit). To make a GDPR or UK GDPR request, email {email_link()} or use the <a href="contact.html">Contact</a> page.</p>
 
 <h2 id="ccpa">California, other US state privacy rights, and “Do Not Sell or Share”</h2>
 <p>If you are a resident of California or of another US state that has a consumer privacy law (including, where applicable, the CCPA/CPRA and similar state statutes), you may have the right to request that we disclose the personal information we have collected about you, to request deletion or correction, to opt out of the “sale” or “sharing” of personal information (including sharing for cross-context behavioral advertising), and to not be discriminated against for exercising those rights. You may also have the right to use an authorized agent, subject to verification.</p>
-<p>We do not sell personal information for money. If Google AdSense or similar advertising is enabled, some uses of cookies or identifiers for personalized ads may be treated as “sharing” or targeted advertising under those laws. When ads are live, we intend to offer required opt-out tools, including through Google’s Privacy &amp; messaging / US state messages where available, and through the opt-out links in the advertising section above. To make a request, use the <a href="contact.html">Contact</a> page. We will take reasonable steps to verify a request and will describe if we cannot complete it.</p>
+<p>We do not sell personal information for money. If Google AdSense or similar advertising is enabled, some uses of cookies or identifiers for personalized ads may be treated as “sharing” or targeted advertising under those laws. When ads are live, we intend to offer required opt-out tools, including through Google’s Privacy &amp; messaging / US state messages where available, and through the opt-out links in the advertising section above. To make a request, email {email_link()} or use the <a href="contact.html">Contact</a> page. We will take reasonable steps to verify a request and will describe if we cannot complete it.</p>
 <p>This site does not currently have a first-party cookie banner or a “Do Not Sell or Share” link of its own, because we are not yet running a certified advertising consent or opt-out interface and we do not collect account data. That will be updated when ads and a compliant messaging tool are enabled.</p>
 
 <h2 id="links">External links and third parties</h2>
@@ -68,7 +75,7 @@ def privacy_body():
 <p>We may update this Privacy Policy when the site, our hosting, advertising, or the law changes. The “Last updated” date at the top will change when we do. The revised policy applies from that date. We encourage you to review this page periodically.</p>
 
 <h2 id="contact">How to contact us</h2>
-<p>Questions about this policy, cookies, ads, or a privacy rights request can be sent through the public contact method on our <a href="contact.html">Contact</a> page: the Fridge YouTube channel at <a href="{YT}" rel="noopener" target="_blank">@Fridgetherealone</a>. Please do not send passwords, Roblox cookies, or other account secrets in a public comment. If a dedicated email address is added later, it will be listed on the Contact page and this section will be updated.</p>
+<p>Questions about this policy, cookies, ads, or a privacy rights request can be sent to {email_link()}, the public site email listed on our <a href="contact.html">Contact</a> page. You can also reach the Fridge YouTube channel at <a href="{YT}" rel="noopener" target="_blank">@Fridgetherealone</a>. Please do not send passwords, Roblox cookies, or other account secrets in a public comment or unsolicited attachment.</p>
 <p>See also our <a href="terms.html">Terms of Use</a> and <a href="about.html">About</a> page.</p>
 </article></div>"""
 
@@ -109,7 +116,7 @@ def terms_body():
 <p>We may change these Terms of Use or the Site at any time. The “Last updated” date will change when we revise this page. Continued use of the Site after a change means you accept the revised terms.</p>
 
 <h2 id="contact">Contact</h2>
-<p>Questions about these terms can be sent through the method on our <a href="contact.html">Contact</a> page. Also see the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+<p>Questions about these terms can be sent to {email_link()} or through the <a href="contact.html">Contact</a> page. Also see the <a href="privacy-policy.html">Privacy Policy</a>.</p>
 </article></div>"""
 
 def contact_body():
@@ -117,22 +124,23 @@ def contact_body():
 <article class="post">
 <h1>Contact Roblox Guides</h1>
 <p class="updated"><strong>Last updated:</strong> <time datetime="{EFFECTIVE_ISO}">{EFFECTIVE}</time></p>
-<p class="lead">Roblox Guides is the written site for the Fridge YouTube channel. The public way to reach the operator is through that channel. We do not publish a personal email address on this website.</p>
+<p class="lead">The primary way to reach Roblox Guides is by email at {email_link()}. The Fridge YouTube channel is a secondary public contact method.</p>
 
-<h2 id="youtube">YouTube is the current contact method</h2>
-<p>Please use the Fridge channel to get in touch:</p>
+<h2 id="email">Email (primary contact)</h2>
+<p>Write to {email_link()} for questions about a guide, a correction (for example, a code that no longer works), a privacy or advertising request described in the <a href="privacy-policy.html">Privacy Policy</a>, or other feedback about this site. Tell us which page you are writing about and what you need. Please do not send your Roblox password, cookie, backup codes or other login secrets.</p>
+<p><a class="btn" href="mailto:{''.join(f'&#{ord(c)};' for c in EMAIL)}">Email Roblox Guides</a></p>
+
+<h2 id="youtube">YouTube (secondary contact)</h2>
+<p>You can also reach the operator through the Fridge channel:</p>
 <ul>
 <li>Channel: <a href="{YT}" rel="noopener" target="_blank">youtube.com/@Fridgetherealone</a></li>
 <li>Subscribe or open the channel: <a class="yt-sub" href="{SUB}" rel="noopener" target="_blank">Subscribe on YouTube</a></li>
 </ul>
-<p>The most useful public options are a comment on a relevant video or the channel’s YouTube contact features (including the About / business inquiry options YouTube provides). Tell us which page you are writing about and what you need. Please do not post your Roblox password, cookie, backup codes or other login secrets in a comment or message.</p>
+<p>A comment on a relevant video or the channel’s YouTube About / inquiry options can work for general feedback. Please do not post login secrets in a public comment.</p>
 
 <h2 id="what">What to contact us about</h2>
-<p>This address is appropriate for questions about a guide, a correction (for example, a code that no longer works), a privacy or advertising request described in the <a href="privacy-policy.html">Privacy Policy</a>, or a question about these pages. We also welcome feedback on missing games or unclear steps.</p>
+<p>Email is the best path for corrections, privacy or advertising requests, and questions about these pages. We also welcome feedback on missing games or unclear steps.</p>
 <p>We cannot reset a Roblox account, restore Robux, or override a game ban. For those issues, use official Roblox Support. We also cannot provide private “undetected” tools or downloads.</p>
-
-<h2 id="email">Email</h2>
-<p>There is no public email address listed on Roblox Guides at this time, and we have not added a <code>mailto:</code> link. A dedicated site email is recommended for privacy requests and for publisher programs, and it will be added here if and when the operator publishes one.</p>
 
 <h2 id="more">More about this site</h2>
 <p>Learn who runs Roblox Guides and how we check codes on the <a href="about.html">About</a> page. Legal terms are in the <a href="terms.html">Terms of Use</a>. Cookie and advertising disclosures are in the <a href="privacy-policy.html">Privacy Policy</a>.</p>

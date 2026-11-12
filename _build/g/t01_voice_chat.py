@@ -6,7 +6,7 @@ desc="How to turn on voice chat on Roblox in 2026: the age check you need, the h
 cat="Guides", game="Roblox", date="2026-11-11", videos=[],
 kw_primary="how to turn on voice chat on roblox",
 kw_secondary=["roblox voice chat","roblox voice chat age check","how to turn on voice chat on roblox mobile","how to turn on voice chat on roblox ps5","roblox voice chat not showing"],
-related=["add-trusted-friends-roblox","roblox-parental-controls-guide","how-to-appear-offline-roblox","fix-roblox-lag"],
+related=["roblox-age-verification","add-trusted-friends-roblox","roblox-parental-controls-guide","how-to-appear-offline-roblox"],
 chapters=[("0:00","Intro: who can use voice chat","requirements"),("0:30","Step 1: complete the age check","age-check"),("1:15","Step 2: turn voice on in a game","turn-on"),("1:45","Consoles: PlayStation and Xbox","consoles"),("2:15","Voice chat not showing? Fixes","fixes"),("2:50","Staying safe on voice","safety")],
 sources=[("Roblox Support: How do I turn on Voice Chat?","https://en.help.roblox.com/hc/en-us/articles/34506487801364-How-do-I-turn-on-Voice-Chat"),("Roblox Support: Parental Controls Overview","https://en.help.roblox.com/hc/en-us/articles/30428310121620-Parental-Controls-Overview")],
 body="""
@@ -31,7 +31,7 @@ body="""
 <ol class="steps">
 <li>Open <strong>Settings</strong> (gear icon on desktop; <strong>More → Settings</strong> on mobile).</li>
 <li>Go to <strong>Account Info</strong>.</li>
-<li>Choose the age check option and follow the prompts, using either <strong>Facial Age Estimation</strong> with your camera or <strong>ID Verification</strong>.</li>
+<li>Choose the age check option and follow the prompts, using either <strong>Facial Age Estimation</strong> with your camera or <strong>ID Verification</strong>. Our <a href="roblox-age-verification.html">guide on how to verify your age on Roblox</a> has the current selfie and ID steps.</li>
 <li>Wait for the confirmation. Some verification methods aren't available on every account or in every region.</li>
 </ol>
 

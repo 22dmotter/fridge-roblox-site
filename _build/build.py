@@ -15,6 +15,11 @@ CATS = {
 }
 def esc(s): return html.escape(s, quote=True)
 
+def email_link(text=None):
+    enc = "".join(f"&#{ord(c)};" for c in "blazingblox49@gmail.com")
+    return f'<a href="mailto:{enc}">{text if text is not None else enc}</a>'
+
+
 # ---------- load guides ----------
 guides = []
 import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -55,7 +60,9 @@ def make_cover(g):
     im.save(os.path.join(d, g["slug"]+".png"), optimize=True)
 
 for _g in guides:
-    if not _g["videos"] and not _g.get("cover"): make_cover(_g)
+    cover = _g.get("cover") or ""
+    if cover.endswith(f"/thumbs/{_g['slug']}.png") or cover.endswith(f"thumbs/{_g['slug']}.png") or (not _g["videos"] and not _g.get("cover")):
+        make_cover(_g)
 
 # ---------- CSS ----------
 CSS = r"""
@@ -279,6 +286,7 @@ def footer(prefix=""):
 <div><h2>Categories</h2><ul>{cats}<li><a href="{prefix}about.html">About Fridge</a></li><li><a href="{prefix}sitemap.xml">Sitemap</a></li></ul></div>
 </div><div class="wrap legal">
 <p class="legal-nav"><a href="{prefix}privacy-policy.html">Privacy Policy</a><a href="{prefix}terms.html">Terms of Use</a><a href="{prefix}contact.html">Contact</a><a href="{prefix}about.html">About</a></p>
+<p class="small">Site email: {email_link()}</p>
 <p class="small disclosure"><strong>Disclosure:</strong> This site may display advertisements, including ads served by Google. Links to third-party tools such as ExoPanda are provided for context and are not sponsored unless a page says otherwise. We are not affiliated with those vendors or with Roblox Corporation.</p>
 <p class="small">If you are in the EEA, the UK or Switzerland, Google requires a Google-certified consent management platform before personalized ads can be shown. We have not added an unofficial cookie banner. After AdSense approval, the operator intends to enable Google's Privacy &amp; messaging GDPR (and applicable US state) messages. See the <a href="{prefix}privacy-policy.html">Privacy Policy</a> for cookies, ads and your choices.</p>
 <p class="small">© 2026 Fridge (@Fridgetherealone). Not affiliated with Roblox Corporation or any game developer. Game names belong to their owners.</p>
@@ -312,9 +320,9 @@ def bc_html(items):
 
 def thumb(vid): return f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
 def g_img(g, absolute=False):
+    if g.get("cover"): return (BASE if absolute else "") + g["cover"]
     if g["videos"]: return thumb(g["videos"][0][0])
     if g.get("shorts"): return thumb(g["shorts"][0][0])
-    if g.get("cover"): return (BASE if absolute else "") + g["cover"]
     return (BASE if absolute else "") + f"assets/thumbs/{g['slug']}.png"
 def g_img_alt(g):
     if g.get("image_alt"): return g["image_alt"]

@@ -6,7 +6,7 @@ desc='Roblox parental controls in 2026: link a parent account, set content matur
 cat="Guides", game="Roblox", date="2026-11-11", videos=[],
 kw_primary="roblox parental controls",
 kw_secondary=["how to set up parental controls on roblox","roblox parent account","roblox spending limit","roblox screen time limit","roblox parental controls not working"],
-related=["add-trusted-friends-roblox","how-to-turn-on-voice-chat-roblox","redeem-roblox-gift-card","how-to-appear-offline-roblox"],
+related=["roblox-age-verification","add-trusted-friends-roblox","how-to-turn-on-voice-chat-roblox","redeem-roblox-gift-card"],
 chapters=[("0:00","Intro: two ways to manage","link"),("0:30","Step 1: link a parent account","link"),("1:15","Step 2: content maturity","content"),("1:50","Step 3: chat settings","chat"),("2:30","Step 4: spending limits","spending"),("3:00","Step 5: screen time","screen"),("3:25","Step 6: visibility and activity","visibility")],
 sources=[("Roblox Support: Parental Controls Overview","https://en.help.roblox.com/hc/en-us/articles/30428310121620-Parental-Controls-Overview"),("Roblox Support: Linking parent and child accounts","https://en.help.roblox.com/hc/en-us/articles/30428321333140"),("Roblox Support: Monthly Spending Limits","https://en.help.roblox.com/hc/en-us/articles/4409125091348")],
 body="""
@@ -65,7 +65,7 @@ body="""
 <li><strong>Wrong account:</strong> make sure you picked the right child in Parental controls.</li>
 <li><strong>Setting missing:</strong> settings change with age. From 13 teens manage screen time and blocking, and for 16+ parents only see notifications and activity updates.</li>
 <li><strong>Game still open:</strong> a blocked game only stops working the next time your child joins it.</li>
-<li><strong>"Age check needed":</strong> many chat options need your child to finish an age check (Settings → Account info).</li>
+<li><strong>"Age check needed":</strong> many chat options need your child to finish an age check (Settings → Account info). Our <a href="roblox-age-verification.html">how to verify age on Roblox</a> guide covers the official selfie and ID steps.</li>
 <li><strong>Region:</strong> some options, like Preview games, aren't available everywhere.</li>
 </ol>
 """,
