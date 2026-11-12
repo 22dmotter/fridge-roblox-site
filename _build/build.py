@@ -258,6 +258,7 @@ def head(title, desc, path, og_type="website", image=None, image_alt=None, extra
 <link rel="preconnect" href="https://i.ytimg.com">
 <link rel="stylesheet" href="{prefix}assets/style.min.css">
 <script src="{prefix}assets/site.js" defer></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6703417075646187" crossorigin="anonymous"></script>
 {lds}
 </head>
 <body>
@@ -626,9 +627,7 @@ sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps
 write("sitemap.xml", sm)
 write("robots.txt", f"User-agent: Mediapartners-Google\nAllow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
 write("ads.txt", """# ads.txt for robloxguides.org
-# Placeholder only. After Google AdSense approval, add the official publisher line
-# that AdSense provides, in this form (do not invent a publisher ID):
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-6703417075646187, DIRECT, f08c47fec0942fa0
 """)
 
 # ---------- assets ----------

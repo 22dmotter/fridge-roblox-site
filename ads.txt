@@ -1,4 +1,2 @@
 # ads.txt for robloxguides.org
-# Placeholder only. After Google AdSense approval, add the official publisher line
-# that AdSense provides, in this form (do not invent a publisher ID):
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-6703417075646187, DIRECT, f08c47fec0942fa0
