@@ -7,6 +7,8 @@ ABOUTADS = "https://www.aboutads.info"
 YOC = "https://www.youronlinechoices.eu/"
 EFFECTIVE = "November 12, 2026"
 EFFECTIVE_ISO = "2026-11-12"
+PRIVACY_UPDATED = "November 13, 2026"
+PRIVACY_UPDATED_ISO = "2026-11-13"
 
 EMAIL = "blazingblox49@gmail.com"
 def email_link(text=None):
@@ -19,7 +21,7 @@ def privacy_body():
     return f"""<div class="wrap">{{CRUMBS}}
 <article class="post">
 <h1>Privacy Policy</h1>
-<p class="updated"><strong>Effective date:</strong> <time datetime="{EFFECTIVE_ISO}">{EFFECTIVE}</time> · <strong>Last updated:</strong> <time datetime="{EFFECTIVE_ISO}">{EFFECTIVE}</time></p>
+<p class="updated"><strong>Effective date:</strong> <time datetime="{EFFECTIVE_ISO}">{EFFECTIVE}</time> · <strong>Last updated:</strong> <time datetime="{PRIVACY_UPDATED_ISO}">{PRIVACY_UPDATED}</time></p>
 <p class="lead">This Privacy Policy explains who operates Roblox Guides, what information is collected when you visit <a href="index.html">robloxguides.org</a>, how advertising and embedded videos may use cookies, and what choices you have. Please read it carefully.</p>
 
 <h2 id="who">Who we are</h2>
@@ -31,7 +33,7 @@ def privacy_body():
 <h3>Server logs</h3>
 <p>Like most websites, the hosting server may automatically record technical data when your browser requests a page. That typically includes your IP address, the date and time of the request, the page or file requested, the referring URL if your browser sends one, and your browser or device user-agent. These logs are used to operate and secure the site, diagnose errors, and understand aggregate traffic. We do not use server logs to build a marketing profile of you. Retention is controlled by the hosting environment and is limited to what is needed for those purposes.</p>
 <h3>Analytics</h3>
-<p>As of the effective date of this policy, this site does not embed a first-party analytics product such as Google Analytics, and it does not include a Facebook, TikTok or similar tracking pixel. If we add analytics later, we will update this policy and, where required, obtain consent before those technologies run.</p>
+<p>This site uses Google Analytics through a Google tag (container ID GTM-54BMLPB9). The tag collects usage data such as pages viewed, device and browser information, approximate location, and the referring site, using cookies or similar identifiers. Google may also process this information as described in <a href="{PARTNER}" rel="noopener" target="_blank">How Google uses information from sites or apps that use our services</a>. You can opt out of Google Analytics in some browsers with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics opt-out browser add-on</a>. This site does not include a Facebook, TikTok or similar tracking pixel.</p>
 <h3>YouTube embeds</h3>
 <p>Many guides can include Fridge videos or YouTube Shorts. Full-length videos on this site use a click-to-play thumbnail and, when you choose to play them, load from YouTube’s privacy-enhanced domain (<code>youtube-nocookie.com</code>). Shorts, when a matching video exists, also use <code>youtube-nocookie.com</code> iframes. We do not load a YouTube player until you click a full video, except where a Short is actually published on the page.</p>
 <p>Even in privacy-enhanced mode, Google or YouTube may still set or read cookies or similar identifiers, collect your IP address, and receive the page URL, especially if you are signed in to a Google account. That processing is governed by Google’s policies, including <a href="{PARTNER}" rel="noopener" target="_blank">How Google uses information from sites or apps that use our services</a>. If you do not want that to happen, do not play the embeds and consider using browser controls described below.</p>
@@ -48,6 +50,7 @@ def privacy_body():
 <p>A cookie is a small text file stored on your device. Similar technologies include pixels, local storage and tags. This site may involve:</p>
 <ul>
 <li><strong>Essential or operational data</strong> such as server logs needed to deliver pages and keep the site secure.</li>
+<li><strong>Google Analytics / Google tag cookies or identifiers</strong> used to measure visits, as described in the Analytics section.</li>
 <li><strong>YouTube / Google cookies or identifiers</strong> if you play an embedded video, as described above.</li>
 <li><strong>Advertising cookies</strong> if and when Google AdSense or other ad vendors run on the site, as described in the advertising section.</li>
 </ul>
