@@ -1,4 +1,21 @@
 (function(){
+var dds=[].slice.call(document.querySelectorAll('.nav-dd'));
+if(!dds.length)return;
+function closeAll(except){dds.forEach(function(dd){if(dd===except)return;var b=dd.querySelector('.nav-dd-btn');if(b)b.setAttribute('aria-expanded','false');dd.classList.remove('is-open');});}
+dds.forEach(function(dd){
+  var btn=dd.querySelector('.nav-dd-btn');
+  if(!btn)return;
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=btn.getAttribute('aria-expanded')==='true';
+    closeAll();
+    if(!open){btn.setAttribute('aria-expanded','true');dd.classList.add('is-open');}
+  });
+});
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-dd'))closeAll();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll();}});
+})();
+(function(){
 document.querySelectorAll('.yt[data-id]').forEach(function(box){var a=box.querySelector('a');if(!a)return;a.addEventListener('click',function(e){e.preventDefault();var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+box.dataset.id+'?autoplay=1&rel=0';f.title=box.dataset.title||'YouTube video';f.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';f.allowFullscreen=true;f.loading='lazy';box.innerHTML='';box.appendChild(f);});});
 var input=document.getElementById('guide-search');if(!input)return;
 var cards=[].slice.call(document.querySelectorAll('.card[data-search]'));var btns=[].slice.call(document.querySelectorAll('.filters button'));var empty=document.querySelector('.empty');var cat='all';

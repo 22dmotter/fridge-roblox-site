@@ -154,8 +154,29 @@ footer.site .cols{display:grid;gap:20px;grid-template-columns:1fr}footer.site h2
 footer.site ul{list-style:none;margin:0;padding:0}footer.site li{margin:4px 0}footer.site a{color:var(--mut)}footer.site a:hover{color:var(--acc)}footer.site .legal{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}footer.site .legal-nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 12px}footer.site .legal-nav a{color:var(--txt);font-weight:600}footer.site .disclosure{max-width:70rem;margin:0 0 8px;line-height:1.55}
 .notfound{text-align:center;padding:60px 0}.notfound h1{font-size:clamp(3rem,14vw,6rem);margin:0;color:var(--acc)}
 @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}.cats{grid-template-columns:repeat(4,1fr)}footer.site .cols{grid-template-columns:2fr 1fr 1fr}}
-@media(min-width:900px){nav.main{order:0;width:auto}form.hs{margin-left:auto}form.hs input{width:190px}.grid{grid-template-columns:repeat(3,1fr)}
+@media(min-width:900px){nav.main{order:0;width:auto;overflow:visible}form.hs{margin-left:auto}form.hs input{width:190px}.grid{grid-template-columns:repeat(3,1fr)}
 .layout{grid-template-columns:minmax(0,1fr) 300px}.layout aside{position:sticky;top:80px;align-self:start;display:grid;gap:16px}.intro{grid-template-columns:2fr 1fr;align-items:center}}
+/* Games nav dropdown */
+nav.main .nav-dd{position:static}
+nav.main .nav-dd-btn{display:block;padding:6px 12px;border-radius:999px;color:var(--mut);background:transparent;border:0;font:inherit;font-weight:600;white-space:nowrap;cursor:pointer}
+nav.main .nav-dd-btn .caret{display:inline-block;width:0;height:0;margin-left:6px;vertical-align:middle;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor}
+nav.main .nav-dd-btn:hover,nav.main .nav-dd-btn:focus-visible,nav.main .nav-dd-btn[aria-current=page],nav.main .nav-dd-btn[aria-expanded=true],nav.main .nav-dd:hover>.nav-dd-btn,nav.main .nav-dd:focus-within>.nav-dd-btn{color:var(--ink);background:var(--acc)}
+nav.main .nav-dd-btn:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+nav.main .nav-dd-panel{display:none;margin:0;padding:8px;list-style:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(0,0,0,.45)}
+nav.main .nav-dd-panel a{display:block;padding:8px 12px;border-radius:8px;color:var(--txt);text-decoration:none;font-weight:600;white-space:nowrap}
+nav.main .nav-dd-panel a:hover,nav.main .nav-dd-panel a:focus-visible,nav.main .nav-dd-panel a[aria-current=page]{color:var(--ink);background:var(--acc)}
+/* Mobile: wrap instead of clipping a panel inside overflow-x:auto; panel sits under the whole nav */
+@media(max-width:899px){
+nav.main{overflow:visible;position:relative}
+nav.main>ul{flex-wrap:wrap}
+.nav-dd-panel{position:absolute;left:0;right:0;top:100%;z-index:8;margin-top:8px}
+.nav-dd.is-open>.nav-dd-panel,.nav-dd:focus-within>.nav-dd-panel{display:block}
+}
+@media(min-width:900px){
+nav.main .nav-dd{position:relative}
+nav.main .nav-dd-panel{position:absolute;top:calc(100% + 8px);left:0;min-width:240px;z-index:8}
+nav.main .nav-dd:hover>.nav-dd-panel,nav.main .nav-dd:focus-within>.nav-dd-panel,nav.main .nav-dd.is-open>.nav-dd-panel{display:block}
+}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 """
 def minify_css(c):
@@ -164,6 +185,23 @@ def minify_css(c):
     return c.strip()
 
 JS = r"""(function(){
+var dds=[].slice.call(document.querySelectorAll('.nav-dd'));
+if(!dds.length)return;
+function closeAll(except){dds.forEach(function(dd){if(dd===except)return;var b=dd.querySelector('.nav-dd-btn');if(b)b.setAttribute('aria-expanded','false');dd.classList.remove('is-open');});}
+dds.forEach(function(dd){
+  var btn=dd.querySelector('.nav-dd-btn');
+  if(!btn)return;
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=btn.getAttribute('aria-expanded')==='true';
+    closeAll();
+    if(!open){btn.setAttribute('aria-expanded','true');dd.classList.add('is-open');}
+  });
+});
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-dd'))closeAll();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll();}});
+})();
+(function(){
 document.querySelectorAll('.yt[data-id]').forEach(function(box){var a=box.querySelector('a');if(!a)return;a.addEventListener('click',function(e){e.preventDefault();var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+box.dataset.id+'?autoplay=1&rel=0';f.title=box.dataset.title||'YouTube video';f.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';f.allowFullscreen=true;f.loading='lazy';box.innerHTML='';box.appendChild(f);});});
 var input=document.getElementById('guide-search');if(!input)return;
 var cards=[].slice.call(document.querySelectorAll('.card[data-search]'));var btns=[].slice.call(document.querySelectorAll('.filters button'));var empty=document.querySelector('.empty');var cat='all';
@@ -220,10 +258,23 @@ resize();start();
 
 LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Fridge logo</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="12" y="3" width="40" height="58" rx="9" fill="url(#g)"/><rect x="12" y="24" width="40" height="3" fill="#0a0f14"/><rect x="18" y="10" width="4" height="10" rx="2" fill="#0a0f14"/><rect x="18" y="32" width="4" height="14" rx="2" fill="#0a0f14"/><path d="M38 38l3-5 3 5-3 5z" fill="#fff" opacity=".9"/><path d="M33 13l2-3 2 3-2 3z" fill="#fff" opacity=".8"/></svg>"""
 
+GAME_PAGES = {"roblox-the-forge.html"}
+
 def nav(active):
-    items = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides"),("tag-events.html","Events"),("tag-tips.html","Tips"),("tag-macro.html","Macro"),("about.html","About")]
-    li = "".join(f'<li><a href="{h}"{" aria-current=\"page\"" if h==active else ""}>{t}</a></li>' for h,t in items)
-    return li
+    before = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides")]
+    after = [("tag-events.html","Events"),("tag-tips.html","Tips"),("tag-macro.html","Macro"),("about.html","About")]
+    def item(h,t):
+        return f'<li><a href="{h}"{" aria-current=\"page\"" if h==active else ""}>{t}</a></li>'
+    games_on = active in GAME_PAGES
+    forge_cur = ' aria-current="page"' if active=="roblox-the-forge.html" else ""
+    games = (
+        '<li class="nav-dd">'
+        f'<button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="nav-games-menu" aria-haspopup="true"{" aria-current=\"page\"" if games_on else ""}>Games <span class="caret" aria-hidden="true"></span></button>'
+        '<ul id="nav-games-menu" class="nav-dd-panel">'
+        f'<li><a href="roblox-the-forge.html"{forge_cur}>Roblox The Forge</a></li>'
+        '</ul></li>'
+    )
+    return "".join(item(h,t) for h,t in before) + games + "".join(item(h,t) for h,t in after)
 
 def head(title, desc, path, og_type="website", image=None, image_alt=None, extra_ld=None, prefix=""):
     url = BASE + ("" if path=="index.html" else path)
@@ -315,13 +366,16 @@ def crumbs(items):
 def bc_ld(items):
     els=[]
     for i,(n,p) in enumerate(items):
-        url = BASE if p=="index.html" else BASE+p
-        els.append({"@type":"ListItem","position":i+1,"name":n,"item":url})
+        el={"@type":"ListItem","position":i+1,"name":n}
+        if p:
+            el["item"] = BASE if p=="index.html" else BASE+p
+        els.append(el)
     return {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":els}
 def bc_html(items):
     li=[]
     for i,(n,p) in enumerate(items):
-        if i < len(items)-1: li.append(f'<li><a href="{p}">{esc(n)}</a></li>')
+        if i < len(items)-1:
+            li.append(f'<li><a href="{p}">{esc(n)}</a></li>' if p else f'<li>{esc(n)}</li>')
         else: li.append(f'<li aria-current="page">{esc(n)}</li>')
     return f'<nav class="crumbs" aria-label="Breadcrumb"><ol>{"".join(li)}</ol></nav>'
 
@@ -589,6 +643,37 @@ write("tag-the-forge.html", f"""<!doctype html>
 </html>
 """)
 
+# ---------- Games placeholder hubs ----------
+_forge_hub_desc = "Find Roblox The Forge codes and existing walkthroughs on Roblox Guides. This game hub is a placeholder while we build it out. Open the pages now!"
+_forge_cards = []
+for _slug in ("the-forge-codes", "the-forge-beginners-guide", "the-forge-forging-guide", "the-forge-races-guide"):
+    if _slug not in BY:
+        raise SystemExit(f"missing forge guide {_slug}")
+    _forge_cards.append(card(BY[_slug], "h2"))
+_guides_card = """<article class="card">
+<div class="bd"><div class="meta"><span class="tag">Guides</span></div>
+<h2><a href="tag-guides.html">All Guides (including The Forge)</a></h2>
+<p>Open the Guides category for The Forge walkthroughs already on the site, plus other Roblox game guides.</p>
+<a class="more" href="tag-guides.html">Browse Guides →</a></div></article>"""
+_forge_body = f"""<div class="wrap">{{CRUMBS}}
+<article>
+<h1>Roblox The Forge</h1>
+<p class="updated"><strong>Last updated: <time datetime="{TODAY}">{MOD_HUMAN}</time></strong></p>
+<p>This is a placeholder game hub for Roblox The Forge, a game already covered on Roblox Guides with codes and walkthroughs. Use it to jump to those existing pages from the new Games menu.</p>
+<p><strong>Game hub coming soon.</strong> A fuller hub will live here later. For now, start with The Forge codes, the Guides category, and a few walkthroughs already on the site.</p>
+<div class="grid">{_guides_card}{''.join(_forge_cards)}</div>
+</article>
+</div>"""
+write("roblox-the-forge.html", page(
+    "roblox-the-forge.html",
+    "Roblox The Forge Hub | Codes and Guides",
+    _forge_hub_desc,
+    [("Home","index.html"),("Games",None),("Roblox The Forge","roblox-the-forge.html")],
+    _forge_body,
+    active="roblox-the-forge.html",
+    ld=[{"@context":"https://schema.org","@type":"WebPage","name":"Roblox The Forge","url":BASE+"roblox-the-forge.html","dateModified":TODAY,"publisher":ORG}],
+))
+
 # ---------- about / legal ----------
 from legalpages import privacy_body, terms_body, contact_body, about_body
 
@@ -626,7 +711,7 @@ nf += header("", prefix=P) + f"""<div class="wrap">{bc_html([("Home",P+"index.ht
 write("404.html", nf)
 
 # ---------- sitemap / robots ----------
-urls = [("",TODAY,"1.0","daily"),("guides.html",TODAY,"0.9","daily"),("about.html",TODAY,"0.5","monthly"),("privacy-policy.html",TODAY,"0.5","yearly"),("terms.html",TODAY,"0.5","yearly"),("contact.html",TODAY,"0.5","yearly")] + \
+urls = [("",TODAY,"1.0","daily"),("guides.html",TODAY,"0.9","daily"),("about.html",TODAY,"0.5","monthly"),("privacy-policy.html",TODAY,"0.5","yearly"),("terms.html",TODAY,"0.5","yearly"),("contact.html",TODAY,"0.5","yearly"),("roblox-the-forge.html",TODAY,"0.7","weekly")] + \
        [(v[0],TODAY,"0.7","weekly") for v in CATS.values()] + [(g["slug"]+".html",TODAY,"0.8","weekly") for g in guides]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"  <url><loc>{BASE}{u}</loc><lastmod>{d}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>\n" for u,d,p,c in urls) + "</urlset>\n"
