@@ -271,7 +271,7 @@ def nav(active):
         '<li class="nav-dd">'
         f'<button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="nav-games-menu" aria-haspopup="true"{" aria-current=\"page\"" if games_on else ""}>Games <span class="caret" aria-hidden="true"></span></button>'
         '<ul id="nav-games-menu" class="nav-dd-panel">'
-        f'<li><a href="roblox-the-forge.html"{forge_cur}>Roblox The Forge</a></li>'
+        f'<li><a href="roblox-the-forge.html"{forge_cur}>The Forge</a></li>'
         '</ul></li>'
     )
     return "".join(item(h,t) for h,t in before) + games + "".join(item(h,t) for h,t in after)
