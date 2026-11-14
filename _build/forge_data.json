@@ -2,7 +2,7 @@
   "checked": "2026-11-14",
   "category": "ores",
   "list_slug": "the-forge-ores",
-  "note": "Pilot of 5 starter ores. Add more objects to items[] to generate new pages.",
+  "note": "Pilot of 10 Stonewake's Cross ores. Add more objects to items[] to generate new pages.",
   "items": [
     {
       "id": "stone",
@@ -284,6 +284,303 @@
       ],
       "image_file_page": "https://forgewiki.org/wiki/File:Gold.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/1/10/Gold.png"
+    },
+    {
+      "id": "mushroomite",
+      "name": "Mushroomite",
+      "slug": "the-forge-mushroomite-ore",
+      "title": "Mushroomite in The Forge: Stats and Location",
+      "h1": "Mushroomite Ore in The Forge: Drop Chance and Uses",
+      "desc": "Mushroomite in The Forge: a Rare 1-in-22 drop from Rocks and Boulders in Stonewake's Cross, 0.8x multiplier, $12 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/22",
+      "multiplier": "0.8x",
+      "price": "$12",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Rock",
+        "Boulder"
+      ],
+      "lead": "Mushroomite is a Rare ore from Stonewake's Cross. Sources agree it drops from Rocks and Boulders at 1-in-22, with a 0.8x multiplier, a $12 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Rocks</strong> or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/22</strong> drop chance from those nodes.",
+      "uses": "Mushroomite has <strong>no trait</strong>, a <strong>0.8x</strong> multiplier, and a <strong>$12</strong> sell price. That multiplier is a step up from Gold's 0.65x, even though Gold sells for more. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how ore multipliers feed item stats, and the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide for reaching Boulders.",
+      "image": "assets/forge/mushroomite.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Mushroomite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/6/6e/Mushroomite.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Mushroomite",
+          "url": "https://forgewiki.org/wiki/Mushroomite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Mushroomite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573589"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "slug": "the-forge-platinum-ore",
+      "title": "Platinum Ore in The Forge: Drop Chance and Price",
+      "h1": "Platinum Ore in The Forge: Drop Chance and Price",
+      "desc": "Platinum ore in The Forge: Rare, 1-in-28 from Boulders in Stonewake's Cross, 0.8x multiplier, $12 sell price, and no trait. See the full stats!",
+      "rarity": "Rare",
+      "chance": "1/28",
+      "multiplier": "0.8x",
+      "price": "$12",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Boulder"
+      ],
+      "lead": "Platinum is a Rare ore with the same 0.8x multiplier and $12 sell price as Mushroomite, but a lower drop chance. Sources agree it comes from Boulders in Stonewake's Cross at 1-in-28, and that it has no trait.",
+      "how_to_get": "Mine <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/28</strong> drop chance from Boulders there.",
+      "uses": "Platinum has <strong>no trait</strong>, a <strong>0.8x</strong> multiplier, and a <strong>$12</strong> sell price, matching Mushroomite's confirmed multiplier and price. For reaching Boulders, see the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide. Our <a href=\"the-forge-money-guide.html\">money guide</a> generally recommends forging ores into gear rather than selling the raw ore.",
+      "image": "assets/forge/platinum.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Platinum.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/a/ac/Platinum.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "The official Forge Wiki Platinum page also lists Forgotten Kingdom (Basalt Rock). Game8 (February 22, 2026), Destructoid (January 8, 2026), and BloxInformer do not list that area. Game8 also lists Rocks in Stonewake's Cross; the official wiki, Destructoid, and BloxInformer list only Boulders. We treat only Boulders in Stonewake's Cross as confirmed."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Platinum",
+          "url": "https://forgewiki.org/wiki/Platinum"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Platinum Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573588"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "bananite",
+      "name": "Bananite",
+      "slug": "the-forge-bananite-ore",
+      "title": "Bananite Ore in The Forge: Chance and Uses",
+      "h1": "Bananite Ore in The Forge: Drop Chance and Uses",
+      "desc": "Bananite in The Forge: an Uncommon 1-in-30 drop from Rocks and Boulders in Stonewake's Cross, 0.85x multiplier, $12.75, no trait. See the stats!",
+      "rarity": "Uncommon",
+      "chance": "1/30",
+      "multiplier": "0.85x",
+      "price": "$12.75",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Rock",
+        "Boulder"
+      ],
+      "lead": "Bananite is an Uncommon ore from Stonewake's Cross. Sources agree it drops from Rocks and Boulders at 1-in-30, with a 0.85x multiplier, a $12.75 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Rocks</strong> or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/30</strong> drop chance from those nodes.",
+      "uses": "Bananite has <strong>no trait</strong>, a <strong>0.85x</strong> multiplier, and a <strong>$12.75</strong> sell price. Among the ten ores in this pilot, that is the highest confirmed multiplier. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how early ores fit the crafting loop.",
+      "image": "assets/forge/bananite.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Bananite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/1/1b/Bananite.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Bananite",
+          "url": "https://forgewiki.org/wiki/Bananite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Bananite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573587"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "cardboardite",
+      "name": "Cardboardite",
+      "slug": "the-forge-cardboardite-ore",
+      "title": "Cardboardite Ore in The Forge: Stats & Location",
+      "h1": "Cardboardite Ore in The Forge: Drop Chance and Uses",
+      "desc": "Cardboardite in The Forge: a Common 1-in-31 drop from Rocks and Boulders in Stonewake's Cross, 0.7x multiplier, $10.50, no trait. See the stats!",
+      "rarity": "Common",
+      "chance": "1/31",
+      "multiplier": "0.7x",
+      "price": "$10.50",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Rock",
+        "Boulder"
+      ],
+      "lead": "Cardboardite is a Common ore from Stonewake's Cross, but its drop chance is lower than several Uncommon and Rare ores in this set. Sources agree it drops from Rocks and Boulders at 1-in-31, with a 0.7x multiplier, a $10.50 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Rocks</strong> or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/31</strong> drop chance from those nodes.",
+      "uses": "Cardboardite has <strong>no trait</strong>, a <strong>0.7x</strong> multiplier, and a <strong>$10.50</strong> sell price. That multiplier is higher than the earlier Common ores in this list (Stone through Iron) and sits just below Mushroomite and Platinum. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how multipliers work.",
+      "image": "assets/forge/cardboardite.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Cardboardite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/1/18/Cardboardite.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Cardboardite",
+          "url": "https://forgewiki.org/wiki/Cardboardite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Cardboardite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573586"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "aite",
+      "name": "Aite",
+      "slug": "the-forge-aite-ore",
+      "title": "Aite Ore in The Forge: Drop Chance and Price",
+      "h1": "Aite Ore in The Forge: Drop Chance and Price",
+      "desc": "Aite ore in The Forge: an Epic 1-in-44 drop from Boulders in Stonewake's Cross, a $16.50 sell price, no trait, and a disputed multiplier. See the stats!",
+      "rarity": "Epic",
+      "chance": "1/44",
+      "multiplier": null,
+      "price": "$16.50",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Boulder"
+      ],
+      "lead": "Aite is an Epic ore from Stonewake's Cross. Sources agree it drops from Boulders at 1-in-44, sells for $16.50, and has no trait. They do not agree on the multiplier, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/44</strong> drop chance from Boulders there.",
+      "uses": "Aite has <strong>no trait</strong> and a confirmed sell price of <strong>$16.50</strong>. We do not list a multiplier, because sources disagree (see below). For reaching Boulders, see the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide.",
+      "image": "assets/forge/aite.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Aite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/8/8c/Aite.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Multiplier: the official Forge Wiki Aite page and BloxInformer list 1.1x. Game8 (February 22, 2026) and Destructoid (January 8, 2026) list 1x. Because two sources support each figure, this page shows a dash (\u2014) instead of choosing one."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Aite",
+          "url": "https://forgewiki.org/wiki/Aite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Aite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573585"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
     }
   ]
 }

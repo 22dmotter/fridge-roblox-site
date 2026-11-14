@@ -234,8 +234,8 @@ def list_body(data, items):
 <h1>The Forge Ores: Stats and Locations</h1>
 <p class="updated">Last checked: <time datetime="{CHECKED}">{CHECKED_HUMAN}</time></p>
 </header>
-<p class="lead">This is a <strong>pilot</strong> of five starter ores from Stonewake's Cross. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. More ores will be added after this layout is reviewed. A dash (—) means we did not find two sources that agree.</p>
-<div class="callout"><strong>More coming:</strong> This list is not a complete ore encyclopedia yet. It starts with Stone, Sand Stone, Copper, Iron and Gold so we can lock the page design first.</div>
+<p class="lead">This is a <strong>pilot</strong> of ten ores from Stonewake's Cross, in the official Forge Wiki list order through Aite. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. More ores will be added after this layout is reviewed. A dash (—) means we did not find two sources that agree.</p>
+<div class="callout"><strong>More coming:</strong> This list is not a complete ore encyclopedia yet. It currently covers ten Stonewake's Cross ores, from Stone through Aite.</div>
 <h2 id="grid">Ore Icons</h2>
 <div class="wiki-icons wiki-icons-lg">{''.join(tiles)}</div>
 <p class="small wiki-credit" id="icon-credit">{list_credit}</p>
@@ -269,7 +269,7 @@ def list_body(data, items):
 <h2 id="src-h">Sources</h2>
 <p>Item pages cite the sources used for each ore. The list was checked against:</p>
 <ul>
-<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual Stone, Sand Stone, Copper, Iron and Gold pages</li>
+<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for the ten ores in this pilot</li>
 <li><a href="https://game8.co/games/The-Forge/archives/572862" rel="noopener" target="_blank">Game8: List of All Ores and Traits</a> and the <a href="https://game8.co/games/The-Forge/archives/573590" rel="noopener" target="_blank">Game8 Gold page</a> (updated February 22, 2026)</li>
 <li><a href="https://www.destructoid.com/all-ores-in-the-forge/" rel="noopener" target="_blank">Destructoid: All Ores in The Forge</a> (updated January 8, 2026)</li>
 <li><a href="https://bloxinformer.com/wikis/the-forge/ores/" rel="noopener" target="_blank">BloxInformer: The Forge ores</a></li>
@@ -316,7 +316,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
     paths = []
 
     list_title = "The Forge Ores: Stats, Locations and Traits"
-    list_desc = "Confirmed stats for five starter The Forge ores in Stonewake's Cross: drop chances, multipliers, sell prices and traits. More ores coming. Open the list!"
+    list_desc = "Confirmed stats for ten The Forge ores in Stonewake's Cross: drop chances, multipliers, sell prices and traits. More ores are coming. Open the list!"
     _check_seo(list_title, list_desc, "the-forge-ores.html")
     list_path = "the-forge-ores.html"
     list_crumbs = [
@@ -345,7 +345,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
         active="roblox-the-forge.html",
         og_type="website",
         image=BASE + _ver("assets/forge/ores-og.webp"),
-        image_alt="The Forge ores wiki: Stone, Sand Stone, Copper, Iron and Gold icons",
+        image_alt="The Forge ores wiki: ten starter ore icons from Stonewake's Cross",
         ld=list_ld,
     ))
     paths.append(list_path)
