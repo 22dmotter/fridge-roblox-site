@@ -14,7 +14,7 @@ ENV SITE_BASE=${SITE_BASE}
 RUN python -m pip install --no-cache-dir Pillow \
     && python _build/build.py \
     && mkdir -p /out \
-    && cp /site/*.html /site/sitemap.xml /site/robots.txt /site/ads.txt /out/ \
+    && cp /site/*.html /site/sitemap.xml /site/robots.txt /site/ads.txt /site/favicon.ico /out/ \
     && cp -a /site/assets /out/assets
 
 FROM nginx:alpine AS runtime
