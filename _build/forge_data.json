@@ -2,7 +2,7 @@
   "checked": "2026-11-14",
   "category": "ores",
   "list_slug": "the-forge-ores",
-  "note": "Pilot of 10 Stonewake's Cross ores. Add more objects to items[] to generate new pages.",
+  "note": "All 14 Stonewake's Cross (World 1) ores from the official Forge Wiki list, in list order from Stone through Fichillium. Add more objects to items[] to generate new pages.",
   "items": [
     {
       "id": "stone",
@@ -20,7 +20,7 @@
       "obtained_from": [
         "Pebble"
       ],
-      "lead": "Stone is the first Common ore most players pick up in The Forge. It drops from every Pebble in Stonewake's Cross, so it is easy to stock but it has the lowest multiplier of the five ores in this pilot.",
+      "lead": "Stone is the first Common ore most players pick up in The Forge. It drops from every Pebble in Stonewake's Cross, so it is easy to stock, and it has a 0.2x multiplier.",
       "how_to_get": "Mine <strong>Pebbles</strong> in <strong>Stonewake's Cross</strong>, the starting area. Multiple sources list Stone's drop chance as a guaranteed <strong>1/1</strong> from those Pebbles, and they do not list it on Rocks or Boulders.",
       "uses": "Stone has <strong>no trait</strong>. Its multiplier is <strong>0.2x</strong>, the lowest in this set, and it sells for <strong>$3</strong>. It is early-game filler for forging practice; later ores in this list have higher multipliers. For the mine-forge-sell loop, see the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a>.",
       "image": "assets/forge/stone.webp",
@@ -187,9 +187,9 @@
         "Rock",
         "Boulder"
       ],
-      "lead": "Iron is the strongest Common ore in this starter set. It comes from the same Stonewake's Cross nodes as Copper, with a lower drop chance and a slightly higher multiplier.",
+      "lead": "Iron is a Common Stonewake's Cross ore from the same nodes as Copper, with a lower drop chance and a slightly higher multiplier.",
       "how_to_get": "Mine <strong>Pebbles</strong>, <strong>Rocks</strong>, or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Sources agree the drop chance is <strong>1/5</strong> from those nodes.",
-      "uses": "Iron has <strong>no trait</strong>, a <strong>0.35x</strong> multiplier, and a <strong>$5.25</strong> sell price. Among the four Common ores in this pilot, it is the best raw multiplier for early weapons and armor. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how to use early ores in the crafting loop.",
+      "uses": "Iron has <strong>no trait</strong>, a <strong>0.35x</strong> multiplier, and a <strong>$5.25</strong> sell price. It is a reliable early-game forging ore in Stonewake's Cross. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how to use early ores in the crafting loop.",
       "image": "assets/forge/iron.webp",
       "image_kind": "wiki-icon",
       "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
@@ -226,6 +226,126 @@
       "image_source_url": "https://static.wikitide.net/theforgewiki/4/45/Iron.png"
     },
     {
+      "id": "tin",
+      "name": "Tin",
+      "slug": "the-forge-tin-ore",
+      "title": "Tin Ore in The Forge: Drop Chance and Price",
+      "h1": "Tin Ore in The Forge: Drop Chance and Price",
+      "desc": "Tin ore in The Forge: an Uncommon 1-in-7 drop from Rocks and Boulders in Stonewake's Cross, 0.425x multiplier, $6.38 sell price, no trait. See the stats!",
+      "rarity": "Uncommon",
+      "chance": "1/7",
+      "multiplier": "0.425x",
+      "price": "$6.38",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Rock",
+        "Boulder"
+      ],
+      "lead": "Tin is an Uncommon ore from Stonewake's Cross. Sources agree it drops from Rocks and Boulders at 1-in-7, with a 0.425x multiplier, a $6.38 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Rocks</strong> or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/7</strong> drop chance from those nodes. They do not list Tin on Pebbles.",
+      "uses": "Tin has <strong>no trait</strong>, a <strong>0.425x</strong> multiplier, and a <strong>$6.38</strong> sell price. It sits between Iron and Silver on the official World 1 list. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how early ores fit the crafting loop.",
+      "image": "assets/forge/tin.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Tin.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/8/80/Tin.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Tin",
+          "url": "https://forgewiki.org/wiki/Tin"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Tin Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573592"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "slug": "the-forge-silver-ore",
+      "title": "Silver Ore in The Forge: Drop Chance and Price",
+      "h1": "Silver Ore in The Forge: Drop Chance and Price",
+      "desc": "Silver ore in The Forge: an Uncommon 1-in-12 drop from Rocks and Boulders in Stonewake's Cross, 0.5x multiplier, $7.50 sell price, and no trait. See the stats!",
+      "rarity": "Uncommon",
+      "chance": "1/12",
+      "multiplier": "0.5x",
+      "price": "$7.50",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Rock",
+        "Boulder"
+      ],
+      "lead": "Silver is an Uncommon ore from Stonewake's Cross. Sources agree it drops from Rocks and Boulders at 1-in-12, with a 0.5x multiplier, a $7.50 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Rocks</strong> or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/12</strong> drop chance from those nodes there.",
+      "uses": "Silver has <strong>no trait</strong>, a <strong>0.5x</strong> multiplier, and a <strong>$7.50</strong> sell price. For reaching Rocks and Boulders, see the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide.",
+      "image": "assets/forge/silver.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Silver.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/0/0b/Silver.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "The official Forge Wiki Silver page also lists Forgotten Kingdom (Basalt Rock). Game8 (February 22, 2026), Destructoid (January 8, 2026), and BloxInformer list only Rocks and Boulders in Stonewake's Cross. We do not treat Forgotten Kingdom or Basalt Rock as confirmed."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Silver",
+          "url": "https://forgewiki.org/wiki/Silver"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Silver Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573591"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
       "id": "gold",
       "name": "Gold",
       "slug": "the-forge-gold-ore",
@@ -241,7 +361,7 @@
       "obtained_from": [
         "Boulder"
       ],
-      "lead": "Gold is the Uncommon ore in this starter set. Sources agree it drops from Boulders in Stonewake's Cross at 1-in-16, with a 0.65x multiplier and a $19.50 sell price \u2014 high for that multiplier \u2014 and no trait.",
+      "lead": "Gold is an Uncommon ore from Stonewake's Cross. Sources agree it drops from Boulders in Stonewake's Cross at 1-in-16, with a 0.65x multiplier and a $19.50 sell price \u2014 high for that multiplier \u2014 and no trait.",
       "how_to_get": "Mine <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Game8, Destructoid, BloxInformer, and the official Forge Wiki all list a <strong>1/16</strong> drop chance from Boulders there.",
       "uses": "Gold has <strong>no trait</strong> and a <strong>0.65x</strong> multiplier, higher than the Common ores in this list. Its confirmed sell price is <strong>$19.50</strong>, which is high compared with nearby ores that have similar or higher multipliers. Our <a href=\"the-forge-money-guide.html\">money guide</a> still generally recommends forging ores into gear rather than selling the raw ore. For reaching Boulders, see <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a>.",
       "image": "assets/forge/gold.webp",
@@ -423,7 +543,7 @@
       ],
       "lead": "Bananite is an Uncommon ore from Stonewake's Cross. Sources agree it drops from Rocks and Boulders at 1-in-30, with a 0.85x multiplier, a $12.75 sell price, and no trait.",
       "how_to_get": "Mine <strong>Rocks</strong> or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/30</strong> drop chance from those nodes.",
-      "uses": "Bananite has <strong>no trait</strong>, a <strong>0.85x</strong> multiplier, and a <strong>$12.75</strong> sell price. Among the ten ores in this pilot, that is the highest confirmed multiplier. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how early ores fit the crafting loop.",
+      "uses": "Bananite has <strong>no trait</strong>, a <strong>0.85x</strong> multiplier, and a <strong>$12.75</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how early ores fit the crafting loop.",
       "image": "assets/forge/bananite.webp",
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Bananite.png",
@@ -575,6 +695,131 @@
         {
           "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
           "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "poopite",
+      "name": "Poopite",
+      "slug": "the-forge-poopite-ore",
+      "title": "Poopite Ore in The Forge: Drop Chance and Trait",
+      "h1": "Poopite Ore in The Forge: Drop Chance and Trait",
+      "desc": "Poopite in The Forge: an Epic 1-in-131 drop from Pebbles, Rocks and Boulders in Stonewake's Cross, 1.2x multiplier, $18, and a Bad Smell trait. See the stats!",
+      "rarity": "Epic",
+      "chance": "1/131",
+      "multiplier": "1.2x",
+      "price": "$18",
+      "trait": "Bad Smell",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Pebble",
+        "Rock",
+        "Boulder"
+      ],
+      "lead": "Poopite is an Epic ore from Stonewake's Cross, and it is the only World 1 ore with a confirmed trait. Sources agree it drops from Pebbles, Rocks, and Boulders at 1-in-131, with a 1.2x multiplier, an $18 sell price, and the Bad Smell trait.",
+      "how_to_get": "Mine <strong>Pebbles</strong>, <strong>Rocks</strong>, or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/131</strong> drop chance from those nodes.",
+      "uses": "Poopite has the <strong>Bad Smell</strong> trait and the highest confirmed multiplier in Stonewake's Cross at <strong>1.2x</strong>. It sells for <strong>$18</strong>. Two or more sources agree the trait creates a poison cloud around the player for <strong>5 seconds</strong>, deals <strong>15% poison</strong> damage, makes enemies flee, has a <strong>15 second cooldown</strong>, and activates when health is low. The official wiki and Destructoid list the trigger as below <strong>35% HP</strong>; see the source note below for a wording disagreement. For early mining and forging, see the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide and the <a href=\"the-forge-forging-guide.html\">forging guide</a>.",
+      "image": "assets/forge/poopite.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Poopite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/e/ec/Poopite.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Trait trigger: the official Forge Wiki Poopite page and Destructoid (January 8, 2026) say Bad Smell activates below 35% HP. Game8 (February 22, 2026) writes \"below 35 HP\" without a percent sign. BloxInformer lists 15% Health. This page uses 35% HP, the figure with two clear sources, and flags the disagreement.",
+        "The official wiki describes the cloud as dealing 15% of base weapon damage per second for 5 seconds. Game8 and BloxInformer list 15% poison for 5 seconds but do not mention per-second ticks or base weapon damage, so those extra details are not treated as confirmed."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Poopite",
+          "url": "https://forgewiki.org/wiki/Poopite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Poopite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573584"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "fichillium",
+      "name": "Fichillium",
+      "slug": "the-forge-fichillium-ore",
+      "title": "Fichillium Ore in The Forge: Lucky Block Drop",
+      "h1": "Fichillium Ore in The Forge: Lucky Block Drop",
+      "desc": "Fichillium in The Forge: a Relic 1-in-1 drop from Lucky Blocks in Stonewake's Cross, with a 0x multiplier, a $0 sell price, and no trait. See the stats!",
+      "rarity": "Relic",
+      "chance": "1/1",
+      "multiplier": "0x",
+      "price": "$0",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Lucky Block"
+      ],
+      "lead": "Fichillium is a Relic ore from Stonewake's Cross. The official Forge Wiki, Game8, and BloxInformer list it as Relic, with a 1/1 chance, a 0x multiplier, a $0 sell price, and no trait. The official wiki and Game8 say it comes from Lucky Blocks; BloxInformer describes a hidden house location instead (see below).",
+      "how_to_get": "It comes from <strong>Lucky Blocks</strong> in <strong>Stonewake's Cross</strong>. The official Forge Wiki and Game8 both list a guaranteed <strong>1/1</strong> drop from those blocks. The official wiki's Lucky Block page says the block is a hidden mineable rock that only spawns inside a specific hut and does not appear in the open world. BloxInformer also calls Fichillium a secret ore from a hidden section of a house in Stonewake's Cross, but it does not name Lucky Block. Destructoid's World 1 table (January 8, 2026) does not include Fichillium.",
+      "uses": "Fichillium has <strong>no trait</strong>, a <strong>0x</strong> multiplier, and a <strong>$0</strong> sell price, so sources do not treat it as a forging or selling ore. The official wiki also says it can be useful for creating Golemites, because the game treats Relic-tier ores as high quality for that; we did not find a second source, so that use is not listed as confirmed.",
+      "image": "assets/forge/fichillium.webp",
+      "image_kind": "wiki-icon",
+      "image_file_page": "https://forgewiki.org/wiki/File:Fichillium.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/e/e7/Fichillium.png",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Source: the official Forge Wiki and Game8 (February 22, 2026) list Lucky Block in Stonewake's Cross. BloxInformer describes a secret ore from a hidden section of a house there and does not name Lucky Block. The official wiki's Lucky Block page adds that the block only spawns inside a specific hut (it mentions a hidden roof). We treat Lucky Block in Stonewake's Cross as confirmed. We do not treat the exact hut or roof steps as confirmed.",
+        "Golemite use: only the official Forge Wiki Fichillium page mentions creating Golemites. We did not find a second source, so that use is not confirmed.",
+        "Destructoid's All Ores in The Forge guide (updated January 8, 2026) does not include Fichillium in its World 1 table, so it is not used as a confirming source for this ore."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Fichillium",
+          "url": "https://forgewiki.org/wiki/Fichillium"
+        },
+        {
+          "name": "Forge Wiki: Lucky Block",
+          "url": "https://forgewiki.org/wiki/Lucky_Block"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Fichillium Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573583"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
         },
         {
           "name": "BloxInformer: The Forge ores",

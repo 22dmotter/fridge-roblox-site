@@ -209,7 +209,7 @@ def item_body(item, items, BASE):
 {_stat_table(item)}
 {_unverified(item)}
 <h2 id="related">Related Ores</h2>
-<p>These are the other starter ores in this pilot. The full set lives on the <a href="the-forge-ores.html">ores list</a>.</p>
+<p>These are other Stonewake's Cross ores. The full World 1 set lives on the <a href="the-forge-ores.html">ores list</a>.</p>
 {_related_icons(item, items)}
 <h2 id="guides">Related The Forge Guides</h2>
 <p>Written walkthroughs on this site that pair with this wiki page:</p>
@@ -264,15 +264,15 @@ def list_body(data, items):
 <h1>The Forge Ores: Stats and Locations</h1>
 <p class="updated">Last checked: <time datetime="{CHECKED}">{CHECKED_HUMAN}</time></p>
 </header>
-<p class="lead">This is a <strong>pilot</strong> of ten ores from Stonewake's Cross, in the official Forge Wiki list order through Aite. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. More ores will be added after this layout is reviewed. A dash (—) means we did not find two sources that agree.</p>
-<div class="callout"><strong>More coming:</strong> This list is not a complete ore encyclopedia yet. It currently covers ten Stonewake's Cross ores, from Stone through Aite.</div>
+<p class="lead">This list covers every ore in World 1 (Stonewake's Cross), in the official Forge Wiki list order from Stone through Fichillium. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. A dash (—) means we did not find two sources that agree. Later worlds are not included yet.</p>
+<div class="callout"><strong>World 1 complete:</strong> These 14 ores are the full Stonewake's Cross set from the official Forge Wiki list, including Fichillium, a Relic Lucky Block ore. Forgotten Kingdom and later areas are not on this list yet.</div>
 <h2 id="grid">Ore Icons</h2>
 <div class="wiki-icons wiki-icons-lg">{''.join(tiles)}</div>
 <p class="small wiki-credit" id="icon-credit">{list_credit}</p>
 <h2 id="table">Ore Stats Table</h2>
 <p>Click a column header to sort. Open an ore name for the full wiki page.</p>
 <div class="table-wrap"><table class="wiki-sort">
-<caption>Starter The Forge ores (checked {CHECKED_HUMAN})</caption>
+<caption>Stonewake's Cross (World 1) ores (checked {CHECKED_HUMAN})</caption>
 <thead><tr>
 <th scope="col"><button type="button">Ore</button></th>
 <th scope="col"><button type="button">Rarity</button></th>
@@ -299,12 +299,12 @@ def list_body(data, items):
 <h2 id="src-h">Sources</h2>
 <p>Item pages cite the sources used for each ore. The list was checked against:</p>
 <ul>
-<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for the ten ores in this pilot</li>
+<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for all 14 Stonewake's Cross ores</li>
 <li><a href="https://game8.co/games/The-Forge/archives/572862" rel="noopener" target="_blank">Game8: List of All Ores and Traits</a> and the <a href="https://game8.co/games/The-Forge/archives/573590" rel="noopener" target="_blank">Game8 Gold page</a> (updated February 22, 2026)</li>
 <li><a href="https://www.destructoid.com/all-ores-in-the-forge/" rel="noopener" target="_blank">Destructoid: All Ores in The Forge</a> (updated January 8, 2026)</li>
 <li><a href="https://bloxinformer.com/wikis/the-forge/ores/" rel="noopener" target="_blank">BloxInformer: The Forge ores</a></li>
 </ul>
-<p class="small">Pro Game Guides published an ores guide dated January 13, 2026 whose visible snippets matched Stone, Sand Stone, Copper and Iron, but the live page returned HTTP 403 when we tried to re-fetch it on {CHECKED_HUMAN}, so it is not used as a confirming source here.</p>
+<p class="small">Destructoid's World 1 table (updated January 8, 2026) covers Stone through Poopite but does not include Fichillium, so it is not used as a confirming source for that ore. Pro Game Guides published an ores guide dated January 13, 2026 whose visible snippets matched Stone, Sand Stone, Copper and Iron, but the live page returned HTTP 403 when we tried to re-fetch it on {CHECKED_HUMAN}, so it is not used as a confirming source here.</p>
 </article>
 </div>"""
 
@@ -346,7 +346,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
     paths = []
 
     list_title = "The Forge Ores: Stats, Locations and Traits"
-    list_desc = "Confirmed stats for ten The Forge ores in Stonewake's Cross: drop chances, multipliers, sell prices and traits. More ores are coming. Open the list!"
+    list_desc = "Confirmed stats for all 14 World 1 ores in The Forge, from Stone to Fichillium: drop chances, multipliers, prices, and traits. Open the list!"
     _check_seo(list_title, list_desc, "the-forge-ores.html")
     list_path = "the-forge-ores.html"
     list_crumbs = [
@@ -375,7 +375,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
         active="roblox-the-forge.html",
         og_type="website",
         image=BASE + _ver("assets/forge/ores-og.webp"),
-        image_alt="The Forge ores wiki: ten starter ore icons from Stonewake's Cross",
+        image_alt="The Forge ores wiki: all 14 Stonewake's Cross World 1 ore icons",
         ld=list_ld,
     ))
     paths.append(list_path)

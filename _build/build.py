@@ -956,7 +956,7 @@ _guides_card = """<article class="card">
 <a class="more" href="tag-guides.html">Browse Guides →</a></div></article>"""
 _forge_wiki_cats = """
 <div class="wiki-cats" role="list">
-<a class="wiki-cat" role="listitem" href="the-forge-ores.html">Ores<small>10 ore pages</small></a>
+<a class="wiki-cat" role="listitem" href="the-forge-ores.html">Ores<small>14 ore pages</small></a>
 <div class="wiki-cat is-soon" role="listitem">Weapons<small>Coming soon</small></div>
 <div class="wiki-cat is-soon" role="listitem">Armor<small>Coming soon</small></div>
 <div class="wiki-cat is-soon" role="listitem">Pickaxes<small>Coming soon</small></div>
@@ -967,9 +967,9 @@ _forge_body = f"""<div class="wrap">{{CRUMBS}}
 <article>
 <h1>Roblox The Forge</h1>
 <p class="updated"><strong>Last updated: <time datetime="{TODAY}">{MOD_HUMAN}</time></strong></p>
-<p>This is the Roblox The Forge hub on Roblox Guides. Use it to jump to codes, walkthroughs, and the new ores wiki pilot.</p>
+<p>This is the Roblox The Forge hub on Roblox Guides. Use it to jump to codes, walkthroughs, and the Stonewake's Cross ores wiki.</p>
 <h2 id="wiki">The Forge Wiki</h2>
-<p>We are building a data-driven wiki of item stats, with photos, starting with ten Stonewake's Cross ores. Other categories will follow once this layout is reviewed.</p>
+<p>The ores wiki now covers all 14 Stonewake's Cross (World 1) ores, with photos and two-source stats. Other categories and later worlds will follow.</p>
 {_forge_wiki_cats}
 <p>A fuller game hub will still grow here. For now, start with the ores list, The Forge codes, the Guides category, and the walkthroughs already on the site.</p>
 <div class="grid">{_guides_card}{''.join(_forge_cards)}</div>
