@@ -142,12 +142,12 @@ def item_body(item, items, BASE):
     )
     return f"""<div class="wrap wiki-page">{{CRUMBS}}
 <article>
-<header>
+<div class="wiki-item">
+<header class="wiki-head">
 <p class="wiki-kicker"><a href="the-forge-ores.html">The Forge ores</a></p>
 <h1>{esc(item["h1"])}</h1>
 <p class="updated">Last checked: <time datetime="{CHECKED}">{CHECKED_HUMAN}</time></p>
 </header>
-<div class="wiki-item">
 <div class="wiki-main">
 <p class="lead">{item["lead"]}</p>
 <h2 id="get">How to Get {esc(item["name"])}</h2>
