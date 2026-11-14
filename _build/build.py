@@ -168,11 +168,18 @@ nav.main .nav-dd-btn:focus-visible,nav.main a.nav-dd-link:focus-visible{outline:
 nav.main .nav-dd-panel{display:none;margin:0;padding:8px;list-style:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(0,0,0,.45)}
 nav.main .nav-dd-panel a{display:block;padding:8px 12px;border-radius:8px;color:var(--txt);text-decoration:none;font-weight:600;white-space:nowrap}
 nav.main .nav-dd-panel a:hover,nav.main .nav-dd-panel a:focus-visible,nav.main .nav-dd-panel a[aria-current=page]{color:var(--ink);background:var(--acc)}
-.game-card h2{font-size:1.2rem}
-.game-card .game-counts{margin:2px 0}
-.game-card .game-counts a{color:var(--acc);font-weight:700;text-decoration:none}
-.game-card .game-counts a:hover{color:var(--accd)}
-.game-card .more{margin-top:auto}
+.games-page h1{font-size:clamp(1.8rem,5vw,2.5rem);margin:.15em 0 .9em}
+.game-icons{display:grid;gap:16px 10px;grid-template-columns:repeat(3,1fr);margin:0 0 48px}
+.game-icon{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:var(--txt);text-align:center;min-width:0;padding:2px;border-radius:16px}
+.game-icon:hover,.game-icon:focus-visible{color:var(--acc)}
+.game-icon:hover .game-icon-art,.game-icon:focus-visible .game-icon-art{border-color:var(--acc);transform:translateY(-2px)}
+.game-icon-art{display:block;width:100%;aspect-ratio:1;border-radius:18px;overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .15s,border-color .15s}
+.game-icon-art img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.game-icon-ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--ph,var(--acc)),var(--accd));color:var(--ink);font-weight:800;font-size:clamp(1.1rem,3.4vw,1.55rem);letter-spacing:.04em}
+.game-icon-name{font-weight:700;font-size:.82rem;line-height:1.25;max-width:100%;hyphens:auto}
+@media(min-width:640px){.game-icons{grid-template-columns:repeat(5,1fr);gap:18px 14px}.game-icon-name{font-size:.85rem}}
+@media(min-width:900px){.game-icons{grid-template-columns:repeat(6,1fr)}}
+@media(min-width:1100px){.game-icons{grid-template-columns:repeat(8,1fr)}}
 /* Mobile: wrap instead of clipping a panel inside overflow-x:auto; panel sits under the whole nav */
 @media(max-width:899px){
 nav.main{overflow:visible;position:relative}
@@ -665,7 +672,9 @@ GAME_PAGE_ALIASES = {
     "fisch-macro": "Fisch",
     "bee-swarm-simulator-macro": "Bee Swarm Simulator",
 }
-FEATURED_GAMES = [
+# The Forge is pinned first on the icon grid; remaining titles follow this
+# coverage-first order, then the rest alphabetically.
+GAME_ORDER = [
     "The Forge",
     "Steal an Egg",
     "Scrooms",
@@ -675,75 +684,74 @@ FEATURED_GAMES = [
     "99 Nights in the Forest",
     "Throw Food For Animals",
 ]
-# Short blurbs taken only from existing guide titles/descriptions on this site.
-GAME_BLURBS = {
-    "The Forge": "Codes and walkthroughs for Roblox The Forge, including a beginner guide, races, forging, pickaxes, armor, runes and money.",
-    "Steal an Egg": "Steal an Egg coverage on this site includes a codes page, Speed and race tips, plus Candy Corn and the Phantom Express event guides.",
-    "Scrooms": "Scrooms guides covering the first catch, selling to Julian, leveling up, and statue locations including Halden's statue quest.",
-    "Anime Dice": "All 24 working Anime Dice codes for November 2026, including free Rerolls, Gems and Spins, plus how to redeem them.",
-    "The Hollow": "A recap of the Roblox Hollow event 2026: dates, all 9 monsters, maze rewards, partner game quests, tickets and badges.",
-    "+1 Speed Monkey Escape": "A guide to all 9 Sunken Shards in +1 Speed Monkey Escape, from the lobby to Stage 9, and the free x2 Speed Treadmill.",
-    "99 Nights in the Forest": "A beginner guide to 99 Nights in the Forest plus 3 working codes, covering the campfire, the Deer, the Pelt Trader and your bench.",
-    "Throw Food For Animals": "A beginner guide covering Throw Power, zones, foods and Server Luck, plus a codes page that explains this game has no code system.",
-    "Fisch": "2 working Fisch codes last checked in November 2026, plus a macro guide for this game.",
-    "Bee Swarm Simulator": "9 working Bee Swarm Simulator codes last checked in November 2026, plus a macro guide for this game.",
-    "Grow a Garden": "2 working Grow a Garden codes last checked in November 2026, plus a macro guide for this game.",
-}
 GAME_HUBS = {
-    "The Forge": ("roblox-the-forge.html", "Open game hub \u2192"),
-    "Steal an Egg": ("steal-an-egg-codes.html", "Open game pages \u2192"),
-    "Scrooms": ("scrooms-beginners-guide.html", "Open guides \u2192"),
-    "Anime Dice": ("anime-dice-codes.html", "View codes \u2192"),
-    "The Hollow": ("roblox-hollow-event-guide.html", "Open event guide \u2192"),
-    "+1 Speed Monkey Escape": ("monkey-escape-sunken-shards.html", "Open guide \u2192"),
-    "99 Nights in the Forest": ("99-nights-in-the-forest-guide.html", "Open guides \u2192"),
-    "Throw Food For Animals": ("throw-food-for-animals-guide.html", "Open guides \u2192"),
+    "The Forge": "roblox-the-forge.html",
+    "Steal an Egg": "steal-an-egg-codes.html",
+    "Scrooms": "scrooms-beginners-guide.html",
+    "Anime Dice": "anime-dice-codes.html",
+    "The Hollow": "roblox-hollow-event-guide.html",
+    "+1 Speed Monkey Escape": "monkey-escape-sunken-shards.html",
+    "99 Nights in the Forest": "99-nights-in-the-forest-guide.html",
+    "Throw Food For Animals": "throw-food-for-animals-guide.html",
 }
+_GAME_ICON_COLORS = ("#ffb020","#e8890c","#5b8def","#3dbe8c","#e36b6b","#b07cff","#f08ab8","#4ecdc4")
 
 def _game_name_for(g):
     return GAME_PAGE_ALIASES.get(g["slug"], g["game"])
 
-def _codes_blurb(name, n):
-    if n is None:
-        return f"Our {name} page explains that this game has no code system, based on the last check in November 2026."
-    if n == 0:
-        return f"Our {name} codes page lists no confirmed working codes as of the last check in November 2026."
-    return f"Working {name} codes last checked in November 2026: {n} confirmed against at least two sources."
+def _game_initials(name):
+    words = re.findall(r"[A-Za-z0-9]+", name)
+    small = {"the", "a", "an", "and", "of", "in", "for", "to"}
+    main = [w for w in words if w.lower() not in small] or words
+    parts = []
+    for w in main:
+        parts.append(w if w.isdigit() else w[0].upper())
+        if sum(len(p) for p in parts) >= 3 and len(parts) >= 2:
+            break
+    if len(parts) == 1 and not main[0].isdigit() and words and words[0].lower() in small:
+        return (words[0][0] + parts[0]).upper()
+    return "".join(parts)[:4]
+
+def _game_icon_color(name):
+    return _GAME_ICON_COLORS[sum(map(ord, name)) % len(_GAME_ICON_COLORS)]
 
 def _pick_hub(name, pages):
     if name in GAME_HUBS:
         return GAME_HUBS[name]
     for g in pages:
         if "beginners" in g["slug"]:
-            return g["slug"] + ".html", "Open guides \u2192"
+            return g["slug"] + ".html"
     for g in pages:
         if g["cat"] not in ("Codes", "Macro") and g["slug"].endswith("-guide"):
-            return g["slug"] + ".html", "Open guides \u2192"
+            return g["slug"] + ".html"
     for g in pages:
         if g["cat"] == "Codes":
-            return g["slug"] + ".html", "View codes \u2192"
-    for g in pages:
-        if g["cat"] != "Codes":
-            return g["slug"] + ".html", "Open guide \u2192"
-    return pages[0]["slug"] + ".html", "View codes \u2192"
+            return g["slug"] + ".html"
+    return pages[0]["slug"] + ".html"
+
+def _yt_icon(vid):
+    # mqdefault is 16:9, so a center square crop avoids hqdefault letterbox bars.
+    return f"https://i.ytimg.com/vi/{vid}/mqdefault.jpg"
 
 def _game_image(pages, hub_path):
-    # Prefer a local thumbnail already in assets/thumbs, then the hub page image.
-    preferred = ("the-forge-races-guide", "the-forge-beginners-guide", "the-forge-combat-guide")
+    # Prefer a real video thumb (crops cleanly to a square icon), then a local file.
     hub_slug = hub_path.replace(".html", "")
-    ordered = [g for slug in preferred for g in pages if g["slug"] == slug]
-    ordered += [g for g in pages if g["slug"] == hub_slug and g not in ordered]
-    ordered += [g for g in pages if g not in ordered]
+    ordered = [g for g in pages if g["slug"] == hub_slug] + [g for g in pages if g["slug"] != hub_slug]
+    for g in ordered:
+        if g.get("videos"):
+            return _yt_icon(g["videos"][0][0]), g_img_alt(g)
+        if g.get("shorts"):
+            return _yt_icon(g["shorts"][0][0]), g_img_alt(g)
+        if g.get("cover"):
+            rel = g["cover"]
+            if os.path.exists(os.path.join(OUT, rel.lstrip("/"))):
+                return rel, g_img_alt(g)
     for g in ordered:
         for ext in (".png", ".webp"):
             rel = f"assets/thumbs/{g['slug']}{ext}"
             if os.path.exists(os.path.join(OUT, rel)):
                 return rel, g_img_alt(g)
-    hub_slug = hub_path.replace(".html", "")
-    for g in pages:
-        if g["slug"] == hub_slug:
-            return g_img(g), g_img_alt(g)
-    return g_img(pages[0]), g_img_alt(pages[0])
+    return None, None
 
 def _build_game_catalog():
     by = {}
@@ -755,106 +763,50 @@ def _build_game_catalog():
     catalog = []
     for name, pages in by.items():
         pages = sorted(pages, key=lambda x: (0 if x["cat"] != "Codes" else 1, x.get("date", ""), x["slug"]))
-        codes_pages = [x for x in pages if x["cat"] == "Codes"]
-        other_pages = [x for x in pages if x["cat"] != "Codes"]
-        hub, cta = _pick_hub(name, pages)
+        hub = _pick_hub(name, pages)
         img, img_alt = _game_image(pages, hub)
-        codes_slug = codes_pages[0]["slug"] if codes_pages else None
-        if codes_slug and codes_slug in CODE_COUNTS:
-            codes_n = CODE_COUNTS[codes_slug]
-        else:
-            codes_n = None
-        if name in GAME_BLURBS:
-            blurb = GAME_BLURBS[name]
-        elif codes_pages and not other_pages:
-            blurb = _codes_blurb(name, codes_n if codes_slug in CODE_COUNTS else None)
-        elif other_pages and not codes_pages:
-            blurb = f"Existing {name} walkthroughs on Roblox Guides, collected from the guides already published for this game."
-        else:
-            blurb = f"{name} codes and walkthroughs already published on Roblox Guides."
         catalog.append({
             "name": name,
-            "pages": pages,
-            "other": other_pages,
-            "codes_slug": codes_slug,
-            "codes_n": codes_n,
-            "has_codes_page": bool(codes_pages),
             "hub": hub,
-            "cta": cta,
             "img": img,
-            "img_alt": img_alt,
-            "blurb": blurb,
-            "featured": name in FEATURED_GAMES,
+            "img_alt": img_alt or f"{name} icon",
+            "initials": _game_initials(name),
+            "color": _game_icon_color(name),
         })
-    order = {n: i for i, n in enumerate(FEATURED_GAMES)}
-    featured = sorted([x for x in catalog if x["featured"]], key=lambda x: order[x["name"]])
-    rest = sorted([x for x in catalog if not x["featured"]], key=lambda x: x["name"].lower())
-    return featured, rest
+    pin = {n: i for i, n in enumerate(GAME_ORDER)}
+    catalog.sort(key=lambda x: (0, pin[x["name"]]) if x["name"] in pin else (1, x["name"].lower()))
+    return catalog
 
-def game_card(item):
-    counts = []
-    n_guides = len(item["other"])
-    if n_guides:
-        guide_href = item["other"][0]["slug"] + ".html"
-        if item["name"] == "The Forge":
-            guide_href = "tag-guides.html"
-        elif item["name"] == "Steal an Egg":
-            guide_href = "steal-an-egg-speed-guide.html"
-        elif not item["hub"].endswith("codes.html") and item["hub"] != "roblox-the-forge.html":
-            guide_href = item["hub"]
-        label = "1 guide" if n_guides == 1 else f"{n_guides} guides"
-        counts.append(f'<a href="{guide_href}">{label}</a>')
-    if item["has_codes_page"]:
-        href = item["codes_slug"] + ".html"
-        n = item["codes_n"]
-        if n is None:
-            counts.append(f'<a href="{href}">No code system</a>')
-        elif n == 0:
-            counts.append(f'<a href="{href}">0 confirmed codes</a>')
-        else:
-            label = "1 working code" if n == 1 else f"{n} working codes"
-            counts.append(f'<a href="{href}">{label}</a>')
-    counts_html = " \u00b7 ".join(counts) if counts else ""
-    return (
-        f'<article class="card game-card">'
-        f'<a class="thumb" href="{item["hub"]}" tabindex="-1" aria-hidden="true"><img src="{item["img"]}" alt="{esc(item["img_alt"])}" loading="lazy" width="480" height="270"></a>'
-        f'<div class="bd">'
-        f'<h2><a href="{item["hub"]}">{esc(item["name"])}</a></h2>'
-        f'<p>{esc(item["blurb"])}</p>'
-        f'<p class="meta game-counts">{counts_html}</p>'
-        f'<a class="more" href="{item["hub"]}">{esc(item["cta"])}</a>'
-        f'</div></article>'
-    )
+def game_icon(item):
+    name = esc(item["name"])
+    if item["img"]:
+        art = (
+            f'<span class="game-icon-art">'
+            f'<img src="{esc(item["img"])}" alt="" width="256" height="256" loading="lazy">'
+            f"</span>"
+        )
+    else:
+        art = (
+            f'<span class="game-icon-art game-icon-ph" style="--ph:{item["color"]}" aria-hidden="true">'
+            f'{esc(item["initials"])}</span>'
+        )
+    return f'<a class="game-icon" href="{item["hub"]}" title="{name}">{art}<span class="game-icon-name">{name}</span></a>'
 
-_featured_games, _more_games = _build_game_catalog()
-_all_games = _featured_games + _more_games
-_games_title = "Roblox Games | Guides and Codes Hub"
-_games_desc = "Browse Roblox game pages for The Forge, Steal an Egg, Scrooms, Anime Dice and more, with working codes and walkthroughs from Roblox Guides. Pick a game!"
+_all_games = _build_game_catalog()
+_games_title = "Games | Roblox Guides and Codes"
+_games_desc = "Browse Roblox games on Roblox Guides: The Forge, Steal an Egg, Scrooms, Anime Dice and more, with codes and walkthroughs one click away. Pick a game!"
 _games_ld = [
-    {"@context":"https://schema.org","@type":"CollectionPage","name":"Roblox Games","url":BASE+"games.html","description":_games_desc,"dateModified":TODAY,"publisher":ORG,
+    {"@context":"https://schema.org","@type":"CollectionPage","name":"Games","url":BASE+"games.html","description":_games_desc,"dateModified":TODAY,"publisher":ORG,
      "mainEntity":{"@type":"ItemList","numberOfItems":len(_all_games),"itemListElement":[
          {"@type":"ListItem","position":i+1,"name":it["name"],"url":BASE+it["hub"]} for i,it in enumerate(_all_games)
      ]}},
 ]
 _games_og = BASE + "assets/thumbs/the-forge-races-guide.png"
-_feat_cards = "".join(game_card(it) for it in _featured_games)
-_more_cards = "".join(game_card(it) for it in _more_games)
+_icon_grid = "".join(game_icon(it) for it in _all_games)
 _games_body = (
-    '<div class="wrap">{CRUMBS}'
-    "<article>"
-    "<h1>Roblox Games</h1>"
-    f'<p class="updated"><strong>Last updated: <time datetime="{TODAY}">{MOD_HUMAN}</time></strong> \u00b7 {len(_all_games)} games</p>'
-    "<p>Each card opens the existing codes page, walkthrough, or game hub for that Roblox title on Roblox Guides.</p>"
-    '<section aria-labelledby="feat-games-h">'
-    '<div class="sec-h"><h2 id="feat-games-h">Featured games</h2></div>'
-    f'<div class="grid">{_feat_cards}</div>'
-    "</section>"
-    '<section aria-labelledby="more-games-h">'
-    '<div class="sec-h"><h2 id="more-games-h">More Roblox game codes</h2></div>'
-    '<p class="small">Codes pages for other Roblox games already on the site. Working-code counts come from each page\'s last check.</p>'
-    f'<div class="grid">{_more_cards}</div>'
-    "</section>"
-    "</article>"
+    '<div class="wrap games-page">{CRUMBS}'
+    "<h1>Games</h1>"
+    f'<div class="game-icons">{_icon_grid}</div>'
     "</div>"
 )
 write("games.html", page(
@@ -865,7 +817,7 @@ write("games.html", page(
     _games_body,
     active="games.html",
     image=_games_og,
-    image_alt="The Forge guide cover used for the Roblox Games hub",
+    image_alt="Roblox game guides and codes on Roblox Guides",
     ld=_games_ld,
 ))
 
