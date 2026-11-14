@@ -298,6 +298,10 @@ def nav(active):
     )
     return "".join(item(h,t) for h,t in before) + games + "".join(item(h,t) for h,t in after)
 
+def _asset_ver():
+    import hashlib
+    return hashlib.md5((minify_css(CSS)+JS).encode()).hexdigest()[:8]
+
 def head(title, desc, path, og_type="website", image=None, image_alt=None, extra_ld=None, prefix=""):
     url = BASE + ("" if path=="index.html" else path)
     image = image or BASE + "assets/og-default.png"
@@ -335,8 +339,8 @@ def head(title, desc, path, og_type="website", image=None, image_alt=None, extra
 <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://i.ytimg.com">
-<link rel="stylesheet" href="{prefix}assets/style.min.css">
-<script src="{prefix}assets/site.js" defer></script>
+<link rel="stylesheet" href="{prefix}assets/style.min.css?v={_asset_ver()}">
+<script src="{prefix}assets/site.js?v={_asset_ver()}" defer></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6703417075646187" crossorigin="anonymous"></script>
 {lds}
 </head>
