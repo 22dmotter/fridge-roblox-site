@@ -24,8 +24,8 @@
       "how_to_get": "Mine <strong>Pebbles</strong> in <strong>Stonewake's Cross</strong>, the starting area. Multiple sources list Stone's drop chance as a guaranteed <strong>1/1</strong> from those Pebbles, and they do not list it on Rocks or Boulders.",
       "uses": "Stone has <strong>no trait</strong>. Its multiplier is <strong>0.2x</strong>, the lowest in this set, and it sells for <strong>$3</strong>. It is early-game filler for forging practice; later ores in this list have higher multipliers. For the mine-forge-sell loop, see the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a>.",
       "image": "assets/forge/stone.webp",
-      "image_kind": "placeholder",
-      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Stone.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -54,7 +54,9 @@
           "name": "BloxInformer: The Forge ores",
           "url": "https://bloxinformer.com/wikis/the-forge/ores/"
         }
-      ]
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Stone.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/d/d4/Stone.png"
     },
     {
       "id": "sand-stone",
@@ -77,8 +79,8 @@
       "how_to_get": "Mine <strong>Pebbles</strong> and <strong>Rocks</strong> in <strong>Stonewake's Cross</strong>. Sources agree the drop chance is <strong>1/2</strong> from those nodes. They do not list Sand Stone on Boulders.",
       "uses": "Sand Stone has <strong>no trait</strong>, a <strong>0.25x</strong> multiplier, and a <strong>$3.75</strong> sell price. Use it as a small step up from Stone when you forge early weapons or armor, then move on to Copper and Iron as they drop. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how ore multipliers feed item stats.",
       "image": "assets/forge/sand-stone.webp",
-      "image_kind": "placeholder",
-      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Sand Stone.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -107,7 +109,9 @@
           "name": "BloxInformer: The Forge ores",
           "url": "https://bloxinformer.com/wikis/the-forge/ores/"
         }
-      ]
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Sand_Stone.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/0/0a/Sand_Stone.png"
     },
     {
       "id": "copper",
@@ -131,8 +135,8 @@
       "how_to_get": "Mine <strong>Pebbles</strong>, <strong>Rocks</strong>, or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Sources agree the drop chance is <strong>1/3</strong> from those nodes.",
       "uses": "Copper has <strong>no trait</strong>, a <strong>0.3x</strong> multiplier, and a <strong>$4.50</strong> sell price. It is a solid early forging ore once you can break the same nodes that also drop Iron. For pickaxe upgrades that reach Boulders, see the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide.",
       "image": "assets/forge/copper.webp",
-      "image_kind": "placeholder",
-      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Copper.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -161,7 +165,9 @@
           "name": "BloxInformer: The Forge ores",
           "url": "https://bloxinformer.com/wikis/the-forge/ores/"
         }
-      ]
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Copper.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/1/12/Copper.png"
     },
     {
       "id": "iron",
@@ -185,8 +191,8 @@
       "how_to_get": "Mine <strong>Pebbles</strong>, <strong>Rocks</strong>, or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Sources agree the drop chance is <strong>1/5</strong> from those nodes.",
       "uses": "Iron has <strong>no trait</strong>, a <strong>0.35x</strong> multiplier, and a <strong>$5.25</strong> sell price. Among the four Common ores in this pilot, it is the best raw multiplier for early weapons and armor. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how to use early ores in the crafting loop.",
       "image": "assets/forge/iron.webp",
-      "image_kind": "placeholder",
-      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Iron.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -215,7 +221,9 @@
           "name": "BloxInformer: The Forge ores",
           "url": "https://bloxinformer.com/wikis/the-forge/ores/"
         }
-      ]
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Iron.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/4/45/Iron.png"
     },
     {
       "id": "gold",
@@ -237,8 +245,8 @@
       "how_to_get": "Mine <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Game8, Destructoid, BloxInformer, and the official Forge Wiki all list a <strong>1/16</strong> drop chance from Boulders there.",
       "uses": "Gold has <strong>no trait</strong> and a <strong>0.65x</strong> multiplier, higher than the Common ores in this list. Its confirmed sell price is <strong>$19.50</strong>, which is high compared with nearby ores that have similar or higher multipliers. Our <a href=\"the-forge-money-guide.html\">money guide</a> still generally recommends forging ores into gear rather than selling the raw ore. For reaching Boulders, see <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a>.",
       "image": "assets/forge/gold.webp",
-      "image_kind": "placeholder",
-      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Gold.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -273,7 +281,9 @@
           "name": "BloxInformer: The Forge ores",
           "url": "https://bloxinformer.com/wikis/the-forge/ores/"
         }
-      ]
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Gold.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/1/10/Gold.png"
     }
   ]
 }

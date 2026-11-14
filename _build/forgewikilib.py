@@ -38,6 +38,15 @@ def _obtained(item):
         return "—"
     return ", ".join(got)
 
+
+def _icon_credit_html(item, *, linked_name=True):
+    page = item.get("image_file_page")
+    if page:
+        name = '<a href="%s" rel="noopener" target="_blank">The Forge Wiki (forgewiki.org)</a>' % esc(page)
+    else:
+        name = "The Forge Wiki (forgewiki.org)"
+    return f"Item icon: {name}, game artwork © the game's developer"
+
 def _infobox(item, BASE):
     img = BASE + item["image"] if not item["image"].startswith("http") else item["image"]
     rows = [
@@ -50,11 +59,11 @@ def _infobox(item, BASE):
         ("Trait", item.get("trait") or "—"),
     ]
     dl = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in rows)
-    cap = "Placeholder tile" if item.get("image_kind") == "placeholder" else "Ore image"
+    credit = _icon_credit_html(item)
     return f"""<aside class="wiki-infobox" aria-label="{esc(item['name'])} facts">
 <figure class="wiki-art">
-<img src="{esc(item['image'])}" width="600" height="600" alt="{esc(item['name'])} placeholder tile">
-<figcaption>{esc(cap)}</figcaption>
+<img src="{esc(item['image'])}" width="600" height="600" alt="{esc(item['name'])} item icon">
+<figcaption>{credit}</figcaption>
 </figure>
 <div class="wiki-ibox-body">
 <p class="wiki-ibox-kicker">The Forge · Ore</p>
@@ -137,9 +146,7 @@ def item_body(item, items, BASE):
     faq_html = "".join(
         f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in faq
     )
-    img_note = (
-        f'<p class="small wiki-credit"><strong>Image:</strong> {esc(item.get("image_credit") or "Original placeholder tile.")}</p>'
-    )
+    img_note = f'<p class="small wiki-credit">{_icon_credit_html(item)}</p>' 
     return f"""<div class="wrap wiki-page">{{CRUMBS}}
 <article>
 <div class="wiki-item">
@@ -185,7 +192,7 @@ def list_body(data, items):
     for x in items:
         tiles.append(
             f'<a class="wiki-icon" href="{esc(x["slug"])}.html">'
-            f'<span class="wiki-icon-art"><img src="{esc(x["image"])}" width="600" height="600" alt="{esc(x["name"])} placeholder tile"></span>'
+            f'<span class="wiki-icon-art"><img src="{esc(x["image"])}" width="600" height="600" alt="{esc(x["name"])} item icon"></span>'
             f'<span class="wiki-icon-name">{esc(x["name"])}</span>'
             f'<span class="wiki-icon-sub">{esc(x.get("rarity") or "")} · {esc(x.get("chance") or "")}</span></a>'
         )
@@ -201,6 +208,10 @@ def list_body(data, items):
             f'<td data-sort="{esc(x.get("trait") or "")}">{esc(x.get("trait") or "—")}</td>'
             "</tr>"
         )
+    list_credit = "Item icons: " + ", ".join(
+        f'<a href="{esc(x["image_file_page"])}" rel="noopener" target="_blank">{esc(x["name"])}</a>'
+        for x in items if x.get("image_file_page")
+    ) + " on The Forge Wiki (forgewiki.org), game artwork © the game's developer"
     return f"""<div class="wrap wiki-page">{{CRUMBS}}
 <article>
 <header>
@@ -212,6 +223,7 @@ def list_body(data, items):
 <div class="callout"><strong>More coming:</strong> This list is not a complete ore encyclopedia yet. It starts with Stone, Sand Stone, Copper, Iron and Gold so we can lock the page design first.</div>
 <h2 id="grid">Ore Icons</h2>
 <div class="wiki-icons wiki-icons-lg">{''.join(tiles)}</div>
+<p class="small wiki-credit" id="icon-credit">{list_credit}</p>
 <h2 id="table">Ore Stats Table</h2>
 <p>Click a column header to sort. Open an ore name for the full wiki page.</p>
 <div class="table-wrap"><table class="wiki-sort">
@@ -318,7 +330,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
         active="roblox-the-forge.html",
         og_type="website",
         image=BASE + "assets/forge/ores-og.webp",
-        image_alt="The Forge ores wiki: starter ore placeholder tiles",
+        image_alt="The Forge ores wiki: Stone, Sand Stone, Copper, Iron and Gold icons",
         ld=list_ld,
     ))
     paths.append(list_path)
@@ -342,7 +354,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
             active="roblox-the-forge.html",
             og_type="article",
             image=BASE + item["image"],
-            image_alt=f"{item['name']} placeholder tile from the The Forge ores wiki",
+            image_alt=f"{item['name']} item icon from The Forge Wiki",
             ld=_item_ld(item, BASE, ORG, PERSON),
         ))
         paths.append(path)
