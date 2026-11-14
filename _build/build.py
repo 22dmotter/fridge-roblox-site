@@ -700,16 +700,21 @@ def _game_name_for(g):
     return GAME_PAGE_ALIASES.get(g["slug"], g["game"])
 
 def _game_initials(name):
-    words = re.findall(r"[A-Za-z0-9]+", name)
-    small = {"the", "a", "an", "and", "of", "in", "for", "to"}
+    words = re.findall(r"[A-Za-z0-9]+", name.replace("'", ""))
+    small = {"the", "a", "an", "and", "of", "in", "for"}
     main = [w for w in words if w.lower() not in small] or words
+    if len(main) == 1:
+        if words and words[0].lower() in small:
+            return (words[0][0] + main[0][0]).upper()
+        w = main[0]
+        return (w if w.isdigit() else w[:2]).upper()
     parts = []
+    if words and words[0].lower() == "the" and len(main) >= 2:
+        parts.append("T")
     for w in main:
         parts.append(w if w.isdigit() else w[0].upper())
         if sum(len(p) for p in parts) >= 3 and len(parts) >= 2:
             break
-    if len(parts) == 1 and not main[0].isdigit() and words and words[0].lower() in small:
-        return (words[0][0] + parts[0]).upper()
     return "".join(parts)[:4]
 
 def _game_icon_color(name):
@@ -733,8 +738,15 @@ def _yt_icon(vid):
     # mqdefault is 16:9, so a center square crop avoids hqdefault letterbox bars.
     return f"https://i.ytimg.com/vi/{vid}/mqdefault.jpg"
 
+def _is_generated_cover(g, rel):
+    # 16:9 typography covers crop badly as square icons; skip them.
+    slug_png = f"assets/thumbs/{g['slug']}.png"
+    cover = (g.get("cover") or "").lstrip("/")
+    return rel == slug_png or cover.endswith(f"thumbs/{g['slug']}.png")
+
 def _game_image(pages, hub_path):
-    # Prefer a real video thumb (crops cleanly to a square icon), then a local file.
+    # Prefer a real video thumb (crops cleanly to a square icon). Skip the
+    # auto-generated 16:9 title cards; those become initials fallbacks.
     hub_slug = hub_path.replace(".html", "")
     ordered = [g for g in pages if g["slug"] == hub_slug] + [g for g in pages if g["slug"] != hub_slug]
     for g in ordered:
@@ -742,14 +754,14 @@ def _game_image(pages, hub_path):
             return _yt_icon(g["videos"][0][0]), g_img_alt(g)
         if g.get("shorts"):
             return _yt_icon(g["shorts"][0][0]), g_img_alt(g)
-        if g.get("cover"):
-            rel = g["cover"]
-            if os.path.exists(os.path.join(OUT, rel.lstrip("/"))):
-                return rel, g_img_alt(g)
     for g in ordered:
+        if g.get("cover"):
+            rel = g["cover"].lstrip("/")
+            if not _is_generated_cover(g, rel) and os.path.exists(os.path.join(OUT, rel)):
+                return rel, g_img_alt(g)
         for ext in (".png", ".webp"):
             rel = f"assets/thumbs/{g['slug']}{ext}"
-            if os.path.exists(os.path.join(OUT, rel)):
+            if os.path.exists(os.path.join(OUT, rel)) and not _is_generated_cover(g, rel):
                 return rel, g_img_alt(g)
     return None, None
 
