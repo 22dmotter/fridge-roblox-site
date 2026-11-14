@@ -271,6 +271,7 @@ document.addEventListener('visibilitychange',function(){if(document.hidden)stop(
 resize();start();
 })();"""
 
+FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Roblox Guides icon</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#0a0f14"/><rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#g)" stroke-width="4"/><text x="32" y="43" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="28" fill="url(#g)">RG</text></svg>"""
 LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Fridge logo</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="12" y="3" width="40" height="58" rx="9" fill="url(#g)"/><rect x="12" y="24" width="40" height="3" fill="#0a0f14"/><rect x="18" y="10" width="4" height="10" rx="2" fill="#0a0f14"/><rect x="18" y="32" width="4" height="14" rx="2" fill="#0a0f14"/><path d="M38 38l3-5 3 5-3 5z" fill="#fff" opacity=".9"/><path d="M33 13l2-3 2 3-2 3z" fill="#fff" opacity=".8"/></svg>"""
 
 GAME_PAGES = {"games.html", "roblox-the-forge.html"}
@@ -336,8 +337,9 @@ def head(title, desc, path, og_type="website", image=None, image_alt=None, extra
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{image}">
 <meta name="twitter:image:alt" content="{esc(image_alt)}">
-<link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">
+<link rel="icon" href="{prefix}assets/favicon.svg?v=rg1" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png?v=rg1">
+<link rel="icon" href="{prefix}favicon.ico?v=rg1" sizes="any">
 <link rel="preconnect" href="https://i.ytimg.com">
 <link rel="stylesheet" href="{prefix}assets/style.min.css?v={_asset_ver()}">
 <script src="{prefix}assets/site.js?v={_asset_ver()}" defer></script>
@@ -920,7 +922,7 @@ os.makedirs(os.path.join(OUT,"assets"), exist_ok=True)
 write("assets/style.min.css", minify_css(CSS))
 write("assets/site.js", JS)
 write("assets/logo.svg", LOGO_SVG)
-write("assets/favicon.svg", LOGO_SVG)
+write("assets/favicon.svg", FAVICON_SVG)
 write(".nojekyll", "")
 json.dump(report, open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"seo-report.json"),"w"), indent=1)
 for r in report: print(r["slug"], "T",r["title_len"], "D",r["desc_len"], "W",r["words"], "kw",r["occ"], r["density"], "first100",r["kw_first100"], "links",r["body_links"])
