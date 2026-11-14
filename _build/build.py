@@ -467,7 +467,7 @@ def page(path, title, desc, crumbs_items, body, active=None, og_type="website", 
     return head(title, desc, path, og_type, image, image_alt, ld) + header(active or path) + body.replace("{CRUMBS}", bc_html(crumbs_items)) + footer()
 
 # working-code counts per codes page (from each page's verified table); None = game has no code system
-CODE_COUNTS = {"steal-an-egg-codes":None,"blox-fruits-codes":24,"rivals-codes":8,"99-nights-in-the-forest-codes":3,"jujutsu-shenanigans-codes":2,
+CODE_COUNTS = {"steal-an-egg-codes":None,"blox-fruits-codes":24,"rivals-codes":8,"99-nights-in-the-forest-codes":3,"jujutsu-shenanigans-codes":1,
  "murder-mystery-2-codes":0,"adopt-me-codes":0,"brookhaven-codes":None,"throw-food-for-animals-codes":None,"break-and-steal-an-egg-codes":None,
  "anime-adventures-codes":5,"forsaken-codes":None,"dandys-world-codes":2,"fisch-codes":2,"survive-your-ideas-codes":4,"fish-it-codes":3,
  "violence-district-codes":None,"dont-splash-codes":0,"steal-a-brainrot-codes":1,"catalog-avatar-creator-codes":0,"the-strongest-battlegrounds-codes":None,
@@ -696,7 +696,7 @@ GAME_HUBS = {
     "The Hollow": "roblox-hollow-event-guide.html",
     "+1 Speed Monkey Escape": "monkey-escape-sunken-shards.html",
     "99 Nights in the Forest": "99-nights-in-the-forest-guide.html",
-    "Throw Food For Animals": "throw-food-for-animals-guide.html",
+    "Throw Food For Animals": "throw-food-for-animals-codes.html",
 }
 _GAME_ICON_COLORS = ("#ffb020","#e8890c","#5b8def","#3dbe8c","#e36b6b","#b07cff","#f08ab8","#4ecdc4")
 
