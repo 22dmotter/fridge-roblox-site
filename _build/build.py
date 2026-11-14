@@ -353,7 +353,7 @@ def header(active, prefix=""):
     n = nav(active)
     if prefix: n = re.sub(r'href="', f'href="{prefix}', n)
     return f"""<header class="top"><div class="wrap bar">
-<a class="brand" href="{prefix}index.html" aria-label="Roblox Guides home"><img src="{prefix}assets/logo.svg" alt="Roblox Guides logo" width="34" height="34"><span><b>Roblox</b> Guides</span></a>
+<a class="brand" href="{prefix}index.html" aria-label="Roblox Guides home"><span><b>Roblox</b> Guides</span></a>
 <nav class="main" aria-label="Main"><ul>{n}</ul></nav>
 <form class="hs" action="{prefix}guides.html" method="get" role="search"><label class="skip" for="hs-q">Search guides</label><input id="hs-q" name="q" type="search" placeholder="Search guides…" autocomplete="off"></form>
 </div></header>
