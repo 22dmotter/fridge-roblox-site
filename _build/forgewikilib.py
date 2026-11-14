@@ -54,6 +54,21 @@ def _obtained(item):
     return ", ".join(got)
 
 
+
+def _rarity_class(rarity):
+    raw = (rarity or "").strip().lower().replace(" ", "-")
+    if raw in ("", "—", "-", "none"):
+        return ""
+    raw = {"mythical": "mythic"}.get(raw, raw)
+    return "rarity-" + raw
+
+def _rarity_html(rarity):
+    label = rarity or "—"
+    cls = _rarity_class(rarity)
+    if not cls:
+        return esc(label)
+    return f'<span class="rarity {cls}">{esc(label)}</span>'
+
 def _icon_credit_html(item, *, linked_name=True):
     page = item.get("image_file_page")
     if page:
@@ -73,10 +88,16 @@ def _infobox(item, BASE):
         ("Sell price", item.get("price") or "—"),
         ("Trait", item.get("trait") or "—"),
     ]
-    dl = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in rows)
+    cells = []
+    for k, v in rows:
+        val = _rarity_html(v) if k == "Rarity" else esc(v)
+        cells.append(f"<div><dt>{esc(k)}</dt><dd>{val}</dd></div>")
+    dl = "".join(cells)
     credit = _icon_credit_html(item)
+    rcls = _rarity_class(item.get("rarity"))
+    art_cls = ("wiki-art " + rcls).strip()
     return f"""<aside class="wiki-infobox" aria-label="{esc(item['name'])} facts">
-<figure class="wiki-art">
+<figure class="{art_cls}">
 <img src="{esc(item['image'])}" width="600" height="600" alt="{esc(item['name'])} item icon">
 <figcaption>{credit}</figcaption>
 </figure>
@@ -91,10 +112,13 @@ def _related_icons(item, items):
     others = [x for x in items if x["id"] != item["id"]]
     tiles = []
     for x in others:
+        rcls = _rarity_class(x.get("rarity"))
+        art = ("wiki-icon-art " + rcls).strip()
         tiles.append(
             f'<a class="wiki-icon" href="{esc(x["slug"])}.html">'
-            f'<span class="wiki-icon-art"><img src="{esc(x["image"])}" width="600" height="600" alt=""></span>'
-            f'<span class="wiki-icon-name">{esc(x["name"])}</span></a>'
+            f'<span class="{art}"><img src="{esc(x["image"])}" width="600" height="600" alt=""></span>'
+            f'<span class="wiki-icon-name">{esc(x["name"])}</span>'
+            f'<span class="wiki-icon-sub">{_rarity_html(x.get("rarity"))}</span></a>'
         )
     return '<div class="wiki-icons">' + "".join(tiles) + "</div>"
 
@@ -132,7 +156,11 @@ def _stat_table(item):
         ("Sell price", item.get("price") or "—"),
         ("Trait", item.get("trait") or "—"),
     ]
-    body = "".join(f"<tr><th scope='row'>{esc(k)}</th><td>{esc(v)}</td></tr>" for k, v in rows)
+    body_rows = []
+    for k, v in rows:
+        val = _rarity_html(v) if k == "Rarity" else esc(v)
+        body_rows.append(f"<tr><th scope='row'>{esc(k)}</th><td>{val}</td></tr>")
+    body = "".join(body_rows)
     return (
         '<div class="table-wrap"><table>'
         f"<caption>Confirmed {esc(item['name'])} stats (checked {CHECKED_HUMAN})</caption>"
@@ -205,16 +233,18 @@ def list_body(data, items):
     tiles = []
     rows = []
     for x in items:
+        rcls = _rarity_class(x.get("rarity"))
+        art = ("wiki-icon-art " + rcls).strip()
         tiles.append(
             f'<a class="wiki-icon" href="{esc(x["slug"])}.html">'
-            f'<span class="wiki-icon-art"><img src="{esc(x["image"])}" width="600" height="600" alt="{esc(x["name"])} item icon"></span>'
+            f'<span class="{art}"><img src="{esc(x["image"])}" width="600" height="600" alt="{esc(x["name"])} item icon"></span>'
             f'<span class="wiki-icon-name">{esc(x["name"])}</span>'
-            f'<span class="wiki-icon-sub">{esc(x.get("rarity") or "")} · {esc(x.get("chance") or "")}</span></a>'
+            f'<span class="wiki-icon-sub">{_rarity_html(x.get("rarity"))} · {esc(x.get("chance") or "")}</span></a>'
         )
         rows.append(
             "<tr>"
             f'<th scope="row"><a href="{esc(x["slug"])}.html">{esc(x["name"])}</a></th>'
-            f'<td data-sort="{esc(x.get("rarity") or "")}">{esc(x.get("rarity") or "—")}</td>'
+            f'<td data-sort="{esc(x.get("rarity") or "")}">{_rarity_html(x.get("rarity"))}</td>'
             f'<td data-sort="{esc(x.get("location") or "")}">{esc(x.get("location") or "—")}</td>'
             f'<td data-sort="{esc(_obtained(x))}">{esc(_obtained(x))}</td>'
             f'<td data-sort="{esc(x.get("chance") or "")}">{esc(x.get("chance") or "—")}</td>'

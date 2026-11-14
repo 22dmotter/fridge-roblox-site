@@ -214,12 +214,25 @@ nav.main .nav-dd:hover>.nav-dd-panel,nav.main .nav-dd:focus-within>.nav-dd-panel
 .wiki-icons{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 10px;margin:8px 0 24px}
 .wiki-icons-lg{margin-bottom:8px}
 .wiki-icon{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:var(--txt);text-align:center;min-width:0}
-.wiki-icon:hover,.wiki-icon:focus-visible{color:var(--acc)}
-.wiki-icon-art{display:block;width:100%;max-width:140px;aspect-ratio:1;border-radius:16px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
-.wiki-icon:hover .wiki-icon-art,.wiki-icon:focus-visible .wiki-icon-art{border-color:var(--acc)}
+.wiki-icon:hover .wiki-icon-name,.wiki-icon:focus-visible .wiki-icon-name{color:var(--acc)}
+.wiki-icon-art{display:block;width:100%;max-width:140px;aspect-ratio:1;border-radius:16px;overflow:hidden;background:var(--card);border:2px solid var(--line)}
+.wiki-icon:hover .wiki-icon-art:not([class*="rarity-"]),.wiki-icon:focus-visible .wiki-icon-art:not([class*="rarity-"]){border-color:var(--acc)}
 .wiki-icon-art img{width:100%;height:100%;object-fit:cover}
 .wiki-icon-name{font-weight:700;font-size:.88rem;line-height:1.25}
 .wiki-icon-sub{font-size:.75rem;color:var(--mut)}
+/* Rarity colors: Common/Uncommon/Rare/Epic sampled from in-game labels (most frequent solid glyph pixels). Higher tiers from official Forge Wiki .ep-tag-rarity-* CSS on item pages. */
+.rarity-common{--rarity:#757575;--rarity-glow:rgba(117,117,117,.45)}
+.rarity-uncommon{--rarity:#6ad538;--rarity-glow:rgba(106,213,56,.45)}
+.rarity-rare{--rarity:#41aafd;--rarity-glow:rgba(65,170,253,.45)}
+.rarity-epic{--rarity:#b822fe;--rarity-glow:rgba(184,34,254,.45)}
+.rarity-legendary{--rarity:#ffcc00;--rarity-glow:rgba(255,204,0,.4)}
+.rarity-mythic,.rarity-mythical{--rarity:#ff8888;--rarity-glow:rgba(255,136,136,.4)}
+.rarity-relic{--rarity:#ffee44;--rarity-glow:rgba(255,238,68,.4)}
+.rarity-exotic,.rarity-divine{--rarity:#ddaaff;--rarity-glow:rgba(221,170,255,.4)}
+span.rarity{font-weight:700;color:var(--rarity)}
+.wiki-icon-art[class*="rarity-"]{border-color:var(--rarity);box-shadow:0 0 12px var(--rarity-glow)}
+.wiki-icon:hover .wiki-icon-art[class*="rarity-"],.wiki-icon:focus-visible .wiki-icon-art[class*="rarity-"]{box-shadow:0 0 18px var(--rarity-glow)}
+.wiki-art[class*="rarity-"] img{box-shadow:0 0 0 2px var(--rarity),0 0 22px var(--rarity-glow)}
 .wiki-credit{margin-top:12px}
 .wiki-sort th button{all:unset;cursor:pointer;font:inherit;font-weight:700;color:inherit;display:inline-flex;align-items:center;gap:4px}
 .wiki-sort th button:after{content:"↕";font-size:.7em;color:var(--mut)}
