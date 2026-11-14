@@ -19,9 +19,24 @@ GUIDE_LABELS = {
 def esc(s):
     return html.escape(s, quote=True)
 
+def _ver(rel):
+    import hashlib
+    fp = os.path.join(HERE, "..", rel)
+    try:
+        return rel + "?v=" + hashlib.md5(open(fp, "rb").read()).hexdigest()[:8]
+    except OSError:
+        return rel
+
+def _bust(o):
+    if isinstance(o, dict):
+        return {k: (_ver(v) if k == "image" and isinstance(v, str) and v.startswith("assets/") else _bust(v)) for k, v in o.items()}
+    if isinstance(o, list):
+        return [_bust(x) for x in o]
+    return o
+
 def load_data():
     with open(DATA_PATH, encoding="utf-8") as f:
-        return json.load(f)
+        return _bust(json.load(f))
 
 def _check_seo(title, desc, path):
     if len(title) > 60:
@@ -329,7 +344,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
         list_body(data, items),
         active="roblox-the-forge.html",
         og_type="website",
-        image=BASE + "assets/forge/ores-og.webp",
+        image=BASE + _ver("assets/forge/ores-og.webp"),
         image_alt="The Forge ores wiki: Stone, Sand Stone, Copper, Iron and Gold icons",
         ld=list_ld,
     ))
