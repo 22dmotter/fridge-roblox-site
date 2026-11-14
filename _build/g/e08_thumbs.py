@@ -6,7 +6,7 @@ desc="How to make Roblox thumbnails for free in 2026 with Roblox Studio and Phot
 cat="Guides", game="Roblox", date="2026-11-10", videos=[],
 kw_primary="how to make roblox thumbnails",
 kw_secondary=["roblox thumbnail size","roblox youtube thumbnail","photopea roblox thumbnail","roblox game thumbnail","roblox gfx free"],
-related=["roblox-shaders","fix-roblox-lag","join-someone-roblox-without-friends","unlock-fps-roblox"],
+related=["how-to-upload-audio-to-roblox","roblox-shaders","fix-roblox-lag","join-someone-roblox-without-friends","unlock-fps-roblox"],
 sources=[("Roblox Creator Hub: Thumbnails","https://create.roblox.com/docs/production/publishing/thumbnails"),
  ("Roblox Creator Hub: Icons","https://create.roblox.com/docs/production/publishing/experience-icons"),
  ("YouTube Help: Add video thumbnails","https://support.google.com/youtube/answer/72431"),
