@@ -192,6 +192,52 @@ nav.main .nav-dd{position:relative}
 nav.main .nav-dd-panel{position:absolute;top:calc(100% + 8px);left:0;min-width:240px;z-index:8}
 nav.main .nav-dd:hover>.nav-dd-panel,nav.main .nav-dd:focus-within>.nav-dd-panel,nav.main .nav-dd.is-open>.nav-dd-panel{display:block}
 }
+
+/* The Forge wiki pilot */
+.wiki-page{padding-bottom:40px}
+.wiki-kicker{margin:0 0 6px;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--acc)}
+.wiki-kicker a{color:var(--acc);text-decoration:none}
+.wiki-item{display:flex;flex-direction:column;gap:24px}
+.wiki-infobox{order:-1;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.wiki-art{margin:0;background:#0e1620}
+.wiki-art img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.wiki-art figcaption{padding:8px 14px 0;font-size:.75rem;color:var(--mut)}
+.wiki-ibox-body{padding:8px 16px 16px}
+.wiki-ibox-kicker{margin:0;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.wiki-ibox-name{margin:2px 0 8px;font-size:1.25rem;font-weight:800}
+.wiki-infobox dl{margin:0}
+.wiki-infobox dl div{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;padding:8px 0;border-top:1px solid var(--line)}
+.wiki-infobox dt{margin:0;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.wiki-infobox dd{margin:0;font-weight:700;text-align:right}
+.wiki-icons{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 10px;margin:8px 0 24px}
+.wiki-icons-lg{margin-bottom:8px}
+.wiki-icon{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:var(--txt);text-align:center;min-width:0}
+.wiki-icon:hover,.wiki-icon:focus-visible{color:var(--acc)}
+.wiki-icon-art{display:block;width:100%;max-width:140px;aspect-ratio:1;border-radius:16px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.wiki-icon:hover .wiki-icon-art,.wiki-icon:focus-visible .wiki-icon-art{border-color:var(--acc)}
+.wiki-icon-art img{width:100%;height:100%;object-fit:cover}
+.wiki-icon-name{font-weight:700;font-size:.88rem;line-height:1.25}
+.wiki-icon-sub{font-size:.75rem;color:var(--mut)}
+.wiki-credit{margin-top:12px}
+.wiki-sort th button{all:unset;cursor:pointer;font:inherit;font-weight:700;color:inherit;display:inline-flex;align-items:center;gap:4px}
+.wiki-sort th button:after{content:"↕";font-size:.7em;color:var(--mut)}
+.wiki-sort th button[aria-sort=ascending]:after{content:"↑";color:var(--acc)}
+.wiki-sort th button[aria-sort=descending]:after{content:"↓";color:var(--acc)}
+.wiki-cats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0 28px}
+.wiki-cat{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:18px 12px;min-height:96px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);text-decoration:none;color:var(--txt);text-align:center;font-weight:800}
+a.wiki-cat:hover,a.wiki-cat:focus-visible{border-color:var(--acc);color:var(--acc);transform:translateY(-2px)}
+.wiki-cat.is-soon{opacity:.55;cursor:default;font-weight:700}
+.wiki-cat small{display:block;font-weight:600;color:var(--mut);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+@media(min-width:640px){
+.wiki-icons{grid-template-columns:repeat(4,1fr)}
+.wiki-icons-lg{grid-template-columns:repeat(5,1fr)}
+.wiki-cats{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:900px){
+.wiki-item{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.wiki-infobox{order:0;position:sticky;top:84px}
+.wiki-cats{grid-template-columns:repeat(6,1fr)}
+}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 """
 def minify_css(c):
@@ -269,7 +315,47 @@ function stop(){running=false;last=0;if(raf)cancelAnimationFrame(raf);}
 window.addEventListener('resize',resize,{passive:true});
 document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});
 resize();start();
-})();"""
+})();
+
+(function(){
+var tables=[].slice.call(document.querySelectorAll('table.wiki-sort'));
+if(!tables.length)return;
+function cellVal(cell){
+  var s=((cell&& (cell.getAttribute('data-sort')||cell.textContent))||'').trim();
+  var frac=s.match(/^1\/(\d+)$/);
+  if(frac) return parseInt(frac[1],10);
+  var num=s.replace(/[$,]/g,'');
+  if(/^-?\d+(\.\d+)?x?$/.test(num)) return parseFloat(num);
+  return s.toLowerCase();
+}
+function cmp(a,b){
+  if(typeof a==='number' && typeof b==='number') return a-b;
+  a=String(a); b=String(b);
+  return a<b?-1:a>b?1:0;
+}
+tables.forEach(function(table){
+  var heads=table.querySelectorAll('thead th');
+  heads.forEach(function(th,idx){
+    var btn=th.querySelector('button');
+    if(!btn)return;
+    btn.addEventListener('click',function(){
+      var tbody=table.tBodies[0];
+      var rows=[].slice.call(tbody.rows);
+      var cur=btn.getAttribute('aria-sort');
+      var dir=cur==='ascending'?'descending':'ascending';
+      heads.forEach(function(h){var b=h.querySelector('button'); if(b)b.removeAttribute('aria-sort');});
+      btn.setAttribute('aria-sort',dir);
+      rows.sort(function(r1,r2){
+        var v1=cellVal(r1.cells[idx]), v2=cellVal(r2.cells[idx]);
+        var d=cmp(v1,v2);
+        return dir==='ascending'?d:-d;
+      });
+      rows.forEach(function(r){tbody.appendChild(r);});
+    });
+  });
+});
+})();
+"""""
 
 FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Roblox Guides icon</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#0a0f14"/><rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#g)" stroke-width="4"/><text x="32" y="43" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="28" fill="url(#g)">RG</text></svg>"""
 LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Fridge logo</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="12" y="3" width="40" height="58" rx="9" fill="url(#g)"/><rect x="12" y="24" width="40" height="3" fill="#0a0f14"/><rect x="18" y="10" width="4" height="10" rx="2" fill="#0a0f14"/><rect x="18" y="32" width="4" height="14" rx="2" fill="#0a0f14"/><path d="M38 38l3-5 3 5-3 5z" fill="#fff" opacity=".9"/><path d="M33 13l2-3 2 3-2 3z" fill="#fff" opacity=".8"/></svg>"""
@@ -851,12 +937,24 @@ _guides_card = """<article class="card">
 <h2><a href="tag-guides.html">All Guides (including The Forge)</a></h2>
 <p>Open the Guides category for The Forge walkthroughs already on the site, plus other Roblox game guides.</p>
 <a class="more" href="tag-guides.html">Browse Guides →</a></div></article>"""
+_forge_wiki_cats = """
+<div class="wiki-cats" role="list">
+<a class="wiki-cat" role="listitem" href="the-forge-ores.html">Ores<small>5 starter pages</small></a>
+<div class="wiki-cat is-soon" role="listitem">Weapons<small>Coming soon</small></div>
+<div class="wiki-cat is-soon" role="listitem">Armor<small>Coming soon</small></div>
+<div class="wiki-cat is-soon" role="listitem">Pickaxes<small>Coming soon</small></div>
+<div class="wiki-cat is-soon" role="listitem">Races<small>Coming soon</small></div>
+<div class="wiki-cat is-soon" role="listitem">Runes<small>Coming soon</small></div>
+</div>"""
 _forge_body = f"""<div class="wrap">{{CRUMBS}}
 <article>
 <h1>Roblox The Forge</h1>
 <p class="updated"><strong>Last updated: <time datetime="{TODAY}">{MOD_HUMAN}</time></strong></p>
-<p>This is a placeholder game hub for Roblox The Forge, a game already covered on Roblox Guides with codes and walkthroughs. Use it to jump to those existing pages from the new Games menu.</p>
-<p><strong>Game hub coming soon.</strong> A fuller hub will live here later. For now, start with The Forge codes, the Guides category, and a few walkthroughs already on the site.</p>
+<p>This is the Roblox The Forge hub on Roblox Guides. Use it to jump to codes, walkthroughs, and the new ores wiki pilot.</p>
+<h2 id="wiki">The Forge Wiki</h2>
+<p>We are starting a data-driven wiki of item stats, with photos, beginning with five starter ores. Other categories will follow once this layout is reviewed.</p>
+{_forge_wiki_cats}
+<p>A fuller game hub will still grow here. For now, start with the ores list, The Forge codes, the Guides category, and the walkthroughs already on the site.</p>
 <div class="grid">{_guides_card}{''.join(_forge_cards)}</div>
 </article>
 </div>"""
@@ -869,6 +967,11 @@ write("roblox-the-forge.html", page(
     active="roblox-the-forge.html",
     ld=[{"@context":"https://schema.org","@type":"WebPage","name":"Roblox The Forge","url":BASE+"roblox-the-forge.html","dateModified":TODAY,"publisher":ORG}],
 ))
+
+# ---------- The Forge wiki pilot (data-driven from forge_data.json) ----------
+import forgewikilib
+_WIKI_PATHS, _WIKI_CHECKED = forgewikilib.write_pages(page, write, BASE, ORG, PERSON)
+
 
 # ---------- about / legal ----------
 from legalpages import privacy_body, terms_body, contact_body, about_body
@@ -908,7 +1011,8 @@ write("404.html", nf)
 
 # ---------- sitemap / robots ----------
 urls = [("",TODAY,"1.0","daily"),("guides.html",TODAY,"0.9","daily"),("games.html",TODAY,"0.8","weekly"),("about.html",TODAY,"0.5","monthly"),("privacy-policy.html",TODAY,"0.5","yearly"),("terms.html",TODAY,"0.5","yearly"),("contact.html",TODAY,"0.5","yearly"),("roblox-the-forge.html",TODAY,"0.7","weekly")] + \
-       [(v[0],TODAY,"0.7","weekly") for v in CATS.values()] + [(g["slug"]+".html",TODAY,"0.8","weekly") for g in guides]
+       [(v[0],TODAY,"0.7","weekly") for v in CATS.values()] + [(g["slug"]+".html",TODAY,"0.8","weekly") for g in guides] + \
+       [(p, _WIKI_CHECKED, "0.7", "weekly") for p in _WIKI_PATHS]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"  <url><loc>{BASE}{u}</loc><lastmod>{d}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>\n" for u,d,p,c in urls) + "</urlset>\n"
 write("sitemap.xml", sm)

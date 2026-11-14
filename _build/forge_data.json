@@ -1,0 +1,279 @@
+{
+  "checked": "2026-11-14",
+  "category": "ores",
+  "list_slug": "the-forge-ores",
+  "note": "Pilot of 5 starter ores. Add more objects to items[] to generate new pages.",
+  "items": [
+    {
+      "id": "stone",
+      "name": "Stone",
+      "slug": "the-forge-stone-ore",
+      "title": "Stone Ore in The Forge: Stats and Location",
+      "h1": "Stone Ore in The Forge: Drop Chance and Uses",
+      "desc": "Stone ore in The Forge: a Common 1-in-1 drop from Pebbles in Stonewake's Cross, with a 0.2x multiplier, a $3 sell price, and no trait. See the stats!",
+      "rarity": "Common",
+      "chance": "1/1",
+      "multiplier": "0.2x",
+      "price": "$3",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Pebble"
+      ],
+      "lead": "Stone is the first Common ore most players pick up in The Forge. It drops from every Pebble in Stonewake's Cross, so it is easy to stock but it has the lowest multiplier of the five ores in this pilot.",
+      "how_to_get": "Mine <strong>Pebbles</strong> in <strong>Stonewake's Cross</strong>, the starting area. Multiple sources list Stone's drop chance as a guaranteed <strong>1/1</strong> from those Pebbles, and they do not list it on Rocks or Boulders.",
+      "uses": "Stone has <strong>no trait</strong>. Its multiplier is <strong>0.2x</strong>, the lowest in this set, and it sells for <strong>$3</strong>. It is early-game filler for forging practice; later ores in this list have higher multipliers. For the mine-forge-sell loop, see the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a>.",
+      "image": "assets/forge/stone.webp",
+      "image_kind": "placeholder",
+      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Stone.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Stone",
+          "url": "https://forgewiki.org/wiki/Stone"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "sand-stone",
+      "name": "Sand Stone",
+      "slug": "the-forge-sand-stone-ore",
+      "title": "Sand Stone Ore in The Forge: Stats & Location",
+      "h1": "Sand Stone Ore in The Forge: Chance and Uses",
+      "desc": "Sand Stone in The Forge: a Common 1-in-2 drop from Pebbles and Rocks in Stonewake's Cross, 0.25x multiplier, $3.75 sell price, no trait. See the stats!",
+      "rarity": "Common",
+      "chance": "1/2",
+      "multiplier": "0.25x",
+      "price": "$3.75",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Pebble",
+        "Rock"
+      ],
+      "lead": "Sand Stone is a Common ore from Stonewake's Cross with a slightly better multiplier and sell price than Stone. It still has no trait, so it is mainly an early mining drop while you work toward Iron and Gold.",
+      "how_to_get": "Mine <strong>Pebbles</strong> and <strong>Rocks</strong> in <strong>Stonewake's Cross</strong>. Sources agree the drop chance is <strong>1/2</strong> from those nodes. They do not list Sand Stone on Boulders.",
+      "uses": "Sand Stone has <strong>no trait</strong>, a <strong>0.25x</strong> multiplier, and a <strong>$3.75</strong> sell price. Use it as a small step up from Stone when you forge early weapons or armor, then move on to Copper and Iron as they drop. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how ore multipliers feed item stats.",
+      "image": "assets/forge/sand-stone.webp",
+      "image_kind": "placeholder",
+      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Sand Stone.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Sand Stone",
+          "url": "https://forgewiki.org/wiki/Sand_Stone"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "copper",
+      "name": "Copper",
+      "slug": "the-forge-copper-ore",
+      "title": "Copper Ore in The Forge: Chance and Uses",
+      "h1": "Copper Ore in The Forge: Drop Chance and Uses",
+      "desc": "Copper ore in The Forge: Common, 1-in-3 from Pebbles, Rocks and Boulders in Stonewake's Cross, 0.3x multiplier, $4.50 sell price, no trait. See the stats!",
+      "rarity": "Common",
+      "chance": "1/3",
+      "multiplier": "0.3x",
+      "price": "$4.50",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Pebble",
+        "Rock",
+        "Boulder"
+      ],
+      "lead": "Copper is a Common Stonewake's Cross ore that drops from all three early rock types: Pebbles, Rocks, and Boulders. It has no trait, but its multiplier and sell price sit a step above Sand Stone.",
+      "how_to_get": "Mine <strong>Pebbles</strong>, <strong>Rocks</strong>, or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Sources agree the drop chance is <strong>1/3</strong> from those nodes.",
+      "uses": "Copper has <strong>no trait</strong>, a <strong>0.3x</strong> multiplier, and a <strong>$4.50</strong> sell price. It is a solid early forging ore once you can break the same nodes that also drop Iron. For pickaxe upgrades that reach Boulders, see the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide.",
+      "image": "assets/forge/copper.webp",
+      "image_kind": "placeholder",
+      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Copper.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Copper",
+          "url": "https://forgewiki.org/wiki/Copper"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "iron",
+      "name": "Iron",
+      "slug": "the-forge-iron-ore",
+      "title": "Iron Ore in The Forge: Stats and Location",
+      "h1": "Iron Ore in The Forge: Drop Chance and Uses",
+      "desc": "Iron ore in The Forge: Common, 1-in-5 from Pebbles, Rocks and Boulders in Stonewake's Cross, 0.35x multiplier, $5.25 sell price, no trait. See the stats!",
+      "rarity": "Common",
+      "chance": "1/5",
+      "multiplier": "0.35x",
+      "price": "$5.25",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Pebble",
+        "Rock",
+        "Boulder"
+      ],
+      "lead": "Iron is the strongest Common ore in this starter set. It comes from the same Stonewake's Cross nodes as Copper, with a lower drop chance and a slightly higher multiplier.",
+      "how_to_get": "Mine <strong>Pebbles</strong>, <strong>Rocks</strong>, or <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Sources agree the drop chance is <strong>1/5</strong> from those nodes.",
+      "uses": "Iron has <strong>no trait</strong>, a <strong>0.35x</strong> multiplier, and a <strong>$5.25</strong> sell price. Among the four Common ores in this pilot, it is the best raw multiplier for early weapons and armor. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how to use early ores in the crafting loop.",
+      "image": "assets/forge/iron.webp",
+      "image_kind": "placeholder",
+      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Iron.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Iron",
+          "url": "https://forgewiki.org/wiki/Iron"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "slug": "the-forge-gold-ore",
+      "title": "Gold Ore in The Forge: Drop Chance and Price",
+      "h1": "Gold Ore in The Forge: Drop Chance and Price",
+      "desc": "Gold ore in The Forge: Uncommon, 1-in-16 from Boulders in Stonewake's Cross, 0.65x multiplier, $19.50 sell price, and no trait. See the full stats!",
+      "rarity": "Uncommon",
+      "chance": "1/16",
+      "multiplier": "0.65x",
+      "price": "$19.50",
+      "trait": "None",
+      "location": "Stonewake's Cross",
+      "obtained_from": [
+        "Boulder"
+      ],
+      "lead": "Gold is the Uncommon ore in this starter set. Sources agree it drops from Boulders in Stonewake's Cross at 1-in-16, with a 0.65x multiplier and a $19.50 sell price \u2014 high for that multiplier \u2014 and no trait.",
+      "how_to_get": "Mine <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Game8, Destructoid, BloxInformer, and the official Forge Wiki all list a <strong>1/16</strong> drop chance from Boulders there.",
+      "uses": "Gold has <strong>no trait</strong> and a <strong>0.65x</strong> multiplier, higher than the Common ores in this list. Its confirmed sell price is <strong>$19.50</strong>, which is high compared with nearby ores that have similar or higher multipliers. Our <a href=\"the-forge-money-guide.html\">money guide</a> still generally recommends forging ores into gear rather than selling the raw ore. For reaching Boulders, see <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a>.",
+      "image": "assets/forge/gold.webp",
+      "image_kind": "placeholder",
+      "image_credit": "Original placeholder tile by Roblox Guides. The official Forge Wiki hosts an in-game icon at File:Gold.png, but that file page has no license template and the wiki's copyright policy says media files are not automatically licensed, so we did not copy it.",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "The official Forge Wiki Gold page also lists Forgotten Kingdom (Basalt Rock). Game8 (February 22, 2026), Destructoid (January 8, 2026), and BloxInformer list only Boulders in Stonewake's Cross. We do not treat Forgotten Kingdom or Basalt Rock as confirmed."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Gold",
+          "url": "https://forgewiki.org/wiki/Gold"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Gold Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573590"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ]
+    }
+  ]
+}

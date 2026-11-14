@@ -69,3 +69,42 @@ window.addEventListener('resize',resize,{passive:true});
 document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});
 resize();start();
 })();
+
+(function(){
+var tables=[].slice.call(document.querySelectorAll('table.wiki-sort'));
+if(!tables.length)return;
+function cellVal(cell){
+  var s=((cell&& (cell.getAttribute('data-sort')||cell.textContent))||'').trim();
+  var frac=s.match(/^1\/(\d+)$/);
+  if(frac) return parseInt(frac[1],10);
+  var num=s.replace(/[$,]/g,'');
+  if(/^-?\d+(\.\d+)?x?$/.test(num)) return parseFloat(num);
+  return s.toLowerCase();
+}
+function cmp(a,b){
+  if(typeof a==='number' && typeof b==='number') return a-b;
+  a=String(a); b=String(b);
+  return a<b?-1:a>b?1:0;
+}
+tables.forEach(function(table){
+  var heads=table.querySelectorAll('thead th');
+  heads.forEach(function(th,idx){
+    var btn=th.querySelector('button');
+    if(!btn)return;
+    btn.addEventListener('click',function(){
+      var tbody=table.tBodies[0];
+      var rows=[].slice.call(tbody.rows);
+      var cur=btn.getAttribute('aria-sort');
+      var dir=cur==='ascending'?'descending':'ascending';
+      heads.forEach(function(h){var b=h.querySelector('button'); if(b)b.removeAttribute('aria-sort');});
+      btn.setAttribute('aria-sort',dir);
+      rows.sort(function(r1,r2){
+        var v1=cellVal(r1.cells[idx]), v2=cellVal(r2.cells[idx]);
+        var d=cmp(v1,v2);
+        return dir==='ascending'?d:-d;
+      });
+      rows.forEach(function(r){tbody.appendChild(r);});
+    });
+  });
+});
+})();
