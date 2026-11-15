@@ -249,6 +249,28 @@ def item_body(item, items, BASE):
 </article>
 </div>"""
 
+
+def _world_short_label(heading, hid):
+    if ": " in heading:
+        return heading.split(": ", 1)[0]
+    if hid.startswith("world-") and hid.split("-", 1)[-1].isdigit():
+        return "World " + hid.split("-", 1)[-1]
+    return heading
+
+def _world_jump_nav(items):
+    links = []
+    for hid, heading, group in _worlds(items):
+        if not group:
+            continue
+        short = _world_short_label(heading, hid)
+        label = f"{heading} ({len(group)} ores)"
+        links.append(
+            f'<a class="wiki-world-jump" href="#{esc(hid)}" title="{esc(label)}" aria-label="{esc(label)}">{esc(short)}</a>'
+        )
+    if not links:
+        return ""
+    return f'<nav class="wiki-world-nav" aria-label="Jump to a world">{"".join(links)}</nav>'
+
 def _worlds(items):
     groups = [
         ("world-1", "World 1: Stonewake's Cross", "Stonewake's Cross"),
@@ -322,6 +344,7 @@ def list_body(data, items):
             f'<div class="wiki-icons wiki-icons-lg">{"".join(tiles)}</div>'
             f"{_ore_table(group, caption)}"
         )
+    jump_nav = _world_jump_nav(items)
     list_credit = "Item icons: " + ", ".join(
         f'<a href="{esc(x["image_file_page"])}" rel="noopener" target="_blank">{esc(x["name"])}</a>'
         for x in items if x.get("image_file_page")
@@ -334,6 +357,7 @@ def list_body(data, items):
 <p class="updated">Last checked: <time datetime="{CHECKED}">{CHECKED_HUMAN}</time></p>
 </header>
 <p class="lead">This list covers every ore in World 1 (Stonewake's Cross), World 2 (Forgotten Kingdom), and World 3 (Frostspire Expanse), in the official Forge Wiki list order from Stone through Fichillium, then Cobalt through Darkryte, then Grass through Prismatic Heart. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. A dash (—) means we did not find two sources that agree. Later official areas such as The Peak are not included yet.</p>
+{jump_nav}
 <div class="callout"><strong>Worlds 1–3:</strong> These 55 ores are the full Stonewake's Cross set (14), the Forgotten Kingdom set from Cobalt through Darkryte (25), and the Frostspire Expanse set from Grass through Prismatic Heart (16) on the official Forge Wiki list. Royal Boneite appears on the World 2 list but could not be confirmed with a second independent source, so it is not on this site yet. For most World 3 ores, the official wiki drop chance does not match Game8, Destructoid, and BloxInformer, so those chance fields are dashes. Later official areas such as The Peak are not included yet.</div>
 {''.join(sections)}
 <p class="small wiki-credit" id="icon-credit">{list_credit}</p>

@@ -68,14 +68,14 @@ for _g in guides:
 CSS = r"""
 .bg-fx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
 .bg-fx canvas{display:block;width:100%;height:100%}
-@media (prefers-reduced-motion:reduce){.bg-fx{display:none}}
+@media (prefers-reduced-motion:reduce){.bg-fx{display:none}html{scroll-behavior:auto}}
 .short-slot{margin:22px auto;max-width:300px}.short-ph{aspect-ratio:9/16;width:100%;border:2px dashed var(--acc);border-radius:18px;background:var(--bg2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:18px;color:var(--mut)}
 .short-ph strong{color:var(--txt)}.short-ic{width:56px;height:56px;border-radius:14px;background:#FF0000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
 .shorts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;margin:18px 0}.shorts-grid .short-slot{margin:0;max-width:none}
 .short-slot iframe{aspect-ratio:9/16;width:100%;height:auto;border:0;border-radius:18px}.short-slot figcaption{text-align:center;margin-top:6px}
 figure.shot{margin:20px 0;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}figure.shot img{width:100%;height:auto;display:block;background:#000}figure.shot figcaption{padding:10px 14px;font-size:.85rem;color:var(--mut);line-height:1.45}figure.shot figcaption a{font-weight:700}
 :root{--bg:#0a0f14;--bg2:#101821;--card:#131d28;--line:#1f2e3d;--txt:#e6eef5;--mut:#9fb3c4;--acc:#ffb020;--acc2:#ffc966;--accd:#e8890c;--acc3:#f5a623;--ink:#1a1000;--r:14px;--max:1160px}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif}
 a{color:var(--acc)}a:hover{color:var(--accd)}img{max-width:100%;height:auto;display:block}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
@@ -195,6 +195,11 @@ nav.main .nav-dd:hover>.nav-dd-panel,nav.main .nav-dd:focus-within>.nav-dd-panel
 
 /* The Forge wiki pilot */
 .wiki-page{padding-bottom:40px}
+.wiki-page h2[id]{scroll-margin-top:11rem}
+@media(min-width:900px){.wiki-page h2[id]{scroll-margin-top:6rem}}
+.wiki-world-nav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 8px}
+.wiki-world-jump{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:44px;min-width:44px;padding:10px 20px;border-radius:999px;background:var(--acc);color:var(--ink);font-weight:800;text-decoration:none;line-height:1.2}
+.wiki-world-jump:hover,.wiki-world-jump:focus-visible{background:var(--accd);color:var(--ink)}
 .wiki-kicker{margin:0 0 6px;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--acc)}
 .wiki-kicker a{color:var(--acc);text-decoration:none}
 .wiki-item{display:flex;flex-direction:column;gap:24px}
