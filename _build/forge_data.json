@@ -3755,8 +3755,8 @@
       "slug": "the-forge-arcane-crystal-ore",
       "title": "Arcane Crystal Ore in The Forge: Drop Chance and Price",
       "h1": "Arcane Crystal Ore in The Forge: Drop Chance and Price",
-      "desc": "Arcane Crystal in The Forge: a Mythic 1-in-100,000 drop from Goblin Cave, 7.5x multiplier, $112.50 sell price. Checked against multiple sources. Open the stats!",
-      "rarity": "Mythic",
+      "desc": "Arcane Crystal in The Forge: a 1-in-100,000 Goblin Cave drop with a 7.5x multiplier and $112.50 sell price. Sources disagree on rarity. Open the stats!",
+      "rarity": "—",
       "chance": "1/100000",
       "multiplier": "7.5x",
       "price": "$112.50",
@@ -3769,7 +3769,7 @@
         "Crimson Crystal",
         "Cyan Crystal"
       ],
-      "lead": "Arcane Crystal is a Mythic ore on the official Goblin Cave list. Sources agree it is obtained from Light Crystal, Earth Crystal, Violet Crystal, Crimson Crystal, Cyan Crystal, with a 1-in-100,000 drop chance, a 7.5x multiplier, and a $112.50 sell price. It has no confirmed forge trait.",
+      "lead": "Arcane Crystal is on the official Goblin Cave list. Sources agree it is obtained from Light Crystal, Earth Crystal, Violet Crystal, Crimson Crystal, and Cyan Crystal, with a 1-in-100,000 drop chance, a 7.5x multiplier, and a $112.50 sell price. It has no confirmed forge trait. Sources disagree on rarity (the official wiki and BloxInformer list Mythic; Destructoid and Pocket Tactics list Epic), so that field is a dash.",
       "how_to_get": "On the official Forge Wiki list, Arcane Crystal is a Goblin Cave ore, obtained from <strong>Light Crystal, Earth Crystal, Violet Crystal, Crimson Crystal, Cyan Crystal</strong>. the official Forge Wiki, Game8, BloxInformer, Destructoid, and Pocket Tactics all mention this ore. Bloxinformer places it under how to craft. This page follows the official wiki list for the location label (Goblin Cave). The confirmed drop chance on this page is 1-in-100,000.",
       "uses": "Arcane Crystal has no confirmed forge trait. It has a <strong>7.5x</strong> multiplier and a <strong>$112.50</strong> sell price. See the <a href=\"the-forge-goblin-cave.html\">Goblin Cave guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how these ores fit the crafting loop.",
       "image": "assets/forge/arcane_crystal.webp",
@@ -3787,7 +3787,7 @@
         "Drop chance: Game8, Destructoid agree on 1/100000. Pocket Tactics lists 1/255. This page uses 1/100000.",
         "Multiplier: Destructoid, Pocket Tactics agree on 7.5x. the official Forge Wiki lists 9x. This page uses 7.5x.",
         "Sell price: Destructoid, Pocket Tactics agree on $112.50. the official Forge Wiki lists $135. This page uses $112.50.",
-        "Rarity: no two sources agree (Destructoid list Epic; the official Forge Wiki list Mythic), so this page shows a dash (—).",
+        "Rarity: the official Forge Wiki and BloxInformer list Mythic (BloxInformer: Mythical); Destructoid and Pocket Tactics list Epic. Because two or more sources support each figure, this page shows a dash (—) instead of choosing one.",
         "Location label: BloxInformer places it under How to Craft. This page follows the official wiki list and uses Goblin Cave."
       ],
       "sources": [
@@ -6239,17 +6239,17 @@
       "slug": "the-forge-fruite-ore",
       "title": "Fruite Ore in The Forge: Drop Chance and Price",
       "h1": "Fruite Ore in The Forge: Drop Chance and Price",
-      "desc": "Fruite in The Forge: a Rare 1-in-290 drop from the Holy Tree, 10.33x multiplier, no trait. Confirmed with the official wiki and other guides. See how to get it!",
+      "desc": "Fruite in The Forge: a Rare 1-in-290 drop from the Holy Tree with a 10.33x multiplier. Sources disagree on the trait and sell price. See how to get it!",
       "rarity": "Rare",
       "chance": "1/290",
       "multiplier": "10.33x",
       "price": null,
-      "trait": "None",
+      "trait": "—",
       "location": "Holy Tree",
       "obtained_from": [
         "Hana Pebble"
       ],
-      "lead": "Fruite is a Rare ore on the official Holy Tree list. Sources agree it is obtained from Hana Pebble, with a 1-in-290 drop chance and a 10.33x multiplier. They do not agree on the sell price, so that field is left blank on this page. It has no confirmed forge trait.",
+      "lead": "Fruite is a Rare ore on the official Holy Tree list. Sources agree it is obtained from Hana Pebble, with a 1-in-290 drop chance and a 10.33x multiplier. They do not agree on the sell price or the trait, so those fields are dashes on this page.",
       "how_to_get": "On the official Forge Wiki list, Fruite is a Holy Tree ore, obtained from <strong>Hana Pebble</strong>. the official Forge Wiki, Game8, BloxInformer, and Pocket Tactics all mention this ore. The confirmed drop chance on this page is 1-in-290.",
       "uses": "Fruite has no confirmed forge trait. It has a <strong>10.33x</strong> multiplier. The sell price is left blank because sources do not agree. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide for how later-island ores fit the crafting loop.",
       "image": "assets/forge/fruite.webp",
@@ -6263,7 +6263,8 @@
         "the-forge-island-3-guide"
       ],
       "unverified": [
-        "Sell price: no two sources agree (the official Forge Wiki list $241.88), so this page shows a dash (—)."
+        "Sell price: no two sources agree (the official Forge Wiki list $241.88), so this page shows a dash (—).",
+        "Trait: the official Forge Wiki lists None; Game8 lists “3% Extra Movement Speed”; BloxInformer lists the trait as TBA. Because the sources disagree, this page shows a dash (—)."
       ],
       "sources": [
         {
