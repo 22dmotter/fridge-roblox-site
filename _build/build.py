@@ -874,6 +874,25 @@ def _game_image(pages, hub_path):
                 return rel, g_img_alt(g)
     return None, None
 
+
+GAME_ICONS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "game_icons.json")
+
+def _file_ver(rel):
+    import hashlib
+    fp = os.path.join(OUT, rel)
+    try:
+        return rel + "?v=" + hashlib.md5(open(fp, "rb").read()).hexdigest()[:8]
+    except OSError:
+        return rel
+
+def _load_game_icons():
+    try:
+        with open(GAME_ICONS_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+        return {g["name"]: g for g in data.get("games") or []}
+    except OSError:
+        return {}
+
 def _build_game_catalog():
     by = {}
     for g in guides:
@@ -881,11 +900,17 @@ def _build_game_catalog():
         if name == "Roblox":
             continue
         by.setdefault(name, []).append(g)
+    official = _load_game_icons()
     catalog = []
     for name, pages in by.items():
         pages = sorted(pages, key=lambda x: (0 if x["cat"] != "Codes" else 1, x.get("date", ""), x["slug"]))
         hub = _pick_hub(name, pages)
-        img, img_alt = _game_image(pages, hub)
+        rec = official.get(name) or {}
+        rel = rec.get("icon")
+        if rel and os.path.exists(os.path.join(OUT, rel)):
+            img, img_alt = _file_ver(rel), f"{name} official Roblox game icon"
+        else:
+            img, img_alt = None, f"{name} icon"
         catalog.append({
             "name": name,
             "hub": hub,
@@ -903,7 +928,7 @@ def game_icon(item):
     if item["img"]:
         art = (
             f'<span class="game-icon-art">'
-            f'<img src="{esc(item["img"])}" alt="" width="256" height="256" loading="lazy">'
+            f'<img src="{esc(item["img"])}" alt="" width="512" height="512" loading="lazy">'
             f"</span>"
         )
     else:
@@ -928,6 +953,7 @@ _games_body = (
     '<div class="wrap games-page">{CRUMBS}'
     "<h1>Games</h1>"
     f'<div class="game-icons">{_icon_grid}</div>'
+    '<p class="small">Game icons © their Roblox developers.</p>'
     "</div>"
 )
 write("games.html", page(
