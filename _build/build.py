@@ -4,8 +4,8 @@ OUT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "
 SITE = "Fridge"
 YT = "https://www.youtube.com/@Fridgetherealone"
 SUB = YT + "?sub_confirmation=1"
-TODAY = "2026-11-14"
-MOD_HUMAN = "November 14, 2026"
+TODAY = "2026-11-15"
+MOD_HUMAN = "November 15, 2026"
 CATS = {
  "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus The Forge, Dress To Impress, King Legacy, Blade Ball, Bee Swarm Simulator, Arise Crossover, Anime Dice, Huzz Valley and more, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
  "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: uploading audio, voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus The Forge (races, pickaxes and money), Scrooms, Bloxstrap, account recovery and more."),

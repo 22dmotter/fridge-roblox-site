@@ -5,8 +5,8 @@ G = F.make(slug="the-forge-race-reroll-guide", order=3, kw="reroll race in the f
  desc="How to reroll race in The Forge: where the Wizard's Tower is on each island, how the Race Menu works, the odds for every rarity, and 45 free rerolls from codes.",
  kw2=["the forge reroll race","the forge free rerolls","the forge wizard tower","the forge race menu","how to get rerolls in the forge"],
  related=["the-forge-codes","the-forge-races-guide","the-forge-archangel-race","the-forge-beginners-guide"],
- ids=["so5h2Z_odXI","ap6TlIsKHWE","APELI3KKolk","gmYPCLg-q9U","ol9sMpzbyMc","8Rx3uOjRhJU","Fxsnep5Hwho","z2SYTq_Ka0U"],
- lead="Your race is one of the biggest power boosts in the game, so knowing how to <strong>reroll race in The Forge</strong> matters. This guide shows where to reroll on every island, what the odds are, and how to get rerolls for free. It brings together all eight of Fridge's reroll videos and Shorts.",
+ ids=["spukO-e4X3I","so5h2Z_odXI","ap6TlIsKHWE","APELI3KKolk","gmYPCLg-q9U","ol9sMpzbyMc","8Rx3uOjRhJU","Fxsnep5Hwho","z2SYTq_Ka0U"],
+ lead="Your race is one of the biggest power boosts in the game, so knowing how to <strong>reroll race in The Forge</strong> matters. This guide shows where to reroll on every island, what the odds are, and how to get rerolls for free. It brings together all nine of Fridge's reroll videos and Shorts, including his newest Short from November 15, 2026.",
  heading="Watch Fridge's Race Reroll Videos and Shorts",
  sections=[
  ("where","Where to Reroll Your Race","""<p>According to the Forge Wiki, you change race in the <strong>Wizard's Tower</strong> by talking to the <strong>Wizard</strong>, or from the <strong>Race Menu</strong>. The Wizard opens the Race Menu for you. Here's where he stands on each island:</p>
