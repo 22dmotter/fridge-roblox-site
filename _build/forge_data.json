@@ -2,7 +2,7 @@
   "checked": "2026-11-14",
   "category": "ores",
   "list_slug": "the-forge-ores",
-  "note": "All 14 Stonewake's Cross (World 1) ores from the official Forge Wiki list, in list order from Stone through Fichillium. Add more objects to items[] to generate new pages.",
+  "note": "All 14 Stonewake's Cross (World 1) ores and 25 Forgotten Kingdom (World 2) ores from the official Forge Wiki list, in list order from Stone through Fichillium, then Cobalt through Darkryte. Royal Boneite appears on the official list but was not added because it could not be confirmed with a second source. Add more objects to items[] to generate new pages.",
   "items": [
     {
       "id": "stone",
@@ -25,7 +25,7 @@
       "uses": "Stone has <strong>no trait</strong>. Its multiplier is <strong>0.2x</strong>, the lowest in this set, and it sells for <strong>$3</strong>. It is early-game filler for forging practice; later ores in this list have higher multipliers. For the mine-forge-sell loop, see the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a>.",
       "image": "assets/forge/stone.webp",
       "image_kind": "wiki-icon",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -80,7 +80,7 @@
       "uses": "Sand Stone has <strong>no trait</strong>, a <strong>0.25x</strong> multiplier, and a <strong>$3.75</strong> sell price. Use it as a small step up from Stone when you forge early weapons or armor, then move on to Copper and Iron as they drop. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how ore multipliers feed item stats.",
       "image": "assets/forge/sand-stone.webp",
       "image_kind": "wiki-icon",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -136,7 +136,7 @@
       "uses": "Copper has <strong>no trait</strong>, a <strong>0.3x</strong> multiplier, and a <strong>$4.50</strong> sell price. It is a solid early forging ore once you can break the same nodes that also drop Iron. For pickaxe upgrades that reach Boulders, see the <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a> guide.",
       "image": "assets/forge/copper.webp",
       "image_kind": "wiki-icon",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -192,7 +192,7 @@
       "uses": "Iron has <strong>no trait</strong>, a <strong>0.35x</strong> multiplier, and a <strong>$5.25</strong> sell price. It is a reliable early-game forging ore in Stonewake's Cross. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how to use early ores in the crafting loop.",
       "image": "assets/forge/iron.webp",
       "image_kind": "wiki-icon",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -249,7 +249,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Tin.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/8/80/Tin.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -308,7 +308,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Silver.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/0/0b/Silver.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -361,12 +361,12 @@
       "obtained_from": [
         "Boulder"
       ],
-      "lead": "Gold is an Uncommon ore from Stonewake's Cross. Sources agree it drops from Boulders in Stonewake's Cross at 1-in-16, with a 0.65x multiplier and a $19.50 sell price \u2014 high for that multiplier \u2014 and no trait.",
+      "lead": "Gold is an Uncommon ore from Stonewake's Cross. Sources agree it drops from Boulders in Stonewake's Cross at 1-in-16, with a 0.65x multiplier and a $19.50 sell price — high for that multiplier — and no trait.",
       "how_to_get": "Mine <strong>Boulders</strong> in <strong>Stonewake's Cross</strong>. Game8, Destructoid, BloxInformer, and the official Forge Wiki all list a <strong>1/16</strong> drop chance from Boulders there.",
       "uses": "Gold has <strong>no trait</strong> and a <strong>0.65x</strong> multiplier, higher than the Common ores in this list. Its confirmed sell price is <strong>$19.50</strong>, which is high compared with nearby ores that have similar or higher multipliers. Our <a href=\"the-forge-money-guide.html\">money guide</a> still generally recommends forging ores into gear rather than selling the raw ore. For reaching Boulders, see <a href=\"the-forge-pickaxe-progression.html\">pickaxe progression</a>.",
       "image": "assets/forge/gold.webp",
       "image_kind": "wiki-icon",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -429,7 +429,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Mushroomite.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/6/6e/Mushroomite.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -487,7 +487,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Platinum.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/a/ac/Platinum.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -548,7 +548,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Bananite.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/1/1b/Bananite.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -607,7 +607,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Cardboardite.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/1/18/Cardboardite.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -665,7 +665,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Aite.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/8/8c/Aite.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -673,7 +673,7 @@
         "the-forge-money-guide"
       ],
       "unverified": [
-        "Multiplier: the official Forge Wiki Aite page and BloxInformer list 1.1x. Game8 (February 22, 2026) and Destructoid (January 8, 2026) list 1x. Because two sources support each figure, this page shows a dash (\u2014) instead of choosing one."
+        "Multiplier: the official Forge Wiki Aite page and BloxInformer list 1.1x. Game8 (February 22, 2026) and Destructoid (January 8, 2026) list 1x. Because two sources support each figure, this page shows a dash (—) instead of choosing one."
       ],
       "sources": [
         {
@@ -727,7 +727,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Poopite.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/e/ec/Poopite.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -788,7 +788,7 @@
       "image_kind": "wiki-icon",
       "image_file_page": "https://forgewiki.org/wiki/File:Fichillium.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/e/e7/Fichillium.png",
-      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork \u00a9 the game's developer",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
       "related_guides": [
         "the-forge-beginners-guide",
         "the-forge-pickaxe-progression",
@@ -826,6 +826,1502 @@
           "url": "https://bloxinformer.com/wikis/the-forge/ores/"
         }
       ]
+    },
+    {
+      "id": "cobalt",
+      "name": "Cobalt",
+      "slug": "the-forge-cobalt-ore",
+      "title": "Cobalt Ore in The Forge: Drop Chance and Price",
+      "h1": "Cobalt Ore in The Forge: Drop Chance and Price",
+      "desc": "Cobalt ore in The Forge: an Uncommon 1-in-37 Forgotten Kingdom drop from Basalt Rock and Core, 1x multiplier, $15 sell price, no trait. See the stats!",
+      "rarity": "Uncommon",
+      "chance": "1/37",
+      "multiplier": "1x",
+      "price": "$15",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Rock",
+        "Basalt Core"
+      ],
+      "lead": "Cobalt is an Uncommon ore from the Forgotten Kingdom. Sources agree it drops from Basalt Rocks and Basalt Cores at 1-in-37, with a 1x multiplier, a $15 sell price, and no trait. It is the first ore on the official World 2 list.",
+      "how_to_get": "Mine <strong>Basalt Rocks</strong> or <strong>Basalt Cores</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, and BloxInformer all list a <strong>1/37</strong> drop chance from those nodes. Destructoid lists the same chance and Basalt Rock, but writes \"Basalt Cove\" instead of Basalt Core.",
+      "uses": "Cobalt has <strong>no trait</strong>, a <strong>1x</strong> multiplier, and a <strong>$15</strong> sell price. It opens the official Forgotten Kingdom list. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/cobalt.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Destructoid's World 2 table lists \"Basalt Cove\" as a Cobalt node. The official Forge Wiki, Game8, and BloxInformer list Basalt Core (and Basalt Rock). This page follows the three sources that agree and treats \"Basalt Cove\" as an unconfirmed label, likely a typo for Basalt Core."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Cobalt",
+          "url": "https://forgewiki.org/wiki/Cobalt"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Cobalt Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573582"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Cobalt.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/8/80/Cobalt.png"
+    },
+    {
+      "id": "titanium",
+      "name": "Titanium",
+      "slug": "the-forge-titanium-ore",
+      "title": "Titanium Ore in The Forge: Drop Chance and Price",
+      "h1": "Titanium Ore in The Forge: Drop Chance and Price",
+      "desc": "Titanium ore in The Forge: an Uncommon 1-in-50 Forgotten Kingdom drop from Basalt Rock and Core, 1.15x multiplier, $17.25 sell price, no trait. See the stats!",
+      "rarity": "Uncommon",
+      "chance": "1/50",
+      "multiplier": "1.15x",
+      "price": "$17.25",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Rock",
+        "Basalt Core"
+      ],
+      "lead": "Titanium is an Uncommon ore from the Forgotten Kingdom. Sources agree it drops from Basalt Rocks and Basalt Cores at 1-in-50, with a 1.15x multiplier, a $17.25 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Rocks</strong> or <strong>Basalt Cores</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/50</strong> drop chance from those nodes.",
+      "uses": "Titanium has <strong>no trait</strong>, a <strong>1.15x</strong> multiplier, and a <strong>$17.25</strong> sell price. It sits just after Cobalt on the official World 2 list. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/titanium.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Titanium",
+          "url": "https://forgewiki.org/wiki/Titanium"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Titanium Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573581"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Titanium.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/c/cc/Titanium.png"
+    },
+    {
+      "id": "lapis_lazuli",
+      "name": "Lapis Lazuli",
+      "slug": "the-forge-lapis-lazuli-ore",
+      "title": "Lapis Lazuli Ore in The Forge: Drop Chance",
+      "h1": "Lapis Lazuli Ore in The Forge: Drop Chance",
+      "desc": "Lapis Lazuli in The Forge: an Uncommon 1-in-73 Forgotten Kingdom drop from Basalt Core and Rock, 1.3x multiplier, no trait, disputed sell price. See the stats!",
+      "rarity": "Uncommon",
+      "chance": "1/73",
+      "multiplier": "1.3x",
+      "price": null,
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Core",
+        "Basalt Rock"
+      ],
+      "lead": "Lapis Lazuli is an Uncommon ore from the Forgotten Kingdom. Sources agree it drops from Basalt Cores and Basalt Rocks at 1-in-73, with a 1.3x multiplier and no trait. They do not agree on the sell price, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Basalt Cores</strong> or <strong>Basalt Rocks</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/73</strong> drop chance from those nodes.",
+      "uses": "Lapis Lazuli has <strong>no trait</strong> and a <strong>1.3x</strong> multiplier. Sources do not agree on the sell price, so this page does not list one. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/lapis_lazuli.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Sell price: the official Forge Wiki Lapis Lazuli page and BloxInformer list $19.50. Game8 (February 22, 2026) and Destructoid (January 8, 2026) list $22.50. Because two sources support each figure, this page shows a dash (—) instead of choosing one."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Lapis Lazuli",
+          "url": "https://forgewiki.org/wiki/Lapis_Lazuli"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Lapis Lazuli Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573579"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Lapis.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/5/5d/Lapis.png"
+    },
+    {
+      "id": "boneite",
+      "name": "Boneite",
+      "slug": "the-forge-boneite-ore",
+      "title": "Boneite Ore in The Forge: Drop Chance and Price",
+      "h1": "Boneite Ore in The Forge: Drop Chance and Price",
+      "desc": "Boneite ore in The Forge: a Rare 1-in-222 Forgotten Kingdom drop from skeleton enemies, 1.2x multiplier, $18 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/222",
+      "multiplier": "1.2x",
+      "price": "$18",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Skeleton Rogue",
+        "Axe Skeleton",
+        "Deathaxe Skeleton"
+      ],
+      "lead": "Boneite is a Rare enemy-drop ore from the Forgotten Kingdom. Sources agree it comes from Skeleton Rogues, Axe Skeletons, and Deathaxe Skeletons at 1-in-222, with a 1.2x multiplier, an $18 sell price, and no trait.",
+      "how_to_get": "It is dropped by <strong>Skeleton Rogues</strong>, <strong>Axe Skeletons</strong>, and <strong>Deathaxe Skeletons</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, and BloxInformer all list a <strong>1/222</strong> drop chance. Destructoid's World 2 table (January 8, 2026) does not include Boneite, so it is not used as a confirming source here.",
+      "uses": "Boneite has <strong>no trait</strong>, a <strong>1.2x</strong> multiplier, and an <strong>$18</strong> sell price. Unlike most Forgotten Kingdom ores, it comes from enemies rather than rock nodes. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/boneite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "The official Forge Wiki also lists Bomber as a Boneite drop. Game8 and BloxInformer do not, so Bomber is not listed under Obtained from. Game8 lists Axe Skeleton and Deathaxe Skeleton only; Skeleton Rogue is confirmed by the official wiki and BloxInformer."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Boneite",
+          "url": "https://forgewiki.org/wiki/Boneite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Boneite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573651"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Boneite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/a/af/Boneite.png"
+    },
+    {
+      "id": "volcanic_rock_ore",
+      "name": "Volcanic Rock Ore",
+      "slug": "the-forge-volcanic-rock-ore",
+      "title": "Volcanic Rock Ore in The Forge: Drop Chance and Price",
+      "h1": "Volcanic Rock Ore in The Forge: Drop Chance and Price",
+      "desc": "Volcanic Rock Ore in The Forge: a Rare 1-in-55 Forgotten Kingdom drop from Volcanic Rock nodes, 1.55x multiplier, $23.25 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/55",
+      "multiplier": "1.55x",
+      "price": "$23.25",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Volcanic Rock"
+      ],
+      "lead": "Volcanic Rock Ore is a Rare ore from the Forgotten Kingdom. The official Forge Wiki, Game8, and BloxInformer agree it drops from Volcanic Rock nodes at 1-in-55, with a 1.55x multiplier, a $23.25 sell price, and no trait. Game8 and BloxInformer call the ore Volcanic Rock; the official list uses Volcanic Rock Ore.",
+      "how_to_get": "Mine <strong>Volcanic Rock</strong> nodes in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, and BloxInformer all list a <strong>1/55</strong> drop chance from those nodes. Destructoid's World 2 table (January 8, 2026) does not include this ore as a row, so it is not used as a confirming source here.",
+      "uses": "Volcanic Rock Ore has <strong>no trait</strong>, a <strong>1.55x</strong> multiplier, and a <strong>$23.25</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/volcanic_rock_ore.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Volcanic Rock Ore",
+          "url": "https://forgewiki.org/wiki/Volcanic_Rock_Ore"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Volcanic Rock Ore Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573560"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:VolcanicRock.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/3/34/VolcanicRockOre.png"
+    },
+    {
+      "id": "quartz",
+      "name": "Quartz",
+      "slug": "the-forge-quartz-ore",
+      "title": "Quartz Ore in The Forge: Drop Chance and Price",
+      "h1": "Quartz Ore in The Forge: Drop Chance and Price",
+      "desc": "Quartz ore in The Forge: a Rare 1-in-90 Forgotten Kingdom drop from Basalt Cores and Veins, 1.5x multiplier, $22.50 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/90",
+      "multiplier": "1.5x",
+      "price": "$22.50",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Core",
+        "Basalt Vein"
+      ],
+      "lead": "Quartz is a Rare ore from the Forgotten Kingdom. Sources agree it drops from Basalt Cores and Basalt Veins at 1-in-90, with a 1.5x multiplier, a $22.50 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Cores</strong> or <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/90</strong> drop chance from those nodes.",
+      "uses": "Quartz has <strong>no trait</strong>, a <strong>1.5x</strong> multiplier, and a <strong>$22.50</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/quartz.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Quartz",
+          "url": "https://forgewiki.org/wiki/Quartz"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Quartz Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573578"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Quartz.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/c/cf/Quartz.png"
+    },
+    {
+      "id": "amethyst",
+      "name": "Amethyst",
+      "slug": "the-forge-amethyst-ore",
+      "title": "Amethyst Ore in The Forge: Drop Chance and Price",
+      "h1": "Amethyst Ore in The Forge: Drop Chance and Price",
+      "desc": "Amethyst ore in The Forge: a Rare 1-in-115 Forgotten Kingdom drop from Basalt Cores and Veins, 1.65x multiplier, $24.75 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/115",
+      "multiplier": "1.65x",
+      "price": "$24.75",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Core",
+        "Basalt Vein"
+      ],
+      "lead": "Amethyst is a Rare ore from the Forgotten Kingdom. Sources agree it drops from Basalt Cores and Basalt Veins at 1-in-115, with a 1.65x multiplier, a $24.75 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Cores</strong> or <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/115</strong> drop chance from those nodes.",
+      "uses": "Amethyst has <strong>no trait</strong>, a <strong>1.65x</strong> multiplier, and a <strong>$24.75</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/amethyst.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Amethyst",
+          "url": "https://forgewiki.org/wiki/Amethyst"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Amethyst Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573577"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Amethyst.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/2/2e/Amethyst.png"
+    },
+    {
+      "id": "topaz",
+      "name": "Topaz",
+      "slug": "the-forge-topaz-ore",
+      "title": "Topaz Ore in The Forge: Drop Chance and Price",
+      "h1": "Topaz Ore in The Forge: Drop Chance and Price",
+      "desc": "Topaz ore in The Forge: a Rare 1-in-143 Forgotten Kingdom drop from Basalt nodes and Volcanic Rock, 1.75x, $26.25 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/143",
+      "multiplier": "1.75x",
+      "price": "$26.25",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Core",
+        "Basalt Vein",
+        "Volcanic Rock"
+      ],
+      "lead": "Topaz is a Rare ore from the Forgotten Kingdom. Sources agree it drops from Basalt Cores, Basalt Veins, and Volcanic Rock at 1-in-143, with a 1.75x multiplier, a $26.25 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Cores</strong>, <strong>Basalt Veins</strong>, or <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Destructoid, and BloxInformer all list a <strong>1/143</strong> drop chance from those three nodes. Game8 lists the same chance and the two basalt nodes, but does not list Volcanic Rock.",
+      "uses": "Topaz has <strong>no trait</strong>, a <strong>1.75x</strong> multiplier, and a <strong>$26.25</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/topaz.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Topaz",
+          "url": "https://forgewiki.org/wiki/Topaz"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Topaz Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573576"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Topaz.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/a/a5/Topaz.png"
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "slug": "the-forge-diamond-ore",
+      "title": "Diamond Ore in The Forge: Drop Chance and Price",
+      "h1": "Diamond Ore in The Forge: Drop Chance and Price",
+      "desc": "Diamond ore in The Forge: a Rare 1-in-192 Forgotten Kingdom drop from Basalt Cores and Veins, 2x multiplier, $30 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/192",
+      "multiplier": "2x",
+      "price": "$30",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Core",
+        "Basalt Vein"
+      ],
+      "lead": "Diamond is a Rare ore from the Forgotten Kingdom. Sources agree it drops from Basalt Cores and Basalt Veins at 1-in-192, with a 2x multiplier, a $30 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Cores</strong> or <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/192</strong> drop chance from those nodes.",
+      "uses": "Diamond has <strong>no trait</strong>, a <strong>2x</strong> multiplier, and a <strong>$30</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/diamond.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Diamond",
+          "url": "https://forgewiki.org/wiki/Diamond"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Diamond Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573575"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Diamond.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/e/ea/Diamond.png"
+    },
+    {
+      "id": "dark_boneite",
+      "name": "Dark Boneite",
+      "slug": "the-forge-dark-boneite-ore",
+      "title": "Dark Boneite Ore in The Forge: Drop Chance and Price",
+      "h1": "Dark Boneite Ore in The Forge: Drop Chance and Price",
+      "desc": "Dark Boneite in The Forge: a Rare 1-in-555 Forgotten Kingdom drop from elite skeletons, pyromancers, and Reapers, 2.25x, $33.75, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/555",
+      "multiplier": "2.25x",
+      "price": "$33.75",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Elite Skeleton Rogue",
+        "Elite Deathaxe Skeleton",
+        "Blight Pyromancer",
+        "Reaper"
+      ],
+      "lead": "Dark Boneite is a Rare enemy-drop ore from the Forgotten Kingdom. Sources agree it drops at 1-in-555, with a 2.25x multiplier, a $33.75 sell price, and no trait. Confirmed drop sources are Elite Skeleton Rogues, Elite Deathaxe Skeletons, Blight Pyromancers, and Reapers.",
+      "how_to_get": "It is dropped by <strong>Elite Skeleton Rogues</strong>, <strong>Elite Deathaxe Skeletons</strong>, <strong>Blight Pyromancers</strong>, and <strong>Reapers</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, and BloxInformer all list a <strong>1/555</strong> chance. Each enemy is confirmed by at least two of those sources. Destructoid's World 2 table (January 8, 2026) does not include Dark Boneite, so it is not used as a confirming source here.",
+      "uses": "Dark Boneite has <strong>no trait</strong>, a <strong>2.25x</strong> multiplier, and a <strong>$33.75</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/dark_boneite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Game8 does not list Elite Skeleton Rogue. BloxInformer does not list Blight Pyromancer. Each of those two enemies is still confirmed by the official wiki plus one other source, so both remain on the Obtained from list."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Dark Boneite",
+          "url": "https://forgewiki.org/wiki/Dark_Boneite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Dark Boneite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573650"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Dark_boneite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/d/da/Dark_boneite.png"
+    },
+    {
+      "id": "sapphire",
+      "name": "Sapphire",
+      "slug": "the-forge-sapphire-ore",
+      "title": "Sapphire Ore in The Forge: Drop Chance and Price",
+      "h1": "Sapphire Ore in The Forge: Drop Chance and Price",
+      "desc": "Sapphire ore in The Forge: a Rare 1-in-247 Forgotten Kingdom drop from Basalt Cores and Veins, 2.25x multiplier, $33.75 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": "1/247",
+      "multiplier": "2.25x",
+      "price": "$33.75",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Core",
+        "Basalt Vein"
+      ],
+      "lead": "Sapphire is a Rare ore from the Forgotten Kingdom. Sources agree it drops from Basalt Cores and Basalt Veins at 1-in-247, with a 2.25x multiplier, a $33.75 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Cores</strong> or <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/247</strong> drop chance from those nodes.",
+      "uses": "Sapphire has <strong>no trait</strong>, a <strong>2.25x</strong> multiplier, and a <strong>$33.75</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/sapphire.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Sapphire",
+          "url": "https://forgewiki.org/wiki/Sapphire"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Sapphire Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573574"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Sapphire.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/f/f7/Sapphire.png"
+    },
+    {
+      "id": "cuprite",
+      "name": "Cuprite",
+      "slug": "the-forge-cuprite-ore",
+      "title": "Cuprite Ore in The Forge: Drop Chance and Price",
+      "h1": "Cuprite Ore in The Forge: Drop Chance and Price",
+      "desc": "Cuprite ore in The Forge: an Epic 1-in-303 Forgotten Kingdom drop from Basalt nodes and Volcanic Rock, 2.43x, $36.45 sell price, no trait. See the stats!",
+      "rarity": "Epic",
+      "chance": "1/303",
+      "multiplier": "2.43x",
+      "price": "$36.45",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Core",
+        "Basalt Vein",
+        "Volcanic Rock"
+      ],
+      "lead": "Cuprite is an Epic ore from the Forgotten Kingdom. Sources agree it drops from Basalt Cores, Basalt Veins, and Volcanic Rock at 1-in-303, with a 2.43x multiplier, a $36.45 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Cores</strong>, <strong>Basalt Veins</strong>, or <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/303</strong> drop chance from those nodes.",
+      "uses": "Cuprite has <strong>no trait</strong>, a <strong>2.43x</strong> multiplier, and a <strong>$36.45</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/cuprite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [],
+      "sources": [
+        {
+          "name": "Forge Wiki: Cuprite",
+          "url": "https://forgewiki.org/wiki/Cuprite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Cuprite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573573"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Cuprite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/1/1f/Cuprite.png"
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "slug": "the-forge-obsidian-ore",
+      "title": "Obsidian Ore in The Forge: Drop Chance and Price",
+      "h1": "Obsidian Ore in The Forge: Drop Chance and Price",
+      "desc": "Obsidian ore in The Forge: an Epic 1-in-333 Forgotten Kingdom drop from Volcanic Rock, 2.35x multiplier, $35.25 sell price, and a disputed trait. See the stats!",
+      "rarity": "Epic",
+      "chance": "1/333",
+      "multiplier": "2.35x",
+      "price": "$35.25",
+      "trait": null,
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Volcanic Rock"
+      ],
+      "lead": "Obsidian is an Epic ore from the Forgotten Kingdom. Sources agree it drops from Volcanic Rock at 1-in-333, with a 2.35x multiplier and a $35.25 sell price. They do not agree on the trait, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/333</strong> drop chance from those nodes.",
+      "uses": "Obsidian has a <strong>2.35x</strong> multiplier and a <strong>$35.25</strong> sell price. Sources do not agree on the trait effect, so this page does not list one. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/obsidian.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Trait: the official Forge Wiki Obsidian page and BloxInformer describe a 30% vitality / max-health increase on Armor. Game8 (February 22, 2026) and Destructoid (January 8, 2026) describe 30% extra defense on Armor. Because two sources support each wording, this page shows a dash (—) instead of choosing one. All four sources at least agree the trait is used on Armor."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Obsidian",
+          "url": "https://forgewiki.org/wiki/Obsidian"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Obsidian Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573572"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Obsidian.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/2/23/Obsidian.png"
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald",
+      "slug": "the-forge-emerald-ore",
+      "title": "Emerald Ore in The Forge: Drop Chance and Price",
+      "h1": "Emerald Ore in The Forge: Drop Chance and Price",
+      "desc": "Emerald ore in The Forge: an Epic 1-in-363 Forgotten Kingdom drop from Basalt Cores and Veins, 2.55x multiplier, $38.25 sell price, no trait. See the stats!",
+      "rarity": "Epic",
+      "chance": "1/363",
+      "multiplier": "2.55x",
+      "price": "$38.25",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Core",
+        "Basalt Vein"
+      ],
+      "lead": "Emerald is an Epic ore from the Forgotten Kingdom. Sources agree it drops from Basalt Cores and Basalt Veins at 1-in-363, with a 2.55x multiplier, a $38.25 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Cores</strong> or <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/363</strong> drop chance from those nodes.",
+      "uses": "Emerald has <strong>no trait</strong>, a <strong>2.55x</strong> multiplier, and a <strong>$38.25</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/emerald.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Game8 and BloxInformer also list a later-world Icy Pebble node. The official Forge Wiki item page and Destructoid list only Basalt Core and Basalt Vein, so Icy Pebble is not listed under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Emerald",
+          "url": "https://forgewiki.org/wiki/Emerald"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Emerald Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573571"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Emerald.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/6/6a/Emerald.png"
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "slug": "the-forge-ruby-ore",
+      "title": "Ruby Ore in The Forge: Drop Chance and Price",
+      "h1": "Ruby Ore in The Forge: Drop Chance and Price",
+      "desc": "Ruby ore in The Forge: an Epic 1-in-487 drop from Basalt Veins in the Forgotten Kingdom, 2.95x multiplier, $44.25 sell price, no trait. See the stats!",
+      "rarity": "Epic",
+      "chance": "1/487",
+      "multiplier": "2.95x",
+      "price": "$44.25",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Vein"
+      ],
+      "lead": "Ruby is an Epic ore from the Forgotten Kingdom. Sources agree it drops from Basalt Veins at 1-in-487, with a 2.95x multiplier, a $44.25 sell price, and no trait.",
+      "how_to_get": "Mine <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/487</strong> drop chance from that node.",
+      "uses": "Ruby has <strong>no trait</strong>, a <strong>2.95x</strong> multiplier, and a <strong>$44.25</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/ruby.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "BloxInformer also lists Basalt Core. Game8 and BloxInformer also list a later-world Icy Pebble node. The official Forge Wiki item page lists only Basalt Vein, and Destructoid agrees, so Basalt Core and Icy Pebble are not listed under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Ruby",
+          "url": "https://forgewiki.org/wiki/Ruby"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Ruby Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573570"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Ruby.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/a/a9/Ruby.png"
+    },
+    {
+      "id": "rivalite",
+      "name": "Rivalite",
+      "slug": "the-forge-rivalite-ore",
+      "title": "Rivalite Ore in The Forge: Stats and Trait",
+      "h1": "Rivalite Ore in The Forge: Stats and Trait",
+      "desc": "Rivalite ore in The Forge: an Epic 1-in-569 Forgotten Kingdom drop from Basalt Vein and Volcanic Rock, 3.33x, $49.95, +20% crit on Weapons. See the stats!",
+      "rarity": "Epic",
+      "chance": "1/569",
+      "multiplier": "3.33x",
+      "price": "$49.95",
+      "trait": "+20% critical chance on Weapons",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Vein",
+        "Volcanic Rock"
+      ],
+      "lead": "Rivalite is an Epic ore from the Forgotten Kingdom. Sources agree it drops from Basalt Veins and Volcanic Rock at 1-in-569, with a 3.33x multiplier, a $49.95 sell price, and a +20% critical chance trait on Weapons.",
+      "how_to_get": "Mine <strong>Basalt Veins</strong> or <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/569</strong> drop chance from those nodes.",
+      "uses": "Rivalite's confirmed trait is <strong>+20% critical chance on Weapons</strong>. It has a <strong>3.33x</strong> multiplier and a <strong>$49.95</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/rivalite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Game8 and BloxInformer also list a later-world Icy Pebble node. The official Forge Wiki item page and Destructoid list only Basalt Vein and Volcanic Rock, so Icy Pebble is not listed under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Rivalite",
+          "url": "https://forgewiki.org/wiki/Rivalite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Rivalite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573569"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Rivalite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/c/cf/Rivalite.png"
+    },
+    {
+      "id": "slimite",
+      "name": "Slimite",
+      "slug": "the-forge-slimite-ore",
+      "title": "Slimite Ore in The Forge: Drop Chance and Price",
+      "h1": "Slimite Ore in The Forge: Drop Chance and Price",
+      "desc": "Slimite ore in The Forge: an Epic 1-in-247 Forgotten Kingdom drop from Slimes and Blazing Slimes, 2.25x multiplier, $33.75 sell price, no trait. See the stats!",
+      "rarity": "Epic",
+      "chance": "1/247",
+      "multiplier": "2.25x",
+      "price": "$33.75",
+      "trait": "None",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Slime",
+        "Blazing Slime"
+      ],
+      "lead": "Slimite is an Epic enemy-drop ore from the Forgotten Kingdom. The official Forge Wiki, Game8, and BloxInformer agree it drops at 1-in-247, with a 2.25x multiplier and no trait. The official wiki and Game8 list the sell price as $33.75 and the second enemy as Blazing Slime.",
+      "how_to_get": "It is dropped by <strong>Slimes</strong> and <strong>Blazing Slimes</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, and BloxInformer all list a <strong>1/247</strong> drop chance. Destructoid's World 2 table (January 8, 2026) does not include Slimite, so it is not used as a confirming source here.",
+      "uses": "Slimite has <strong>no trait</strong>, a <strong>2.25x</strong> multiplier, and a <strong>$33.75</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/slimite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "BloxInformer lists the second enemy as Burning Slime rather than Blazing Slime, and lists the sell price as $37.55. The official Forge Wiki and Game8 both use Blazing Slime and $33.75, so this page follows those two sources and flags the BloxInformer wording and price."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Slimite",
+          "url": "https://forgewiki.org/wiki/Slimite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Slimite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573649"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Slimite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/8/8b/Slimite.png"
+    },
+    {
+      "id": "uranium",
+      "name": "Uranium",
+      "slug": "the-forge-uranium-ore",
+      "title": "Uranium Ore in The Forge: Stats and Trait",
+      "h1": "Uranium Ore in The Forge: Stats and Trait",
+      "desc": "Uranium ore in The Forge: a Legendary 1-in-777 Forgotten Kingdom drop from Basalt Veins, 3x multiplier, $66 sell price, 1.2% max-HP AoE on Armor. See the stats!",
+      "rarity": "Legendary",
+      "chance": "1/777",
+      "multiplier": "3x",
+      "price": "$66",
+      "trait": "1.2% of max health as AoE damage per second while in combat (Armor)",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Vein"
+      ],
+      "lead": "Uranium is a Legendary ore from the Forgotten Kingdom. Sources agree it drops from Basalt Veins at 1-in-777, with a 3x multiplier and a $66 sell price. The official wiki, Game8, and Destructoid agree the Armor trait deals 1.2% of max health as AoE damage per second while in combat.",
+      "how_to_get": "Mine <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/777</strong> drop chance from those nodes.",
+      "uses": "Uranium's confirmed Armor trait deals <strong>1.2% of max health as AoE damage per second while in combat</strong>. It has a <strong>3x</strong> multiplier and a <strong>$66</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/uranium.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Game8 and BloxInformer also list later-world ice nodes (Icy Pebble and/or Icy Rock). The official Forge Wiki item page and Destructoid list only Basalt Vein, so those ice nodes are not listed under Obtained from.",
+        "BloxInformer describes the Armor trait as 5% of max health as AoE damage, which does not match the 1.2% figure on the official wiki, Game8, and Destructoid.",
+        "Destructoid also says Uranium can now be stacked for up to 3.6% across armor slots. No second source in this set confirmed the stacking cap, so it is not part of the confirmed trait."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Uranium",
+          "url": "https://forgewiki.org/wiki/Uranium"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Uranium Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573568"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Uranium.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/3/31/Uranium.png"
+    },
+    {
+      "id": "mythril",
+      "name": "Mythril",
+      "slug": "the-forge-mythril-ore",
+      "title": "Mythril Ore in The Forge: Drop Chance and Price",
+      "h1": "Mythril Ore in The Forge: Drop Chance and Price",
+      "desc": "Mythril ore in The Forge: a Legendary 1-in-813 Forgotten Kingdom drop from Basalt Veins, 3.5x multiplier, $52.50 sell price, a disputed trait. See the stats!",
+      "rarity": "Legendary",
+      "chance": "1/813",
+      "multiplier": "3.5x",
+      "price": "$52.50",
+      "trait": null,
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Vein"
+      ],
+      "lead": "Mythril is a Legendary ore from the Forgotten Kingdom. Sources agree it drops from Basalt Veins at 1-in-813, with a 3.5x multiplier and a $52.50 sell price. They do not agree on the trait, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/813</strong> drop chance from those nodes.",
+      "uses": "Mythril has a <strong>3.5x</strong> multiplier and a <strong>$52.50</strong> sell price. Sources do not agree on the trait effect, so this page does not list one. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/mythril.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Trait: the official Forge Wiki Mythril page and BloxInformer describe a 15% vitality / max-health increase on Armor. Game8 (February 22, 2026) and Destructoid (January 8, 2026) describe 15% extra defense on Armor. Because two sources support each wording, this page shows a dash (—) instead of choosing one. All four sources at least agree the trait is used on Armor.",
+        "Game8 and BloxInformer also list later-world ice nodes (Icy Pebble and/or Icy Rock). The official Forge Wiki item page and Destructoid list only Basalt Vein, so those ice nodes are not listed under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Mythril",
+          "url": "https://forgewiki.org/wiki/Mythril"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Mythril Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573567"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Mythril.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/f/fa/Mythril.png"
+    },
+    {
+      "id": "eye_ore",
+      "name": "Eye Ore",
+      "slug": "the-forge-eye-ore",
+      "title": "Eye Ore in The Forge: Drop Chance and Trait",
+      "h1": "Eye Ore in The Forge: Drop Chance and Trait",
+      "desc": "Eye Ore in The Forge: a Legendary 1-in-1333 Forgotten Kingdom drop, 4x multiplier, -10% HP and +15% damage, and a disputed sell price. See the stats!",
+      "rarity": "Legendary",
+      "chance": "1/1333",
+      "multiplier": "4x",
+      "price": null,
+      "trait": "-10% max health, +15% damage on Weapons and Armor",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Rock",
+        "Basalt Core",
+        "Basalt Vein",
+        "Volcanic Rock"
+      ],
+      "lead": "Eye Ore is a Legendary ore from the Forgotten Kingdom. Sources agree it drops from Basalt Rocks, Basalt Cores, Basalt Veins, and Volcanic Rock at 1-in-1333, with a 4x multiplier and a trait that cuts max health by 10% and raises damage by 15% on Weapons and Armor. They do not agree on the sell price, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Basalt Rocks</strong>, <strong>Basalt Cores</strong>, <strong>Basalt Veins</strong>, or <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Destructoid, and BloxInformer all list a <strong>1/1333</strong> drop chance from those four nodes. Game8 lists the same chance and three of the four nodes, omitting Basalt Vein.",
+      "uses": "Eye Ore's confirmed trait is <strong>-10% max health, +15% damage on Weapons and Armor</strong>. It has a <strong>4x</strong> multiplier. Sources do not agree on the sell price, so this page does not list one. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/eye_ore.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Sell price: the official Forge Wiki Eye Ore page and ores list say $60. Game8 (February 22, 2026), Destructoid (January 8, 2026), and BloxInformer all say $37.50. Because the official wiki does not agree with the three other sources, this page shows a dash (—) instead of choosing one."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Eye Ore",
+          "url": "https://forgewiki.org/wiki/Eye_Ore"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Eye Ore Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573566"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Eye_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/7/75/Eye_Ore.png"
+    },
+    {
+      "id": "fireite",
+      "name": "Fireite",
+      "slug": "the-forge-fireite-ore",
+      "title": "Fireite Ore in The Forge: Drop Chance and Price",
+      "h1": "Fireite Ore in The Forge: Drop Chance and Price",
+      "desc": "Fireite ore in The Forge: a Legendary 1-in-2187 Forgotten Kingdom drop from Volcanic Rock, 4.5x, $67.50 sell price, and a disputed burn trait. See the stats!",
+      "rarity": "Legendary",
+      "chance": "1/2187",
+      "multiplier": "4.5x",
+      "price": "$67.50",
+      "trait": null,
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Volcanic Rock"
+      ],
+      "lead": "Fireite is a Legendary ore from the Forgotten Kingdom. Sources agree it drops from Volcanic Rock at 1-in-2187, with a 4.5x multiplier and a $67.50 sell price. They describe a burn effect on Weapons but do not agree on the chance or damage numbers, so the trait field is left blank on this page.",
+      "how_to_get": "Mine <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/2187</strong> drop chance from those nodes.",
+      "uses": "Fireite has a <strong>4.5x</strong> multiplier and a <strong>$67.50</strong> sell price. Sources describe a burn trait on Weapons but do not agree on the numbers, so this page does not list a confirmed trait. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/fireite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Trait numbers: the official Forge Wiki Fireite page says a 20% chance to apply Burn for 2 seconds, dealing 10% of base weapon damage per second. Destructoid says a 20% burn for 2 seconds with a 30% chance on-hit on Weapons. BloxInformer says a 30% on-hit chance to deal 20% of weapon damage as Burn over 2 seconds. Game8 only says \"20% Burn Chance on Weapons.\" Because the sources do not agree on a single set of numbers, this page shows a dash (—). They do agree the trait is used on Weapons."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Fireite",
+          "url": "https://forgewiki.org/wiki/Fireite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Fireite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573565"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Fireite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/6/6c/Fireite.png"
+    },
+    {
+      "id": "magmaite",
+      "name": "Magmaite",
+      "slug": "the-forge-magmaite-ore",
+      "title": "Magmaite Ore in The Forge: Drop Chance and Price",
+      "h1": "Magmaite Ore in The Forge: Drop Chance and Price",
+      "desc": "Magmaite ore in The Forge: a Legendary 1-in-3003 Forgotten Kingdom drop from Volcanic Rock, 5x, $75 sell price, and a disputed explosion trait. See the stats!",
+      "rarity": "Legendary",
+      "chance": "1/3003",
+      "multiplier": "5x",
+      "price": "$75",
+      "trait": null,
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Volcanic Rock"
+      ],
+      "lead": "Magmaite is a Legendary ore from the Forgotten Kingdom. Sources agree it drops from Volcanic Rock at 1-in-3003, with a 5x multiplier and a $75 sell price. They describe an AoE explosion trait on Weapons but do not agree on the chance or damage numbers, so the trait field is left blank on this page.",
+      "how_to_get": "Mine <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/3003</strong> drop chance from those nodes.",
+      "uses": "Magmaite has a <strong>5x</strong> multiplier and a <strong>$75</strong> sell price. Sources describe an AoE explosion trait on Weapons but do not agree on the numbers, so this page does not list a confirmed trait. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/magmaite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Trait numbers: the official Forge Wiki Magmaite page says a 20% chance to deal 35% of base weapon damage as an AoE explosion. Game8, Destructoid, and BloxInformer all say a 35% chance to deal 50% of weapon damage as an AoE explosion on Weapons. Because the official wiki does not agree with the three other sources on the numbers, this page shows a dash (—). They do agree the trait is an AoE explosion used on Weapons."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Magmaite",
+          "url": "https://forgewiki.org/wiki/Magmaite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Magmaite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573564"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Magmaite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/9/95/Magmaite.png"
+    },
+    {
+      "id": "lightite",
+      "name": "Lightite",
+      "slug": "the-forge-lightite-ore",
+      "title": "Lightite Ore in The Forge: Stats and Trait",
+      "h1": "Lightite Ore in The Forge: Stats and Trait",
+      "desc": "Lightite ore in The Forge: a Legendary 1-in-3333 Forgotten Kingdom drop from Basalt Veins, 4.6x multiplier, $69 sell price, 15% speed on Armor. See the stats!",
+      "rarity": "Legendary",
+      "chance": "1/3333",
+      "multiplier": "4.6x",
+      "price": "$69",
+      "trait": "15% extra movement speed on Armor",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Basalt Vein"
+      ],
+      "lead": "Lightite is a Legendary ore from the Forgotten Kingdom. Sources agree it drops from Basalt Veins at 1-in-3333, with a 4.6x multiplier and a $69 sell price. The official wiki and Game8 agree the Armor trait is 15% extra movement speed; Destructoid and BloxInformer describe a speed boost without a percentage.",
+      "how_to_get": "Mine <strong>Basalt Veins</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/3333</strong> drop chance from those nodes.",
+      "uses": "Lightite's confirmed Armor trait is <strong>15% extra movement speed</strong>. It has a <strong>4.6x</strong> multiplier and a <strong>$69</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/lightite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Game8 and BloxInformer also list later-world ice nodes (Icy Pebble and/or Icy Rock). The official Forge Wiki item page and Destructoid list only Basalt Vein, so those ice nodes are not listed under Obtained from.",
+        "Destructoid and BloxInformer describe a speed boost on Armor but do not state the 15% figure used by the official wiki and Game8."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Lightite",
+          "url": "https://forgewiki.org/wiki/Lightite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Lightite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573563"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Lightite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/1/11/Lightite.png"
+    },
+    {
+      "id": "demonite",
+      "name": "Demonite",
+      "slug": "the-forge-demonite-ore",
+      "title": "Demonite Ore in The Forge: Stats and Trait",
+      "h1": "Demonite Ore in The Forge: Stats and Trait",
+      "desc": "Demonite ore in The Forge: a Mythic 1-in-3666 Forgotten Kingdom drop from Volcanic Rock, 5.5x multiplier, $82.50 sell price, 25% Burn when hit. See the stats!",
+      "rarity": "Mythic",
+      "chance": "1/3666",
+      "multiplier": "5.5x",
+      "price": "$82.50",
+      "trait": "25% chance to apply Burn when taking damage (Armor)",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Volcanic Rock"
+      ],
+      "lead": "Demonite is a Mythic ore from the Forgotten Kingdom. Sources agree it drops from Volcanic Rock at 1-in-3666, with a 5.5x multiplier and an $82.50 sell price. The official wiki, Game8, and Destructoid agree the Armor trait includes a 25% chance to apply Burn when you take damage. Some sources also describe a second burn effect whose numbers do not line up.",
+      "how_to_get": "Mine <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list a <strong>1/3666</strong> drop chance from those nodes. Some sources label this rarity Mythical; this site uses Mythic, the official wiki's rarity name.",
+      "uses": "Demonite's confirmed Armor trait is a <strong>25% chance to apply Burn when taking damage</strong>. It has a <strong>5.5x</strong> multiplier and an <strong>$82.50</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/demonite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "A second burn effect is described differently across sources: the official wiki lists a 15% chance to apply Burn for 2 seconds, dealing 20% of base weapon damage per second (under Armor Traits). BloxInformer describes a 15% on-hit chance to deal 20% of weapon damage as Burn over 2 seconds, plus a Demon's Backfire passive on Armor. Destructoid combines a 15% on-hit / 20% burn for 2 seconds with the 25% when-damaged effect. Game8 only describes the 25% when-damaged effect. Because those extra numbers do not agree, they are not part of the confirmed trait."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Demonite",
+          "url": "https://forgewiki.org/wiki/Demonite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Demonite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573562"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Demonite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/3/3d/Demonite.png"
+    },
+    {
+      "id": "darkryte",
+      "name": "Darkryte",
+      "slug": "the-forge-darkryte-ore",
+      "title": "Darkryte Ore in The Forge: Stats and Trait",
+      "h1": "Darkryte Ore in The Forge: Stats and Trait",
+      "desc": "Darkryte ore in The Forge: a Mythic 1-in-6655 Forgotten Kingdom drop from Volcanic Rock, 6.3x multiplier, $94.50 sell price, 15% dodge on Armor. See the stats!",
+      "rarity": "Mythic",
+      "chance": "1/6655",
+      "multiplier": "6.3x",
+      "price": "$94.50",
+      "trait": "15% chance to dodge an attack (Armor)",
+      "location": "Forgotten Kingdom",
+      "obtained_from": [
+        "Volcanic Rock"
+      ],
+      "lead": "Darkryte is a Mythic ore from the Forgotten Kingdom. The official wiki, Game8, and Destructoid agree it drops from Volcanic Rock at 1-in-6655, with a 6.3x multiplier, a $94.50 sell price, and a 15% chance to dodge an attack on Armor. Some sources label this rarity Mythical; this site uses Mythic, the official wiki's rarity name.",
+      "how_to_get": "Mine <strong>Volcanic Rock</strong> in the <strong>Forgotten Kingdom</strong>. The official Forge Wiki, Game8, and Destructoid all list a <strong>1/6655</strong> drop chance from those nodes. BloxInformer lists the same nodes, multiplier, price, and a dodge trait, but gives the chance as 1/5555 (see below).",
+      "uses": "Darkryte's confirmed Armor trait is a <strong>15% chance to dodge an attack</strong>. It has a <strong>6.3x</strong> multiplier and a <strong>$94.50</strong> sell price. See the <a href=\"the-forge-forging-guide.html\">forging guide</a> and the <a href=\"the-forge-beginners-guide.html\">beginner guide</a> for how mined ores fit the crafting loop.",
+      "image": "assets/forge/darkryte.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: BloxInformer lists 1/5555. The official Forge Wiki, Game8, and Destructoid list 1/6655, so this page uses 1/6655.",
+        "The official wiki item page also lists Crystals as a location alongside Volcanic Rock. Game8, Destructoid, and BloxInformer list only Volcanic Rock, so Crystals is not listed under Obtained from.",
+        "The official wiki also mentions a small movement speed buff with the dodge (Phantom Step). Game8, Destructoid, and BloxInformer describe the 15% dodge (Destructoid and BloxInformer mention turning into a shadow) but do not confirm the speed buff, so the buff is not part of the confirmed trait."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Darkryte",
+          "url": "https://forgewiki.org/wiki/Darkryte"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Darkryte Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573561"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Darkryte.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/8/83/Darkryte.png"
     }
   ]
 }

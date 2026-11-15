@@ -108,8 +108,25 @@ def _infobox(item, BASE):
 </div>
 </aside>"""
 
+
+def _related_intro(item):
+    loc = item.get("location") or "this world"
+    if loc == "Stonewake's Cross":
+        label = "other Stonewake's Cross (World 1) ores"
+    elif loc == "Forgotten Kingdom":
+        label = "other Forgotten Kingdom (World 2) ores"
+    else:
+        label = f"other {loc} ores"
+    return (
+        f"These are {label}. The full World 1 and World 2 set lives on the "
+        '<a href="the-forge-ores.html">ores list</a>.'
+    )
+
 def _related_icons(item, items):
-    others = [x for x in items if x["id"] != item["id"]]
+    loc = item.get("location")
+    others = [x for x in items if x["id"] != item["id"] and x.get("location") == loc]
+    if not others:
+        others = [x for x in items if x["id"] != item["id"]]
     tiles = []
     for x in others:
         rcls = _rarity_class(x.get("rarity"))
@@ -209,7 +226,7 @@ def item_body(item, items, BASE):
 {_stat_table(item)}
 {_unverified(item)}
 <h2 id="related">Related Ores</h2>
-<p>These are other Stonewake's Cross ores. The full World 1 set lives on the <a href="the-forge-ores.html">ores list</a>.</p>
+<p>{_related_intro(item)}</p>
 {_related_icons(item, items)}
 <h2 id="guides">Related The Forge Guides</h2>
 <p>Written walkthroughs on this site that pair with this wiki page:</p>
@@ -229,9 +246,24 @@ def item_body(item, items, BASE):
 </article>
 </div>"""
 
-def list_body(data, items):
+def _worlds(items):
+    groups = [
+        ("world-1", "World 1: Stonewake's Cross", "Stonewake's Cross"),
+        ("world-2", "World 2: Forgotten Kingdom", "Forgotten Kingdom"),
+    ]
+    used = set()
+    out = []
+    for hid, heading, loc in groups:
+        chunk = [x for x in items if x.get("location") == loc]
+        used.update(id(x) for x in chunk)
+        out.append((hid, heading, chunk))
+    leftover = [x for x in items if id(x) not in used]
+    if leftover:
+        out.append(("world-other", "Other ores", leftover))
+    return out
+
+def _ore_icon_tiles(items):
     tiles = []
-    rows = []
     for x in items:
         rcls = _rarity_class(x.get("rarity"))
         art = ("wiki-icon-art " + rcls).strip()
@@ -241,6 +273,11 @@ def list_body(data, items):
             f'<span class="wiki-icon-name">{esc(x["name"])}</span>'
             f'<span class="wiki-icon-sub">{_rarity_html(x.get("rarity"))} · {esc(x.get("chance") or "")}</span></a>'
         )
+    return tiles
+
+def _ore_table(items, caption):
+    rows = []
+    for x in items:
         rows.append(
             "<tr>"
             f'<th scope="row"><a href="{esc(x["slug"])}.html">{esc(x["name"])}</a></th>'
@@ -253,6 +290,34 @@ def list_body(data, items):
             f'<td data-sort="{esc(x.get("trait") or "")}">{esc(x.get("trait") or "—")}</td>'
             "</tr>"
         )
+    return (
+        '<div class="table-wrap"><table class="wiki-sort">'
+        f"<caption>{caption}</caption>"
+        "<thead><tr>"
+        '<th scope="col"><button type="button">Ore</button></th>'
+        '<th scope="col"><button type="button">Rarity</button></th>'
+        '<th scope="col"><button type="button">Location</button></th>'
+        '<th scope="col"><button type="button">Obtained from</button></th>'
+        '<th scope="col"><button type="button">Drop chance</button></th>'
+        '<th scope="col"><button type="button">Multiplier</button></th>'
+        '<th scope="col"><button type="button">Sell price</button></th>'
+        '<th scope="col"><button type="button">Trait</button></th>'
+        "</tr></thead>"
+        f"<tbody>{''.join(rows)}</tbody></table></div>"
+    )
+
+def list_body(data, items):
+    sections = []
+    for hid, heading, group in _worlds(items):
+        if not group:
+            continue
+        tiles = _ore_icon_tiles(group)
+        caption = f"{heading} ores (checked {CHECKED_HUMAN})"
+        sections.append(
+            f'<h2 id="{hid}">{heading}</h2>'
+            f'<div class="wiki-icons wiki-icons-lg">{"".join(tiles)}</div>'
+            f"{_ore_table(group, caption)}"
+        )
     list_credit = "Item icons: " + ", ".join(
         f'<a href="{esc(x["image_file_page"])}" rel="noopener" target="_blank">{esc(x["name"])}</a>'
         for x in items if x.get("image_file_page")
@@ -264,29 +329,12 @@ def list_body(data, items):
 <h1>The Forge Ores: Stats and Locations</h1>
 <p class="updated">Last checked: <time datetime="{CHECKED}">{CHECKED_HUMAN}</time></p>
 </header>
-<p class="lead">This list covers every ore in World 1 (Stonewake's Cross), in the official Forge Wiki list order from Stone through Fichillium. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. A dash (—) means we did not find two sources that agree. Later worlds are not included yet.</p>
-<div class="callout"><strong>World 1 complete:</strong> These 14 ores are the full Stonewake's Cross set from the official Forge Wiki list, including Fichillium, a Relic Lucky Block ore. Forgotten Kingdom and later areas are not on this list yet.</div>
-<h2 id="grid">Ore Icons</h2>
-<div class="wiki-icons wiki-icons-lg">{''.join(tiles)}</div>
+<p class="lead">This list covers every ore in World 1 (Stonewake's Cross) and World 2 (Forgotten Kingdom), in the official Forge Wiki list order from Stone through Fichillium, then Cobalt through Darkryte. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. A dash (—) means we did not find two sources that agree. Later worlds are not included yet.</p>
+<div class="callout"><strong>World 1 and World 2:</strong> These 39 ores are the full Stonewake's Cross set (14) and the Forgotten Kingdom set from Cobalt through Darkryte (25) on the official Forge Wiki list. Royal Boneite appears on that World 2 list but could not be confirmed with a second independent source, so it is not on this site yet. Later worlds are not included.</div>
+{''.join(sections)}
 <p class="small wiki-credit" id="icon-credit">{list_credit}</p>
-<h2 id="table">Ore Stats Table</h2>
-<p>Click a column header to sort. Open an ore name for the full wiki page.</p>
-<div class="table-wrap"><table class="wiki-sort">
-<caption>Stonewake's Cross (World 1) ores (checked {CHECKED_HUMAN})</caption>
-<thead><tr>
-<th scope="col"><button type="button">Ore</button></th>
-<th scope="col"><button type="button">Rarity</button></th>
-<th scope="col"><button type="button">Location</button></th>
-<th scope="col"><button type="button">Obtained from</button></th>
-<th scope="col"><button type="button">Drop chance</button></th>
-<th scope="col"><button type="button">Multiplier</button></th>
-<th scope="col"><button type="button">Sell price</button></th>
-<th scope="col"><button type="button">Trait</button></th>
-</tr></thead>
-<tbody>{''.join(rows)}</tbody>
-</table></div>
 <h2 id="guides">Related The Forge Guides</h2>
-<p>These walkthroughs cover mining, forging and spending early ores:</p>
+<p>These walkthroughs cover mining, forging and spending ores:</p>
 <ul>
 <li><a href="the-forge-beginners-guide.html">Beginner guide</a></li>
 <li><a href="the-forge-pickaxe-progression.html">Pickaxe progression</a></li>
@@ -299,12 +347,12 @@ def list_body(data, items):
 <h2 id="src-h">Sources</h2>
 <p>Item pages cite the sources used for each ore. The list was checked against:</p>
 <ul>
-<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for all 14 Stonewake's Cross ores</li>
-<li><a href="https://game8.co/games/The-Forge/archives/572862" rel="noopener" target="_blank">Game8: List of All Ores and Traits</a> and the <a href="https://game8.co/games/The-Forge/archives/573590" rel="noopener" target="_blank">Game8 Gold page</a> (updated February 22, 2026)</li>
+<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for all 14 Stonewake's Cross ores and the 25 Forgotten Kingdom ores from Cobalt through Darkryte</li>
+<li><a href="https://game8.co/games/The-Forge/archives/572862" rel="noopener" target="_blank">Game8: List of All Ores and Traits</a> and the matching Game8 item pages (updated February 22, 2026; the list page itself shows a February 24, 2026 update)</li>
 <li><a href="https://www.destructoid.com/all-ores-in-the-forge/" rel="noopener" target="_blank">Destructoid: All Ores in The Forge</a> (updated January 8, 2026)</li>
 <li><a href="https://bloxinformer.com/wikis/the-forge/ores/" rel="noopener" target="_blank">BloxInformer: The Forge ores</a></li>
 </ul>
-<p class="small">Destructoid's World 1 table (updated January 8, 2026) covers Stone through Poopite but does not include Fichillium, so it is not used as a confirming source for that ore. Pro Game Guides published an ores guide dated January 13, 2026 whose visible snippets matched Stone, Sand Stone, Copper and Iron, but the live page returned HTTP 403 when we tried to re-fetch it on {CHECKED_HUMAN}, so it is not used as a confirming source here.</p>
+<p class="small">Destructoid's tables (updated January 8, 2026) cover Stone through Poopite in World 1 and most Forgotten Kingdom rock ores, but do not include Fichillium, Boneite, Dark Boneite, Slimite, or Volcanic Rock Ore, so Destructoid is not used as a confirming source for those ores. Pro Game Guides published an ores guide dated January 13, 2026 whose visible snippets matched Stone, Sand Stone, Copper and Iron, but the live page returned HTTP 403 when we tried to re-fetch it on {CHECKED_HUMAN}, so it is not used as a confirming source here.</p>
 </article>
 </div>"""
 
@@ -346,7 +394,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
     paths = []
 
     list_title = "The Forge Ores: Stats, Locations and Traits"
-    list_desc = "Confirmed stats for all 14 World 1 ores in The Forge, from Stone to Fichillium: drop chances, multipliers, prices, and traits. Open the list!"
+    list_desc = "Confirmed stats for 39 ores in The Forge across World 1 and the Forgotten Kingdom: drop chances, multipliers, prices, and traits. Open the list!"
     _check_seo(list_title, list_desc, "the-forge-ores.html")
     list_path = "the-forge-ores.html"
     list_crumbs = [
@@ -375,7 +423,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
         active="roblox-the-forge.html",
         og_type="website",
         image=BASE + _ver("assets/forge/ores-og.webp"),
-        image_alt="The Forge ores wiki: all 14 Stonewake's Cross World 1 ore icons",
+        image_alt="The Forge ores wiki: World 1 and World 2 ore icons",
         ld=list_ld,
     ))
     paths.append(list_path)

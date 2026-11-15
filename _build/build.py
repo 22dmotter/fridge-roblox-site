@@ -982,7 +982,7 @@ _guides_card = """<article class="card">
 <a class="more" href="tag-guides.html">Browse Guides →</a></div></article>"""
 _forge_wiki_cats = """
 <div class="wiki-cats" role="list">
-<a class="wiki-cat" role="listitem" href="the-forge-ores.html">Ores<small>14 ore pages</small></a>
+<a class="wiki-cat" role="listitem" href="the-forge-ores.html">Ores<small>39 ore pages</small></a>
 <div class="wiki-cat is-soon" role="listitem">Weapons<small>Coming soon</small></div>
 <div class="wiki-cat is-soon" role="listitem">Armor<small>Coming soon</small></div>
 <div class="wiki-cat is-soon" role="listitem">Pickaxes<small>Coming soon</small></div>
