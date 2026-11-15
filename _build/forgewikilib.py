@@ -3,8 +3,8 @@ import json, os, html, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(HERE, "forge_data.json")
-CHECKED = "2026-11-14"
-CHECKED_HUMAN = "November 14, 2026"
+CHECKED = "2026-11-15"
+CHECKED_HUMAN = "November 15, 2026"
 GUIDE_LABELS = {
     "the-forge-beginners-guide": "Beginner guide",
     "the-forge-pickaxe-progression": "Pickaxe progression",
@@ -15,6 +15,8 @@ GUIDE_LABELS = {
     "the-forge-runes-guide": "Runes guide",
     "the-forge-codes": "The Forge codes",
     "the-forge-island-3-guide": "Island 3 / Frostspire Expanse guide",
+    "the-forge-goblin-cave": "Goblin Cave guide",
+    "the-forge-raven-cave": "Raven Cave guide",
 }
 
 def esc(s):
@@ -112,16 +114,19 @@ def _infobox(item, BASE):
 
 def _related_intro(item):
     loc = item.get("location") or "this world"
-    if loc == "Stonewake's Cross":
-        label = "other Stonewake's Cross (World 1) ores"
-    elif loc == "Forgotten Kingdom":
-        label = "other Forgotten Kingdom (World 2) ores"
-    elif loc == "Frostspire Expanse":
-        label = "other Frostspire Expanse (World 3) ores"
-    else:
-        label = f"other {loc} ores"
+    labels = {
+        "Stonewake's Cross": "other Stonewake's Cross (World 1) ores",
+        "Forgotten Kingdom": "other Forgotten Kingdom (World 2) ores",
+        "Frostspire Expanse": "other Frostspire Expanse (World 3) ores",
+        "Goblin Cave": "other Goblin Cave ores",
+        "The Peak": "other The Peak ores",
+        "Raven Cave": "other Raven Cave ores",
+        "Bamboo Forest": "other Bamboo Forest ores",
+        "Holy Tree": "other Holy Tree ores",
+    }
+    label = labels.get(loc, f"other {loc} ores")
     return (
-        f"These are {label}. The full World 1, World 2, and World 3 set lives on the "
+        f"These are {label}. The full confirmed set lives on the "
         '<a href="the-forge-ores.html">ores list</a>.'
     )
 
@@ -272,17 +277,30 @@ def _world_jump_nav(items):
     return f'<nav class="wiki-world-nav" aria-label="Jump to a world">{"".join(links)}</nav>'
 
 def _worlds(items):
+    # Official wiki filter order. Empty groups are omitted so jump buttons
+    # appear only for areas that have confirmed ores on this site.
     groups = [
         ("world-1", "World 1: Stonewake's Cross", "Stonewake's Cross"),
         ("world-2", "World 2: Forgotten Kingdom", "Forgotten Kingdom"),
+        ("goblin-cave", "Goblin Cave", "Goblin Cave"),
         ("world-3", "World 3: Frostspire Expanse", "Frostspire Expanse"),
+        ("the-peak", "The Peak", "The Peak"),
+        ("raven-cave", "Raven Cave", "Raven Cave"),
+        ("bamboo-forest", "Bamboo Forest", "Bamboo Forest"),
+        ("holy-tree", "Holy Tree", "Holy Tree"),
+        ("jade-spirit-cave", "Jade Spirit Cave", "Jade Spirit Cave"),
+        ("aurelia-hall", "Aurelia Hall", "Aurelia Hall"),
+        ("void-cave", "Void Cave", "Void Cave"),
+        ("tower-of-hell", "Tower of Hell", "Tower of Hell"),
+        ("special", "Special", "Special"),
     ]
     used = set()
     out = []
     for hid, heading, loc in groups:
         chunk = [x for x in items if x.get("location") == loc]
         used.update(id(x) for x in chunk)
-        out.append((hid, heading, chunk))
+        if chunk:
+            out.append((hid, heading, chunk))
     leftover = [x for x in items if id(x) not in used]
     if leftover:
         out.append(("world-other", "Other ores", leftover))
@@ -356,9 +374,9 @@ def list_body(data, items):
 <h1>The Forge Ores: Stats and Locations</h1>
 <p class="updated">Last checked: <time datetime="{CHECKED}">{CHECKED_HUMAN}</time></p>
 </header>
-<p class="lead">This list covers every ore in World 1 (Stonewake's Cross), World 2 (Forgotten Kingdom), and World 3 (Frostspire Expanse), in the official Forge Wiki list order from Stone through Fichillium, then Cobalt through Darkryte, then Grass through Prismatic Heart. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. A dash (—) means we did not find two sources that agree. Later official areas such as The Peak are not included yet.</p>
+<p class="lead">This list covers every ore we could confirm with two or more sources across World 1 (Stonewake's Cross), World 2 (Forgotten Kingdom), Goblin Cave, World 3 (Frostspire Expanse), The Peak, Raven Cave, Bamboo Forest, and the Holy Tree, in official Forge Wiki list order. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. A dash (—) means we did not find two sources that agree.</p>
 {jump_nav}
-<div class="callout"><strong>Worlds 1–3:</strong> These 55 ores are the full Stonewake's Cross set (14), the Forgotten Kingdom set from Cobalt through Darkryte (25), and the Frostspire Expanse set from Grass through Prismatic Heart (16) on the official Forge Wiki list. Royal Boneite appears on the World 2 list but could not be confirmed with a second independent source, so it is not on this site yet. For most World 3 ores, the official wiki drop chance does not match Game8, Destructoid, and BloxInformer, so those chance fields are dashes. Later official areas such as The Peak are not included yet.</div>
+<div class="callout"><strong>114 confirmed ores:</strong> This list has the full Stonewake's Cross set (14), the Forgotten Kingdom set from Cobalt through Darkryte (25), Goblin Cave (7), the Frostspire Expanse set from Grass through Prismatic Heart (16), The Peak (17), Raven Cave (8), Bamboo Forest (12), and the Holy Tree (15). Royal Boneite and Shikanite appear on the official wiki list but could not be confirmed with a second independent source, so they are not on this site yet. The same is true of later official areas (Jade Spirit Cave, Aurelia Hall, Void Cave, Tower of Hell) and the Special event ores Pumpkinite, Candy Ore, and Bismuth. For most Peak and Raven Cave ores, and for many World 3 ores, sources disagree on drop chance and sometimes multiplier, so those fields are dashes.</div>
 {''.join(sections)}
 <p class="small wiki-credit" id="icon-credit">{list_credit}</p>
 <h2 id="guides">Related The Forge Guides</h2>
@@ -366,6 +384,8 @@ def list_body(data, items):
 <ul>
 <li><a href="the-forge-beginners-guide.html">Beginner guide</a></li>
 <li><a href="the-forge-island-3-guide.html">Island 3 / Frostspire Expanse guide</a></li>
+<li><a href="the-forge-goblin-cave.html">Goblin Cave guide</a></li>
+<li><a href="the-forge-raven-cave.html">Raven Cave guide</a></li>
 <li><a href="the-forge-pickaxe-progression.html">Pickaxe progression</a></li>
 <li><a href="the-forge-forging-guide.html">Forging guide</a></li>
 <li><a href="the-forge-money-guide.html">Money guide</a></li>
@@ -376,12 +396,13 @@ def list_body(data, items):
 <h2 id="src-h">Sources</h2>
 <p>Item pages cite the sources used for each ore. The list was checked against:</p>
 <ul>
-<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for all 14 Stonewake's Cross ores, the 25 Forgotten Kingdom ores from Cobalt through Darkryte, and the 16 Frostspire Expanse ores from Grass through Prismatic Heart</li>
-<li><a href="https://game8.co/games/The-Forge/archives/572862" rel="noopener" target="_blank">Game8: List of All Ores and Traits</a> and the matching Game8 item pages (updated February 22, 2026; the list page itself shows a February 24, 2026 update)</li>
+<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for the confirmed ores in this list</li>
+<li><a href="https://game8.co/games/The-Forge/archives/572862" rel="noopener" target="_blank">Game8: List of All Ores and Traits</a> (updated February 24, 2026)</li>
 <li><a href="https://www.destructoid.com/all-ores-in-the-forge/" rel="noopener" target="_blank">Destructoid: All Ores in The Forge</a> (updated January 8, 2026)</li>
-<li><a href="https://bloxinformer.com/wikis/the-forge/ores/" rel="noopener" target="_blank">BloxInformer: The Forge ores</a></li>
+<li><a href="https://bloxinformer.com/wikis/the-forge/ores/" rel="noopener" target="_blank">BloxInformer: The Forge ores</a> (updated September 7, 2026)</li>
+<li><a href="https://www.pockettactics.com/the-forge-ore" rel="noopener" target="_blank">Pocket Tactics: All The Forge ores</a> (updated March 3, 2026)</li>
 </ul>
-<p class="small">Destructoid's tables (updated January 8, 2026) cover Stone through Poopite in World 1, most Forgotten Kingdom rock ores, and most Frostspire Expanse ores, but do not include Fichillium, Boneite, Dark Boneite, Slimite, Volcanic Rock Ore, or Grass, so Destructoid is not used as a confirming source for those ores. BloxInformer's Frostspire table also omits Grass. For most World 3 ores, the official wiki drop chance is a lower denominator than the chance listed by Game8, Destructoid, and BloxInformer; those chance fields are dashes on the World 3 pages. Destructoid also lists higher World 3 multipliers than the official wiki, Game8, and BloxInformer, which agree with each other. Pro Game Guides published an ores guide dated January 13, 2026 whose visible snippets matched Stone, Sand Stone, Copper and Iron, but the live page returned HTTP 403 when we tried to re-fetch it on {CHECKED_HUMAN}, so it is not used as a confirming source here.</p>
+<p class="small">Destructoid's tables (updated January 8, 2026) go through Raven Cave and are not used as a confirming source for Bamboo Forest or Holy Tree ores, or for World 1–2 ores they omit (Fichillium, Boneite, Dark Boneite, Slimite, Volcanic Rock Ore, and Grass). Game8 (February 24, 2026), BloxInformer (September 7, 2026), and Pocket Tactics (March 3, 2026) cover Goblin Cave through the Holy Tree, but not later official areas. For most World 3, Peak, and Raven Cave ores, the official wiki and BloxInformer list lower drop-chance denominators (and often lower multipliers) than Game8, Destructoid, and Pocket Tactics; those fields are dashes where two source camps disagree. Holy Tree sell prices are dashes because BloxInformer and Pocket Tactics list them as TBA. Pro Game Guides published an ores guide dated January 13, 2026, but the live page returned HTTP 403 when we tried to re-fetch it on {CHECKED_HUMAN}, so it is not used as a confirming source here.</p>
 </article>
 </div>"""
 
@@ -423,7 +444,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
     paths = []
 
     list_title = "The Forge Ores: Stats, Locations and Traits"
-    list_desc = "Confirmed stats for 55 ores in The Forge across Worlds 1-3, from Stonewake's Cross to Frostspire Expanse: multipliers, prices, and traits. Open the list!"
+    list_desc = "Confirmed stats for 114 ores in The Forge across Worlds 1-3, Goblin Cave, The Peak, Raven Cave, Bamboo Forest, and the Holy Tree. Open the list!"
     _check_seo(list_title, list_desc, "the-forge-ores.html")
     list_path = "the-forge-ores.html"
     list_crumbs = [
@@ -452,7 +473,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
         active="roblox-the-forge.html",
         og_type="website",
         image=BASE + _ver("assets/forge/ores-og.webp"),
-        image_alt="The Forge ores wiki: World 1, World 2, and World 3 ore icons",
+        image_alt="The Forge ores wiki: ore icons from World 1 through the Holy Tree",
         ld=list_ld,
     ))
     paths.append(list_path)

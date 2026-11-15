@@ -985,9 +985,11 @@ _guides_card = """<article class="card">
 <h2><a href="tag-guides.html">All Guides (including The Forge)</a></h2>
 <p>Open the Guides category for The Forge walkthroughs already on the site, plus other Roblox game guides.</p>
 <a class="more" href="tag-guides.html">Browse Guides →</a></div></article>"""
-_forge_wiki_cats = """
+_ORE_PAGE_COUNT = len(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "forge_data.json"), encoding="utf-8"))["items"])
+_forge_wiki_cats = f"""
+
 <div class="wiki-cats" role="list">
-<a class="wiki-cat" role="listitem" href="the-forge-ores.html">Ores<small>55 ore pages</small></a>
+<a class="wiki-cat" role="listitem" href="the-forge-ores.html">Ores<small>{_ORE_PAGE_COUNT} ore pages</small></a>
 <div class="wiki-cat is-soon" role="listitem">Weapons<small>Coming soon</small></div>
 <div class="wiki-cat is-soon" role="listitem">Armor<small>Coming soon</small></div>
 <div class="wiki-cat is-soon" role="listitem">Pickaxes<small>Coming soon</small></div>
@@ -998,9 +1000,9 @@ _forge_body = f"""<div class="wrap">{{CRUMBS}}
 <article>
 <h1>Roblox The Forge</h1>
 <p class="updated"><strong>Last updated: <time datetime="{TODAY}">{MOD_HUMAN}</time></strong></p>
-<p>This is the Roblox The Forge hub on Roblox Guides. Use it to jump to codes, walkthroughs, and the Stonewake's Cross ores wiki.</p>
+<p>This is the Roblox The Forge hub on Roblox Guides. Use it to jump to codes, walkthroughs, and the ores wiki.</p>
 <h2 id="wiki">The Forge Wiki</h2>
-<p>The ores wiki now covers all 14 Stonewake's Cross (World 1) ores, with photos and two-source stats. Other categories and later worlds will follow.</p>
+<p>The ores wiki now covers 114 confirmed ores, from Stonewake's Cross through Goblin Cave, Frostspire Expanse, The Peak, Raven Cave, Bamboo Forest, and the Holy Tree, with official icons and two-source stats.</p>
 {_forge_wiki_cats}
 <p>A fuller game hub will still grow here. For now, start with the ores list, The Forge codes, the Guides category, and the walkthroughs already on the site.</p>
 <div class="grid">{_guides_card}{''.join(_forge_cards)}</div>
