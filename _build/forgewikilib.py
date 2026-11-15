@@ -14,6 +14,7 @@ GUIDE_LABELS = {
     "the-forge-armor-guide": "Armor guide",
     "the-forge-runes-guide": "Runes guide",
     "the-forge-codes": "The Forge codes",
+    "the-forge-island-3-guide": "Island 3 / Frostspire Expanse guide",
 }
 
 def esc(s):
@@ -115,10 +116,12 @@ def _related_intro(item):
         label = "other Stonewake's Cross (World 1) ores"
     elif loc == "Forgotten Kingdom":
         label = "other Forgotten Kingdom (World 2) ores"
+    elif loc == "Frostspire Expanse":
+        label = "other Frostspire Expanse (World 3) ores"
     else:
         label = f"other {loc} ores"
     return (
-        f"These are {label}. The full World 1 and World 2 set lives on the "
+        f"These are {label}. The full World 1, World 2, and World 3 set lives on the "
         '<a href="the-forge-ores.html">ores list</a>.'
     )
 
@@ -250,6 +253,7 @@ def _worlds(items):
     groups = [
         ("world-1", "World 1: Stonewake's Cross", "Stonewake's Cross"),
         ("world-2", "World 2: Forgotten Kingdom", "Forgotten Kingdom"),
+        ("world-3", "World 3: Frostspire Expanse", "Frostspire Expanse"),
     ]
     used = set()
     out = []
@@ -329,14 +333,15 @@ def list_body(data, items):
 <h1>The Forge Ores: Stats and Locations</h1>
 <p class="updated">Last checked: <time datetime="{CHECKED}">{CHECKED_HUMAN}</time></p>
 </header>
-<p class="lead">This list covers every ore in World 1 (Stonewake's Cross) and World 2 (Forgotten Kingdom), in the official Forge Wiki list order from Stone through Fichillium, then Cobalt through Darkryte. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. A dash (—) means we did not find two sources that agree. Later worlds are not included yet.</p>
-<div class="callout"><strong>World 1 and World 2:</strong> These 39 ores are the full Stonewake's Cross set (14) and the Forgotten Kingdom set from Cobalt through Darkryte (25) on the official Forge Wiki list. Royal Boneite appears on that World 2 list but could not be confirmed with a second independent source, so it is not on this site yet. Later worlds are not included.</div>
+<p class="lead">This list covers every ore in World 1 (Stonewake's Cross), World 2 (Forgotten Kingdom), and World 3 (Frostspire Expanse), in the official Forge Wiki list order from Stone through Fichillium, then Cobalt through Darkryte, then Grass through Prismatic Heart. Every stat on these pages was checked against at least two sources on {CHECKED_HUMAN}. A dash (—) means we did not find two sources that agree. Later official areas such as The Peak are not included yet.</p>
+<div class="callout"><strong>Worlds 1–3:</strong> These 55 ores are the full Stonewake's Cross set (14), the Forgotten Kingdom set from Cobalt through Darkryte (25), and the Frostspire Expanse set from Grass through Prismatic Heart (16) on the official Forge Wiki list. Royal Boneite appears on the World 2 list but could not be confirmed with a second independent source, so it is not on this site yet. For most World 3 ores, the official wiki drop chance does not match Game8, Destructoid, and BloxInformer, so those chance fields are dashes. Later official areas such as The Peak are not included yet.</div>
 {''.join(sections)}
 <p class="small wiki-credit" id="icon-credit">{list_credit}</p>
 <h2 id="guides">Related The Forge Guides</h2>
 <p>These walkthroughs cover mining, forging and spending ores:</p>
 <ul>
 <li><a href="the-forge-beginners-guide.html">Beginner guide</a></li>
+<li><a href="the-forge-island-3-guide.html">Island 3 / Frostspire Expanse guide</a></li>
 <li><a href="the-forge-pickaxe-progression.html">Pickaxe progression</a></li>
 <li><a href="the-forge-forging-guide.html">Forging guide</a></li>
 <li><a href="the-forge-money-guide.html">Money guide</a></li>
@@ -347,12 +352,12 @@ def list_body(data, items):
 <h2 id="src-h">Sources</h2>
 <p>Item pages cite the sources used for each ore. The list was checked against:</p>
 <ul>
-<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for all 14 Stonewake's Cross ores and the 25 Forgotten Kingdom ores from Cobalt through Darkryte</li>
+<li><a href="https://forgewiki.org/wiki/Ores" rel="noopener" target="_blank">Forge Wiki: Ores list</a> and the individual pages for all 14 Stonewake's Cross ores, the 25 Forgotten Kingdom ores from Cobalt through Darkryte, and the 16 Frostspire Expanse ores from Grass through Prismatic Heart</li>
 <li><a href="https://game8.co/games/The-Forge/archives/572862" rel="noopener" target="_blank">Game8: List of All Ores and Traits</a> and the matching Game8 item pages (updated February 22, 2026; the list page itself shows a February 24, 2026 update)</li>
 <li><a href="https://www.destructoid.com/all-ores-in-the-forge/" rel="noopener" target="_blank">Destructoid: All Ores in The Forge</a> (updated January 8, 2026)</li>
 <li><a href="https://bloxinformer.com/wikis/the-forge/ores/" rel="noopener" target="_blank">BloxInformer: The Forge ores</a></li>
 </ul>
-<p class="small">Destructoid's tables (updated January 8, 2026) cover Stone through Poopite in World 1 and most Forgotten Kingdom rock ores, but do not include Fichillium, Boneite, Dark Boneite, Slimite, or Volcanic Rock Ore, so Destructoid is not used as a confirming source for those ores. Pro Game Guides published an ores guide dated January 13, 2026 whose visible snippets matched Stone, Sand Stone, Copper and Iron, but the live page returned HTTP 403 when we tried to re-fetch it on {CHECKED_HUMAN}, so it is not used as a confirming source here.</p>
+<p class="small">Destructoid's tables (updated January 8, 2026) cover Stone through Poopite in World 1, most Forgotten Kingdom rock ores, and most Frostspire Expanse ores, but do not include Fichillium, Boneite, Dark Boneite, Slimite, Volcanic Rock Ore, or Grass, so Destructoid is not used as a confirming source for those ores. BloxInformer's Frostspire table also omits Grass. For most World 3 ores, the official wiki drop chance is a lower denominator than the chance listed by Game8, Destructoid, and BloxInformer; those chance fields are dashes on the World 3 pages. Destructoid also lists higher World 3 multipliers than the official wiki, Game8, and BloxInformer, which agree with each other. Pro Game Guides published an ores guide dated January 13, 2026 whose visible snippets matched Stone, Sand Stone, Copper and Iron, but the live page returned HTTP 403 when we tried to re-fetch it on {CHECKED_HUMAN}, so it is not used as a confirming source here.</p>
 </article>
 </div>"""
 
@@ -394,7 +399,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
     paths = []
 
     list_title = "The Forge Ores: Stats, Locations and Traits"
-    list_desc = "Confirmed stats for 39 ores in The Forge across World 1 and the Forgotten Kingdom: drop chances, multipliers, prices, and traits. Open the list!"
+    list_desc = "Confirmed stats for 55 ores in The Forge across Worlds 1-3, from Stonewake's Cross to Frostspire Expanse: multipliers, prices, and traits. Open the list!"
     _check_seo(list_title, list_desc, "the-forge-ores.html")
     list_path = "the-forge-ores.html"
     list_crumbs = [
@@ -423,7 +428,7 @@ def write_pages(page, write, BASE, ORG, PERSON):
         active="roblox-the-forge.html",
         og_type="website",
         image=BASE + _ver("assets/forge/ores-og.webp"),
-        image_alt="The Forge ores wiki: World 1 and World 2 ore icons",
+        image_alt="The Forge ores wiki: World 1, World 2, and World 3 ore icons",
         ld=list_ld,
     ))
     paths.append(list_path)

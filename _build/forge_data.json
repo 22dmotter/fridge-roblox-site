@@ -2,7 +2,7 @@
   "checked": "2026-11-14",
   "category": "ores",
   "list_slug": "the-forge-ores",
-  "note": "All 14 Stonewake's Cross (World 1) ores and 25 Forgotten Kingdom (World 2) ores from the official Forge Wiki list, in list order from Stone through Fichillium, then Cobalt through Darkryte. Royal Boneite appears on the official list but was not added because it could not be confirmed with a second source. Add more objects to items[] to generate new pages.",
+  "note": "All 14 Stonewake's Cross (World 1) ores, 25 Forgotten Kingdom (World 2) ores from Cobalt through Darkryte, and 16 Frostspire Expanse (World 3) ores from Grass through Prismatic Heart, in official Forge Wiki list order. Royal Boneite appears on the official World 2 list but was not added because it could not be confirmed with a second source. Add more objects to items[] to generate new pages.",
   "items": [
     {
       "id": "stone",
@@ -2322,6 +2322,1044 @@
       ],
       "image_file_page": "https://forgewiki.org/wiki/File:Darkryte.png",
       "image_source_url": "https://static.wikitide.net/theforgewiki/8/83/Darkryte.png"
+    },
+    {
+      "id": "grass",
+      "name": "Grass",
+      "slug": "the-forge-grass-ore",
+      "title": "Grass Ore in The Forge: Drop Chance and Price",
+      "h1": "Grass Ore in The Forge: Drop Chance and Price",
+      "desc": "Grass ore in The Forge: a Common 1-in-23 Frostspire Expanse drop from the LocalModuled quest, 0.1x multiplier, $1.50 sell price, no trait. See the stats!",
+      "rarity": "Common",
+      "chance": "1/23",
+      "multiplier": "0.1x",
+      "price": "$1.50",
+      "trait": "None",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "LocalModuled Quest"
+      ],
+      "lead": "Grass is a Common ore from the Frostspire Expanse, the official World 3 area. The official Forge Wiki and Game8 agree it comes from the LocalModuled quest at 1-in-23, with a 0.1x multiplier, a $1.50 sell price, and no trait. It is the first ore on the official World 3 list. Destructoid and BloxInformer do not include it.",
+      "how_to_get": "It comes from the <strong>LocalModuled Quest</strong> in the <strong>Frostspire Expanse</strong>. The official Forge Wiki item page and Game8 both list a <strong>1/23</strong> chance and name that quest NPC. The official wiki ores list writes the source as \"Local Modulated Quest.\" Destructoid's World 3 table (January 8, 2026) and BloxInformer's Frostspire table do not include Grass, so they are not used as confirming sources here.",
+      "uses": "Grass has <strong>no trait</strong>, a <strong>0.1x</strong> multiplier, and a <strong>$1.50</strong> sell price, the lowest multiplier on this World 3 list. The official wiki's flavor text says you probably should not forge it. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/grass.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "The official ores list labels the source \"Local Modulated Quest.\" The official Grass item page and Game8 both use LocalModuled, so that is the name used under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Grass",
+          "url": "https://forgewiki.org/wiki/Grass"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Grass Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573641"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Grass.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/c/c5/Grass.png"
+    },
+    {
+      "id": "tungsten",
+      "name": "Tungsten",
+      "slug": "the-forge-tungsten-ore",
+      "title": "Tungsten Ore in The Forge: Multiplier and Price",
+      "h1": "Tungsten Ore in The Forge: Multiplier and Price",
+      "desc": "Tungsten ore in The Forge: a Common Frostspire Expanse drop from Icy Pebbles, Rocks, and Boulders, 1.95x multiplier, $48.75 sell price, no trait. See the stats!",
+      "rarity": "Common",
+      "chance": null,
+      "multiplier": "1.95x",
+      "price": "$48.75",
+      "trait": "None",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Pebble",
+        "Icy Rock",
+        "Icy Boulder"
+      ],
+      "lead": "Tungsten is a Common ore from the Frostspire Expanse. Sources agree it drops from Icy Pebbles, Icy Rocks, and Icy Boulders, with a 1.95x multiplier, a $48.75 sell price, and no trait. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Pebbles</strong>, <strong>Icy Rocks</strong>, or <strong>Icy Boulders</strong> in the <strong>Frostspire Expanse</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list those three nodes. They do not agree on the drop chance (see below).",
+      "uses": "Tungsten has <strong>no trait</strong>, a <strong>1.95x</strong> multiplier, and a <strong>$48.75</strong> sell price. It is the first mineable ore on the official World 3 list. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/tungsten.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/30. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/180. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 2.6x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 1.95x, so this page uses 1.95x."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Tungsten",
+          "url": "https://forgewiki.org/wiki/Tungsten"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Tungsten Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573640"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Tungsten_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/6/6f/Tungsten_Ore.png"
+    },
+    {
+      "id": "sulfur",
+      "name": "Sulfur",
+      "slug": "the-forge-sulfur-ore",
+      "title": "Sulfur Ore in The Forge: Multiplier and Price",
+      "h1": "Sulfur Ore in The Forge: Multiplier and Price",
+      "desc": "Sulfur ore in The Forge: an Uncommon Frostspire Expanse drop from Icy Pebbles, Rocks, and Boulders, 2.1x multiplier, $51.56 sell price, no trait. See the stats!",
+      "rarity": "Uncommon",
+      "chance": null,
+      "multiplier": "2.1x",
+      "price": "$51.56",
+      "trait": "None",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Pebble",
+        "Icy Rock",
+        "Icy Boulder"
+      ],
+      "lead": "Sulfur is an Uncommon ore from the Frostspire Expanse. Sources agree it drops from Icy Pebbles, Icy Rocks, and Icy Boulders, with a 2.1x multiplier, a $51.56 sell price, and no trait. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Pebbles</strong>, <strong>Icy Rocks</strong>, or <strong>Icy Boulders</strong> in the <strong>Frostspire Expanse</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list those three nodes. They do not agree on the drop chance (see below).",
+      "uses": "Sulfur has <strong>no trait</strong>, a <strong>2.1x</strong> multiplier, and a <strong>$51.56</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/sulfur.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/36. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/215. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 2.75x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 2.1x, so this page uses 2.1x.",
+        "Game8's Sulfur item page lists the sell price as $1.56. The official Forge Wiki, Destructoid, and BloxInformer all list $51.56, so this page uses $51.56 and treats the Game8 figure as an unconfirmed typo."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Sulfur",
+          "url": "https://forgewiki.org/wiki/Sulfur"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Sulfur Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573639"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Sulfur_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/f/f8/Sulfur_Ore.png"
+    },
+    {
+      "id": "pumice",
+      "name": "Pumice",
+      "slug": "the-forge-pumice-ore",
+      "title": "Pumice Ore in The Forge: Multiplier and Price",
+      "h1": "Pumice Ore in The Forge: Multiplier and Price",
+      "desc": "Pumice ore in The Forge: a Rare Frostspire Expanse drop from Icy Pebbles, Rocks, and Boulders, 2.2x multiplier, $54.38 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": null,
+      "multiplier": "2.2x",
+      "price": "$54.38",
+      "trait": "None",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Pebble",
+        "Icy Rock",
+        "Icy Boulder"
+      ],
+      "lead": "Pumice is a Rare ore from the Frostspire Expanse. Sources agree it drops from Icy Pebbles, Icy Rocks, and Icy Boulders, with a 2.2x multiplier, a $54.38 sell price, and no trait. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Pebbles</strong>, <strong>Icy Rocks</strong>, or <strong>Icy Boulders</strong> in the <strong>Frostspire Expanse</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list those three nodes. They do not agree on the drop chance (see below).",
+      "uses": "Pumice has <strong>no trait</strong>, a <strong>2.2x</strong> multiplier, and a <strong>$54.38</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/pumice.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/44. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/265. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 2.9x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 2.2x, so this page uses 2.2x.",
+        "Game8's Pumice item page lists the sell price as $4.38. The official Forge Wiki, Destructoid, and BloxInformer all list $54.38, so this page uses $54.38 and treats the Game8 figure as an unconfirmed typo."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Pumice",
+          "url": "https://forgewiki.org/wiki/Pumice"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Pumice Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573638"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Pumice_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/6/6f/Pumice_Ore.png"
+    },
+    {
+      "id": "graphite",
+      "name": "Graphite",
+      "slug": "the-forge-graphite-ore",
+      "title": "Graphite Ore in The Forge: Stats and Trait",
+      "h1": "Graphite Ore in The Forge: Stats and Trait",
+      "desc": "Graphite ore in The Forge: a Rare Frostspire Expanse drop from icy rock nodes, 2.33x multiplier, $58.13 sell price, and an armor vitality trait. See the stats!",
+      "rarity": "Rare",
+      "chance": null,
+      "multiplier": "2.33x",
+      "price": "$58.13",
+      "trait": "+5% max health, and a 20% chance to reduce incoming damage by 12% (Armor)",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Pebble",
+        "Icy Rock",
+        "Icy Boulder"
+      ],
+      "lead": "Graphite is a Rare ore from the Frostspire Expanse. Sources agree it drops from Icy Pebbles, Icy Rocks, and Icy Boulders, with a 2.33x multiplier, a $58.13 sell price, and an Armor trait that adds 5% max health and a 20% chance to reduce incoming damage by 12%. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Pebbles</strong>, <strong>Icy Rocks</strong>, or <strong>Icy Boulders</strong> in the <strong>Frostspire Expanse</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all list those three nodes. They do not agree on the drop chance (see below).",
+      "uses": "Graphite's confirmed Armor trait is <strong>+5% max health, and a 20% chance to reduce incoming damage by 12%</strong>. It has a <strong>2.33x</strong> multiplier and a <strong>$58.13</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/graphite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/52. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/315. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 3.1x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 2.33x, so this page uses 2.33x.",
+        "Game8 and BloxInformer describe the +5% health as Vitality. The official wiki and Destructoid describe it as max health or HP. The numbers agree, so this page uses max health."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Graphite",
+          "url": "https://forgewiki.org/wiki/Graphite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Graphite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573637"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Graphite_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/f/f8/Graphite_Ore.png"
+    },
+    {
+      "id": "aetherit",
+      "name": "Aetherit",
+      "slug": "the-forge-aetherit-ore",
+      "title": "Aetherit Ore in The Forge: Stats and Trait",
+      "h1": "Aetherit Ore in The Forge: Stats and Trait",
+      "desc": "Aetherit ore in The Forge: a Rare Frostspire Expanse drop from icy nodes and Small Ice Crystals, 2.55x multiplier, $63.75, 5% speed on Armor. See the stats!",
+      "rarity": "Rare",
+      "chance": null,
+      "multiplier": "2.55x",
+      "price": "$63.75",
+      "trait": "5% extra movement speed on Armor",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Pebble",
+        "Icy Rock",
+        "Icy Boulder",
+        "Small Ice Crystal"
+      ],
+      "lead": "Aetherit is a Rare ore from the Frostspire Expanse. Sources agree it has a 2.55x multiplier, a $63.75 sell price, and a 5% extra movement speed trait on Armor. Confirmed nodes are Icy Pebbles, Icy Rocks, Icy Boulders, and Small Ice Crystals. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Pebbles</strong>, <strong>Icy Rocks</strong>, <strong>Icy Boulders</strong>, or <strong>Small Ice Crystals</strong> in the <strong>Frostspire Expanse</strong>. Small Ice Crystal is listed by all four sources. Icy Pebble, Icy Rock, and Icy Boulder are listed by the official wiki, Game8, and BloxInformer (Destructoid lists only Small Ice Crystal). They do not agree on the drop chance (see below).",
+      "uses": "Aetherit's confirmed Armor trait is <strong>5% extra movement speed</strong>. It has a <strong>2.55x</strong> multiplier and a <strong>$63.75</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/aetherit.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/65. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/390. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 3.4x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 2.55x, so this page uses 2.55x.",
+        "The official wiki Aetherit page also lists an 8% attack speed trait on Weapons. Game8, Destructoid, and BloxInformer only describe the 5% speed effect on Armor, so the weapon trait is not listed as confirmed.",
+        "The official wiki item page also names The Peak as an area header. Game8 lists Aetherit under Frostspire Expanse only, so The Peak is not added as a separate confirmed location."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Aetherit",
+          "url": "https://forgewiki.org/wiki/Aetherit"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Aetherit Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573636"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Aetherit_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/7/7a/Aetherit_Ore.png"
+    },
+    {
+      "id": "scheelite",
+      "name": "Scheelite",
+      "slug": "the-forge-scheelite-ore",
+      "title": "Scheelite Ore in The Forge: Multiplier and Price",
+      "h1": "Scheelite Ore in The Forge: Multiplier and Price",
+      "desc": "Scheelite ore in The Forge: a Rare Frostspire Expanse drop from Icy Rocks, Boulders, and Small Ice Crystals, 2.8x, $69.38 sell price, no trait. See the stats!",
+      "rarity": "Rare",
+      "chance": null,
+      "multiplier": "2.8x",
+      "price": "$69.38",
+      "trait": "None",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Rock",
+        "Icy Boulder",
+        "Small Ice Crystal"
+      ],
+      "lead": "Scheelite is a Rare ore from the Frostspire Expanse. Sources agree it drops from Icy Rocks, Icy Boulders, and Small Ice Crystals, with a 2.8x multiplier, a $69.38 sell price, and no trait. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Rocks</strong>, <strong>Icy Boulders</strong>, or <strong>Small Ice Crystals</strong> in the <strong>Frostspire Expanse</strong>. The official Forge Wiki, Game8, and BloxInformer all list those three nodes. Destructoid lists only Small Ice Crystal. They do not agree on the drop chance (see below).",
+      "uses": "Scheelite has <strong>no trait</strong>, a <strong>2.8x</strong> multiplier, and a <strong>$69.38</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/scheelite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/79. Game8 (February 22, 2026) and BloxInformer list 1/247. Destructoid (January 8, 2026) lists 1/474. Because the sources do not agree, this page shows a dash (—).",
+        "Destructoid lists the multiplier as 3.7x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 2.8x, so this page uses 2.8x."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Scheelite",
+          "url": "https://forgewiki.org/wiki/Scheelite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Scheelite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573635"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Scheelite_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/5/53/Scheelite_Ore.png"
+    },
+    {
+      "id": "larimar",
+      "name": "Larimar",
+      "slug": "the-forge-larimar-ore",
+      "title": "Larimar Ore in The Forge: Multiplier and Price",
+      "h1": "Larimar Ore in The Forge: Multiplier and Price",
+      "desc": "Larimar ore in The Forge: an Epic Frostspire Expanse drop from Icy Rocks, Boulders, and Small Ice Crystals, 3.1x, $76.88 sell price, no trait. See the stats!",
+      "rarity": "Epic",
+      "chance": null,
+      "multiplier": "3.1x",
+      "price": "$76.88",
+      "trait": "None",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Rock",
+        "Icy Boulder",
+        "Small Ice Crystal"
+      ],
+      "lead": "Larimar is an Epic ore from the Frostspire Expanse. Sources agree it drops from Icy Rocks, Icy Boulders, and Small Ice Crystals, with a 3.1x multiplier, a $76.88 sell price, and no trait. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Rocks</strong>, <strong>Icy Boulders</strong>, or <strong>Small Ice Crystals</strong> in the <strong>Frostspire Expanse</strong>. The official Forge Wiki, Game8, and BloxInformer all list those three nodes. Destructoid lists only Small Ice Crystal. They do not agree on the drop chance (see below).",
+      "uses": "Larimar has <strong>no trait</strong>, a <strong>3.1x</strong> multiplier, and a <strong>$76.88</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/larimar.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/96. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/575. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 4.1x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 3.1x, so this page uses 3.1x."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Larimar",
+          "url": "https://forgewiki.org/wiki/Larimar"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Larimar Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573634"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Larimar_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/b/be/Larimar_Ore.png"
+    },
+    {
+      "id": "neurotite",
+      "name": "Neurotite",
+      "slug": "the-forge-neurotite-ore",
+      "title": "Neurotite Ore in The Forge: Multiplier and Price",
+      "h1": "Neurotite Ore in The Forge: Multiplier and Price",
+      "desc": "Neurotite ore in The Forge: an Epic Frostspire Expanse drop from Icy Rocks, Boulders, and Small Ice Crystals, 3.2x, $80.63 sell price, no trait. See the stats!",
+      "rarity": "Epic",
+      "chance": null,
+      "multiplier": "3.2x",
+      "price": "$80.63",
+      "trait": "None",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Rock",
+        "Icy Boulder",
+        "Small Ice Crystal"
+      ],
+      "lead": "Neurotite is an Epic ore from the Frostspire Expanse. Sources agree it drops from Icy Rocks, Icy Boulders, and Small Ice Crystals, with a 3.2x multiplier, an $80.63 sell price, and no trait. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Rocks</strong>, <strong>Icy Boulders</strong>, or <strong>Small Ice Crystals</strong> in the <strong>Frostspire Expanse</strong>. The official Forge Wiki, Game8, and BloxInformer all list those three nodes. Destructoid lists only Small Ice Crystal. They do not agree on the drop chance (see below).",
+      "uses": "Neurotite has <strong>no trait</strong>, a <strong>3.2x</strong> multiplier, and an <strong>$80.63</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/neurotite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/115. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/690. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 4.3x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 3.2x, so this page uses 3.2x."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Neurotite",
+          "url": "https://forgewiki.org/wiki/Neurotite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Neurotite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573633"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Neurotite_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/6/6d/Neurotite_Ore.png"
+    },
+    {
+      "id": "frost_fossil",
+      "name": "Frost Fossil",
+      "slug": "the-forge-frost-fossil-ore",
+      "title": "Frost Fossil Ore in The Forge: Stats and Trait",
+      "h1": "Frost Fossil Ore in The Forge: Stats and Trait",
+      "desc": "Frost Fossil ore in The Forge: an Epic Frostspire Expanse drop from Icy Boulders and ice crystals, 3.34x, $84.38 sell price, and a damage trait. See the stats!",
+      "rarity": "Epic",
+      "chance": null,
+      "multiplier": "3.34x",
+      "price": "$84.38",
+      "trait": "+17.5% physical damage and -5% movement speed on Weapons and Armor",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Boulder",
+        "Small Ice Crystal",
+        "Medium Ice Crystal"
+      ],
+      "lead": "Frost Fossil is an Epic ore from the Frostspire Expanse. Sources agree it has a 3.34x multiplier, an $84.38 sell price, and a Weapons and Armor trait of +17.5% physical damage and -5% movement speed. Confirmed nodes are Icy Boulders, Small Ice Crystals, and Medium Ice Crystals. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Boulders</strong>, <strong>Small Ice Crystals</strong>, or <strong>Medium Ice Crystals</strong> in the <strong>Frostspire Expanse</strong>. Small Ice Crystal is listed by all four sources, Icy Boulder by the official wiki, Game8, and BloxInformer, and Medium Ice Crystal by the official wiki, Destructoid, and BloxInformer. They do not agree on the drop chance (see below).",
+      "uses": "Frost Fossil's confirmed trait is <strong>+17.5% physical damage and -5% movement speed on Weapons and Armor</strong>. It has a <strong>3.34x</strong> multiplier and an <strong>$84.38</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/frost_fossil.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/137. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/820. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 4.5x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 3.34x, so this page uses 3.34x.",
+        "Game8 and Destructoid write the speed penalty as \"-5 Speed\" without a percent sign. The official wiki and BloxInformer specify -5% movement speed, so this page uses the percent figure.",
+        "The official wiki ores list also names All Red Crystals and Heart Of The Island. The official item page lists Small Red Crystal, The Peak, and Raven Cave. None of those extra nodes are confirmed by Game8, Destructoid, or BloxInformer, so they are not listed under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Frost Fossil",
+          "url": "https://forgewiki.org/wiki/Frost_Fossil"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Frost Fossil Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573632"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Frost_Fossil_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/a/af/Frost_Fossil_Ore.png"
+    },
+    {
+      "id": "tide_carve",
+      "name": "Tide Carve",
+      "slug": "the-forge-tide-carve-ore",
+      "title": "Tide Carve Ore in The Forge: Multiplier and Price",
+      "h1": "Tide Carve Ore in The Forge: Multiplier and Price",
+      "desc": "Tide Carve ore in The Forge: an Epic Frostspire Expanse drop from Icy Boulders and ice crystals, 3.5x multiplier, $88.13 sell price, no trait. See the stats!",
+      "rarity": "Epic",
+      "chance": null,
+      "multiplier": "3.5x",
+      "price": "$88.13",
+      "trait": "None",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Boulder",
+        "Small Ice Crystal",
+        "Medium Ice Crystal"
+      ],
+      "lead": "Tide Carve is an Epic ore from the Frostspire Expanse. Sources agree it has a 3.5x multiplier, an $88.13 sell price, and no trait. Confirmed nodes are Icy Boulders, Small Ice Crystals, and Medium Ice Crystals. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Boulders</strong>, <strong>Small Ice Crystals</strong>, or <strong>Medium Ice Crystals</strong> in the <strong>Frostspire Expanse</strong>. Small Ice Crystal is listed by all four sources, Icy Boulder by the official wiki, Game8, and BloxInformer, and Medium Ice Crystal by the official wiki, Destructoid, and BloxInformer. They do not agree on the drop chance (see below).",
+      "uses": "Tide Carve has <strong>no trait</strong>, a <strong>3.5x</strong> multiplier, and an <strong>$88.13</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/tide_carve.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/163. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/980. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 4.7x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 3.5x, so this page uses 3.5x.",
+        "The official wiki ores list also names All Red Crystals and Heart Of The Island. The official item page lists Small Red Crystal, The Peak, and Raven Cave, and it does not repeat the Frostspire Expanse header used on other World 3 pages. Game8 still lists the area as Frostspire Expanse. Those extra nodes are not confirmed by the other sources, so they are not listed under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Tide Carve",
+          "url": "https://forgewiki.org/wiki/Tide_Carve"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Tide Carve Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573631"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Tide_Carve_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/b/b4/Tide_Carve_Ore.png"
+    },
+    {
+      "id": "velchire",
+      "name": "Velchire",
+      "slug": "the-forge-velchire-ore",
+      "title": "Velchire Ore in The Forge: Stats and Trait",
+      "h1": "Velchire Ore in The Forge: Stats and Trait",
+      "desc": "Velchire ore in The Forge: a Legendary Frostspire Expanse drop from Icy Boulders and ice crystals, 4.7x, $103.13 sell price, 20% speed on Armor. See the stats!",
+      "rarity": "Legendary",
+      "chance": null,
+      "multiplier": "4.7x",
+      "price": "$103.13",
+      "trait": "20% extra movement speed on Armor",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Boulder",
+        "Small Ice Crystal",
+        "Medium Ice Crystal",
+        "Large Ice Crystal",
+        "Floating Crystal"
+      ],
+      "lead": "Velchire is a Legendary ore from the Frostspire Expanse. Sources agree it has a 4.7x multiplier, a $103.13 sell price, and a 20% extra movement speed trait on Armor. Confirmed nodes are Icy Boulders, Small, Medium, and Large Ice Crystals, and Floating Crystals. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Boulders</strong>, <strong>Small Ice Crystals</strong>, <strong>Medium Ice Crystals</strong>, <strong>Large Ice Crystals</strong>, or <strong>Floating Crystals</strong> in the <strong>Frostspire Expanse</strong>. Those five nodes are each listed by at least two of the official wiki ores list, Game8, Destructoid, and BloxInformer. They do not agree on the drop chance (see below).",
+      "uses": "Velchire's confirmed Armor trait is <strong>20% extra movement speed</strong>. It has a <strong>4.7x</strong> multiplier and a <strong>$103.13</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/velchire.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/241. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/1450. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 5.5x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 4.7x, so this page uses 4.7x.",
+        "BloxInformer writes Floating Ice Crystal rather than Floating Crystal. The official wiki ores list, Game8, and Destructoid use Floating Crystal, so that is the name used here.",
+        "The official wiki ores list also names All Red Crystals and Heart Of The Island. The official item page lists Small Red Crystal, Medium Red Crystal, The Peak, and Raven Cave, and it omits Large Ice Crystal and Floating Crystal (those two still have two or more other sources). The red-crystal and Heart nodes are not confirmed by Game8, Destructoid, or BloxInformer, so they are not listed under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Velchire",
+          "url": "https://forgewiki.org/wiki/Velchire"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Velchire Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573630"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Velchire_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/c/cf/Velchire_Ore.png"
+    },
+    {
+      "id": "sanctis",
+      "name": "Sanctis",
+      "slug": "the-forge-sanctis-ore",
+      "title": "Sanctis Ore in The Forge: Stats and Trait",
+      "h1": "Sanctis Ore in The Forge: Stats and Trait",
+      "desc": "Sanctis ore in The Forge: a Legendary Frostspire Expanse drop from Icy Boulders and ice crystals, 5x, $112.50 sell price, 18% stamina on Armor. See the stats!",
+      "rarity": "Legendary",
+      "chance": null,
+      "multiplier": "5x",
+      "price": "$112.50",
+      "trait": "18% extra stamina on Armor",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Boulder",
+        "Small Ice Crystal",
+        "Medium Ice Crystal",
+        "Large Ice Crystal",
+        "Floating Crystal"
+      ],
+      "lead": "Sanctis is a Legendary ore from the Frostspire Expanse. Sources agree it has a 5x multiplier, a $112.50 sell price, and an 18% extra stamina trait on Armor. Confirmed nodes are Icy Boulders, Small, Medium, and Large Ice Crystals, and Floating Crystals. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Boulders</strong>, <strong>Small Ice Crystals</strong>, <strong>Medium Ice Crystals</strong>, <strong>Large Ice Crystals</strong>, or <strong>Floating Crystals</strong> in the <strong>Frostspire Expanse</strong>. Those five nodes are each listed by at least two of the official wiki ores list, Game8, Destructoid, and BloxInformer. The official Sanctis item page omits Large Ice Crystal, but the official list, Game8, Destructoid, and BloxInformer all include it. They do not agree on the drop chance (see below).",
+      "uses": "Sanctis's confirmed Armor trait is <strong>18% extra stamina</strong>. It has a <strong>5x</strong> multiplier and a <strong>$112.50</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/sanctis.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/305. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/1830. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 6x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 5x, so this page uses 5x.",
+        "BloxInformer writes Floating Ice Crystal rather than Floating Crystal. The official wiki, Game8, and Destructoid use Floating Crystal."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Sanctis",
+          "url": "https://forgewiki.org/wiki/Sanctis"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Sanctis Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573629"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Sanctis_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/2/22/Sanctis_Ore.png"
+    },
+    {
+      "id": "snowite",
+      "name": "Snowite",
+      "slug": "the-forge-snowite-ore",
+      "title": "Snowite Ore in The Forge: Stats and Trait",
+      "h1": "Snowite Ore in The Forge: Stats and Trait",
+      "desc": "Snowite ore in The Forge: a Legendary Frostspire Expanse drop from icy nodes and crystals, 6x multiplier, $150 sell price, a 15% slow on Weapons. See the stats!",
+      "rarity": "Legendary",
+      "chance": null,
+      "multiplier": "6x",
+      "price": "$150",
+      "trait": "30% chance to slow enemies by 15% for 3 seconds (Weapons)",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Pebble",
+        "Icy Rock",
+        "Icy Boulder",
+        "Small Ice Crystal",
+        "Medium Ice Crystal",
+        "Large Ice Crystal"
+      ],
+      "lead": "Snowite is a Legendary ore from the Frostspire Expanse. Sources agree it has a 6x multiplier, a $150 sell price, and a Weapons trait with a 30% chance to apply a 15% slow for 3 seconds. Confirmed nodes are Icy Pebbles, Icy Rocks, Icy Boulders, and Small, Medium, and Large Ice Crystals. They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "Mine <strong>Icy Pebbles</strong>, <strong>Icy Rocks</strong>, <strong>Icy Boulders</strong>, <strong>Small Ice Crystals</strong>, <strong>Medium Ice Crystals</strong>, or <strong>Large Ice Crystals</strong> in the <strong>Frostspire Expanse</strong>. Icy Pebble, Icy Rock, Icy Boulder, and Small Ice Crystal are listed by the official wiki, Game8, and BloxInformer. Medium and Large Ice Crystal are listed by the official wiki ores list and BloxInformer (the official item page includes Medium but not Large). Destructoid lists only Small Ice Crystal. They do not agree on the drop chance (see below).",
+      "uses": "Snowite's confirmed Weapons trait is a <strong>30% chance to slow enemies by 15% for 3 seconds</strong>. It has a <strong>6x</strong> multiplier and a <strong>$150</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/snowite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/721. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/4325. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 8x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 6x, so this page uses 6x.",
+        "Game8 and Destructoid specify that the 15% slow is to both attack speed and movement speed on the enemy. The official wiki says only \"slow enemies by 15%.\" BloxInformer instead describes a +15% buff to your own attack speed plus a movement-speed reduction on enemies. This page uses the 15% enemy slow that three of the four sources support, and flags the extra wording.",
+        "The official wiki ores list also names Large Red Crystal and floating Crystal. Those nodes are not confirmed by Game8, Destructoid, or BloxInformer, so they are not listed under Obtained from."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Snowite",
+          "url": "https://forgewiki.org/wiki/Snowite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Snowite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573628"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Snowite_Ore.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/f/f6/Snowite_Ore.png"
+    },
+    {
+      "id": "iceite",
+      "name": "Iceite",
+      "slug": "the-forge-iceite-ore",
+      "title": "Iceite Ore in The Forge: Stats and Trait",
+      "h1": "Iceite Ore in The Forge: Stats and Trait",
+      "desc": "Iceite ore in The Forge: a Mythic Frostspire Expanse drop from icy nodes and crystals, 8x multiplier, $196.88, a 25% freeze on Weapons. See the stats!",
+      "rarity": "Mythic",
+      "chance": null,
+      "multiplier": "8x",
+      "price": "$196.88",
+      "trait": "25% chance to freeze enemies for 2 seconds, 12 second cooldown (Weapons)",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Icy Rock",
+        "Icy Boulder",
+        "Small Ice Crystal",
+        "Medium Ice Crystal",
+        "Large Ice Crystal",
+        "Floating Crystal"
+      ],
+      "lead": "Iceite is a Mythic ore from the Frostspire Expanse. Sources agree it has an 8x multiplier, a $196.88 sell price, and a Weapons trait with a 25% chance to freeze enemies for 2 seconds (12 second cooldown). Confirmed nodes are Icy Rocks, Icy Boulders, Small, Medium, and Large Ice Crystals, and Floating Crystals. They do not agree on the drop chance, so that field is left blank on this page. Some sources label this rarity Mythical; this site uses Mythic, the official wiki's rarity name.",
+      "how_to_get": "Mine <strong>Icy Rocks</strong>, <strong>Icy Boulders</strong>, <strong>Small Ice Crystals</strong>, <strong>Medium Ice Crystals</strong>, <strong>Large Ice Crystals</strong>, or <strong>Floating Crystals</strong> in the <strong>Frostspire Expanse</strong>. Those six nodes are each listed by at least two of the official wiki, Game8, Destructoid, and BloxInformer. They do not agree on the drop chance (see below).",
+      "uses": "Iceite's confirmed Weapons trait is a <strong>25% chance to freeze enemies for 2 seconds, with a 12 second cooldown</strong>. It has an <strong>8x</strong> multiplier and a <strong>$196.88</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/iceite.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki lists 1/1650. Game8 (February 22, 2026), BloxInformer, and Destructoid (January 8, 2026) list 1/9898. Because the official wiki does not agree with the other three sources, this page shows a dash (—) instead of choosing one.",
+        "Destructoid lists the multiplier as 10.5x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 8x, so this page uses 8x.",
+        "The official wiki item page and ores list also name Large Red Crystal, and the item page adds The Peak and Raven Cave. Those extra nodes are not confirmed by Game8, Destructoid, or BloxInformer, so they are not listed under Obtained from. BloxInformer writes Floating Ice Crystal; this page follows the official wiki, Game8, and Destructoid name Floating Crystal."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Iceite",
+          "url": "https://forgewiki.org/wiki/Iceite"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Iceite Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573627"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Iceite.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/6/6a/Iceite.png"
+    },
+    {
+      "id": "prismatic_heart",
+      "name": "Prismatic Heart",
+      "slug": "the-forge-prismatic-heart-ore",
+      "title": "Prismatic Heart in The Forge: Stats and Trait",
+      "h1": "Prismatic Heart in The Forge: Stats and Trait",
+      "desc": "Prismatic Heart in The Forge: a Legendary Prismarine Spider drop on World 3, 4.3x multiplier, $112.50 sell price, and a weapon crit/freeze trait. See the stats!",
+      "rarity": "Legendary",
+      "chance": null,
+      "multiplier": "4.3x",
+      "price": "$112.50",
+      "trait": "+20% critical chance, +5% critical damage, and a 15% chance to freeze enemies for 2 seconds (18 second cooldown) on Weapons",
+      "location": "Frostspire Expanse",
+      "obtained_from": [
+        "Prismarine Spider"
+      ],
+      "lead": "Prismatic Heart is a Legendary ore on the official Frostspire Expanse (World 3) list. Sources agree it drops from the Prismarine Spider, with a 4.3x multiplier, a $112.50 sell price, and a Weapons trait of +20% critical chance, +5% critical damage, and a 15% chance to freeze enemies for 2 seconds (18 second cooldown). They do not agree on the drop chance, so that field is left blank on this page.",
+      "how_to_get": "It is dropped by the <strong>Prismarine Spider</strong>. The official Forge Wiki, Game8, Destructoid, and BloxInformer all name that enemy. The official wiki lists the ore in the Frostspire Expanse set. Game8 lists the area as Raven Cave, BloxInformer places it in its The Peak / Raven Cave section, and Destructoid describes the boss at the end of Spider Cave. This page follows the official wiki's World 3 list for the location label and keeps Prismarine Spider as the confirmed source. They do not agree on the drop chance (see below).",
+      "uses": "Prismatic Heart's confirmed Weapons trait is <strong>+20% critical chance, +5% critical damage, and a 15% chance to freeze enemies for 2 seconds (18 second cooldown)</strong>. It has a <strong>4.3x</strong> multiplier and a <strong>$112.50</strong> sell price. See the <a href=\"the-forge-island-3-guide.html\">Island 3 / Frostspire Expanse guide</a> and the <a href=\"the-forge-forging-guide.html\">forging guide</a> for how later-game ores fit the crafting loop.",
+      "image": "assets/forge/prismatic_heart.webp",
+      "image_kind": "wiki-icon",
+      "image_credit": "Item icon: The Forge Wiki (forgewiki.org), game artwork © the game's developer",
+      "related_guides": [
+        "the-forge-beginners-guide",
+        "the-forge-island-3-guide",
+        "the-forge-pickaxe-progression",
+        "the-forge-forging-guide",
+        "the-forge-money-guide"
+      ],
+      "unverified": [
+        "Drop chance: the official Forge Wiki and BloxInformer list 1/5555. Game8 (February 22, 2026) and Destructoid (January 8, 2026) list 1/33333. Because two sources support each figure, this page shows a dash (—) instead of choosing one.",
+        "BloxInformer also adds a bracketed 1/15 chance from the Prismarine Spider. No second source in this set confirmed that 1/15 figure, so it is not used as the drop chance.",
+        "Destructoid lists the multiplier as 5.5x. The official Forge Wiki, Game8 (February 22, 2026), and BloxInformer agree on 4.3x, so this page uses 4.3x.",
+        "BloxInformer describes the 15% on-hit effect as a slow rather than a freeze. The official wiki, Game8, and Destructoid all say freeze for 2 seconds with an 18 second cooldown, so this page uses freeze."
+      ],
+      "sources": [
+        {
+          "name": "Forge Wiki: Prismatic Heart",
+          "url": "https://forgewiki.org/wiki/Prismatic_Heart"
+        },
+        {
+          "name": "Forge Wiki: Ores list",
+          "url": "https://forgewiki.org/wiki/Ores"
+        },
+        {
+          "name": "Game8: Prismatic Heart Location and Trait (updated February 22, 2026)",
+          "url": "https://game8.co/games/The-Forge/archives/573603"
+        },
+        {
+          "name": "Game8: List of All Ores and Traits",
+          "url": "https://game8.co/games/The-Forge/archives/572862"
+        },
+        {
+          "name": "Destructoid: All Ores in The Forge (updated January 8, 2026)",
+          "url": "https://www.destructoid.com/all-ores-in-the-forge/"
+        },
+        {
+          "name": "BloxInformer: The Forge ores",
+          "url": "https://bloxinformer.com/wikis/the-forge/ores/"
+        }
+      ],
+      "image_file_page": "https://forgewiki.org/wiki/File:Prismatic_Heart.png",
+      "image_source_url": "https://static.wikitide.net/theforgewiki/2/22/Prismatic_Heart.png"
     }
   ]
 }
