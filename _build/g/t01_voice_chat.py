@@ -3,16 +3,20 @@ slug="how-to-turn-on-voice-chat-roblox",
 title="How to Turn On Voice Chat on Roblox (2026 Guide)",
 h1="How to Turn On Voice Chat on Roblox in 2026 (PC, Mobile, Console)",
 desc="How to turn on voice chat on Roblox in 2026: the age check you need, the headphone icon, console steps and fixes when voice won't show up. Set it up now!",
-cat="Guides", game="Roblox", date="2026-11-11", videos=[],
+cat="Guides", game="Roblox", date="2026-11-11",
+videos=[("kwEbemArLIo","How to Enable Voice Chat in Roblox | How to Get Voice Chat in Roblox (Easy Step-by-Step Guide) 🎤","2026-11-15")],
+cover="assets/thumbs/how-to-turn-on-voice-chat-roblox.webp",
+image_alt="Thumbnail from Fridge's video How to Enable Voice Chat in Roblox (Easy Step-by-Step Guide)",
 kw_primary="how to turn on voice chat on roblox",
 kw_secondary=["roblox voice chat","roblox voice chat age check","how to turn on voice chat on roblox mobile","how to turn on voice chat on roblox ps5","roblox voice chat not showing"],
 related=["roblox-age-verification","add-trusted-friends-roblox","roblox-parental-controls-guide","how-to-appear-offline-roblox"],
-chapters=[("0:00","Intro: who can use voice chat","requirements"),("0:30","Step 1: complete the age check","age-check"),("1:15","Step 2: turn voice on in a game","turn-on"),("1:45","Consoles: PlayStation and Xbox","consoles"),("2:15","Voice chat not showing? Fixes","fixes"),("2:50","Staying safe on voice","safety")],
-sources=[("Roblox Support: How do I turn on Voice Chat?","https://en.help.roblox.com/hc/en-us/articles/34506487801364-How-do-I-turn-on-Voice-Chat"),("Roblox Support: Parental Controls Overview","https://en.help.roblox.com/hc/en-us/articles/30428310121620-Parental-Controls-Overview")],
+sources=[("Roblox Support: How do I turn on Voice Chat?","https://en.help.roblox.com/hc/en-us/articles/34506487801364-How-do-I-turn-on-Voice-Chat"),("Roblox Support: Parental Controls Overview","https://en.help.roblox.com/hc/en-us/articles/30428310121620-Parental-Controls-Overview"),("Fridge: How to Enable Voice Chat in Roblox (Easy Step-by-Step Guide)","https://www.youtube.com/watch?v=kwEbemArLIo")],
 body="""
-<p class="lead">Want to know <strong>how to turn on voice chat on Roblox</strong>? In 2026 it takes two things: you must be <strong>13 or older and age checked</strong>, and you need to join a game that supports voice. Voice chat is <strong>not on by default</strong>, and phone verification no longer unlocks it. This guide walks through every step on PC, mobile and console, plus what to do if the voice icon never shows up.</p>
-{CHAPTERS}
-{VIDEO_PLACEHOLDER}
+<p class="lead">Want to know <strong>how to turn on voice chat on Roblox</strong>? In 2026 it takes two things: you must be <strong>13 or older and age checked</strong>, and you need to join a game that supports voice. Voice chat is <strong>not on by default</strong>, and phone verification no longer unlocks it. This guide walks through every step on PC, mobile and console, plus what to do if the voice icon never shows up. Fridge's walkthrough from November 15, 2026 is embedded below.</p>
+{VIDEO0}
+
+<h2 id="video">Watch: How to Enable Voice Chat in Roblox</h2>
+<p>Fridge's video, <a href="https://www.youtube.com/watch?v=kwEbemArLIo" rel="noopener" target="_blank">How to Enable Voice Chat in Roblox | How to Get Voice Chat in Roblox (Easy Step-by-Step Guide)</a>, is a 58-second walkthrough of how to turn on voice chat on Roblox. It was uploaded on November 15, 2026. YouTube has not published chapter markers, so the written steps below follow official Roblox Support for the topics the video covers: voice chat requirements and the age check, how to turn voice on in a game, how to use your mic, and fixes if the voice icon never shows up. Console and mobile notes are in the written sections too.</p>
 
 <h2 id="requirements">Roblox Voice Chat Requirements</h2>
 <div class="table-wrap"><table>
