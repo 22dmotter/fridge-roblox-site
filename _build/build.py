@@ -4,8 +4,8 @@ OUT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "
 SITE = "Fridge"
 YT = "https://www.youtube.com/@Fridgetherealone"
 SUB = YT + "?sub_confirmation=1"
-TODAY = "2026-11-15"
-MOD_HUMAN = "November 15, 2026"
+TODAY = "2026-11-16"
+MOD_HUMAN = "November 16, 2026"
 CATS = {
  "Codes": ("tag-codes.html", "Roblox Codes", "Working Roblox codes for November 2026 for the top 20 games by players (Steal an Egg, Blox Fruits, RIVALS, Fisch, Steal a Brainrot, Anime Adventures and more) plus The Forge, Dress To Impress, King Legacy, Blade Ball, Bee Swarm Simulator, Arise Crossover, Anime Dice, Huzz Valley and more, all collected in the November 2026 codes hub. Each code is checked against at least two live sources, and games with no codes say so."),
  "Guides": ("tag-guides.html", "Roblox Guides", "Step-by-step Roblox walkthroughs: uploading audio, voice chat, Trusted Friends, appearing offline, parental controls, gift cards, account status and accessories, free items, leveling, pets, reporting players, Communities, age checks and username changes, plus The Forge (races, pickaxes and money), Scrooms, Bloxstrap, account recovery and more."),
@@ -626,7 +626,7 @@ def page(path, title, desc, crumbs_items, body, active=None, og_type="website", 
 # working-code counts per codes page (from each page's verified table); None = game has no code system
 CODE_COUNTS = {"steal-an-egg-codes":None,"blox-fruits-codes":24,"rivals-codes":8,"99-nights-in-the-forest-codes":3,"jujutsu-shenanigans-codes":1,
  "murder-mystery-2-codes":0,"adopt-me-codes":0,"brookhaven-codes":None,"throw-food-for-animals-codes":None,"break-and-steal-an-egg-codes":None,
- "anime-adventures-codes":5,"forsaken-codes":None,"dandys-world-codes":2,"fisch-codes":2,"survive-your-ideas-codes":4,"fish-it-codes":3,
+ "anime-adventures-codes":5,"forsaken-codes":None,"dandys-world-codes":2,"fisch-codes":3,"survive-your-ideas-codes":4,"fish-it-codes":3,
  "violence-district-codes":None,"dont-splash-codes":0,"steal-a-brainrot-codes":1,"catalog-avatar-creator-codes":0,"the-strongest-battlegrounds-codes":None,
  "anime-dice-codes":24,"huzz-valley-codes":4}
 def codes_table():
@@ -670,7 +670,7 @@ for g in guides:
     url = BASE + g["slug"] + ".html"
     vids_ld = [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/watch?v={v[0]}","thumbnailUrl":(g_img(g, True) if i==0 and g.get("cover") else thumb(v[0])),"uploadDate":iso_upload_date((v[2] if len(v)>2 else g["date"]), v[0]),"description":f"Fridge's Roblox video: {v[1]}"} for i,v in enumerate(g["videos"]) if len(v)<3 or v[2]] + \
               [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/shorts/{v[0]}","thumbnailUrl":thumb(v[0]),"uploadDate":iso_upload_date(v[2], v[0]),"description":f"Fridge's Roblox YouTube Short: {v[1]}"} for v in g.get("shorts",[]) if len(v)>2 and v[2]]
-    ld_post = {"@context":"https://schema.org","@type":"BlogPosting","headline":g["h1"],"description":g["desc"],"image":[g_img(g, True)],
+    ld_post = {"@context":"https://schema.org","@type":g.get("ld_type") or "BlogPosting","headline":g["h1"],"description":g["desc"],"image":[g_img(g, True)],
       "datePublished":g["date"],"dateModified":TODAY,"author":PERSON,"publisher":ORG,"mainEntityOfPage":{"@type":"WebPage","@id":url},
       "articleSection":g["cat"],"keywords":", ".join([g["kw_primary"]]+g["kw_secondary"]),"about":{"@type":"VideoGame","name":g["game"],"gamePlatform":"Roblox"},
       **({} if not vids_ld else {"video":vids_ld})}
@@ -1096,7 +1096,7 @@ _fisch_body = f"""<div class="wrap">{{CRUMBS}}
 <h2 id="wiki">Fisch Wiki</h2>
 <p>These category cards follow the Official Fisch Wiki (fischipedia.org) main-page navigation and Popular sidebar, checked {_FISCH_CHECKED_HUMAN}. Item pages are not on this site yet, so every category is marked coming soon.</p>
 {fischwikilib.wiki_cats_html()}
-<p>A codes wiki category will be added here later. Until then, the existing <a href="fisch-codes.html">Fisch codes</a> guide on this site is the place to check working codes. The <a href="fisch-macro.html">Fisch macro</a> page covers unofficial auto-fishing tools and the ban risk; it is not an official Fisch feature.</p>
+<p>Working codes are on the <a href="fisch-codes.html">Fisch codes</a> guide, last checked November 16, 2026. The <a href="fisch-macro.html">Fisch macro</a> page covers unofficial auto-fishing tools and the ban risk; it is not an official Fisch feature.</p>
 <div class="grid">{_fisch_codes_card}{_fisch_macro_card}</div>
 <h2 id="src-h">Sources</h2>
 <ul>

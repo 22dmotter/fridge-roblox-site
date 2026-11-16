@@ -67,6 +67,9 @@ def wiki_cats_html(data=None):
             path = cat["slug"] + ".html"
             label = f"{n} page" if n == 1 else f"{n} pages"
             cards.append(f'<a class="wiki-cat" role="listitem" href="{esc(path)}">{name}<small>{esc(label)}</small></a>')
+        elif cat.get("id") == "codes":
+            # Existing codes guide is live; other empty wiki categories stay coming-soon.
+            cards.append(f'<a class="wiki-cat" role="listitem" href="fisch-codes.html">{name}<small>Working codes</small></a>')
         else:
             cards.append(f'<div class="wiki-cat is-soon" role="listitem">{name}<small>Coming soon</small></div>')
     return '<div class="wiki-cats" role="list">\n' + "\n".join(cards) + "\n</div>"
