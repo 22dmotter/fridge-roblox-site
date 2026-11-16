@@ -19,6 +19,44 @@ def email_link(text=None):
     enc = "".join(f"&#{ord(c)};" for c in "blazingblox49@gmail.com")
     return f'<a href="mailto:{enc}">{text if text is not None else enc}</a>'
 
+def page_url(path):
+    """Absolute canonical URL for a site path. Home is the bare origin with a trailing slash."""
+    if not path or path in ("index.html", "/", "/index.html"):
+        return BASE
+    if path.startswith("https://") or path.startswith("http://"):
+        return path
+    return BASE + path.lstrip("/")
+
+_YT_DATES_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "youtube_upload_dates.json")
+try:
+    with open(_YT_DATES_PATH, encoding="utf-8") as _ytf:
+        _YT_UPLOAD_DATES = json.load(_ytf)
+except OSError:
+    _YT_UPLOAD_DATES = {}
+
+def iso_upload_date(value, video_id=None):
+    """Return a full ISO 8601 datetime with a timezone offset for VideoObject.uploadDate."""
+    if video_id and _YT_UPLOAD_DATES.get(video_id):
+        value = _YT_UPLOAD_DATES[video_id]
+    raw = (value or "").strip()
+    if not raw:
+        raise ValueError("uploadDate is empty")
+    if raw.endswith("Z"):
+        raw = raw[:-1] + "+00:00"
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?[+-]\d{2}:\d{2}", raw):
+        return raw
+    from zoneinfo import ZoneInfo
+    eastern = ZoneInfo("America/New_York")
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}$", raw):
+        dt = datetime.datetime.strptime(raw, "%Y-%m-%d").replace(hour=12, minute=0, second=0, tzinfo=eastern)
+        return dt.isoformat()
+    m = re.match(r"^(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2})(?::(\d{2}))?(?:\.\d+)?$", raw)
+    if m:
+        stub = f"{m.group(1)}T{m.group(2)}:{m.group(3) or '00'}"
+        dt = datetime.datetime.strptime(stub, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=eastern)
+        return dt.isoformat()
+    raise ValueError(f"unrecognized uploadDate: {value!r}")
+
 
 # ---------- load guides ----------
 guides = []
@@ -489,24 +527,26 @@ def footer(prefix=""):
 </html>
 """
 
-def crumbs(items):
-    # items: list of (name, path or None)
-    li = []
-    for i,(n,p) in enumerate(items):
-        if p and i < len(items)-1: li.append(f'<li><a href="{p}">{esc(n)}</a></li>')
-        else: li.append(f'<li aria-current="page">{esc(n)}</li>')
-    ld = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":BASE+("" if p in (None,"index.html") and i==0 else (p or ""))} for i,(n,p) in enumerate(items)]}
-    # fix last item url
-    return f'<nav class="crumbs wrap" aria-label="Breadcrumb"><ol>{"".join(li)}</ol></nav>', ld
+def crumbs(items, page_path=None):
+    # items: list of (name, path or None). Kept for callers; HTML + JSON-LD always include a URL.
+    return bc_html(items), bc_ld(items, page_path)
 
-def bc_ld(items):
-    els=[]
-    for i,(n,p) in enumerate(items):
-        el={"@type":"ListItem","position":i+1,"name":n}
-        if p:
-            el["item"] = BASE if p=="index.html" else BASE+p
-        els.append(el)
-    return {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":els}
+def bc_ld(items, page_path=None):
+    """Build a BreadcrumbList where every ListItem has position, name, and an absolute item URL."""
+    els = []
+    last = len(items) - 1
+    for i, (n, p) in enumerate(items):
+        if not p:
+            if i == 0:
+                p = "index.html"
+            elif i == last and page_path:
+                p = page_path
+            elif page_path:
+                p = page_path
+            else:
+                p = "index.html"
+        els.append({"@type": "ListItem", "position": i + 1, "name": n, "item": page_url(p)})
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": els}
 def bc_html(items):
     li=[]
     for i,(n,p) in enumerate(items):
@@ -573,7 +613,7 @@ ORG = {"@type":"Organization","name":"Fridge","url":BASE,"logo":BASE+"assets/app
 PERSON = {"@type":"Person","name":"Fridge","url":BASE+"about.html","sameAs":[YT]}
 
 def page(path, title, desc, crumbs_items, body, active=None, og_type="website", image=None, image_alt=None, ld=None):
-    ld = (ld or []) + [bc_ld(crumbs_items)]
+    ld = (ld or []) + [bc_ld(crumbs_items, path)]
     return head(title, desc, path, og_type, image, image_alt, ld) + header(active or path) + body.replace("{CRUMBS}", bc_html(crumbs_items)) + footer()
 
 # working-code counts per codes page (from each page's verified table); None = game has no code system
@@ -621,8 +661,8 @@ for g in guides:
     catp, catn, _ = CATS[g["cat"]]
     items = [("Home","index.html"),(catn,catp),(g["h1"].split(":")[0], g["slug"]+".html")]
     url = BASE + g["slug"] + ".html"
-    vids_ld = [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/watch?v={v[0]}","thumbnailUrl":(g_img(g, True) if i==0 and g.get("cover") else thumb(v[0])),"uploadDate":(v[2] if len(v)>2 else g["date"]),"description":f"Fridge's Roblox video: {v[1]}"} for i,v in enumerate(g["videos"]) if len(v)<3 or v[2]] + \
-              [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/shorts/{v[0]}","thumbnailUrl":thumb(v[0]),"uploadDate":v[2],"description":f"Fridge's Roblox YouTube Short: {v[1]}"} for v in g.get("shorts",[]) if len(v)>2 and v[2]]
+    vids_ld = [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/watch?v={v[0]}","thumbnailUrl":(g_img(g, True) if i==0 and g.get("cover") else thumb(v[0])),"uploadDate":iso_upload_date((v[2] if len(v)>2 else g["date"]), v[0]),"description":f"Fridge's Roblox video: {v[1]}"} for i,v in enumerate(g["videos"]) if len(v)<3 or v[2]] + \
+              [{"@type":"VideoObject","name":v[1],"embedUrl":f"https://www.youtube.com/embed/{v[0]}","contentUrl":f"https://www.youtube.com/shorts/{v[0]}","thumbnailUrl":thumb(v[0]),"uploadDate":iso_upload_date(v[2], v[0]),"description":f"Fridge's Roblox YouTube Short: {v[1]}"} for v in g.get("shorts",[]) if len(v)>2 and v[2]]
     ld_post = {"@context":"https://schema.org","@type":"BlogPosting","headline":g["h1"],"description":g["desc"],"image":[g_img(g, True)],
       "datePublished":g["date"],"dateModified":TODAY,"author":PERSON,"publisher":ORG,"mainEntityOfPage":{"@type":"WebPage","@id":url},
       "articleSection":g["cat"],"keywords":", ".join([g["kw_primary"]]+g["kw_secondary"]),"about":{"@type":"VideoGame","name":g["game"],"gamePlatform":"Roblox"},
@@ -1080,3 +1120,5 @@ write("assets/favicon.svg", FAVICON_SVG)
 write(".nojekyll", "")
 json.dump(report, open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"seo-report.json"),"w"), indent=1)
 for r in report: print(r["slug"], "T",r["title_len"], "D",r["desc_len"], "W",r["words"], "kw",r["occ"], r["density"], "first100",r["kw_first100"], "links",r["body_links"])
+from validate_jsonld import validate_site
+validate_site(OUT, BASE)
