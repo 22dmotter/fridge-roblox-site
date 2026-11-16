@@ -1,0 +1,93 @@
+{
+  "checked": "2026-11-16",
+  "game": "Fisch",
+  "hub_path": "roblox-fisch.html",
+  "official_wiki": "https://fischipedia.org/wiki/Fisch_Wiki",
+  "official_wiki_name": "Official Fisch Wiki (fischipedia.org)",
+  "roblox": {
+    "placeId": 16732694052,
+    "universeId": 5750914919,
+    "rootPlaceId": 16732694052,
+    "robloxName": "Fisch 🎩 [COMPANION HATS]",
+    "creatorName": "Fisching",
+    "creatorType": "Group",
+    "creatorId": 7381705,
+    "gameUrl": "https://www.roblox.com/games/16732694052/Fisch",
+    "genre": "Adventure",
+    "genre_l1": "Simulation",
+    "icon": "assets/game-icons/fisch.webp",
+    "iconSource": "https://tr.rbxcdn.com/180DAY-b9ef91f33f1cc5cbb7d2601ee21ada56/512/512/Image/Png/noFilter",
+    "fetched": "2026-11-16"
+  },
+  "note": "Scaffold only: no item pages yet. Categories follow the Official Fisch Wiki main-page navigation and Popular sidebar (fischipedia.org, fetched 2026-11-16). NPCs is on the official main-page nav (not the Popular sidebar). Codes is a coming-soon wiki category here; the existing fisch-codes.html guide is a separate article. Bestiary is a gameplay log described on the wiki's Fisch article, not a top-level nav category. Islands are covered by Locations.",
+  "categories": [
+    {
+      "id": "fish",
+      "name": "Fish",
+      "slug": "fisch-fish",
+      "wiki_url": "https://fischipedia.org/wiki/Fish"
+    },
+    {
+      "id": "fishing-rods",
+      "name": "Fishing Rods",
+      "slug": "fisch-fishing-rods",
+      "wiki_url": "https://fischipedia.org/wiki/Fishing_Rods"
+    },
+    {
+      "id": "bait",
+      "name": "Bait",
+      "slug": "fisch-bait",
+      "wiki_url": "https://fischipedia.org/wiki/Bait"
+    },
+    {
+      "id": "mutations",
+      "name": "Mutations",
+      "slug": "fisch-mutations",
+      "wiki_url": "https://fischipedia.org/wiki/Mutations"
+    },
+    {
+      "id": "locations",
+      "name": "Locations",
+      "slug": "fisch-locations",
+      "wiki_url": "https://fischipedia.org/wiki/Locations"
+    },
+    {
+      "id": "boats",
+      "name": "Boats",
+      "slug": "fisch-boats",
+      "wiki_url": "https://fischipedia.org/wiki/Boats"
+    },
+    {
+      "id": "weather",
+      "name": "Weather",
+      "slug": "fisch-weather",
+      "wiki_url": "https://fischipedia.org/wiki/Weather"
+    },
+    {
+      "id": "npcs",
+      "name": "NPCs",
+      "slug": "fisch-npcs",
+      "wiki_url": "https://fischipedia.org/wiki/NPCs"
+    },
+    {
+      "id": "items",
+      "name": "Items",
+      "slug": "fisch-items",
+      "wiki_url": "https://fischipedia.org/wiki/Items"
+    },
+    {
+      "id": "codes",
+      "name": "Codes",
+      "slug": "fisch-wiki-codes",
+      "wiki_url": "https://fischipedia.org/wiki/Codes"
+    },
+    {
+      "id": "enchanting",
+      "name": "Enchanting",
+      "slug": "fisch-enchanting",
+      "wiki_url": "https://fischipedia.org/wiki/Enchanting",
+      "note": "The Official Fisch Wiki sidebar label is Enchantments; the article slug is Enchanting."
+    }
+  ],
+  "items": []
+}

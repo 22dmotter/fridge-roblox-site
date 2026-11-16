@@ -420,7 +420,7 @@ tables.forEach(function(table){
 FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Roblox Guides icon</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#0a0f14"/><rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#g)" stroke-width="4"/><text x="32" y="43" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="28" fill="url(#g)">RG</text></svg>"""
 LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">Fridge logo</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc966"/><stop offset="1" stop-color="#e8890c"/></linearGradient></defs><rect x="12" y="3" width="40" height="58" rx="9" fill="url(#g)"/><rect x="12" y="24" width="40" height="3" fill="#0a0f14"/><rect x="18" y="10" width="4" height="10" rx="2" fill="#0a0f14"/><rect x="18" y="32" width="4" height="14" rx="2" fill="#0a0f14"/><path d="M38 38l3-5 3 5-3 5z" fill="#fff" opacity=".9"/><path d="M33 13l2-3 2 3-2 3z" fill="#fff" opacity=".8"/></svg>"""
 
-GAME_PAGES = {"games.html", "roblox-the-forge.html"}
+GAME_PAGES = {"games.html", "roblox-the-forge.html", "roblox-fisch.html"}
 
 def nav(active):
     before = [("index.html","Home"),("guides.html","All Guides"),("tag-codes.html","Codes"),("tag-guides.html","Guides")]
@@ -432,6 +432,7 @@ def nav(active):
     label_cur = " is-current" if games_on else ""
     all_cur = ' aria-current="page"' if active=="games.html" else ""
     forge_cur = ' aria-current="page"' if active=="roblox-the-forge.html" else ""
+    fisch_cur = ' aria-current="page"' if active=="roblox-fisch.html" else ""
     games = (
         '<li class="nav-dd">'
         f'<div class="nav-dd-label{label_cur}">'
@@ -441,6 +442,7 @@ def nav(active):
         '<ul id="nav-games-menu" class="nav-dd-panel">'
         f'<li><a href="games.html"{all_cur}>All Games</a></li>'
         f'<li><a href="roblox-the-forge.html"{forge_cur}>The Forge</a></li>'
+        f'<li><a href="roblox-fisch.html"{fisch_cur}>Fisch</a></li>'
         '</ul></li>'
     )
     return "".join(item(h,t) for h,t in before) + games + "".join(item(h,t) for h,t in after)
@@ -830,6 +832,7 @@ GAME_PAGE_ALIASES = {
 # coverage-first order, then the rest alphabetically.
 GAME_ORDER = [
     "The Forge",
+    "Fisch",
     "Steal an Egg",
     "Scrooms",
     "Anime Dice",
@@ -840,6 +843,7 @@ GAME_ORDER = [
 ]
 GAME_HUBS = {
     "The Forge": "roblox-the-forge.html",
+    "Fisch": "roblox-fisch.html",
     "Steal an Egg": "steal-an-egg-codes.html",
     "Scrooms": "scrooms-beginners-guide.html",
     "Anime Dice": "anime-dice-codes.html",
@@ -1062,6 +1066,56 @@ write("roblox-the-forge.html", page(
 import forgewikilib
 _WIKI_PATHS, _WIKI_CHECKED = forgewikilib.write_pages(page, write, BASE, ORG, PERSON)
 
+# ---------- Fisch hub and wiki scaffold (data-driven from fisch_data.json) ----------
+import fischwikilib
+_FISCH_WIKI_PATHS, _FISCH_CHECKED = fischwikilib.write_pages(page, write, BASE, ORG, PERSON)
+_FISCH_CHECKED_HUMAN = "November 16, 2026"
+_fisch_title = "Roblox Fisch Hub | Wiki and Guides"
+_fisch_desc = "Roblox Fisch is a fishing adventure published by the Fisching group. This hub has the official game link and wiki categories coming soon. Open the hub!"
+if not (140 <= len(_fisch_desc) <= 160) or len(_fisch_title) > 60:
+    raise SystemExit(f"Fisch hub SEO T {len(_fisch_title)} D {len(_fisch_desc)}")
+_fisch_icon = BASE + _file_ver("assets/game-icons/fisch.webp")
+_fisch_codes_card = ""
+if "fisch-codes" in BY:
+    _fisch_codes_card = card(BY["fisch-codes"], "h2")
+_fisch_macro_card = ""
+if "fisch-macro" in BY:
+    _fisch_macro_card = card(BY["fisch-macro"], "h2")
+_fisch_body = f"""<div class="wrap">{{CRUMBS}}
+<article>
+<h1>Roblox Fisch</h1>
+<p class="updated"><strong>Last updated: <time datetime="{_FISCH_CHECKED}">{_FISCH_CHECKED_HUMAN}</time></strong></p>
+<p>Fisch is a Roblox fishing adventure published by the <strong>Fisching</strong> group. The official Roblox game page describes it as a fishing adventure focused on exploration and progression, with many possible fish variations. The <a href="https://fischipedia.org/wiki/Fisch_Wiki" rel="noopener" target="_blank">Official Fisch Wiki</a> likewise calls it an open-world adventure and exploration fishing game.</p>
+<p>Play the official experience on <a href="https://www.roblox.com/games/16732694052/Fisch" rel="noopener" target="_blank">Roblox: Fisch</a>. This page is the Fisch hub on <a href="games.html">Roblox Guides</a>.</p>
+<p class="small">Game icon © Fisching, via Roblox. We do not hotlink the live CDN file; the copy on this site was downloaded from the official 512×512 Roblox thumbnail.</p>
+<h2 id="wiki">Fisch Wiki</h2>
+<p>These category cards follow the Official Fisch Wiki (fischipedia.org) main-page navigation and Popular sidebar, checked {_FISCH_CHECKED_HUMAN}. Item pages are not on this site yet, so every category is marked coming soon.</p>
+{fischwikilib.wiki_cats_html()}
+<p>A codes wiki category will be added here later. Until then, the existing <a href="fisch-codes.html">Fisch codes</a> guide on this site is the place to check working codes. The <a href="fisch-macro.html">Fisch macro</a> page covers unofficial auto-fishing tools and the ban risk; it is not an official Fisch feature.</p>
+<div class="grid">{_fisch_codes_card}{_fisch_macro_card}</div>
+<h2 id="src-h">Sources</h2>
+<ul>
+<li><a href="https://www.roblox.com/games/16732694052/Fisch" rel="noopener" target="_blank">Official Roblox game page: Fisch</a> (place 16732694052, universe 5750914919; publisher listed as the Fisching group; description and genre fetched from the Roblox games API on {_FISCH_CHECKED_HUMAN})</li>
+<li><a href="https://fischipedia.org/wiki/Fisch_Wiki" rel="noopener" target="_blank">Official Fisch Wiki (fischipedia.org)</a> and the <a href="https://fischipedia.org/wiki/Fisch" rel="noopener" target="_blank">Fisch</a> article (checked {_FISCH_CHECKED_HUMAN}), including the main-page category navigation and Popular sidebar</li>
+</ul>
+</article>
+</div>"""
+write("roblox-fisch.html", page(
+    "roblox-fisch.html",
+    _fisch_title,
+    _fisch_desc,
+    [("Home","index.html"),("Games","games.html"),("Fisch","roblox-fisch.html")],
+    _fisch_body,
+    active="roblox-fisch.html",
+    image=_fisch_icon,
+    image_alt="Official Roblox game icon for Fisch",
+    ld=[
+        {"@context":"https://schema.org","@type":"WebPage","name":"Roblox Fisch","url":BASE+"roblox-fisch.html","dateModified":_FISCH_CHECKED,"publisher":ORG,
+         "about":{"@type":"VideoGame","name":"Fisch","gamePlatform":"Roblox","url":"https://www.roblox.com/games/16732694052/Fisch","author":{"@type":"Organization","name":"Fisching"}}},
+        {"@context":"https://schema.org","@type":"VideoGame","name":"Fisch","gamePlatform":"Roblox","url":"https://www.roblox.com/games/16732694052/Fisch","author":{"@type":"Organization","name":"Fisching"},"image":_fisch_icon},
+    ],
+))
+
 
 # ---------- about / legal ----------
 from legalpages import privacy_body, terms_body, contact_body, about_body
@@ -1100,9 +1154,10 @@ nf += header("", prefix=P) + f"""<div class="wrap">{bc_html([("Home",P+"index.ht
 write("404.html", nf)
 
 # ---------- sitemap / robots ----------
-urls = [("",TODAY,"1.0","daily"),("guides.html",TODAY,"0.9","daily"),("games.html",TODAY,"0.8","weekly"),("about.html",TODAY,"0.5","monthly"),("privacy-policy.html",TODAY,"0.5","yearly"),("terms.html",TODAY,"0.5","yearly"),("contact.html",TODAY,"0.5","yearly"),("roblox-the-forge.html",TODAY,"0.7","weekly")] + \
+urls = [("",TODAY,"1.0","daily"),("guides.html",TODAY,"0.9","daily"),("games.html",TODAY,"0.8","weekly"),("about.html",TODAY,"0.5","monthly"),("privacy-policy.html",TODAY,"0.5","yearly"),("terms.html",TODAY,"0.5","yearly"),("contact.html",TODAY,"0.5","yearly"),("roblox-the-forge.html",TODAY,"0.7","weekly"),("roblox-fisch.html",_FISCH_CHECKED,"0.7","weekly")] + \
        [(v[0],TODAY,"0.7","weekly") for v in CATS.values()] + [(g["slug"]+".html",TODAY,"0.8","weekly") for g in guides] + \
-       [(p, _WIKI_CHECKED, "0.7", "weekly") for p in _WIKI_PATHS]
+       [(p, _WIKI_CHECKED, "0.7", "weekly") for p in _WIKI_PATHS] + \
+       [(p, _FISCH_CHECKED, "0.7", "weekly") for p in _FISCH_WIKI_PATHS]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"  <url><loc>{BASE}{u}</loc><lastmod>{d}</lastmod><changefreq>{c}</changefreq><priority>{p}</priority></url>\n" for u,d,p,c in urls) + "</urlset>\n"
 write("sitemap.xml", sm)
