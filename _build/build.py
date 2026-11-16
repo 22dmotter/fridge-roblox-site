@@ -203,8 +203,12 @@ nav.main .nav-dd-btn{display:flex;align-items:center;justify-content:center;marg
 nav.main .nav-dd-btn .caret{display:inline-block;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor}
 nav.main .nav-dd-label:hover,nav.main .nav-dd:hover>.nav-dd-label,nav.main .nav-dd:focus-within>.nav-dd-label,nav.main .nav-dd.is-open>.nav-dd-label,nav.main .nav-dd-label.is-current{color:var(--ink);background:var(--acc)}
 nav.main .nav-dd-btn:focus-visible,nav.main a.nav-dd-link:focus-visible{outline:2px solid var(--acc2);outline-offset:2px;z-index:1}
-nav.main .nav-dd-panel{display:none;margin:0;padding:8px;list-style:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(0,0,0,.45)}
-nav.main .nav-dd-panel a{display:block;padding:8px 12px;border-radius:8px;color:var(--txt);text-decoration:none;font-weight:600;white-space:nowrap}
+nav.main .nav-dd-panel{display:none;margin:0;padding:4px;list-style:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 28px rgba(0,0,0,.45);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+nav.main .nav-dd-panel::-webkit-scrollbar{width:8px}
+nav.main .nav-dd-panel::-webkit-scrollbar-track{background:transparent}
+nav.main .nav-dd-panel::-webkit-scrollbar-thumb{background:var(--line);border-radius:999px}
+nav.main .nav-dd-panel a{display:flex;align-items:center;padding:6px 10px;border-radius:6px;color:var(--txt);text-decoration:none;font-weight:600;font-size:.9rem;line-height:1.25;white-space:nowrap}
+nav.main .nav-dd-panel li:first-child{position:sticky;top:0;z-index:1;background:var(--card)}
 nav.main .nav-dd-panel a:hover,nav.main .nav-dd-panel a:focus-visible,nav.main .nav-dd-panel a[aria-current=page]{color:var(--ink);background:var(--acc)}
 .games-page h1{font-size:clamp(1.8rem,5vw,2.5rem);margin:.15em 0 .9em}
 .game-icons{display:grid;gap:16px 10px;grid-template-columns:repeat(3,1fr);margin:0 0 48px}
@@ -222,12 +226,13 @@ nav.main .nav-dd-panel a:hover,nav.main .nav-dd-panel a:focus-visible,nav.main .
 @media(max-width:899px){
 nav.main{overflow:visible;position:relative}
 nav.main>ul{flex-wrap:wrap}
-.nav-dd-panel{position:absolute;left:0;right:0;top:100%;z-index:8;margin-top:8px}
+.nav-dd-panel{position:absolute;left:0;right:0;top:100%;z-index:8;margin-top:6px;max-height:70vh}
+nav.main .nav-dd-panel a{box-sizing:border-box;min-height:40px;padding:10px 12px}
 .nav-dd.is-open>.nav-dd-panel,.nav-dd:focus-within>.nav-dd-panel{display:block}
 }
 @media(min-width:900px){
 nav.main .nav-dd{position:relative}
-nav.main .nav-dd-panel{position:absolute;top:calc(100% + 8px);left:0;min-width:240px;z-index:8}
+nav.main .nav-dd-panel{position:absolute;top:calc(100% + 6px);left:0;min-width:11.5rem;max-height:60vh;z-index:8}
 nav.main .nav-dd:hover>.nav-dd-panel,nav.main .nav-dd:focus-within>.nav-dd-panel,nav.main .nav-dd.is-open>.nav-dd-panel{display:block}
 }
 
