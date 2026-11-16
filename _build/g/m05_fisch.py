@@ -5,14 +5,21 @@ G = make(
     kw="fisch macro",
     title="Fisch Macro for Roblox: Auto Fish and Risks",
     h1="Fisch Macro for Roblox: Auto Fishing and Ban Risk",
-    desc="What a Fisch macro does in Roblox, what ExoPanda lists for auto fishing, and why it can break the Terms of Use. Check the ban risk and read it!",
-    kw2=["fisch auto fish", "fisch roblox macro", "fisch auto clicker"],
+    desc="Fridge AFK Fisch macro video (November 16, 2026), what auto fishing does in Roblox, and why it can break the Terms of Use. Watch the video now!",
+    kw2=["fisch auto fish", "fisch roblox macro", "fisch auto clicker", "afk fisch macro"],
     related=["what-is-a-roblox-macro", "best-roblox-macros", "grow-a-garden-macro", "fisch-codes", "bee-swarm-simulator-macro", "tag-macro"],
-    lead="A Fisch macro is unofficial software that recasts, shakes or completes the fishing minigame in the Roblox experience Fisch so you can farm fish with less input. It is a popular search, and it is not an official Fisch feature. This page covers what those tools generally do, what one third-party vendor lists, and the ban risk of auto fishing.",
+    videos=[("oY9ruH_KAlI", "Best AFK Fisch Macro | Make TONS of Money While AFK (Roblox Fisch)", "2026-11-16T10:25:13-08:00")],
+    cover="assets/thumbs/fisch-macro.webp",
+    image_alt="Thumbnail from Fridge's video Best AFK Fisch Macro | Make TONS of Money While AFK (Roblox Fisch)",
+    game="Fisch",
+    lead='A Fisch macro is unofficial software that recasts, shakes or completes the fishing minigame in the Roblox experience Fisch so you can farm fish with less input. Fridge\'s November 16, 2026 video, <a href="https://www.youtube.com/watch?v=oY9ruH_KAlI" rel="noopener" target="_blank">Best AFK Fisch Macro | Make TONS of Money While AFK (Roblox Fisch)</a>, shows an AFK Fisch macro. It is not an official Fisch feature. This page pairs that video with what those tools generally do, what one third-party vendor lists, and the ban risk of auto fishing. <strong>Last checked <time datetime="2026-11-16">November 16, 2026</time></strong>.',
     sections=[
+        ("video", "Watch: Best AFK Fisch Macro",
+         """<p>Fridge's video, <a href="https://www.youtube.com/watch?v=oY9ruH_KAlI" rel="noopener" target="_blank">Best AFK Fisch Macro | Make TONS of Money While AFK (Roblox Fisch)</a>, runs about four minutes and was uploaded on November 16, 2026 at 1:25 p.m. Eastern. YouTube has not published chapter markers, and auto-generated captions were not available when this page was updated. The official description says the video shows an AFK Fisch macro meant to catch fish while you are away. It does not name a tool, list settings, or give a verified catch rate, so this page does not either.</p>
+<p>Auto fishing is still unofficial and can break the Roblox Terms of Use. The warning at the top of this page applies to anything the video demonstrates.</p>"""),
         ("what", "What a Fisch macro usually automates",
          """<p>Fisch is built around a fishing loop: cast, wait, react, reel, sell, repeat. That loop is why "Fisch macro," "Fisch auto fish" and "Fisch auto clicker" show up so often. Typical unofficial tools try to recast for you, spam the shake prompt or replay a recorded sell path. That is a <a href="what-is-a-roblox-macro.html">Roblox macro</a> applied to one game, not a setting you turn on in Fisch's official menu.</p>
-<p>If you want progress the developers actually hand out, use our checked <a href="fisch-codes.html">Fisch codes</a> list when codes are active. Codes and in-game events do not require a third-party executable.</p>"""),
+<p>If you want progress the developers actually hand out, use our checked <a href="fisch-codes.html">Fisch codes</a> list when codes are active, or start from the <a href="roblox-fisch.html">Roblox Fisch hub</a>. Codes and in-game events do not require a third-party executable.</p>"""),
         ("exo", "What ExoPanda lists for Fisch",
          """<p><a href="https://exopanda.com/" rel="noopener" target="_blank">ExoPanda</a> includes Fisch on its <a href="https://exopanda.com/guides" rel="noopener" target="_blank">guides index</a> and publishes a dedicated page at <a href="https://exopanda.com/guides/fisch" rel="noopener" target="_blank">exopanda.com/guides/fisch</a>. As of this writing the vendor marks that Fisch material as ready. Fridge is not affiliated with ExoPanda, does not republish its fishing steps, and cannot confirm that the tool is allowed, hidden or safe for your account.</p>
 <p>A "ready" badge on a macro site only means the seller says the profile works on their product. It is not approval from Roblox or from Fisch's developers. Read the vendor's own terms, which generally leave Roblox enforcement to you, before you treat any download as low risk.</p>"""),
@@ -25,6 +32,8 @@ G = make(
     faq=[
         ("Is there an official Fisch macro or auto fish?",
          "Not as a third-party download. Only features inside Fisch itself are official. A macro or auto clicker you install from another site is unofficial."),
+        ("Is there a Fridge video about a Fisch macro?",
+         "Yes. Fridge uploaded Best AFK Fisch Macro | Make TONS of Money While AFK (Roblox Fisch) on November 16, 2026. The official description says it shows an AFK Fisch macro. This page does not repeat settings or catch-rate claims that are not in that description."),
         ("Can a Fisch macro get you banned?",
          "Yes. Auto fishing can violate Roblox's Terms of Use and the game's rules. No seller can honestly guarantee you will not be banned."),
         ("Does ExoPanda have a Fisch macro?",
@@ -33,6 +42,7 @@ G = make(
          "A clicker can only repeat a click. Fisch's loop often needs more than one input, which is why people look at full macros. Both approaches automate play and carry policy risk."),
     ],
     sources=[
+        ("Fridge: Best AFK Fisch Macro | Make TONS of Money While AFK (Roblox Fisch)", "https://www.youtube.com/watch?v=oY9ruH_KAlI"),
         ("Fridge: Fisch codes", "fisch-codes.html"),
         ("ExoPanda Fisch guide (third party, not affiliated)", EXO_FISCH),
     ],

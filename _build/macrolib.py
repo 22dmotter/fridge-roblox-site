@@ -23,12 +23,19 @@ CORE_SOURCES = [
     ("ExoPanda Terms of Service", EXO_TOS),
 ]
 
-def make(slug, kw, title, h1, desc, kw2, related, lead, sections, faq, sources=(), howto=None, heading=None, extra_body=""):
+def make(slug, kw, title, h1, desc, kw2, related, lead, sections, faq, sources=(), howto=None, heading=None, extra_body="",
+         videos=None, cover=None, image_alt=None, date="2026-11-12", game="Roblox", chapters=None):
     secs = "\n".join(f'<h2 id="{a}">{h}</h2>\n{b}' for a,h,b in sections)
     more = ('<h2 id="more">More Roblox Macro Guides</h2>\n<p>Start with <a href="what-is-a-roblox-macro.html">what a Roblox macro is and whether it can get you banned</a>, '
             'the <a href="best-roblox-macros.html">best Roblox macros and auto clickers</a> overview, or the full list on our <a href="tag-macro.html">Roblox Macros</a> hub. '
             'For idle play that does not automate your inputs, see <a href="how-to-afk-in-roblox.html">how to AFK in Roblox</a>.</p>')
-    body = f'<p class="lead">{lead}</p>\n{{CHAPTERS}}\n{{VIDEO_PLACEHOLDER}}\n{DISCLAIMER}\n{MALWARE}\n{secs}\n{extra_body}{more}\n'
+    video_slot = "{VIDEO0}" if videos else "{VIDEO_PLACEHOLDER}"
+    body = f'<p class="lead">{lead}</p>\n{{CHAPTERS}}\n{video_slot}\n{DISCLAIMER}\n{MALWARE}\n{secs}\n{extra_body}{more}\n'
     src = list(CORE_SOURCES) + list(sources)
-    return dict(slug=slug, title=title, h1=h1, desc=desc, cat="Macro", game="Roblox", date="2026-11-12", videos=[],
-                kw_primary=kw, kw_secondary=kw2, related=related, chapters=None, howto=howto, sources=src, body=body, faq=faq)
+    g = dict(slug=slug, title=title, h1=h1, desc=desc, cat="Macro", game=game, date=date, videos=list(videos or []),
+                kw_primary=kw, kw_secondary=kw2, related=related, chapters=chapters, howto=howto, sources=src, body=body, faq=faq)
+    if cover:
+        g["cover"] = cover
+    if image_alt:
+        g["image_alt"] = image_alt
+    return g

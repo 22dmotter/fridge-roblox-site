@@ -1096,7 +1096,7 @@ _fisch_body = f"""<div class="wrap">{{CRUMBS}}
 <h2 id="wiki">Fisch Wiki</h2>
 <p>These category cards follow the Official Fisch Wiki (fischipedia.org) main-page navigation and Popular sidebar, checked {_FISCH_CHECKED_HUMAN}. Item pages are not on this site yet, so every category is marked coming soon.</p>
 {fischwikilib.wiki_cats_html()}
-<p>Working codes are on the <a href="fisch-codes.html">Fisch codes</a> guide, last checked November 16, 2026. The <a href="fisch-macro.html">Fisch macro</a> page covers unofficial auto-fishing tools and the ban risk; it is not an official Fisch feature.</p>
+<p>Working codes are on the <a href="fisch-codes.html">Fisch codes</a> guide, last checked November 16, 2026. The <a href="fisch-macro.html">Fisch macro</a> page pairs Fridge's November 16, 2026 AFK macro video with unofficial auto-fishing tools and the ban risk; it is not an official Fisch feature.</p>
 <div class="grid">{_fisch_codes_card}{_fisch_macro_card}</div>
 <h2 id="src-h">Sources</h2>
 <ul>
